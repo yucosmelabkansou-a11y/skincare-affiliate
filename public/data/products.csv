@@ -1,0 +1,5 @@
+id,name,brand,tags,review,image_filename,amazon_url,rakuten_url,is_pick,instagram_url
+1,セラミドバリアクリーム,CeraVe,"クリーム,セラミド,乾燥,敏感肌,バリア機能","セラミド1・3・6を独自のMultiVesicular Emulsion技術で配合。角層のラメラ構造を直接補修するため、一般的な保湿剤と比べて持続性が高い。敏感肌・アトピー肌にも皮膚科医が推奨する処方。",placeholder.jpg,https://www.amazon.co.jp/,https://www.rakuten.co.jp/,true,
+2,レチノールリンクルセラム,RoC,"美容液,レチノール,エイジングケア,シワ,ハリ","0.1%純粋レチノール配合。ビタミンA誘導体の中でも最も研究実績が豊富で、真皮のコラーゲン産生を促進する作用が臨床試験で証明済み。刺激を抑えるためにナイアシンアミドを共配合。夜用での使用を推奨。",placeholder.jpg,https://www.amazon.co.jp/,https://www.rakuten.co.jp/,true,
+3,ナイアシンアミド10%セラム,The Ordinary,"美容液,セラム,ナイアシンアミド,毛穴,ニキビ,美白,くすみ","10%ナイアシンアミド＋1%亜鉛配合。皮脂分泌の抑制・毛穴の目立ちの改善・メラニン転送阻害による美白作用を同時に発揮。コスパ最強の多機能原液。ビタミンCと同時使用は効果を相殺するため避けること。",placeholder.jpg,https://www.amazon.co.jp/,https://www.rakuten.co.jp/,true,
+4,SPF50+UVエッセンス,アリィー,"日焼け止め,UV,ノンケミカル,毛穴","紫外線散乱剤のみ使用したノンケミカル処方でありながらSPF50+・PA++++を達成。独自のナノ化酸化亜鉛を採用し、白浮き・ベタつきをクリア。毛穴レス効果もあり、下地として使用可能。",placeholder.jpg,https://www.amazon.co.jp/,https://www.rakuten.co.jp/,false,
