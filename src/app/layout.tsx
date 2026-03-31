@@ -15,7 +15,7 @@ const notoSansJP = Noto_Sans_JP({
 })
 
 export const metadata: Metadata = {
-  title: 'ゆんのおすすめアイテム一覧',
+  title: 'yun.skincare_',
   description:
     '毛穴・ニキビ・乾燥・エイジングケアなど肌悩み別に、成分にこだわったスキンケア商品を紹介。Amazon・楽天でまとめて比較・購入できます。',
 }
