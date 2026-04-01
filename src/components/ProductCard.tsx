@@ -1,7 +1,5 @@
 'use client'
 
-import Image from 'next/image'
-import { useState } from 'react'
 import { Product } from '@/types/product'
 
 type Props = {
@@ -10,11 +8,6 @@ type Props = {
 }
 
 export default function ProductCard({ product, onClick }: Props) {
-  const [imgLoaded, setImgLoaded] = useState(false)
-  const [imgError, setImgError] = useState(false)
-
-  const showFallback = !product.image_filename || imgError || !imgLoaded
-
   return (
     <button
       onClick={onClick}
@@ -22,24 +15,20 @@ export default function ProductCard({ product, onClick }: Props) {
     >
       {/* Image area */}
       <div className="relative w-full aspect-square bg-[#F8F9FA]">
-        {/* Fallback overlay — shown only while loading or on error */}
-        {showFallback && (
-          <div className="absolute inset-0 flex items-center justify-center text-3xl text-gray-300 bg-[#F8F9FA]">
-            🧴
-          </div>
-        )}
-        {product.image_filename && !imgError ? (
-          <Image
+        {/* 🧴 fallback — always behind the product image */}
+        <div className="absolute inset-0 flex items-center justify-center text-3xl text-gray-300">
+          🧴
+        </div>
+        {product.image_filename && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
             src={`/images/${product.image_filename}`}
             alt={product.name}
-            fill
-            sizes="(max-width: 640px) 50vw, 33vw"
-            className="object-cover"
-            onLoad={() => setImgLoaded(true)}
-            onError={() => setImgError(true)}
-            unoptimized
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+            onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
           />
-        ) : null}
+        )}
 
         {/* Instagram badge */}
         {product.instagram_url && (
