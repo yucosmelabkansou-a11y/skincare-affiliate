@@ -25,7 +25,7 @@ export default function ProductCard({ product, onClick }: Props) {
             src={`/images/${product.image_filename}`}
             alt={product.name}
             className="absolute inset-0 w-full h-full object-cover"
-            loading="lazy"
+            loading="eager"
             onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
           />
         )}
