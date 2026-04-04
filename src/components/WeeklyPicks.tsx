@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { Product } from '@/types/product'
 
 type Props = {
@@ -30,19 +29,19 @@ export default function WeeklyPicks({ products, onSelect }: Props) {
           >
             {/* Image */}
             <div className="relative w-full aspect-square bg-[#F8F9FA]">
-              {product.image_filename && (
-                <Image
-                  src={`/images/${product.image_filename}`}
-                  alt={product.name}
-                  fill
-                  sizes="128px"
-                  className="object-cover"
-                  unoptimized
-                />
-              )}
-              <div className="absolute inset-0 flex items-center justify-center text-2xl text-gray-300 bg-[#F8F9FA]">
+              <div className="absolute inset-0 flex items-center justify-center text-2xl text-gray-300">
                 🧴
               </div>
+              {product.image_filename && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={`/images/${product.image_filename}`}
+                  alt={product.name}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="eager"
+                  onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
+                />
+              )}
               {/* Pick badge */}
               <span className="absolute top-1.5 left-1.5 text-[9px] font-bold bg-[#4DB6AC] text-white px-1.5 py-0.5 rounded-full leading-none">
                 PICK
