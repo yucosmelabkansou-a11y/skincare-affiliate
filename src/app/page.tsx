@@ -8,13 +8,23 @@ export default function Home() {
     <div className="max-w-2xl mx-auto">
       {/* Header */}
       <header className="px-4 pt-6 pb-4">
-        <h1 className="text-xl font-bold text-[#343A40]">yun.skincare_</h1>
-        <p className="text-sm text-[#6C757D] mt-1 leading-relaxed">
-          投稿で紹介しているスキンケア、ベースメイクを探せるサイトです
+        <a
+          href="https://www.instagram.com/yun.skincare_"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block text-xl font-bold text-[#343A40] hover:text-[#4DB6AC] transition-colors"
+        >
+          yun.skincare_
+        </a>
+        <p className="text-sm text-[#6C757D] mt-2 leading-relaxed">
+          投稿で紹介したスキンケア・ベースメイクをまとめてます🌿<br />
+          ゆんが実際に使ってよかったオススメアイテムだけを厳選。<br />
+          Amazon・楽天のリンクからすぐに購入できます。
         </p>
-        <p className="text-[10px] text-gray-400 mt-2">
-          ※本サイトはアフィリエイトリンクを含みます
-        </p>
+        <div className="text-[10px] text-gray-400 mt-2 space-y-0.5">
+          <p>※本サイトはアフィリエイトリンクを含みます</p>
+          <p>※韓国コスメ、デパコスなどの一部商品はブランド公式サイトからの購入を推奨しています</p>
+        </div>
       </header>
 
       <ProductList products={products} />
