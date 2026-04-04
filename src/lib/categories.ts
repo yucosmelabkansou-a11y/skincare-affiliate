@@ -23,8 +23,6 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
       { id: 'serum',       label: '美容液',     emoji: '💎', tags: ['美容液', 'セラム'] },
       { id: 'sunscreen',   label: '日焼け止め', emoji: '☀️', tags: ['日焼け止め', 'UV'] },
       { id: 'base',        label: '下地',       emoji: '🖌️', tags: ['下地'] },
-      { id: 'foundation',  label: 'ファンデ',   emoji: '💄', tags: ['ファンデーション', 'クッションファンデ'] },
-      { id: 'concealer',   label: 'コンシーラー', emoji: '🪄', tags: ['コンシーラー'] },
     ],
   },
   {
