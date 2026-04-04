@@ -51,6 +51,30 @@ export default function ProductCard({ product, onClick }: Props) {
             </span>
           ))}
         </div>
+        {(product.amazon_url || product.rakuten_url) && (
+          <div className="flex gap-1.5 mt-3" onClick={(e) => e.stopPropagation()}>
+            {product.amazon_url && (
+              <a
+                href={product.amazon_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 px-2.5 py-1 text-[10px] font-medium bg-amber-400 hover:bg-amber-500 text-amber-900 rounded-full transition-colors"
+              >
+                Amazon
+              </a>
+            )}
+            {product.rakuten_url && (
+              <a
+                href={product.rakuten_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 px-2.5 py-1 text-[10px] font-medium bg-red-600 hover:bg-red-700 text-white rounded-full transition-colors"
+              >
+                楽天
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </button>
   )

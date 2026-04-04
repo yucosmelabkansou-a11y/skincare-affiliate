@@ -73,24 +73,30 @@ export default function ProductModal({ product, onClose }: Props) {
         </div>
 
         {/* Sticky footer buttons */}
-        <div className="sticky bottom-0 left-0 right-0 bg-white border-t border-[#E9ECEF] px-5 py-3 flex gap-3">
-          <a
-            href={product.amazon_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 py-3 text-sm font-semibold text-white bg-[#FF9900] rounded-xl text-center hover:bg-[#e88a00] active:scale-95 transition-all"
-          >
-            Amazonで見る 🛒
-          </a>
-          <a
-            href={product.rakuten_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 py-3 text-sm font-semibold text-white bg-[#BF0000] rounded-xl text-center hover:bg-[#a80000] active:scale-95 transition-all"
-          >
-            楽天で見る
-          </a>
-        </div>
+        {(product.amazon_url || product.rakuten_url) && (
+          <div className="sticky bottom-0 left-0 right-0 bg-white border-t border-[#E9ECEF] px-5 py-3 flex gap-3">
+            {product.amazon_url && (
+              <a
+                href={product.amazon_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 py-3 text-sm font-semibold text-white bg-[#FF9900] rounded-xl text-center hover:bg-[#e88a00] active:scale-95 transition-all"
+              >
+                Amazonで見る 🛒
+              </a>
+            )}
+            {product.rakuten_url && (
+              <a
+                href={product.rakuten_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 py-3 text-sm font-semibold text-white bg-[#BF0000] rounded-xl text-center hover:bg-[#a80000] active:scale-95 transition-all"
+              >
+                楽天で見る
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </div>
   )

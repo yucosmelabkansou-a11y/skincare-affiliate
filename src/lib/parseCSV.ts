@@ -35,19 +35,23 @@ export function getProducts(): Product[] {
       .map((line) => {
         const fields = parseCSVLine(line)
         const [
-          id, name, brand, tagsRaw, review,
+          id, category, name, brand, price, tagsRaw, review,
           image_filename, amazon_url, rakuten_url,
           is_pick, instagram_url,
         ] = fields
+        const raw = image_filename?.trim() ?? ''
+        const normalized = raw.includes('.') ? raw : raw + '.jpg'
         return {
           id: id.trim(),
+          category: category?.trim() ?? '',
           name: name.trim(),
           brand: brand.trim(),
+          price: price?.trim() ?? '',
           tags: tagsRaw.trim().split(',').map((t) => t.trim()).filter((t) => t !== ''),
           review: review.trim(),
-          image_filename: image_filename.trim(),
-          amazon_url: amazon_url.trim(),
-          rakuten_url: rakuten_url.trim(),
+          image_filename: normalized,
+          amazon_url: amazon_url?.trim() ?? '',
+          rakuten_url: rakuten_url?.trim() ?? '',
           is_pick: is_pick?.trim() === 'true',
           instagram_url: instagram_url?.trim() ?? '',
         }
