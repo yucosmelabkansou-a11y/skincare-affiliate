@@ -23,7 +23,11 @@ export default function ProductModal({ product, onClose }: Props) {
       >
         {/* Image */}
         <div className="relative w-full aspect-[4/3] bg-[#F8F9FA]">
-          {product.image_filename ? (
+          {/* 🧴 fallback — always behind the product image */}
+          <div className="absolute inset-0 flex items-center justify-center text-6xl text-gray-200">
+            🧴
+          </div>
+          {product.image_filename && (
             <Image
               src={`/images/${product.image_filename}`}
               alt={product.name}
@@ -32,10 +36,7 @@ export default function ProductModal({ product, onClose }: Props) {
               className="object-cover"
               unoptimized
             />
-          ) : null}
-          <div className="absolute inset-0 flex items-center justify-center text-6xl text-gray-200 bg-[#F8F9FA]">
-            🧴
-          </div>
+          )}
         </div>
 
         {/* Close button */}
