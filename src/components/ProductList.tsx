@@ -35,7 +35,9 @@ export default function ProductList({ products }: Props) {
     const category = CATEGORIES.find((c) => c.id === selectedCategoryId)
     return products.filter((p) => {
       if (category && category.tags.length > 0) {
-        if (!p.tags.some((t) => category.tags.includes(t))) return false
+        const matchByTag = p.tags.some((t) => category.tags.includes(t))
+        const matchByCategory = p.category === category.label
+        if (!matchByTag && !matchByCategory) return false
       }
       if (searchQuery.trim() !== '') {
         const q = searchQuery.toLowerCase()
