@@ -23,6 +23,7 @@ export default function Home() {
         </p>
         <div className="text-[10px] text-gray-400 mt-2 space-y-0.5">
           <p>※本サイトはアフィリエイトリンクを含みます</p>
+          <p>※一部ブランド様よりご提供頂いた商品も含みます。</p>
           <p>※韓国コスメ、デパコスなどの一部商品はブランド公式サイトからの購入を推奨しています</p>
         </div>
       </header>
