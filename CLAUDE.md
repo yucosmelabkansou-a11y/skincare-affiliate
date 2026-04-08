@@ -8,6 +8,31 @@
 本番URL: https://skincare-affiliate.vercel.app/
 GitHub: https://github.com/yucosmelabkansou-a11y/skincare-affiliate.git
 
+## ⚠️ 新規セッション向け：絶対パス
+
+```
+作業ディレクトリ（Google Drive）:
+/Users/myuasa/Library/CloudStorage/GoogleDrive-yu.cosmelab.kansou@gmail.com/マイドライブ/★商品紹介サイト/
+
+Next.jsプロジェクト:
+/Users/myuasa/Library/CloudStorage/GoogleDrive-yu.cosmelab.kansou@gmail.com/マイドライブ/★商品紹介サイト/skincare-affiliate/
+
+CSVデータ:
+/Users/myuasa/Library/CloudStorage/GoogleDrive-yu.cosmelab.kansou@gmail.com/マイドライブ/★商品紹介サイト/商品写真データ - シート1.csv
+
+楽天URLキャッシュ:
+/Users/myuasa/Library/CloudStorage/GoogleDrive-yu.cosmelab.kansou@gmail.com/マイドライブ/★商品紹介サイト/rakuten_links.json
+
+楽天URL取得スクリプト:
+/Users/myuasa/Library/CloudStorage/GoogleDrive-yu.cosmelab.kansou@gmail.com/マイドライブ/★商品紹介サイト/fetch_rakuten.py
+
+公開画像フォルダ:
+/Users/myuasa/Library/CloudStorage/GoogleDrive-yu.cosmelab.kansou@gmail.com/マイドライブ/★商品紹介サイト/skincare-affiliate/public/images/
+
+products.csv:
+/Users/myuasa/Library/CloudStorage/GoogleDrive-yu.cosmelab.kansou@gmail.com/マイドライブ/★商品紹介サイト/skincare-affiliate/public/data/products.csv
+```
+
 ## 技術スタック
 
 - Next.js 16 (App Router) / TypeScript / Tailwind CSS
@@ -30,7 +55,7 @@ src/
   types/product.ts          ← Product型定義
 
 public/
-  data/products.csv         ← 商品マスターデータ（全件・現在56件）
+  data/products.csv         ← 商品マスターデータ（全件・現在67件）
   images/                   ← 商品画像（IMG_xxxx.jpg 形式）
 ```
 
@@ -39,7 +64,7 @@ public/
 ```typescript
 type Product = {
   id: string
-  category: string        // 化粧水 / 化粧下地 / 日焼け止め / BBクリーム / CCクリーム
+  category: string        // 化粧水 / 乳液 / 化粧下地 / 日焼け止め / BBクリーム / CCクリーム
   name: string
   brand: string
   price: string           // 例: ¥1,760 / 42g
@@ -99,10 +124,28 @@ type Product = {
 ## Step 3: 画像コピー
 
 ```python
-# 写真入れ/ 以下を再帰検索して public/images/ にコピー
-# CSVのファイル名列（拡張子なし）に一致するもののみ
-# すでに存在するファイルはスキップ
-# コピー先: public/images/IMG_xxxx.jpg
+import csv, shutil, pathlib, glob as g
+
+BASE = "/Users/myuasa/Library/CloudStorage/GoogleDrive-yu.cosmelab.kansou@gmail.com/マイドライブ/★商品紹介サイト"
+DST  = f"{BASE}/skincare-affiliate/public/images"
+pathlib.Path(DST).mkdir(exist_ok=True)
+
+with open(f"{BASE}/商品写真データ - シート1.csv", encoding="utf-8") as f:
+    fnames = [r["ファイル名"].strip() for r in csv.DictReader(f) if r.get("商品名","").strip()]
+
+for fname in fnames:
+    stem = fname.replace(".jpg","").replace(".jpeg","")
+    # 既に存在するならスキップ
+    if pathlib.Path(f"{DST}/{stem}.jpg").exists():
+        continue
+    # 写真入れ/ 以下を再帰検索
+    found = g.glob(f"{BASE}/写真入れ/**/{stem}.jpg", recursive=True) or \
+            g.glob(f"{BASE}/写真入れ/**/{stem}.jpeg", recursive=True)
+    if found:
+        shutil.copy2(found[0], f"{DST}/{stem}.jpg")
+        print(f"コピー: {stem}.jpg")
+    else:
+        print(f"⚠️ 見つからない: {stem}")
 ```
 
 ## Step 4: 楽天URL取得
@@ -129,11 +172,56 @@ python3 fetch_rakuten.py
 ## Step 5: products.csv 再生成
 
 ```python
-# 商品写真データ - シート1.csv + rakuten_links.json → public/data/products.csv
-# 必ず csv.QUOTE_ALL を使うこと（カンマ混入対策）
-# URLの制御文字（改行など）を除去すること
-# カテゴリの表記ゆれを確認・統一すること
+import csv, json, re, urllib.parse
+
+BASE = "/Users/myuasa/Library/CloudStorage/GoogleDrive-yu.cosmelab.kansou@gmail.com/マイドライブ/★商品紹介サイト"
+
+with open(f"{BASE}/rakuten_links.json", encoding="utf-8") as f:
+    links = json.load(f)
+
+CAT_MAP = {"化粧液": "化粧水"}  # 表記ゆれ対策
+
+def clean_url(url):
+    return re.sub(r'[\x00-\x1f\x7f]', '', url).strip()
+
+rows_out = []
+with open(f"{BASE}/商品写真データ - シート1.csv", encoding="utf-8") as f:
+    for row in csv.DictReader(f):
+        name = row.get("商品名","").strip()
+        if not name:
+            continue
+        category = CAT_MAP.get(row.get("カテゴリ","").strip(), row.get("カテゴリ","").strip())
+        brand    = row.get("ブランド","").strip()
+        price    = row.get("価格 / 最小容量","").strip()
+        review   = row.get("注目成分・技術","").strip()
+        is_pick  = "true" if row.get("pick","").strip().upper() == "TRUE" else "false"
+        tags_raw = row.get("悩み","").strip()
+        fname    = row.get("ファイル名","").strip()
+        ig_url   = row.get("instagram_url","").strip()
+        if ig_url == "-": ig_url = ""
+        img_filename = fname if "." in fname else fname + ".jpg"
+        link = links.get(fname, {})
+        amazon_url  = clean_url(link.get("amazon_url",""))
+        rakuten_url = clean_url(link.get("rakuten_url",""))
+        if not amazon_url:
+            q = urllib.parse.quote(f"{brand} {name}")
+            amazon_url = f"https://www.amazon.co.jp/s?k={q}&i=beauty"
+        rows_out.append([str(len(rows_out)+1), category, name, brand, price,
+                         tags_raw, review, img_filename, amazon_url, rakuten_url, is_pick, ig_url])
+
+OUT = f"{BASE}/skincare-affiliate/public/data/products.csv"
+with open(OUT, "w", encoding="utf-8", newline="") as f:
+    w = csv.writer(f, quoting=csv.QUOTE_ALL)
+    w.writerow(["id","category","name","brand","price","tags","review","image_filename",
+                "amazon_url","rakuten_url","is_pick","instagram_url"])
+    w.writerows(rows_out)
+
+print(f"生成完了: {len(rows_out)}件 → {OUT}")
 ```
+
+- 必ず `csv.QUOTE_ALL`（カンマ混入対策）
+- URLの制御文字（改行など）を `re.sub` で除去
+- カテゴリ表記ゆれは `CAT_MAP` で統一
 
 ## Step 6: ビルド確認 → コミット → プッシュ
 
@@ -171,6 +259,7 @@ git push origin main
     下地/
     日焼け止め/
     化粧水/
+    乳液/
     （追加カテゴリは都度作成）
   skincare-affiliate/            ← Next.jsプロジェクト本体
   Instagram投稿案.md             ← サイト紹介用のInstagram投稿テキスト案
