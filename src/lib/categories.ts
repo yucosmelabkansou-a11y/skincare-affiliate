@@ -22,7 +22,9 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
       { id: 'cream',       label: 'クリーム',   emoji: '🫙', tags: ['クリーム'] },
       { id: 'serum',       label: '美容液',     emoji: '💎', tags: ['美容液', '導入美容液', 'セラム'] },
       { id: 'sunscreen',   label: '日焼け止め', emoji: '☀️', tags: ['日焼け止め', 'UV'] },
-      { id: 'base',        label: '下地',       emoji: '🖌️', tags: ['下地'] },
+      { id: 'base',        label: '化粧下地',   emoji: '🖌️', tags: ['下地'] },
+      { id: 'facewash',    label: '洗顔',       emoji: '🧼', tags: ['洗顔'] },
+      { id: 'cleansing',   label: 'クレンジング', emoji: '🧹', tags: ['クレンジング'] },
     ],
   },
   {
