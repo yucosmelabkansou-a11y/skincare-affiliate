@@ -4,8 +4,6 @@ import { useState, useMemo } from 'react'
 import { Product } from '@/types/product'
 import { CATEGORIES, CATEGORY_GROUPS } from '@/lib/categories'
 import SearchBar from './SearchBar'
-import ActiveFilterChips from './ActiveFilterChips'
-import FilterDrawer from './FilterDrawer'
 import ProductCard from './ProductCard'
 import ProductModal from './ProductModal'
 import CategoryNav from './CategoryNav'
@@ -17,53 +15,39 @@ type Props = {
 
 export default function ProductList({ products }: Props) {
   const [searchQuery, setSearchQuery] = useState('')
-  const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [selectedCategoryId, setSelectedCategoryId] = useState('all')
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
 
-  // トップ表示かどうか（カテゴリー・検索・タグ未選択）
-  const isTopView = selectedCategoryId === 'all' && searchQuery === '' && selectedTags.length === 0
-
-  const allTags = useMemo(() => {
-    const tagSet = new Set<string>()
-    products.forEach((p) => p.tags.forEach((t) => tagSet.add(t)))
-    return Array.from(tagSet)
-  }, [products])
+  // トップ表示かどうか（カテゴリー・検索未選択）
+  const isTopView = selectedCategoryId === 'all' && searchQuery === ''
 
   const filtered = useMemo(() => {
     const category = CATEGORIES.find((c) => c.id === selectedCategoryId)
     return products.filter((p) => {
+      // カテゴリーフィルター
       if (category && category.tags.length > 0) {
         const matchByTag = p.tags.some((t) => category.tags.includes(t))
         const matchByCategory = p.category === category.label
         if (!matchByTag && !matchByCategory) return false
       }
+      // スペース区切りAND検索（全キーワードにマッチ）
       if (searchQuery.trim() !== '') {
-        const q = searchQuery.toLowerCase()
-        const match =
-          p.name.toLowerCase().includes(q) ||
-          p.brand.toLowerCase().includes(q) ||
-          p.tags.some((t) => t.toLowerCase().includes(q)) ||
-          p.review.toLowerCase().includes(q)
-        if (!match) return false
-      }
-      if (selectedTags.length > 0) {
-        if (!selectedTags.every((st) => p.tags.includes(st))) return false
+        const keywords = searchQuery.toLowerCase().split(/\s+/).filter(Boolean)
+        const searchTarget = [
+          p.name,
+          p.brand,
+          p.category,
+          ...p.tags,
+          p.review,
+        ].join(' ').toLowerCase()
+        if (!keywords.every((kw) => searchTarget.includes(kw))) return false
       }
       return true
     })
-  }, [products, searchQuery, selectedTags, selectedCategoryId])
-
-  const toggleTag = (tag: string) => {
-    setSelectedTags((prev) =>
-      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
-    )
-  }
+  }, [products, searchQuery, selectedCategoryId])
 
   const handleCategoryChange = (id: string) => {
     setSelectedCategoryId(id)
-    setSelectedTags([])
     setSearchQuery('')
   }
 
@@ -110,16 +94,10 @@ export default function ProductList({ products }: Props) {
             ))}
           </div>
         )}
-        <div className="px-4 py-3 space-y-2">
+        <div className="px-4 py-3">
           <SearchBar
             value={searchQuery}
             onChange={setSearchQuery}
-            onOpenDrawer={() => setIsDrawerOpen(true)}
-          />
-          <ActiveFilterChips
-            tags={selectedTags}
-            onRemove={(tag) => setSelectedTags((prev) => prev.filter((t) => t !== tag))}
-            onReset={() => setSelectedTags([])}
           />
         </div>
       </div>
@@ -153,14 +131,6 @@ export default function ProductList({ products }: Props) {
           </>
         )}
       </main>
-
-      <FilterDrawer
-        isOpen={isDrawerOpen}
-        onClose={() => setIsDrawerOpen(false)}
-        allTags={allTags}
-        selectedTags={selectedTags}
-        onToggle={toggleTag}
-      />
 
       <ProductModal
         product={selectedProduct}
