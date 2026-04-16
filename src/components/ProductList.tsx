@@ -38,7 +38,6 @@ export default function ProductList({ products }: Props) {
           p.brand,
           p.category,
           ...p.tags,
-          p.review,
         ].join(' ').toLowerCase()
         if (!keywords.every((kw) => searchTarget.includes(kw))) return false
       }
