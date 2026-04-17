@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Noto_Sans_JP } from 'next/font/google'
+import { Inter, Noto_Sans_JP, Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
 import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_DESCRIPTION } from '@/lib/siteConfig'
 
@@ -12,6 +12,14 @@ const inter = Inter({
 const notoSansJP = Noto_Sans_JP({
   subsets: ['latin'],
   variable: '--font-noto-sans-jp',
+  display: 'swap',
+})
+
+// エディトリアル感を出す英字セリフ体（見出し・ブランド名強調用）
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-serif',
   display: 'swap',
 })
 
@@ -98,7 +106,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ja" className={`${inter.variable} ${notoSansJP.variable}`}>
+    <html lang="ja" className={`${inter.variable} ${notoSansJP.variable} ${cormorant.variable}`}>
       <body className="min-h-screen bg-white text-[#6C757D] font-sans antialiased">
         {children}
       </body>
