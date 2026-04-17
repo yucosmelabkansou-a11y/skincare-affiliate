@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import { getProducts } from '@/lib/parseCSV'
 import ProductList from '@/components/ProductList'
-
-const SITE_URL = 'https://skincare-affiliate.vercel.app'
+import { SITE_URL } from '@/lib/siteConfig'
 
 export default function Home() {
   const products = getProducts()

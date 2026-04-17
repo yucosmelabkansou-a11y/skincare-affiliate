@@ -1,8 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-
-const SITE_URL = 'https://skincare-affiliate.vercel.app'
+import { SITE_URL } from '@/lib/siteConfig'
 
 type Props = {
   resultName: string

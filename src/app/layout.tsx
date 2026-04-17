@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Noto_Sans_JP } from 'next/font/google'
 import './globals.css'
+import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_DESCRIPTION } from '@/lib/siteConfig'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -13,12 +14,6 @@ const notoSansJP = Noto_Sans_JP({
   variable: '--font-noto-sans-jp',
   display: 'swap',
 })
-
-const SITE_URL = 'https://skincare-affiliate.vercel.app'
-const SITE_NAME = 'yun.skincare_'
-const SITE_TITLE = 'yun.skincare_｜元化粧品研究員×29年ノーファンデ厳選スキンケア'
-const SITE_DESCRIPTION =
-  'Instagram5.7万人フォロワーのゆん（元化粧品会社・研究職／生涯ノーファンデ歴29年）が、本当に使ってよかったスキンケア・ベースメイク163アイテムを厳選。化粧水・美容液・日焼け止め・洗顔・クレンジングなど肌悩み別にAmazon・楽天で比較・購入できます。'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

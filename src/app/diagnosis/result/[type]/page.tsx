@@ -8,9 +8,8 @@ import {
   type SkinType,
   type Concern,
 } from '@/lib/diagnosis'
+import { SITE_URL } from '@/lib/siteConfig'
 import ShareButtons from './ShareButtons'
-
-const SITE_URL = 'https://skincare-affiliate.vercel.app'
 
 // 静的パラメータ生成（SSG）
 export function generateStaticParams() {

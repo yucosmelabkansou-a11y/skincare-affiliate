@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-
-const SITE_URL = 'https://skincare-affiliate.vercel.app'
+import { SITE_URL } from '@/lib/siteConfig'
 
 export const metadata: Metadata = {
   title: '無料 肌診断｜元化粧品研究員監修・8問でわかるあなたの肌タイプ',

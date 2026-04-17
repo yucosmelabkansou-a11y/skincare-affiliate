@@ -1,7 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { allSkinTypes } from '@/lib/diagnosis'
-
-const SITE_URL = 'https://skincare-affiliate.vercel.app'
+import { SITE_URL } from '@/lib/siteConfig'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
