@@ -54,16 +54,24 @@ export default function MustProducts({ skinType, concern, themeColor }: Props) {
 
   return (
     <section className="px-5 pb-6">
-      <div className="bg-white rounded-3xl p-5 shadow-sm">
-        <div className="flex items-center gap-2 mb-1">
-          <span className="text-xl">⭐</span>
-          <h2 className="text-base font-bold text-[#343A40]">
+      <div className="bg-white rounded-3xl p-5 shadow-sm border border-[#F2EAEF]">
+        {/* エディトリアル風ヘッダー */}
+        <div className="text-center mb-5">
+          <p className="text-[10px] tracking-[0.4em] text-[#D4829E] font-serif">
+            YUN&apos;S MUST HAVE
+          </p>
+          <div className="mt-1 text-[10px] tracking-[0.5em] text-[#D4829E]" aria-hidden>
+            · · ·
+          </div>
+          <h2 className="font-serif text-lg text-[#4A3F45] mt-1 tracking-wider">
             ゆんMUSTアイテム
           </h2>
+          <p className="text-[11px] text-[#9B8E94] mt-2 leading-relaxed">
+            元化粧品研究員ゆんが自信を持って推す、
+            <br />
+            本当に使ってほしいアイテム
+          </p>
         </div>
-        <p className="text-xs text-[#6C757D] mb-4">
-          元化粧品研究員ゆんが自信を持って推す、あなたに本当に使ってほしいアイテム
-        </p>
 
         <div className="space-y-3">
           {ordered.map(({ group, product }) => (
@@ -160,7 +168,7 @@ function MustCard({
             </p>
           )}
 
-          {/* 購入ボタン */}
+          {/* 購入ボタン（編集感のあるアウトライン型） */}
           {(product.amazon_url || product.rakuten_url) && (
             <div className="flex gap-1.5 mt-2">
               {product.amazon_url && (
@@ -168,7 +176,7 @@ function MustCard({
                   href={product.amazon_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 text-center px-2 py-1.5 text-[11px] font-semibold text-amber-900 bg-amber-400 hover:bg-amber-500 rounded-full transition-colors"
+                  className="flex-1 text-center px-2 py-1.5 text-[11px] font-medium text-[#4A3F45] border border-[#E8C7D4] hover:bg-[#FDF2F6] rounded-full transition-colors tracking-wider"
                 >
                   Amazon
                 </a>
@@ -178,7 +186,7 @@ function MustCard({
                   href={product.rakuten_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 text-center px-2 py-1.5 text-[11px] font-semibold text-white bg-red-600 hover:bg-red-700 rounded-full transition-colors"
+                  className="flex-1 text-center px-2 py-1.5 text-[11px] font-medium text-[#4A3F45] border border-[#E8C7D4] hover:bg-[#FDF2F6] rounded-full transition-colors tracking-wider"
                 >
                   楽天
                 </a>

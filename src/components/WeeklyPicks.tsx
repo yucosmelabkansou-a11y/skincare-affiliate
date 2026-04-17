@@ -12,24 +12,30 @@ export default function WeeklyPicks({ products, onSelect }: Props) {
   if (picks.length === 0) return null
 
   return (
-    <section className="px-4 pt-2 pb-4">
-      <div className="flex items-baseline gap-2 mb-3">
-        <h2 className="text-base font-bold text-[#343A40]">今週のゆんのおすすめPick</h2>
-        <span className="text-[10px] text-[#4DB6AC] font-medium bg-[#E0F2F1] px-2 py-0.5 rounded-full">
-          毎週更新
-        </span>
+    <section className="px-4 pt-6 pb-4">
+      {/* エディトリアル風セクションタイトル */}
+      <div className="text-center mb-5">
+        <p className="text-[10px] tracking-[0.4em] text-[#D4829E] font-serif">
+          WEEKLY PICKS
+        </p>
+        <div className="mt-1 text-[10px] tracking-[0.5em] text-[#D4829E]" aria-hidden>
+          · · ·
+        </div>
+        <h2 className="font-serif text-lg text-[#4A3F45] mt-1 tracking-wider">
+          今週のおすすめ
+        </h2>
       </div>
 
-      <div className="flex gap-3 overflow-x-auto scrollbar-hide pb-1">
+      <div className="flex gap-3 overflow-x-auto scrollbar-hide pb-1 -mx-4 px-4">
         {picks.map((product) => (
           <button
             key={product.id}
             onClick={() => onSelect(product)}
-            className="shrink-0 w-32 text-left bg-white rounded-2xl border border-[#E9ECEF] shadow-sm overflow-hidden active:scale-95 hover:shadow-md transition-all duration-150"
+            className="shrink-0 w-32 text-left bg-white rounded-2xl border border-[#F2EAEF] overflow-hidden active:scale-[0.98] hover:border-[#E8C7D4] hover:shadow-[0_4px_20px_rgba(212,130,158,0.12)] transition-all duration-200"
           >
             {/* Image */}
-            <div className="relative w-full aspect-square bg-[#F8F9FA]">
-              <div className="absolute inset-0 flex items-center justify-center text-2xl text-gray-300">
+            <div className="relative w-full aspect-square bg-[#FAF6F3]">
+              <div className="absolute inset-0 flex items-center justify-center text-2xl text-[#E8C7D4]">
                 🧴
               </div>
               {product.image_filename && (
@@ -42,15 +48,24 @@ export default function WeeklyPicks({ products, onSelect }: Props) {
                   onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
                 />
               )}
-              {/* Pick badge */}
-              <span className="absolute top-1.5 left-1.5 text-[9px] font-bold bg-[#4DB6AC] text-white px-1.5 py-0.5 rounded-full leading-none">
-                PICK
+              {/* Pick badge — セリフ体イタリックで上品に */}
+              <span
+                className="absolute top-1.5 left-1.5 text-[9px] font-serif italic text-white px-2 py-0.5 rounded-full leading-none"
+                style={{
+                  background:
+                    'linear-gradient(135deg, #D4829E 0%, #C2185B 100%)',
+                  letterSpacing: '0.15em',
+                }}
+              >
+                Pick
               </span>
             </div>
             {/* Text */}
             <div className="p-2">
-              <p className="text-[10px] text-[#6C757D] truncate">{product.brand}</p>
-              <p className="text-xs font-semibold text-[#343A40] leading-snug line-clamp-2 mt-0.5">
+              <p className="text-[10px] text-[#9B8E94] truncate font-serif italic tracking-wide">
+                {product.brand}
+              </p>
+              <p className="text-xs font-semibold text-[#4A3F45] leading-snug line-clamp-2 mt-0.5">
                 {product.name}
               </p>
             </div>
