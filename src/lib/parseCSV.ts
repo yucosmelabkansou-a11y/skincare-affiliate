@@ -38,6 +38,7 @@ export function getProducts(): Product[] {
           id, category, name, brand, price, tagsRaw, review,
           image_filename, amazon_url, rakuten_url,
           is_pick, instagram_url,
+          is_yun_must, must_tags_raw, yun_must_comment,
         ] = fields
         const raw = image_filename?.trim() ?? ''
         const normalized = raw.includes('.') ? raw : raw + '.jpg'
@@ -54,6 +55,9 @@ export function getProducts(): Product[] {
           rakuten_url: rakuten_url?.trim() ?? '',
           is_pick: is_pick?.trim() === 'true',
           instagram_url: instagram_url?.trim() ?? '',
+          is_yun_must: is_yun_must?.trim() === 'true',
+          must_tags: (must_tags_raw ?? '').trim().split(',').map((t) => t.trim()).filter((t) => t !== ''),
+          yun_must_comment: yun_must_comment?.trim() ?? '',
         }
       })
   } catch (error) {

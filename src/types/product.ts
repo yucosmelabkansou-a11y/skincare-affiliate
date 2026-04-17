@@ -11,4 +11,7 @@ export type Product = {
   rakuten_url: string
   is_pick: boolean
   instagram_url: string  // 例: https://www.instagram.com/p/SHORTCODE/
+  is_yun_must: boolean
+  must_tags: string[]    // 'common' | 'dry' | 'oily' | 'combination' | 'sensitive' | 'aging' | 'normal' | 'pores' 等
+  yun_must_comment: string  // ゆん的コメント (MUST商品のみ)
 }

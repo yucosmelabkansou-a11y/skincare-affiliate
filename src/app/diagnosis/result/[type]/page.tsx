@@ -9,6 +9,7 @@ import {
   type Concern,
 } from '@/lib/diagnosis'
 import { SITE_URL } from '@/lib/siteConfig'
+import MustProducts from '@/components/MustProducts'
 import ShareButtons from './ShareButtons'
 
 // 静的パラメータ生成（SSG）
@@ -254,41 +255,29 @@ export default async function ResultPage({ params, searchParams }: Props) {
         </ul>
       </section>
 
-      {/* Coming Soon: おすすめ商品 */}
-      <section className="mx-5 mb-6 relative overflow-hidden rounded-3xl bg-white border-2 border-dashed border-[#E0F2F1]">
-        <div className="p-6 text-center">
-          <div className="inline-block px-3 py-1 bg-gradient-to-r from-[#4DB6AC] to-[#C2185B] text-white text-[10px] font-bold tracking-wider rounded-full mb-3">
-            COMING SOON
+      {/* ⭐ ゆんMUSTアイテム */}
+      <MustProducts
+        skinType={type as SkinType}
+        concern={concern}
+        themeColor={result.themeColor}
+      />
+
+      {/* Coming Soon: ルーティン全体提案 */}
+      <section className="mx-5 mb-6 rounded-2xl bg-[#F8F9FA] border border-[#E9ECEF] p-4">
+        <div className="flex items-start gap-3">
+          <div className="text-2xl flex-shrink-0">🎁</div>
+          <div className="flex-1">
+            <div className="inline-block px-2 py-0.5 bg-gradient-to-r from-[#4DB6AC] to-[#C2185B] text-white text-[9px] font-bold tracking-wider rounded-full mb-1">
+              COMING SOON
+            </div>
+            <h3 className="text-sm font-bold text-[#343A40] mb-1">
+              ルーティン丸ごと提案 機能
+            </h3>
+            <p className="text-[11px] text-[#6C757D] leading-relaxed">
+              クレンジング〜クリームまでSTEP別の最適ルーティン、
+              プチプラ／スタンダード／デパコス予算切替も実装予定🌿
+            </p>
           </div>
-          <div className="text-4xl mb-3" aria-hidden>
-            🎁
-          </div>
-          <h2 className="text-base font-bold text-[#343A40] mb-2">
-            あなたにおすすめの
-            <br />
-            スキンケアアイテム
-          </h2>
-          <p className="text-xs text-[#6C757D] leading-relaxed mb-4 px-2">
-            現在、あなたの肌タイプに最適化された
-            <br />
-            商品ルーティン（プチプラ／デパコス対応）を準備中です🌿
-            <br />
-            <span className="text-[#C2185B] font-semibold">
-              元化粧品研究員ゆん厳選の「MUSTアイテム」も近日公開！
-            </span>
-          </p>
-          <a
-            href="https://www.instagram.com/yun.skincare_"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white rounded-full"
-            style={{
-              background:
-                'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)',
-            }}
-          >
-            Instagramフォローで先取り通知
-          </a>
         </div>
       </section>
 
