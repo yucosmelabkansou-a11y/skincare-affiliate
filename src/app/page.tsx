@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { getProducts } from '@/lib/parseCSV'
 import ProductList from '@/components/ProductList'
 
@@ -137,6 +138,32 @@ export default function Home() {
           <p>※韓国コスメ、デパコスなどの一部商品はブランド公式サイトからの購入を推奨しています</p>
         </div>
       </header>
+
+      {/* 肌診断バナー */}
+      <Link
+        href="/diagnosis"
+        className="block mx-4 mb-5 p-4 rounded-2xl shadow-md active:scale-[0.98] transition-all relative overflow-hidden"
+        style={{
+          background: 'linear-gradient(135deg, #4DB6AC 0%, #C2185B 100%)',
+        }}
+      >
+        <div className="flex items-center gap-3">
+          <div className="text-3xl flex-shrink-0">🪞</div>
+          <div className="flex-1 min-w-0">
+            <p className="text-[10px] tracking-[0.2em] text-white/80 font-semibold mb-0.5">
+              SKIN TYPE DIAGNOSIS
+            </p>
+            <p className="text-sm font-bold text-white leading-snug">
+              あなたの肌タイプは？
+              <br />
+              <span className="text-xs font-medium">
+                元化粧品研究員監修・8問の無料診断
+              </span>
+            </p>
+          </div>
+          <div className="text-white text-lg flex-shrink-0">→</div>
+        </div>
+      </Link>
 
       <ProductList products={products} />
 
