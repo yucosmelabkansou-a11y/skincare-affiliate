@@ -1,6 +1,7 @@
 'use client'
 
 import { CATEGORY_GROUPS } from '@/lib/categories'
+import CategoryIcon from './icons/CategoryIcon'
 
 type Props = {
   selectedId: string
@@ -20,13 +21,13 @@ export default function CategoryNav({ selectedId, onChange }: Props) {
                 <button
                   key={cat.id}
                   onClick={() => onChange(cat.id)}
-                  className={`flex flex-col items-center gap-1 py-3 px-1 rounded-2xl text-center transition-all active:scale-95 ${
+                  className={`flex flex-col items-center gap-1.5 py-3 px-1 rounded-2xl text-center transition-all active:scale-95 ${
                     isSelected
                       ? 'bg-[#4DB6AC] text-white shadow-sm'
                       : 'bg-[#F8F9FA] text-[#6C757D] hover:bg-[#E0F2F1] hover:text-[#4DB6AC]'
                   }`}
                 >
-                  <span className="text-xl leading-none">{cat.emoji}</span>
+                  <CategoryIcon name={cat.iconKey} size={22} />
                   <span className="text-[10px] font-medium leading-tight">{cat.label}</span>
                 </button>
               )

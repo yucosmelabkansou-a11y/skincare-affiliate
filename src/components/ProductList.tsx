@@ -8,6 +8,7 @@ import ProductCard from './ProductCard'
 import ProductModal from './ProductModal'
 import CategoryNav from './CategoryNav'
 import WeeklyPicks from './WeeklyPicks'
+import CategoryIcon from './icons/CategoryIcon'
 
 type Props = {
   products: Product[]
@@ -77,13 +78,13 @@ export default function ProductList({ products }: Props) {
                       <button
                         key={cat.id}
                         onClick={() => handleCategoryChange(cat.id)}
-                        className={`shrink-0 flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+                        className={`shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
                           isSelected
                             ? 'bg-[#4DB6AC] text-white'
                             : 'bg-[#F8F9FA] text-[#6C757D] hover:bg-[#E0F2F1]'
                         }`}
                       >
-                        <span>{cat.emoji}</span>
+                        <CategoryIcon name={cat.iconKey} size={14} />
                         <span>{cat.label}</span>
                       </button>
                     )
