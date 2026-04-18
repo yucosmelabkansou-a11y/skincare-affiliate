@@ -48,7 +48,8 @@ export function getProducts(): Product[] {
           name: name.trim(),
           brand: brand.trim(),
           price: price?.trim() ?? '',
-          tags: tagsRaw.trim().split(',').map((t) => t.trim()).filter((t) => t !== ''),
+          // タグ区切り文字: カンマ(,) と中黒(・) の両方に対応（CSV入力のバラツキを吸収）
+          tags: tagsRaw.trim().split(/[,・]/).map((t) => t.trim()).filter((t) => t !== ''),
           review: review.trim(),
           image_filename: normalized,
           amazon_url: amazon_url?.trim() ?? '',
