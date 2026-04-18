@@ -157,8 +157,8 @@ export const resultTypes: Record<SkinType, ResultType> = {
     tagEn: 'DRY SKIN TYPE',
     emoji: '💧',
     badge: 'うるおいケアタイプ',
-    themeColor: '#7BBFE8',
-    bgColor: '#F0F8FD',
+    themeColor: '#7E96A2',  // くすみブルーグレー
+    bgColor: '#EAF0F2',
     description:
       '肌の水分量が不足しがちなタイプ。洗顔後のつっぱりや粉ふき・カサつきが起きやすく、バリア機能が低下するとシワや小じわが目立ちやすい傾向があります。とにかく「水分補給＋水分を逃さないフタ」が鍵。',
     features: [
@@ -187,8 +187,8 @@ export const resultTypes: Record<SkinType, ResultType> = {
     tagEn: 'OILY SKIN TYPE',
     emoji: '✨',
     badge: 'さっぱりケアタイプ',
-    themeColor: '#FFB74D',
-    bgColor: '#FFF8E7',
+    themeColor: '#A8956B',  // くすみベージュゴールド
+    bgColor: '#F2EBDC',
     description:
       '皮脂の分泌が活発で、テカリや毛穴の開き・黒ずみが気になりやすいタイプ。実は「保湿不足」が皮脂の過剰分泌を招いていることも。落としすぎず、水分はしっかり補給するのがポイント。',
     features: [
@@ -217,8 +217,8 @@ export const resultTypes: Record<SkinType, ResultType> = {
     tagEn: 'COMBINATION SKIN TYPE',
     emoji: '🎭',
     badge: 'バランスケアタイプ',
-    themeColor: '#9575CD',
-    bgColor: '#F3F0FA',
+    themeColor: '#A38787',  // くすみモーブ
+    bgColor: '#EFE8E8',
     description:
       'Tゾーン（おでこ・鼻）はテカるのに、頬や口周りは乾燥する…日本人に最も多い肌質。パーツごとに肌状態が違うので「全顔同じケア」は卒業。部位別ケアで一気にバランスが整います。',
     features: [
@@ -247,8 +247,8 @@ export const resultTypes: Record<SkinType, ResultType> = {
     tagEn: 'SENSITIVE SKIN TYPE',
     emoji: '🌸',
     badge: 'やさしさケアタイプ',
-    themeColor: '#F48FB1',
-    bgColor: '#FDF2F6',
+    themeColor: '#B79490',  // くすみピンクベージュ
+    bgColor: '#F4EAE9',
     description:
       'バリア機能が弱く、外部刺激に敏感に反応しやすいタイプ。化粧品でピリピリしたり、季節の変わり目に赤みやかゆみが出やすい傾向。「シンプル × 低刺激 × バリア強化」の3点が肌を救う鍵。',
     features: [
@@ -277,8 +277,8 @@ export const resultTypes: Record<SkinType, ResultType> = {
     tagEn: 'AGING SKIN TYPE',
     emoji: '💎',
     badge: 'ハリ・ツヤケアタイプ',
-    themeColor: '#BA68C8',
-    bgColor: '#F8F0FA',
+    themeColor: '#928196',  // くすみラベンダー
+    bgColor: '#E9E4ED',
     description:
       'シワ・たるみ・くすみ・ハリ感の低下が主な悩み。コラーゲンやエラスチンの減少、ターンオーバーの遅れが原因。「攻めの美容成分」と「徹底した紫外線対策」の両輪が若見えの鍵。',
     features: [
@@ -307,8 +307,8 @@ export const resultTypes: Record<SkinType, ResultType> = {
     tagEn: 'NORMAL SKIN TYPE',
     emoji: '🌟',
     badge: 'キープケアタイプ',
-    themeColor: '#4DB6AC',
-    bgColor: '#E8F5F4',
+    themeColor: '#7E928A',  // くすみセージグリーン
+    bgColor: '#E7EDE9',
     description:
       '水分と油分のバランスが取れた、理想的な肌状態。大きなトラブルは少ないですが、今の良い状態を維持するためのケアが大切。季節やライフスタイルの変化に合わせた微調整がポイント。',
     features: [

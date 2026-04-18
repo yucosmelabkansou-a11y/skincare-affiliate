@@ -106,48 +106,59 @@ export default async function ResultPage({ params, searchParams }: Props) {
       />
 
       {/* パンくず */}
-      <nav className="px-4 pt-4 text-xs text-[#6C757D]" aria-label="パンくず">
-        <Link href="/" className="hover:text-[#4DB6AC]">
+      <nav className="px-4 pt-4 text-xs text-[#9B8E94] tracking-wider" aria-label="パンくず">
+        <Link href="/" className="hover:text-[#C2185B] transition-colors">
           ホーム
         </Link>
-        <span className="mx-2">/</span>
-        <Link href="/diagnosis" className="hover:text-[#4DB6AC]">
+        <span className="mx-2" style={{ color: result.themeColor }}>/</span>
+        <Link href="/diagnosis" className="hover:text-[#C2185B] transition-colors">
           肌診断
         </Link>
-        <span className="mx-2">/</span>
-        <span className="text-[#343A40]">{result.name}</span>
+        <span className="mx-2" style={{ color: result.themeColor }}>/</span>
+        <span className="text-[#4A3F45]">{result.name}</span>
       </nav>
 
       {/* 結果ヒーロー */}
       <section className="px-6 pt-8 pb-8 text-center">
-        <p className="text-[10px] tracking-[0.3em] text-[#6C757D] font-semibold mb-3">
+        <div className="text-[10px] tracking-[0.5em] mb-2" style={{ color: result.themeColor }} aria-hidden>
+          · · · · ·
+        </div>
+        <p
+          className="font-serif text-[11px] tracking-[0.4em] mb-2"
+          style={{ color: result.themeColor }}
+        >
           DIAGNOSIS RESULT
         </p>
-        <div className="bg-white rounded-3xl p-7 shadow-md border border-white/50">
-          <div className="text-6xl mb-2" aria-hidden>
+
+        <div className="bg-white rounded-3xl p-7 shadow-sm border border-white/60 mt-4">
+          <div className="text-5xl mb-3" aria-hidden>
             {result.emoji}
           </div>
           <p
-            className="text-[10px] tracking-[0.25em] font-semibold mb-2"
+            className="font-serif text-[11px] tracking-[0.35em] mb-1"
             style={{ color: result.themeColor }}
           >
             {result.tagEn}
           </p>
-          <h1 className="text-2xl font-bold text-[#343A40] mb-3">{result.name}</h1>
+          <h1 className="font-serif text-2xl font-medium text-[#4A3F45] mb-3 tracking-wider">
+            {result.name}
+          </h1>
           <span
-            className="inline-block text-xs font-semibold px-4 py-1 rounded-full border"
+            className="inline-block text-[11px] font-medium px-4 py-1 rounded-full border tracking-wider"
             style={{
               color: result.themeColor,
               borderColor: result.themeColor,
-              backgroundColor: `${result.themeColor}15`,
+              backgroundColor: `${result.themeColor}10`,
             }}
           >
             {result.badge}
           </span>
 
           {concern && (
-            <div className="mt-4 pt-4 border-t border-[#F0F0F0]">
-              <p className="text-[10px] text-[#6C757D] mb-1">メインの悩み</p>
+            <div className="mt-4 pt-4 border-t border-[#F2EAEF]">
+              <p className="text-[10px] text-[#9B8E94] mb-1 tracking-wider font-serif italic">
+                main concern
+              </p>
               <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#C2185B]">
                 <span>{concernLabels[concern].emoji}</span>
                 {concernLabels[concern].label}
@@ -161,12 +172,14 @@ export default async function ResultPage({ params, searchParams }: Props) {
         </div>
 
         {/* ゆんコメント */}
-        <div className="mt-4 mx-2 p-4 bg-white/80 rounded-2xl border border-white">
+        <div className="mt-4 mx-2 p-4 bg-white/85 rounded-2xl border border-white/60">
           <div className="flex items-start gap-2">
             <div className="text-lg flex-shrink-0">💬</div>
             <div className="text-left">
-              <p className="text-[10px] text-[#C2185B] font-semibold mb-1">ゆんからのコメント</p>
-              <p className="text-xs text-[#343A40] leading-relaxed">{result.yunComment}</p>
+              <p className="font-serif italic text-[11px] text-[#C2185B] mb-1 tracking-wider">
+                a note from yun
+              </p>
+              <p className="text-xs text-[#4A3F45] leading-relaxed">{result.yunComment}</p>
             </div>
           </div>
         </div>
@@ -174,15 +187,12 @@ export default async function ResultPage({ params, searchParams }: Props) {
 
       {/* 特徴 */}
       <section className="px-5 pb-6">
-        <h2 className="text-base font-bold text-[#343A40] mb-3 flex items-center gap-2">
-          <span style={{ color: result.themeColor }}>|</span>
-          あなたの肌の特徴
-        </h2>
+        <SectionHeading enLabel="YOUR SKIN" jpLabel="あなたの肌の特徴" themeColor={result.themeColor} />
         <ul className="space-y-2">
           {result.features.map((feature, i) => (
             <li
               key={i}
-              className="text-sm text-[#343A40] bg-white p-3.5 rounded-xl border-l-[3px] leading-snug"
+              className="text-sm text-[#4A3F45] bg-white p-3.5 rounded-xl border-l-[3px] leading-snug"
               style={{ borderLeftColor: result.themeColor }}
             >
               {feature}
@@ -193,10 +203,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
 
       {/* おすすめケア */}
       <section className="px-5 pb-6">
-        <h2 className="text-base font-bold text-[#343A40] mb-3 flex items-center gap-2">
-          <span style={{ color: result.themeColor }}>|</span>
-          おすすめスキンケア
-        </h2>
+        <SectionHeading enLabel="HOW TO CARE" jpLabel="おすすめスキンケア" themeColor={result.themeColor} />
         <div className="space-y-2.5">
           {result.cares.map((care, i) => (
             <div key={i} className="flex items-start gap-3 p-4 bg-white rounded-2xl border border-white shadow-sm">
@@ -217,21 +224,18 @@ export default async function ResultPage({ params, searchParams }: Props) {
 
       {/* 重視すべき成分 */}
       <section className="px-5 pb-6">
-        <h2 className="text-base font-bold text-[#343A40] mb-1 flex items-center gap-2">
-          <span style={{ color: result.themeColor }}>|</span>
-          重視すべき成分
-        </h2>
-        <p className="text-xs text-[#6C757D] mb-3">
+        <SectionHeading enLabel="KEY INGREDIENTS" jpLabel="重視すべき成分" themeColor={result.themeColor} />
+        <p className="text-xs text-[#9B8E94] mb-3 text-center font-serif italic">
           元化粧品研究員ゆんが選ぶ、あなたの肌タイプに効く成分
         </p>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 justify-center">
           {result.recommendedIngredients.map((ing, i) => (
             <span
               key={i}
               className="text-xs px-3 py-1.5 bg-white rounded-full border font-medium"
               style={{ borderColor: result.themeColor, color: result.themeColor }}
             >
-              🧪 {ing}
+              {ing}
             </span>
           ))}
         </div>
@@ -239,15 +243,12 @@ export default async function ResultPage({ params, searchParams }: Props) {
 
       {/* NGケア */}
       <section className="px-5 pb-6">
-        <h2 className="text-base font-bold text-[#343A40] mb-3 flex items-center gap-2">
-          <span style={{ color: result.themeColor }}>|</span>
-          避けたいNGケア
-        </h2>
+        <SectionHeading enLabel="AVOID THIS" jpLabel="避けたいNGケア" themeColor={result.themeColor} />
         <ul className="space-y-2">
           {result.ngList.map((ng, i) => (
             <li
               key={i}
-              className="text-sm text-[#C62828] bg-white p-3 rounded-xl border border-[#F5DDE5] leading-snug"
+              className="text-sm text-[#A85959] bg-white p-3 rounded-xl border border-[#F5DDE5] leading-snug"
             >
               ✕ {ng}
             </li>
@@ -263,19 +264,22 @@ export default async function ResultPage({ params, searchParams }: Props) {
       />
 
       {/* Coming Soon: ルーティン全体提案 */}
-      <section className="mx-5 mb-6 rounded-2xl bg-[#F8F9FA] border border-[#E9ECEF] p-4">
+      <section className="mx-5 mb-6 rounded-2xl bg-white/80 border border-[#F2EAEF] p-4">
         <div className="flex items-start gap-3">
           <div className="text-2xl flex-shrink-0">🎁</div>
           <div className="flex-1">
-            <div className="inline-block px-2 py-0.5 bg-gradient-to-r from-[#4DB6AC] to-[#C2185B] text-white text-[9px] font-bold tracking-wider rounded-full mb-1">
-              COMING SOON
+            <div
+              className="inline-block px-2 py-0.5 text-white text-[9px] font-serif italic tracking-wider rounded-full mb-1"
+              style={{ background: 'linear-gradient(135deg, #D4829E 0%, #C2185B 100%)' }}
+            >
+              coming soon
             </div>
-            <h3 className="text-sm font-bold text-[#343A40] mb-1">
+            <h3 className="text-sm font-semibold text-[#4A3F45] mb-1 font-serif">
               ルーティン丸ごと提案 機能
             </h3>
-            <p className="text-[11px] text-[#6C757D] leading-relaxed">
+            <p className="text-[11px] text-[#9B8E94] leading-relaxed">
               クレンジング〜クリームまでSTEP別の最適ルーティン、
-              プチプラ／スタンダード／デパコス予算切替も実装予定🌿
+              プチプラ／スタンダード／デパコス予算切替も実装予定。
             </p>
           </div>
         </div>
@@ -295,27 +299,30 @@ export default async function ResultPage({ params, searchParams }: Props) {
       <section className="px-5 pb-10 text-center space-y-3">
         <Link
           href="/diagnosis/quiz"
-          className="block w-full py-3.5 text-sm font-semibold text-white rounded-full shadow-md active:scale-95 transition-all"
+          className="block w-full py-3.5 text-xs font-semibold text-white rounded-full shadow-md active:scale-95 transition-all tracking-[0.2em]"
           style={{
-            background: 'linear-gradient(135deg, #4DB6AC 0%, #C2185B 100%)',
+            background: 'linear-gradient(135deg, #D4829E 0%, #C2185B 100%)',
           }}
         >
-          もう一度診断する
+          RETAKE QUIZ
         </Link>
         <Link
           href="/"
-          className="block w-full py-3 text-sm font-semibold text-[#343A40] bg-white border border-[#E9ECEF] rounded-full active:scale-95 transition-all"
+          className="block w-full py-3 text-xs font-medium text-[#4A3F45] bg-white border border-[#F2EAEF] rounded-full active:scale-95 transition-all tracking-[0.2em]"
         >
-          商品一覧を見る
+          BACK TO PRODUCTS
         </Link>
       </section>
 
       {/* Instagram CTA */}
-      <footer className="px-5 pb-10 pt-4 text-center border-t border-white/50">
-        <p className="text-xs text-[#6C757D] mb-3">
+      <footer className="px-5 pb-10 pt-6 text-center border-t border-white/60">
+        <div className="text-[10px] tracking-[0.5em] text-[#D4829E] mb-3" aria-hidden>
+          · · ·
+        </div>
+        <p className="text-xs text-[#9B8E94] mb-3 leading-relaxed">
           最新のレビューや新商品情報は
           <br />
-          Instagramで発信中 🌿
+          Instagram で発信中
         </p>
         <a
           href="https://www.instagram.com/yun.skincare_"
@@ -333,6 +340,38 @@ export default async function ResultPage({ params, searchParams }: Props) {
           @yun.skincare_ をフォロー
         </a>
       </footer>
+    </div>
+  )
+}
+
+// ========== セクション見出し（エディトリアル風） ==========
+function SectionHeading({
+  enLabel,
+  jpLabel,
+  themeColor,
+}: {
+  enLabel: string
+  jpLabel: string
+  themeColor: string
+}) {
+  return (
+    <div className="text-center mb-4">
+      <p
+        className="font-serif text-[10px] tracking-[0.4em]"
+        style={{ color: themeColor }}
+      >
+        {enLabel}
+      </p>
+      <div
+        className="mt-1 text-[10px] tracking-[0.5em]"
+        style={{ color: themeColor }}
+        aria-hidden
+      >
+        · · ·
+      </div>
+      <h2 className="font-serif text-base text-[#4A3F45] mt-1 tracking-wider">
+        {jpLabel}
+      </h2>
     </div>
   )
 }

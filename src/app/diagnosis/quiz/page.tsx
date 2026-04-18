@@ -87,31 +87,37 @@ export default function QuizPage() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto min-h-screen bg-gradient-to-b from-white via-white to-[#FDF5F8]">
+    <div
+      className="max-w-2xl mx-auto min-h-screen"
+      style={{
+        background:
+          'linear-gradient(180deg, #FDF5F8 0%, #FAF0F2 50%, #F5EDE8 100%)',
+      }}
+    >
       {/* プログレスバー */}
-      <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm border-b border-[#E9ECEF]">
+      <div className="sticky top-0 z-10 bg-white/85 backdrop-blur-md border-b border-[#F2EAEF]">
         <div className="px-4 py-3">
           <div className="flex items-center justify-between mb-2">
-            <Link href="/diagnosis" className="text-xs text-[#6C757D] hover:text-[#4DB6AC]">
+            <Link href="/diagnosis" className="text-xs text-[#9B8E94] hover:text-[#C2185B] font-serif italic">
               ← トップへ
             </Link>
-            <p className="text-[10px] tracking-[0.2em] text-[#C2185B] font-semibold">
-              QUESTION {currentIndex + 1} / {questions.length}
+            <p className="text-[10px] tracking-[0.3em] text-[#D4829E] font-serif">
+              QUESTION {String(currentIndex + 1).padStart(2, '0')} / {String(questions.length).padStart(2, '0')}
             </p>
             <button
               onClick={handleReset}
-              className="text-xs text-[#6C757D] hover:text-[#C2185B]"
+              className="text-xs text-[#9B8E94] hover:text-[#C2185B] font-serif italic"
               aria-label="最初からやり直す"
             >
-              リセット
+              reset
             </button>
           </div>
-          <div className="h-1 bg-[#F0F0F0] rounded-full overflow-hidden">
+          <div className="h-[3px] bg-[#F2EAEF] rounded-full overflow-hidden">
             <div
               className="h-full transition-all duration-500 ease-out rounded-full"
               style={{
                 width: `${progress}%`,
-                background: 'linear-gradient(90deg, #4DB6AC 0%, #C2185B 100%)',
+                background: 'linear-gradient(90deg, #D4829E 0%, #C2185B 100%)',
               }}
             />
           </div>
@@ -119,33 +125,40 @@ export default function QuizPage() {
       </div>
 
       {/* 質問本体 */}
-      <div className="px-5 pt-8 pb-12">
+      <div className="px-5 pt-10 pb-16">
         <div key={currentIndex} className="animate-fade-in">
-          <h1 className="text-lg font-bold text-[#343A40] leading-relaxed mb-2">
+          {/* 装飾ドット */}
+          <div className="text-center text-[10px] tracking-[0.5em] text-[#D4829E] mb-4" aria-hidden>
+            · · ·
+          </div>
+
+          <h1 className="text-lg font-bold text-[#4A3F45] leading-relaxed mb-2 text-center">
             {currentQuestion.text}
           </h1>
           {currentQuestion.subtext && (
-            <p className="text-xs text-[#6C757D] mb-6">{currentQuestion.subtext}</p>
+            <p className="text-xs text-[#9B8E94] mb-6 text-center font-serif italic">
+              — {currentQuestion.subtext} —
+            </p>
           )}
 
           {/* 選択肢 */}
-          <div className="space-y-2.5 mt-5">
+          <div className="space-y-2.5 mt-7">
             {currentQuestion.options.map((option, i) => {
               const isSelected = answers[currentIndex] === i
               return (
                 <button
                   key={i}
                   onClick={() => handleSelect(i)}
-                  className={`w-full text-left p-4 rounded-2xl border-2 transition-all active:scale-[0.98] flex items-center gap-3 ${
+                  className={`w-full text-left p-4 rounded-2xl border transition-all active:scale-[0.98] flex items-center gap-3 ${
                     isSelected
-                      ? 'border-[#C2185B] bg-[#FDF2F6] shadow-sm'
-                      : 'border-[#E9ECEF] bg-white hover:border-[#F2C4D6] hover:bg-[#FDF5F8]'
+                      ? 'border-[#C2185B] bg-white shadow-[0_4px_20px_rgba(212,130,158,0.18)]'
+                      : 'border-[#F2EAEF] bg-white/80 hover:border-[#E8C7D4] hover:bg-white'
                   }`}
                 >
                   {option.emoji && <span className="text-xl flex-shrink-0">{option.emoji}</span>}
                   <span
                     className={`text-sm leading-snug ${
-                      isSelected ? 'text-[#343A40] font-semibold' : 'text-[#343A40]'
+                      isSelected ? 'text-[#4A3F45] font-semibold' : 'text-[#4A3F45]'
                     }`}
                   >
                     {option.label}
@@ -157,10 +170,10 @@ export default function QuizPage() {
 
           {/* 戻るボタン */}
           {currentIndex > 0 && (
-            <div className="mt-8 text-center">
+            <div className="mt-9 text-center">
               <button
                 onClick={handleBack}
-                className="text-xs text-[#6C757D] hover:text-[#4DB6AC] py-2 px-4"
+                className="text-xs text-[#9B8E94] hover:text-[#C2185B] py-2 px-4 font-serif italic transition-colors"
               >
                 ← 前の質問に戻る
               </button>
