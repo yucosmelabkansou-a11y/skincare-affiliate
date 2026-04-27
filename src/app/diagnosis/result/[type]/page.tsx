@@ -10,6 +10,7 @@ import {
 } from '@/lib/diagnosis'
 import { SITE_URL } from '@/lib/siteConfig'
 import MustProducts from '@/components/MustProducts'
+import RoutineSteps from '@/components/RoutineSteps'
 import ShareButtons from './ShareButtons'
 
 // 静的パラメータ生成（SSG）
@@ -263,27 +264,12 @@ export default async function ResultPage({ params, searchParams }: Props) {
         themeColor={result.themeColor}
       />
 
-      {/* Coming Soon: ルーティン全体提案 */}
-      <section className="mx-5 mb-6 rounded-2xl bg-white/80 border border-[#F2EAEF] p-4">
-        <div className="flex items-start gap-3">
-          <div className="text-2xl flex-shrink-0">🎁</div>
-          <div className="flex-1">
-            <div
-              className="inline-block px-2 py-0.5 text-white text-[9px] font-serif italic tracking-wider rounded-full mb-1"
-              style={{ background: 'linear-gradient(135deg, #D4829E 0%, #C2185B 100%)' }}
-            >
-              coming soon
-            </div>
-            <h3 className="text-sm font-semibold text-[#4A3F45] mb-1 font-serif">
-              ルーティン丸ごと提案 機能
-            </h3>
-            <p className="text-[11px] text-[#9B8E94] leading-relaxed">
-              クレンジング〜クリームまでSTEP別の最適ルーティン、
-              プチプラ／スタンダード／デパコス予算切替も実装予定。
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* 🌸 ゆんおすすめルーティン（STEP別） */}
+      <RoutineSteps
+        skinType={type as SkinType}
+        concern={concern}
+        themeColor={result.themeColor}
+      />
 
       {/* シェアボタン */}
       <section className="px-5 pb-6">
