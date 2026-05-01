@@ -109,10 +109,10 @@ export default function EditorialHero() {
           >
             肌診断を受ける
             <span
-              className="absolute -top-1.5 -right-1.5 px-1.5 py-0.5 text-[8px] tracking-wider font-serif italic text-[#C2185B] bg-white border border-[#D4829E] rounded-full leading-none"
+              className="absolute -top-1.5 -right-1.5 px-2 py-0.5 text-[8px] tracking-wider font-serif italic text-[#C2185B] bg-white border border-[#D4829E] rounded-full leading-none whitespace-nowrap"
               style={{ letterSpacing: '0.15em' }}
             >
-              soon
+              renewal
             </span>
           </Link>
           <a
