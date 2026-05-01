@@ -3,9 +3,9 @@ import Link from 'next/link'
 import { SITE_URL } from '@/lib/siteConfig'
 
 export const metadata: Metadata = {
-  title: '肌診断（現在構築中）｜元化粧品研究員監修・最適ルーティン自動提案',
+  title: '肌診断（現在構築中）｜元化粧品研究・商品企画監修・最適ルーティン自動提案',
   description:
-    '元化粧品会社の研究職・29年ノーファンデのゆん監修。8問・約2分であなたの肌タイプを判定し、最適なスキンケアルーティンを自動提案する診断機能を現在構築中。',
+    '元化粧品研究・商品企画・29年ノーファンデのゆん監修。8問・約2分であなたの肌タイプを判定し、最適なスキンケアルーティンを自動提案する診断機能を現在構築中。',
   alternates: {
     canonical: `${SITE_URL}/diagnosis`,
   },
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/diagnosis`,
     title: '肌診断｜現在構築中｜yun.skincare_',
     description:
-      '8問の診断 → 100種以上から最適ルーティン提案。元化粧品研究員監修の診断機能、現在構築中🌿',
+      '8問の診断 → 100種以上から最適ルーティン提案。元化粧品研究・商品企画監修の診断機能、現在構築中🌿',
     images: ['/og-image.jpg'],
   },
 }
@@ -142,7 +142,7 @@ export default function DiagnosisInProgressPage() {
             {
               icon: <FlaskIcon />,
               title: '100種以上から最適商品を選定',
-              text: '元化粧品研究員監修のスコアリング',
+              text: '元化粧品研究・商品企画監修のスコアリング',
             },
             {
               icon: <CartIcon />,

@@ -12,7 +12,7 @@ export default function ShareButtons({ resultName, type }: Props) {
   const [copied, setCopied] = useState(false)
 
   const url = `${SITE_URL}/diagnosis/result/${type}`
-  const shareText = `私の肌タイプは「${resultName}」でした🌸\n\n元化粧品研究員監修の肌診断、2分でわかるよ！\nあなたもチェックしてみて↓\n\n#yun_skincare肌診断`
+  const shareText = `私の肌タイプは「${resultName}」でした🌸\n\n元化粧品研究・商品企画監修の肌診断、2分でわかるよ！\nあなたもチェックしてみて↓\n\n#yun_skincare肌診断`
 
   const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(SITE_URL + '/diagnosis')}`
   const lineUrl = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(SITE_URL + '/diagnosis')}&text=${encodeURIComponent(shareText)}`

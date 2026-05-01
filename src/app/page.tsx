@@ -15,7 +15,7 @@ export default function Home() {
     alternateName: 'ゆんのスキンケアまとめ',
     url: SITE_URL,
     description:
-      'Instagram5.7万人フォロワーのゆん（元化粧品会社・研究職／生涯ノーファンデ歴29年）が厳選したスキンケア・ベースメイク163アイテム。',
+      'Instagram5.7万人フォロワーのゆん（元化粧品研究・商品企画／生涯ノーファンデ歴29年）が厳選したスキンケア・ベースメイク163アイテム。',
     inLanguage: 'ja-JP',
     potentialAction: {
       '@type': 'SearchAction',
@@ -30,9 +30,9 @@ export default function Home() {
     name: 'ゆん',
     alternateName: 'yun.skincare_',
     url: SITE_URL,
-    jobTitle: '元化粧品会社・研究職／スキンケアインフルエンサー',
+    jobTitle: '元化粧品研究・商品企画／スキンケアインフルエンサー',
     description:
-      '生涯ノーファンデ歴29年、元化粧品会社の研究職としての知見を活かし、本当に使ってよかったスキンケアアイテムを発信。Instagramフォロワー5.7万人。',
+      '生涯ノーファンデ歴29年、元化粧品研究・商品企画としての知見を活かし、本当に使ってよかったスキンケアアイテムを発信。Instagramフォロワー5.7万人。',
     sameAs: ['https://www.instagram.com/yun.skincare_'],
   }
 
@@ -96,7 +96,7 @@ export default function Home() {
       <footer className="px-4 py-8 mt-8 border-t border-[#E9ECEF] bg-[#F8F9FA]">
         <h2 className="text-sm font-bold text-[#343A40] mb-2">yun.skincare_ について</h2>
         <p className="text-xs text-[#6C757D] leading-relaxed mb-3">
-          元化粧品会社の研究職として培った成分知識と、生涯ノーファンデ歴29年の素肌主義の視点から、
+          元化粧品研究・商品企画として培った成分知識と、生涯ノーファンデ歴29年の素肌主義の視点から、
           化粧水・乳液・美容液・クリーム・日焼け止め・化粧下地・洗顔・クレンジングなど、
           本当に使ってよかったスキンケア・ベースメイクを厳選してご紹介しています。
           プチプラからデパコス、韓国コスメまで幅広くカバー。

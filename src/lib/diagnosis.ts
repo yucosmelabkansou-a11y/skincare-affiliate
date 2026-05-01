@@ -1,5 +1,5 @@
 // 肌診断 - 質問データ・結果タイプ・スコアリングロジック
-// 元化粧品研究員ゆん監修
+// 元化粧品研究・商品企画ゆん監修
 
 // ========== 型定義 ==========
 export type SkinType = 'dry' | 'oily' | 'combination' | 'sensitive' | 'aging' | 'normal'

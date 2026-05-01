@@ -75,7 +75,7 @@ export default function EditorialHero() {
         <div className="relative mt-8 grid grid-cols-2 gap-x-4 gap-y-4 max-w-md mx-auto">
           <FeatureBubble
             icon={<FlaskIcon />}
-            title="元化粧品研究員"
+            title="元化粧品研究・商品企画"
             subtitle="監修"
           />
           <FeatureBubble
@@ -198,7 +198,7 @@ const iconProps = {
 }
 
 function FlaskIcon() {
-  // 実験フラスコ（元化粧品研究員）
+  // 実験フラスコ（元化粧品研究・商品企画）
   return (
     <svg {...iconProps}>
       <path d="M10 3h4v5l4 9a2 2 0 01-2 3H8a2 2 0 01-2-3l4-9z" />

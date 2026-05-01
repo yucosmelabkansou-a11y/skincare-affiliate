@@ -1,5 +1,5 @@
 // 肌タイプ × 悩み から最適スキンケアルーティンを自動生成
-// 元化粧品研究員ゆん監修ロジック
+// 元化粧品研究・商品企画ゆん監修ロジック
 
 import type { Product } from '@/types/product'
 import type { SkinType, Concern } from './diagnosis'

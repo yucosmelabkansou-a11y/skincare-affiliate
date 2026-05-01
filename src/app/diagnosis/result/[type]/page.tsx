@@ -28,8 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const result = resultTypes[type as SkinType]
   if (!result) return {}
 
-  const title = `${result.name}診断結果｜元化粧品研究員監修のスキンケアアドバイス`
-  const description = `あなたの肌タイプは「${result.name}」。${result.description.slice(0, 80)}...元化粧品研究員のゆんが監修した専門的なケア方法を解説。`
+  const title = `${result.name}診断結果｜元化粧品研究・商品企画監修のスキンケアアドバイス`
+  const description = `あなたの肌タイプは「${result.name}」。${result.description.slice(0, 80)}...元化粧品研究・商品企画のゆんが監修した専門的なケア方法を解説。`
 
   return {
     title,
@@ -41,13 +41,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       url: `${SITE_URL}/diagnosis/result/${type}`,
       title: `私の肌タイプは「${result.name}」でした🌸`,
-      description: `元化粧品研究員監修の肌診断でわかった、私の肌タイプと最適なケア方法。`,
+      description: `元化粧品研究・商品企画監修の肌診断でわかった、私の肌タイプと最適なケア方法。`,
       images: ['/og-image.jpg'],
     },
     twitter: {
       card: 'summary_large_image',
       title: `私の肌タイプは「${result.name}」でした🌸`,
-      description: '元化粧品研究員監修の肌診断であなたのタイプもチェック！',
+      description: '元化粧品研究・商品企画監修の肌診断であなたのタイプもチェック！',
     },
   }
 }
@@ -81,7 +81,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
     author: {
       '@type': 'Person',
       name: 'ゆん（yun.skincare_）',
-      jobTitle: '元化粧品会社・研究職',
+      jobTitle: '元化粧品研究・商品企画',
       url: 'https://www.instagram.com/yun.skincare_',
     },
     publisher: {
@@ -227,7 +227,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
       <section className="px-5 pb-6">
         <SectionHeading enLabel="KEY INGREDIENTS" jpLabel="重視すべき成分" themeColor={result.themeColor} />
         <p className="text-xs text-[#9B8E94] mb-3 text-center font-serif italic">
-          元化粧品研究員ゆんが選ぶ、あなたの肌タイプに効く成分
+          元化粧品研究・商品企画ゆんが選ぶ、あなたの肌タイプに効く成分
         </p>
         <div className="flex flex-wrap gap-2 justify-center">
           {result.recommendedIngredients.map((ing, i) => (

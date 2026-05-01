@@ -62,7 +62,7 @@ export default function RoutineSteps({ skinType, concern, themeColor }: Props) {
 
       {/* フッター注釈 */}
       <p className="text-[10px] text-[#9B8E94] mt-5 text-center font-serif italic leading-relaxed">
-        ※元化粧品研究員ゆんが、あなたの肌悩みに合わせて
+        ※元化粧品研究・商品企画ゆんが、あなたの肌悩みに合わせて
         <br />
         100種以上の商品から最適解を自動提案しています
       </p>

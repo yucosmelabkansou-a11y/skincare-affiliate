@@ -67,7 +67,7 @@ export default function MustProducts({ skinType, concern, themeColor }: Props) {
             ゆんMUSTアイテム
           </h2>
           <p className="text-[11px] text-[#9B8E94] mt-2 leading-relaxed">
-            元化粧品研究員ゆんが自信を持って推す、
+            元化粧品研究・商品企画ゆんが自信を持って推す、
             <br />
             本当に使ってほしいアイテム
           </p>
