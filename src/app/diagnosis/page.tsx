@@ -3,74 +3,25 @@ import Link from 'next/link'
 import { SITE_URL } from '@/lib/siteConfig'
 
 export const metadata: Metadata = {
-  title: '無料 肌診断｜元化粧品研究員監修・8問でわかるあなたの肌タイプ',
+  title: '肌診断（近日公開）｜元化粧品研究員監修・あなたに最適なルーティンを自動提案',
   description:
-    '元化粧品会社の研究職・29年ノーファンデのゆん監修。8問・約2分で肌タイプ（乾燥肌・脂性肌・混合肌・敏感肌・エイジング肌・普通肌）と悩み別の正しいスキンケアがわかる無料の肌診断。',
-  keywords: [
-    '肌診断',
-    '肌診断 無料',
-    '肌タイプ 診断',
-    '敏感肌 診断',
-    '乾燥肌 診断',
-    '脂性肌 診断',
-    'スキンケア 診断',
-    '肌質 診断',
-  ],
+    '元化粧品会社の研究職・29年ノーファンデのゆん監修。8問・約2分で肌タイプ × 悩みから100種以上の商品を自動スコアリング、最適なスキンケアルーティンを丸ごと提案する無料診断ツールを近日公開予定。',
   alternates: {
     canonical: `${SITE_URL}/diagnosis`,
   },
   openGraph: {
     type: 'website',
     url: `${SITE_URL}/diagnosis`,
-    title: '無料 肌診断｜元化粧品研究員監修・8問でわかる肌タイプ',
+    title: '肌診断（近日公開）｜yun.skincare_',
     description:
-      '元化粧品会社の研究職・29年ノーファンデのゆん監修。8問・約2分で肌タイプと悩み別ケアがわかる無料診断。',
+      '8問・約2分で肌タイプと最適ルーティンがわかる無料診断。元化粧品研究員監修。近日公開！',
     images: ['/og-image.jpg'],
   },
 }
 
-export default function DiagnosisPage() {
-  const quizJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Quiz',
-    name: 'ゆんの肌診断',
-    description: '8問・約2分で肌タイプと悩み別の正しいスキンケアがわかる無料の肌診断',
-    educationalLevel: 'beginner',
-    inLanguage: 'ja',
-    url: `${SITE_URL}/diagnosis`,
-    isPartOf: {
-      '@type': 'WebSite',
-      name: 'yun.skincare_',
-      url: SITE_URL,
-    },
-    author: {
-      '@type': 'Person',
-      name: 'ゆん（yun.skincare_）',
-      jobTitle: '元化粧品会社・研究職',
-      url: 'https://www.instagram.com/yun.skincare_',
-    },
-  }
-
-  const breadcrumbJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'ホーム', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: '肌診断', item: `${SITE_URL}/diagnosis` },
-    ],
-  }
-
+export default function DiagnosisComingSoonPage() {
   return (
     <div className="max-w-2xl mx-auto min-h-screen relative overflow-hidden">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(quizJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-
       {/* 背景グラデ */}
       <div
         className="absolute inset-0 -z-10"
@@ -80,7 +31,6 @@ export default function DiagnosisPage() {
         }}
         aria-hidden
       />
-      {/* 装飾円 */}
       <div
         className="absolute -top-10 -right-20 w-72 h-72 rounded-full opacity-50 -z-10"
         style={{
@@ -108,7 +58,17 @@ export default function DiagnosisPage() {
       </nav>
 
       {/* Hero */}
-      <section className="px-6 pt-10 pb-10 text-center">
+      <section className="px-6 pt-12 pb-10 text-center">
+        {/* COMING SOON ラベル */}
+        <div
+          className="inline-block px-4 py-1.5 text-[10px] tracking-[0.4em] text-white rounded-full font-serif italic mb-4"
+          style={{
+            background: 'linear-gradient(135deg, #D4829E 0%, #C2185B 100%)',
+          }}
+        >
+          coming soon
+        </div>
+
         {/* 装飾ドット */}
         <div className="text-[10px] tracking-[0.5em] text-[#D4829E]" aria-hidden>
           · · · · ·
@@ -122,7 +82,7 @@ export default function DiagnosisPage() {
           SKIN TYPE
         </p>
         <h1
-          className="font-serif text-[36px] leading-[1] tracking-[0.18em] text-[#4A3F45]"
+          className="font-serif text-[40px] leading-[1] tracking-[0.18em] text-[#4A3F45]"
           style={{ fontWeight: 500 }}
         >
           DIAGNOSIS
@@ -131,57 +91,42 @@ export default function DiagnosisPage() {
           BY YUN
         </p>
 
-        {/* 装飾ドット */}
         <div className="mt-5 text-[10px] tracking-[0.5em] text-[#D4829E]" aria-hidden>
           · · ·
         </div>
 
-        {/* リード */}
-        <p className="text-sm text-[#6C757D] leading-[1.9] mt-5">
-          あなたの肌悩みやライフスタイルから、
+        {/* メイン訴求 */}
+        <p className="text-base text-[#4A3F45] leading-[1.9] mt-6 font-serif tracking-wider">
+          肌診断から、
           <br />
-          最適なスキンケアタイプをご提案します。
+          あなたに最適な組み合わせを提案。
         </p>
 
-        <div className="inline-block mt-5 px-4 py-1.5 bg-white/80 border border-[#F2EAEF] rounded-full text-[11px] text-[#9B8E94] tracking-wider font-serif italic">
-          全 8 問 / 所要時間 約 2 分
-        </div>
-
-        {/* CTA */}
-        <div className="mt-9">
-          <Link
-            href="/diagnosis/quiz"
-            className="inline-block px-12 py-4 text-xs font-semibold text-white rounded-full shadow-md active:scale-95 transition-all tracking-[0.2em]"
-            style={{
-              background:
-                'linear-gradient(135deg, #D4829E 0%, #C2185B 100%)',
-            }}
-          >
-            START
-          </Link>
-        </div>
+        <p className="text-xs text-[#9B8E94] leading-[1.9] mt-4 font-serif italic">
+          — Coming this season —
+        </p>
       </section>
 
-      {/* 診断でわかること - エディトリアル風カード */}
+      {/* 機能予告 */}
       <section className="px-6 pb-10">
         <div className="text-center mb-5">
           <p className="text-[10px] tracking-[0.4em] text-[#D4829E] font-serif">
-            WHAT YOU&apos;LL GET
+            WHAT&apos;S COMING
           </p>
           <div className="mt-1 text-[10px] tracking-[0.5em] text-[#D4829E]" aria-hidden>
             · · ·
           </div>
           <h2 className="font-serif text-base text-[#4A3F45] mt-1 tracking-wider">
-            診断でわかること
+            診断でできること
           </h2>
         </div>
 
         <div className="space-y-3">
           {[
-            { icon: <BeakerIcon />, title: 'あなたの肌タイプ', text: '6タイプから最適な肌質を判定' },
-            { icon: <BulbIcon />, title: '肌悩みに合うケア方法', text: '今すぐ取り入れたいお手入れ' },
-            { icon: <ShieldIcon />, title: 'やりがちなNGケア', text: '逆効果になる習慣を回避' },
-            { icon: <FlaskIcon />, title: '重視すべき成分', text: '元研究員が選ぶおすすめ成分' },
+            { icon: <BeakerIcon />, title: '8問・約2分で肌タイプ判定', text: '6タイプ × 6悩みで36通りに分岐' },
+            { icon: <BulbIcon />, title: 'STEP別ルーティンを自動提案', text: 'クレンジング〜日焼け止めまで6STEP' },
+            { icon: <FlaskIcon />, title: '100種以上から最適商品を自動選定', text: '元化粧品研究員監修のスコアリング' },
+            { icon: <ShieldIcon />, title: '結果はAmazon・楽天で即購入可', text: '迷う時間ゼロで揃う' },
           ].map((item) => (
             <div
               key={item.title}
@@ -197,47 +142,47 @@ export default function DiagnosisPage() {
         </div>
       </section>
 
-      {/* 監修者情報 */}
-      <section className="mx-6 mb-10 p-5 bg-white/80 backdrop-blur-sm rounded-3xl border border-[#F2EAEF]">
-        <div className="text-center mb-3">
-          <p className="text-[10px] tracking-[0.4em] text-[#D4829E] font-serif">
-            ABOUT THIS QUIZ
-          </p>
-        </div>
-        <p className="text-xs text-[#6C757D] leading-[1.9] mb-3">
-          元化粧品会社の研究職として培った成分知識と、
-          生涯ノーファンデ歴29年の素肌主義の視点から、
-          ゆんが質問・診断ロジック・結果アドバイスのすべてを監修しています。
+      {/* Instagram通知CTA */}
+      <section className="mx-6 mb-10 p-6 bg-white/80 backdrop-blur-sm rounded-3xl border border-[#F2EAEF] text-center">
+        <p className="text-[10px] tracking-[0.4em] text-[#D4829E] font-serif mb-2">
+          STAY TUNED
+        </p>
+        <h3 className="font-serif text-lg text-[#4A3F45] tracking-wider mb-3">
+          公開のお知らせを受け取る
+        </h3>
+        <p className="text-xs text-[#9B8E94] leading-relaxed mb-4">
+          診断機能の公開・新商品レビューは
+          <br />
+          Instagram で先行案内中
         </p>
         <a
           href="https://www.instagram.com/yun.skincare_"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-xs font-serif italic text-[#C2185B] hover:underline"
+          className="inline-flex items-center gap-1.5 px-5 py-2.5 text-xs font-semibold text-white rounded-full active:scale-95 transition-all"
+          style={{
+            background:
+              'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)',
+          }}
         >
-          @yun.skincare_ をチェック →
+          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg>
+          @yun.skincare_ をフォロー
         </a>
       </section>
 
-      {/* フッター装飾 */}
+      {/* フッター */}
       <div className="text-center pb-10">
         <div className="text-[10px] tracking-[0.5em] text-[#D4829E] mb-3" aria-hidden>
-          · · · · ·
+          · · ·
         </div>
         <Link
-          href="/diagnosis/quiz"
-          className="inline-block px-10 py-3.5 text-xs font-semibold text-white rounded-full shadow-md active:scale-95 transition-all tracking-[0.2em]"
-          style={{
-            background: 'linear-gradient(135deg, #D4829E 0%, #C2185B 100%)',
-          }}
+          href="/"
+          className="text-xs text-[#9B8E94] hover:text-[#C2185B] transition-colors font-serif italic"
         >
-          START
+          ← 商品一覧に戻る
         </Link>
-        <div className="mt-5">
-          <Link href="/" className="text-xs text-[#9B8E94] hover:text-[#C2185B] transition-colors font-serif italic">
-            ← ホームに戻る
-          </Link>
-        </div>
       </div>
     </div>
   )

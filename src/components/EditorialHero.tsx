@@ -101,13 +101,19 @@ export default function EditorialHero() {
         <div className="mt-9 flex justify-center gap-3">
           <Link
             href="/diagnosis"
-            className="px-8 py-3 text-xs font-semibold text-white rounded-full shadow-md active:scale-95 transition-all tracking-[0.15em]"
+            className="relative px-8 py-3 text-xs font-semibold text-white rounded-full shadow-md active:scale-95 transition-all tracking-[0.15em]"
             style={{
               background:
                 'linear-gradient(135deg, #D4829E 0%, #C2185B 100%)',
             }}
           >
             肌診断を受ける
+            <span
+              className="absolute -top-1.5 -right-1.5 px-1.5 py-0.5 text-[8px] tracking-wider font-serif italic text-[#C2185B] bg-white border border-[#D4829E] rounded-full leading-none"
+              style={{ letterSpacing: '0.15em' }}
+            >
+              soon
+            </span>
           </Link>
           <a
             href="#products"
