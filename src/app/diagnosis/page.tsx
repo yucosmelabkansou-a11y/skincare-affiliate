@@ -3,23 +3,23 @@ import Link from 'next/link'
 import { SITE_URL } from '@/lib/siteConfig'
 
 export const metadata: Metadata = {
-  title: '肌診断（リニューアル中）｜元化粧品研究員監修・最適ルーティン自動提案',
+  title: '肌診断（現在構築中）｜元化粧品研究員監修・最適ルーティン自動提案',
   description:
-    '元化粧品会社の研究職・29年ノーファンデのゆん監修。肌診断 × あなた専用ルーティン提案機能を、より精度高く・より使いやすく全面再構築中。完成まで今しばらくお待ちください。',
+    '元化粧品会社の研究職・29年ノーファンデのゆん監修。8問・約2分であなたの肌タイプを判定し、最適なスキンケアルーティンを自動提案する診断機能を現在構築中。',
   alternates: {
     canonical: `${SITE_URL}/diagnosis`,
   },
   openGraph: {
     type: 'website',
     url: `${SITE_URL}/diagnosis`,
-    title: '肌診断、生まれ変わります｜yun.skincare_',
+    title: '肌診断｜現在構築中｜yun.skincare_',
     description:
-      '前回お試しいただいた肌診断を、より精度高く・より使いやすく全面再構築中。完成までもう少しお待ちください🌿',
+      '8問の診断 → 100種以上から最適ルーティン提案。元化粧品研究員監修の診断機能、現在構築中🌿',
     images: ['/og-image.jpg'],
   },
 }
 
-export default function DiagnosisRenewalPage() {
+export default function DiagnosisInProgressPage() {
   return (
     <div className="max-w-2xl mx-auto min-h-screen relative overflow-hidden">
       {/* 背景グラデ */}
@@ -59,14 +59,14 @@ export default function DiagnosisRenewalPage() {
 
       {/* Hero */}
       <section className="px-6 pt-10 pb-10 text-center">
-        {/* RENEWAL ラベル */}
+        {/* IN PROGRESS ラベル */}
         <div
           className="inline-block px-4 py-1.5 text-[10px] tracking-[0.4em] text-white rounded-full font-serif italic mb-4"
           style={{
             background: 'linear-gradient(135deg, #D4829E 0%, #C2185B 100%)',
           }}
         >
-          renewal in progress
+          in progress
         </div>
 
         {/* 装飾ドット */}
@@ -97,35 +97,33 @@ export default function DiagnosisRenewalPage() {
 
         {/* メイン訴求 */}
         <p className="text-base text-[#4A3F45] leading-[1.9] mt-6 font-serif tracking-wider">
-          肌診断、生まれ変わります。
+          肌診断、現在構築中。
         </p>
 
         <p className="text-xs text-[#6C757D] leading-[1.9] mt-5 px-2">
-          前回お試しいただいた肌診断を、
+          8問の診断から
           <br />
-          みなさんの声を反映して
+          <span className="text-[#C2185B] font-semibold">あなたに最適なスキンケアの組み合わせ</span>
           <br />
-          <span className="text-[#C2185B] font-semibold">より精度高く・より使いやすく</span>
-          <br />
-          全面再構築中です。
+          を自動提案する機能を準備中です。
         </p>
 
         <p className="text-xs text-[#9B8E94] leading-[1.9] mt-5 font-serif italic">
-          — Coming back, better. —
+          — Coming this season —
         </p>
       </section>
 
-      {/* 何が変わるか */}
+      {/* 機能予告 */}
       <section className="px-6 pb-10">
         <div className="text-center mb-5">
           <p className="text-[10px] tracking-[0.4em] text-[#D4829E] font-serif">
-            WHAT&apos;S NEW
+            WHAT&apos;S COMING
           </p>
           <div className="mt-1 text-[10px] tracking-[0.5em] text-[#D4829E]" aria-hidden>
             · · ·
           </div>
           <h2 className="font-serif text-base text-[#4A3F45] mt-1 tracking-wider">
-            進化する4つのポイント
+            診断でできること
           </h2>
         </div>
 
@@ -133,71 +131,37 @@ export default function DiagnosisRenewalPage() {
           {[
             {
               icon: <BeakerIcon />,
-              tag: 'EVOLVED',
-              title: '質問は研究員視点へ',
-              text: '8問・約2分で、より深く肌タイプを判定',
+              title: '8問・約2分で肌タイプ判定',
+              text: '6タイプ × 6つの悩みで多軸診断',
             },
             {
               icon: <LayersIcon />,
-              tag: 'NEW',
-              title: 'ルーティン全6STEP提案',
-              text: 'クレンジング〜日焼け止めまで丸ごと最適化',
+              title: 'STEP別ルーティンを自動提案',
+              text: 'クレンジング〜日焼け止めまで6STEP',
             },
             {
               icon: <FlaskIcon />,
-              tag: 'NEW',
-              title: '100種以上から自動選定',
-              text: '元化粧品研究員監修のスコアリングロジック',
+              title: '100種以上から最適商品を選定',
+              text: '元化粧品研究員監修のスコアリング',
             },
             {
               icon: <CartIcon />,
-              tag: 'NEW',
-              title: 'Amazon・楽天で即購入',
-              text: '迷う時間ゼロで揃う・予算切替対応予定',
+              title: '結果はAmazon・楽天で即購入可',
+              text: '迷う時間ゼロで揃う',
             },
           ].map((item) => (
             <div
               key={item.title}
-              className="relative flex items-center gap-3 p-4 bg-white/80 backdrop-blur-sm rounded-2xl border border-[#F2EAEF]"
+              className="flex items-center gap-3 p-4 bg-white/80 backdrop-blur-sm rounded-2xl border border-[#F2EAEF]"
             >
               <div className="text-[#D4829E] flex-shrink-0">{item.icon}</div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 mb-0.5">
-                  <p className="text-sm font-semibold text-[#4A3F45]">{item.title}</p>
-                  <span
-                    className="text-[8px] font-serif italic tracking-[0.2em] text-[#C2185B] border border-[#E8C7D4] px-1.5 py-0.5 rounded-full leading-none"
-                  >
-                    {item.tag}
-                  </span>
-                </div>
-                <p className="text-xs text-[#9B8E94]">{item.text}</p>
+              <div>
+                <p className="text-sm font-semibold text-[#4A3F45]">{item.title}</p>
+                <p className="text-xs text-[#9B8E94] mt-0.5">{item.text}</p>
               </div>
             </div>
           ))}
         </div>
-      </section>
-
-      {/* 制作中メッセージ */}
-      <section className="mx-6 mb-10 p-5 bg-white/85 backdrop-blur-sm rounded-3xl border border-[#F2EAEF]">
-        <div className="text-center mb-3">
-          <p className="text-[10px] tracking-[0.4em] text-[#D4829E] font-serif">
-            FROM YUN
-          </p>
-        </div>
-        <p className="text-xs text-[#4A3F45] leading-[1.9] text-left">
-          公開を楽しみに待ってくださってる方、お待たせしてごめんなさい🌸
-          <br />
-          <br />
-          一度公開した診断版を見直したら、もっと精度を上げたくて、
-          質問もロジックも全部組み直しています。
-          <br />
-          <br />
-          完成したら、みなさんの肌悩みに本当に合う
-          <span className="font-semibold text-[#C2185B]">「あなた専用ルーティン」</span>
-          が出せるようになります。
-          <br />
-          もう少しだけ、待っていてください🫶
-        </p>
       </section>
 
       {/* Instagram通知CTA */}
@@ -209,7 +173,7 @@ export default function DiagnosisRenewalPage() {
           公開のお知らせを受け取る
         </h3>
         <p className="text-xs text-[#9B8E94] leading-relaxed mb-4">
-          リニューアル完成・新商品レビューは
+          診断機能の公開・新商品レビューは
           <br />
           Instagram で先行案内中
         </p>
@@ -259,18 +223,15 @@ const iconProps = {
 }
 
 function BeakerIcon() {
-  // 質問評価
   return (
     <svg {...iconProps}>
-      <path d="M9 2v6l-4 9a2 2 0 002 3h10a2 2 0 002-3l-4-9V2" />
-      <path d="M9 2h6" />
-      <path d="M7 14h10" />
+      <circle cx="12" cy="12" r="9" />
+      <path d="M8 12l3 3 5-5" />
     </svg>
   )
 }
 
 function LayersIcon() {
-  // STEP積み重ね
   return (
     <svg {...iconProps}>
       <path d="M12 2L2 7l10 5 10-5z" />
@@ -281,17 +242,16 @@ function LayersIcon() {
 }
 
 function FlaskIcon() {
-  // 研究員監修
   return (
     <svg {...iconProps}>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M9 9l6 6M15 9l-6 6" />
+      <path d="M10 3h4v5l4 9a2 2 0 01-2 3H8a2 2 0 01-2-3l4-9z" />
+      <path d="M9 3h6" />
+      <path d="M8.5 14h7" />
     </svg>
   )
 }
 
 function CartIcon() {
-  // 即購入
   return (
     <svg {...iconProps}>
       <circle cx="9" cy="20" r="1.2" />
