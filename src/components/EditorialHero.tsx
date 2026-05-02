@@ -126,7 +126,7 @@ export default function EditorialHero() {
               boxShadow: '0 18px 40px -28px oklch(0.5 0.06 70 / .35)',
             }}
           >
-            162アイテムを見る
+            ゆんのおすすめを見る
             <span
               className="inline-block w-5 h-px relative"
               style={{ background: 'currentColor' }}
