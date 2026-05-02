@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Noto_Sans_JP, Cormorant_Garamond } from 'next/font/google'
+import { Inter, Noto_Sans_JP, Cormorant_Garamond, Shippori_Mincho, Italiana, Jost } from 'next/font/google'
 import './globals.css'
 import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_DESCRIPTION } from '@/lib/siteConfig'
 
@@ -15,11 +15,36 @@ const notoSansJP = Noto_Sans_JP({
   display: 'swap',
 })
 
-// エディトリアル感を出す英字セリフ体（見出し・ブランド名強調用）
+// エディトリアル英字セリフ体（見出し・ブランド名）
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
+  weight: ['300', '400', '500', '600'],
+  style: ['normal', 'italic'],
   variable: '--font-serif',
+  display: 'swap',
+})
+
+// 和文セリフ（本文・見出し用）
+const shipporiMincho = Shippori_Mincho({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-jp-serif',
+  display: 'swap',
+})
+
+// 装飾用スクリプト体（ワードマーク "Skin&Care"）
+const italiana = Italiana({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-script',
+  display: 'swap',
+})
+
+// 細身サンセリフ（eyebrow・スモールキャップス）
+const jost = Jost({
+  subsets: ['latin'],
+  weight: ['300', '400'],
+  variable: '--font-jost',
   display: 'swap',
 })
 
@@ -106,8 +131,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ja" className={`${inter.variable} ${notoSansJP.variable} ${cormorant.variable}`}>
-      <body className="min-h-screen bg-white text-[#6C757D] font-sans antialiased">
+    <html lang="ja" className={`${inter.variable} ${notoSansJP.variable} ${cormorant.variable} ${shipporiMincho.variable} ${italiana.variable} ${jost.variable}`}>
+      <body className="min-h-screen bg-[var(--bg-cream)] text-[var(--ink)] font-jp antialiased">
         {children}
       </body>
     </html>

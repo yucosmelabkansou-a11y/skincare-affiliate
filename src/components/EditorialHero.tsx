@@ -1,240 +1,190 @@
-// エディトリアル風ヒーロー（参考イメージのテンプレ風）
-// ピンクグラデ × セリフ体 × バブルに細い線アイコン
+// クリーム×ゴールド エディトリアルヒーロー
+// HTMLモックのトーンを Next.js モバイル幅に合わせて移植
 
 import Link from 'next/link'
 import { INSTAGRAM_URL } from '@/lib/siteConfig'
 
 export default function EditorialHero() {
   return (
-    <section className="relative overflow-hidden">
-      {/* 背景グラデ */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            'linear-gradient(180deg, #FDF5F8 0%, #FAF0F2 40%, #F5EDE8 100%)',
-        }}
-        aria-hidden
-      />
-      {/* 背景の装飾丸（薄く） */}
-      <div
-        className="absolute -top-10 -left-20 w-64 h-64 rounded-full opacity-40"
-        style={{
-          background:
-            'radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(252,228,236,0) 70%)',
-        }}
-        aria-hidden
-      />
-      <div
-        className="absolute bottom-0 -right-10 w-48 h-48 rounded-full opacity-50"
-        style={{
-          background:
-            'radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(252,228,236,0) 70%)',
-        }}
-        aria-hidden
-      />
+    <section
+      className="relative overflow-hidden"
+      style={{
+        background: `
+          radial-gradient(60% 70% at 80% 10%, oklch(0.96 0.025 30 / .7), transparent 70%),
+          radial-gradient(50% 60% at 10% 90%, oklch(0.97 0.02 80 / .8), transparent 70%),
+          linear-gradient(180deg, var(--bg-ivory) 0%, var(--bg-cream) 60%, var(--bg-warm) 100%)
+        `,
+      }}
+    >
+      <div className="relative px-6 pt-16 pb-14 text-center">
+        {/* eyebrow with rule */}
+        <div
+          className="flex items-center justify-center gap-3 mb-7"
+          style={{
+            fontFamily: 'var(--font-sans)',
+            fontWeight: 300,
+            letterSpacing: '0.45em',
+            fontSize: '10px',
+            color: 'var(--gold-deep)',
+            textTransform: 'uppercase',
+          }}
+        >
+          <span className="block w-7 h-px" style={{ background: 'var(--gold)' }} aria-hidden />
+          <span>The Beauty Edit · 162 items</span>
+          <span className="block w-7 h-px" style={{ background: 'var(--gold)' }} aria-hidden />
+        </div>
 
-      {/* コンテンツ */}
-      <div className="relative px-6 pt-8 pb-10 text-center">
-        {/* ブランド名 */}
+        {/* h1 — 和文セリフ */}
+        <h1
+          className="leading-[1.7] mx-auto"
+          style={{
+            fontFamily: 'var(--font-jp)',
+            fontWeight: 500,
+            fontSize: 'clamp(22px, 6vw, 30px)',
+            letterSpacing: '0.14em',
+            color: 'var(--ink)',
+            maxWidth: '20ch',
+          }}
+        >
+          本当に良かったものだけを、
+          <br />
+          あなたへ。
+        </h1>
+
+        {/* tagline */}
+        <p
+          className="mt-5"
+          style={{
+            fontFamily: 'var(--font-serif)',
+            fontStyle: 'italic',
+            fontWeight: 300,
+            fontSize: 'clamp(13px, 3.6vw, 16px)',
+            letterSpacing: '0.32em',
+            color: 'var(--gold-deep)',
+            textTransform: 'uppercase',
+          }}
+        >
+          — Skincare Edit by Yun —
+        </p>
+
+        {/* wordmark Skin&Care */}
+        <div
+          className="mt-8"
+          style={{
+            fontFamily: 'var(--font-script)',
+            fontSize: 'clamp(48px, 14vw, 72px)',
+            letterSpacing: '0.04em',
+            color: 'var(--gold-deep)',
+            lineHeight: 1,
+          }}
+        >
+          Skin
+          <span
+            style={{
+              fontFamily: 'var(--font-serif)',
+              fontStyle: 'italic',
+              fontWeight: 300,
+              color: 'var(--gold)',
+            }}
+          >
+            &amp;
+          </span>
+          Care
+        </div>
+
+        {/* IG handle */}
         <a
           href={INSTAGRAM_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block text-sm tracking-widest text-[#6C757D] hover:text-[#C2185B] transition-colors"
+          className="inline-block mt-6 transition-colors hover:opacity-70"
+          style={{
+            fontFamily: 'var(--font-sans)',
+            fontWeight: 300,
+            fontSize: '11px',
+            letterSpacing: '0.4em',
+            color: 'var(--ink-mute)',
+            textTransform: 'lowercase',
+          }}
         >
-          yun.skincare_
+          edited&nbsp;&nbsp;by&nbsp;&nbsp;yun.skincare_
         </a>
 
-        {/* 装飾ドット */}
-        <div
-          className="mt-2 mb-4 text-[10px] tracking-[0.5em] text-[#D4829E]"
-          aria-hidden
-        >
-          · · · · ·
-        </div>
-
-        {/* セリフ体の大見出し */}
-        <p
-          className="font-serif text-[11px] tracking-[0.4em] text-[#D4829E] mb-1"
-          style={{ fontVariant: 'small-caps' }}
-        >
-          BEAUTY
-        </p>
-        <h1
-          className="font-serif text-[40px] leading-[1] tracking-[0.15em] text-[#4A3F45]"
-          style={{ fontWeight: 500 }}
-        >
-          SKINCARE
-        </h1>
-        <p className="mt-3 text-[11px] tracking-[0.25em] text-[#9B8E94]">
-          EDITED BY YUN
-        </p>
-
-        {/* 4つの特徴バブル */}
-        <div className="relative mt-8 grid grid-cols-2 gap-x-4 gap-y-4 max-w-md mx-auto">
-          <FeatureBubble
-            icon={<FlaskIcon />}
-            title="元化粧品研究・商品企画"
-            subtitle="監修"
-          />
-          <FeatureBubble
-            icon={<MirrorIcon />}
-            title="29年"
-            subtitle="ノーファンデ"
-            align="right"
-          />
-          <FeatureBubble
-            icon={<LeafIcon />}
-            title="肌悩み別"
-            subtitle="ゆん厳選"
-          />
-          <FeatureBubble
-            icon={<SparkleIcon />}
-            title="Instagram"
-            subtitle="5.7万人"
-            align="right"
-          />
-        </div>
-
         {/* CTA */}
-        <div className="mt-9 flex justify-center gap-3">
+        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3 px-2">
+          <a
+            href="#products"
+            className="inline-flex items-center justify-center gap-3 px-9 py-4 transition-all hover:bg-[var(--gold)] hover:text-white"
+            style={{
+              fontFamily: 'var(--font-jp)',
+              fontWeight: 500,
+              fontSize: '13px',
+              letterSpacing: '0.32em',
+              border: '1px solid var(--gold)',
+              color: 'var(--ink)',
+              background: '#fff',
+              boxShadow: '0 18px 40px -28px oklch(0.5 0.06 70 / .35)',
+            }}
+          >
+            162アイテムを見る
+            <span
+              className="inline-block w-5 h-px relative"
+              style={{ background: 'currentColor' }}
+            >
+              <span
+                className="absolute -top-[3px] right-0 w-[7px] h-[7px]"
+                style={{
+                  borderRight: '1px solid currentColor',
+                  borderTop: '1px solid currentColor',
+                  transform: 'rotate(45deg)',
+                }}
+              />
+            </span>
+          </a>
           <Link
             href="/diagnosis"
-            className="relative px-8 py-3 text-xs font-semibold text-white rounded-full shadow-md active:scale-95 transition-all tracking-[0.15em]"
+            className="relative inline-flex items-center justify-center gap-3 px-9 py-4 transition-all hover:opacity-70"
             style={{
-              background:
-                'linear-gradient(135deg, #D4829E 0%, #C2185B 100%)',
+              fontFamily: 'var(--font-jp)',
+              fontWeight: 500,
+              fontSize: '13px',
+              letterSpacing: '0.32em',
+              border: '1px solid var(--ink)',
+              color: 'var(--ink)',
+              background: 'transparent',
             }}
           >
             肌診断を受ける
             <span
-              className="absolute -top-1.5 -right-1.5 px-2 py-0.5 text-[8px] tracking-wider font-serif italic text-[#C2185B] bg-white border border-[#D4829E] rounded-full leading-none whitespace-nowrap"
-              style={{ letterSpacing: '0.15em' }}
+              className="inline-block w-5 h-px relative"
+              style={{ background: 'currentColor' }}
+            >
+              <span
+                className="absolute -top-[3px] right-0 w-[7px] h-[7px]"
+                style={{
+                  borderRight: '1px solid currentColor',
+                  borderTop: '1px solid currentColor',
+                  transform: 'rotate(45deg)',
+                }}
+              />
+            </span>
+            <span
+              className="absolute -top-2 -right-2 px-2 py-0.5 rounded-full whitespace-nowrap"
+              style={{
+                fontFamily: 'var(--font-serif)',
+                fontStyle: 'italic',
+                fontSize: '10px',
+                color: 'var(--gold-deep)',
+                background: '#fff',
+                border: '1px solid var(--gold)',
+                letterSpacing: '0.12em',
+              }}
             >
               soon
             </span>
           </Link>
-          <a
-            href="#products"
-            className="px-8 py-3 text-xs font-semibold text-[#4A3F45] bg-white rounded-full shadow-sm active:scale-95 transition-all tracking-[0.15em] border border-[#EDE5E8]"
-          >
-            商品を見る
-          </a>
-        </div>
-
-        {/* 装飾ドット */}
-        <div
-          className="mt-8 text-[10px] tracking-[0.5em] text-[#D4829E]"
-          aria-hidden
-        >
-          · · · · ·
-        </div>
-
-        {/* フッター風：URL + Instagram */}
-        <div className="mt-5 flex justify-between items-center text-[10px] text-[#9B8E94] tracking-wider max-w-md mx-auto px-2">
-          <span className="font-serif italic">yun.skincare</span>
-          <a
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-[#C2185B] transition-colors"
-          >
-            @yun.skincare_
-          </a>
         </div>
       </div>
     </section>
-  )
-}
-
-// ========== バブルコンポーネント ==========
-function FeatureBubble({
-  icon,
-  title,
-  subtitle,
-  align = 'left',
-}: {
-  icon: React.ReactNode
-  title: string
-  subtitle: string
-  align?: 'left' | 'right'
-}) {
-  return (
-    <div
-      className={`relative flex flex-col items-center py-4 px-3 rounded-full ${
-        align === 'right' ? 'ml-auto' : 'mr-auto'
-      }`}
-      style={{
-        background:
-          'radial-gradient(circle, rgba(255,255,255,0.85) 0%, rgba(253,240,245,0.4) 100%)',
-        aspectRatio: '1 / 1',
-        width: '140px',
-        height: '140px',
-        boxShadow: '0 2px 16px rgba(212,130,158,0.12)',
-      }}
-    >
-      <div className="text-[#D4829E] mt-1 mb-1">{icon}</div>
-      <p className="text-[10px] font-semibold text-[#C2185B] tracking-wider leading-tight text-center">
-        {title}
-      </p>
-      <p className="text-[10px] text-[#9B8E94] tracking-wider leading-tight text-center">
-        {subtitle}
-      </p>
-    </div>
-  )
-}
-
-// ========== 細い線ピンクアイコン ==========
-const iconProps = {
-  width: 28,
-  height: 28,
-  viewBox: '0 0 24 24',
-  fill: 'none',
-  stroke: 'currentColor',
-  strokeWidth: 1.1,
-  strokeLinecap: 'round' as const,
-  strokeLinejoin: 'round' as const,
-}
-
-function FlaskIcon() {
-  // 実験フラスコ（元化粧品研究・商品企画）
-  return (
-    <svg {...iconProps}>
-      <path d="M10 3h4v5l4 9a2 2 0 01-2 3H8a2 2 0 01-2-3l4-9z" />
-      <path d="M9 3h6" />
-      <path d="M8.5 14h7" />
-    </svg>
-  )
-}
-
-function MirrorIcon() {
-  // 手鏡（29年ノーファンデ＝素肌主義）
-  return (
-    <svg {...iconProps}>
-      <circle cx="12" cy="10" r="6" />
-      <path d="M12 16v5" />
-      <path d="M10 21h4" />
-    </svg>
-  )
-}
-
-function LeafIcon() {
-  // 葉（ゆん厳選・ナチュラル）
-  return (
-    <svg {...iconProps}>
-      <path d="M19 4c-9 0-13 6-13 12 0 1 0 2 .3 3 1-.2 2-.3 2.7-.3 6 0 10-5 10-14.7z" />
-      <path d="M6 19c2-5 5-8 10-11" />
-    </svg>
-  )
-}
-
-function SparkleIcon() {
-  // スパークル（5.7万フォロワー）
-  return (
-    <svg {...iconProps}>
-      <path d="M12 3v6M12 15v6M3 12h6M15 12h6" />
-      <path d="M7 7l3 3M14 14l3 3M17 7l-3 3M10 14l-3 3" />
-    </svg>
   )
 }

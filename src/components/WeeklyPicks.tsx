@@ -12,17 +12,41 @@ export default function WeeklyPicks({ products, onSelect }: Props) {
   if (picks.length === 0) return null
 
   return (
-    <section className="px-4 pt-6 pb-4">
-      {/* エディトリアル風セクションタイトル */}
-      <div className="text-center mb-5">
-        <p className="text-[10px] tracking-[0.4em] text-[#D4829E] font-serif">
-          WEEKLY PICKS
-        </p>
-        <div className="mt-1 text-[10px] tracking-[0.5em] text-[#D4829E]" aria-hidden>
-          · · ·
-        </div>
-        <h2 className="font-serif text-lg text-[#4A3F45] mt-1 tracking-wider">
-          今週のおすすめ
+    <section
+      className="px-4 pt-14 pb-8"
+      style={{ background: 'var(--bg-cream)', borderTop: '1px solid var(--line-soft)' }}
+    >
+      {/* エディトリアル風セクションタイトル（共通トーン） */}
+      <div className="flex flex-col items-center gap-2.5 mb-10">
+        <span
+          style={{
+            fontFamily: 'var(--font-serif)',
+            fontStyle: 'italic',
+            fontWeight: 300,
+            fontSize: '13px',
+            letterSpacing: '0.42em',
+            color: 'var(--gold-deep)',
+            textTransform: 'uppercase',
+          }}
+        >
+          {"Editor's Top 5"}
+        </span>
+        <span
+          className="block"
+          style={{ width: 1, height: 36, background: 'var(--gold)' }}
+          aria-hidden
+        />
+        <h2
+          style={{
+            fontFamily: 'var(--font-jp)',
+            fontWeight: 500,
+            fontSize: '12px',
+            letterSpacing: '0.4em',
+            color: 'var(--ink-soft)',
+            margin: 0,
+          }}
+        >
+          ゆんのおすすめTOP5
         </h2>
       </div>
 
