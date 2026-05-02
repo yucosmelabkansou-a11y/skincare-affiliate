@@ -17,9 +17,9 @@ export default function EditorialHero() {
       }}
     >
       <div className="relative px-6 pt-16 pb-14 text-center">
-        {/* eyebrow with rule */}
+        {/* eyebrow with rule（スマホでも崩れないよう2行構成）*/}
         <div
-          className="flex items-center justify-center gap-3 mb-7"
+          className="flex flex-col items-center gap-1.5 mb-7"
           style={{
             fontFamily: 'var(--font-sans)',
             fontWeight: 300,
@@ -29,9 +29,12 @@ export default function EditorialHero() {
             textTransform: 'uppercase',
           }}
         >
-          <span className="block w-7 h-px" style={{ background: 'var(--gold)' }} aria-hidden />
-          <span>The Beauty Edit · Nearly 200 items</span>
-          <span className="block w-7 h-px" style={{ background: 'var(--gold)' }} aria-hidden />
+          <div className="flex items-center justify-center gap-3 whitespace-nowrap">
+            <span className="block w-7 h-px" style={{ background: 'var(--gold)' }} aria-hidden />
+            <span>The Beauty Edit</span>
+            <span className="block w-7 h-px" style={{ background: 'var(--gold)' }} aria-hidden />
+          </div>
+          <span className="whitespace-nowrap">Nearly 200 items</span>
         </div>
 
         {/* h1 — 和文セリフ */}
