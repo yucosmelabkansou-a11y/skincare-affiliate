@@ -30,7 +30,7 @@ export default function EditorialHero() {
           }}
         >
           <span className="block w-7 h-px" style={{ background: 'var(--gold)' }} aria-hidden />
-          <span>The Beauty Edit · 162 items</span>
+          <span>The Beauty Edit · Nearly 200 items</span>
           <span className="block w-7 h-px" style={{ background: 'var(--gold)' }} aria-hidden />
         </div>
 
