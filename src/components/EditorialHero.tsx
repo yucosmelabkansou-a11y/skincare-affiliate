@@ -40,15 +40,16 @@ export default function EditorialHero() {
           style={{
             fontFamily: 'var(--font-jp)',
             fontWeight: 500,
-            fontSize: 'clamp(22px, 6vw, 30px)',
-            letterSpacing: '0.14em',
+            fontSize: 'clamp(20px, 5.6vw, 28px)',
+            letterSpacing: '0.1em',
             color: 'var(--ink)',
-            maxWidth: '20ch',
+            wordBreak: 'keep-all',
+            overflowWrap: 'normal',
           }}
         >
-          本当に良かったものだけを、
+          ノーファンデが選ぶ、
           <br />
-          あなたへ。
+          素肌を育てるスキンケア
         </h1>
 
         {/* tagline */}
