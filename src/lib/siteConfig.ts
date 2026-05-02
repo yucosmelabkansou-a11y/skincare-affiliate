@@ -2,7 +2,7 @@
 // ドメイン変更時はここの SITE_URL を1行書き換えるだけでOK
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yun-skin-care.com'
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.yun-skin-care.com'
 
 export const SITE_NAME = 'yun.skincare_'
 
