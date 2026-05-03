@@ -3,260 +3,395 @@ import Link from 'next/link'
 import { SITE_URL } from '@/lib/siteConfig'
 
 export const metadata: Metadata = {
-  title: '肌診断（現在構築中）｜元化粧品研究・商品企画監修・最適ルーティン自動提案',
+  title: '肌診断｜元化粧品研究・商品企画監修・あなたの肌タイプを2分で判定',
   description:
-    '元化粧品研究・商品企画・29年ノーファンデのゆん監修。8問・約2分であなたの肌タイプを判定し、最適なスキンケアルーティンを自動提案する診断機能を現在構築中。',
+    '元化粧品研究・商品企画・29年ノーファンデのゆん監修。8問・約2分であなたの肌タイプを判定。水分・油分・バリア・ハリ・バランスを五角形グラフで可視化し、今日から取り入れたい成分とケアを提案します。',
   alternates: {
     canonical: `${SITE_URL}/diagnosis`,
   },
   openGraph: {
     type: 'website',
     url: `${SITE_URL}/diagnosis`,
-    title: '肌診断｜現在構築中｜yun.skincare_',
+    title: '肌診断｜2分でわかる、あなたの肌タイプ｜yun.skincare_',
     description:
-      '8問の診断 → 100種以上から最適ルーティン提案。元化粧品研究・商品企画監修の診断機能、現在構築中🌿',
+      '8問の診断であなたの肌タイプを判定。五角形グラフで肌の状態を可視化し、今日からできる改善案とおすすめ成分を提案。',
     images: ['/og-image.jpg'],
   },
 }
 
-export default function DiagnosisInProgressPage() {
+export default function DiagnosisStartPage() {
   return (
-    <div className="max-w-2xl mx-auto min-h-screen relative overflow-hidden">
+    <div
+      className="max-w-2xl mx-auto min-h-screen relative overflow-hidden"
+      style={{ background: 'var(--bg-cream)' }}
+    >
       {/* 背景グラデ */}
       <div
         className="absolute inset-0 -z-10"
         style={{
-          background:
-            'linear-gradient(180deg, #FDF5F8 0%, #FAF0F2 40%, #F5EDE8 100%)',
-        }}
-        aria-hidden
-      />
-      <div
-        className="absolute -top-10 -right-20 w-72 h-72 rounded-full opacity-50 -z-10"
-        style={{
-          background:
-            'radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(252,228,236,0) 70%)',
-        }}
-        aria-hidden
-      />
-      <div
-        className="absolute top-1/2 -left-20 w-56 h-56 rounded-full opacity-40 -z-10"
-        style={{
-          background:
-            'radial-gradient(circle, rgba(255,255,255,0.85) 0%, rgba(252,228,236,0) 70%)',
+          background: `
+            radial-gradient(60% 70% at 80% 10%, oklch(0.96 0.025 30 / .55), transparent 70%),
+            radial-gradient(50% 60% at 10% 90%, oklch(0.97 0.02 80 / .7), transparent 70%),
+            linear-gradient(180deg, var(--bg-ivory) 0%, var(--bg-cream) 60%, var(--bg-warm) 100%)
+          `,
         }}
         aria-hidden
       />
 
       {/* パンくず */}
-      <nav className="px-4 pt-4 text-xs text-[#9B8E94] tracking-wider" aria-label="パンくず">
-        <Link href="/" className="hover:text-[#C2185B] transition-colors">
-          ホーム
-        </Link>
-        <span className="mx-2 text-[#D4829E]">/</span>
-        <span className="text-[#4A3F45]">肌診断</span>
+      <nav
+        className="px-5 pt-5 text-[10px]"
+        style={{ color: 'var(--ink-mute)', letterSpacing: '0.2em' }}
+        aria-label="パンくず"
+      >
+        <Link href="/" className="hover:opacity-70 transition-opacity">ホーム</Link>
+        <span className="mx-2">/</span>
+        <span style={{ color: 'var(--ink)' }}>肌診断</span>
       </nav>
 
       {/* Hero */}
-      <section className="px-6 pt-10 pb-10 text-center">
-        {/* IN PROGRESS ラベル */}
+      <section className="px-6 pt-12 pb-12 text-center">
         <div
-          className="inline-block px-4 py-1.5 text-[10px] tracking-[0.4em] text-white rounded-full font-serif italic mb-4"
+          className="flex flex-col items-center gap-1.5 mb-6"
           style={{
-            background: 'linear-gradient(135deg, #D4829E 0%, #C2185B 100%)',
+            fontFamily: 'var(--font-sans)',
+            fontWeight: 300,
+            letterSpacing: '0.45em',
+            fontSize: '10px',
+            color: 'var(--gold-deep)',
+            textTransform: 'uppercase',
           }}
         >
-          in progress
+          <div className="flex items-center justify-center gap-3 whitespace-nowrap">
+            <span className="block w-7 h-px" style={{ background: 'var(--gold)' }} aria-hidden />
+            <span>Skin Type Diagnosis</span>
+            <span className="block w-7 h-px" style={{ background: 'var(--gold)' }} aria-hidden />
+          </div>
+          <span className="whitespace-nowrap">8 questions · about 2 min</span>
         </div>
 
-        {/* 装飾ドット */}
-        <div className="text-[10px] tracking-[0.5em] text-[#D4829E]" aria-hidden>
-          · · · · ·
-        </div>
-
-        {/* セリフ体大見出し */}
-        <p
-          className="font-serif text-[11px] tracking-[0.4em] text-[#D4829E] mt-3 mb-1"
-          style={{ fontVariant: 'small-caps' }}
-        >
-          SKIN TYPE
-        </p>
         <h1
-          className="font-serif text-[40px] leading-[1] tracking-[0.18em] text-[#4A3F45]"
-          style={{ fontWeight: 500 }}
+          className="leading-[1.7] mx-auto"
+          style={{
+            fontFamily: 'var(--font-jp)',
+            fontWeight: 500,
+            fontSize: 'clamp(20px, 5.6vw, 28px)',
+            letterSpacing: '0.1em',
+            color: 'var(--ink)',
+            wordBreak: 'keep-all',
+          }}
         >
-          DIAGNOSIS
+          まずは自分の肌を、
+          <br />
+          知ることから。
         </h1>
-        <p className="mt-3 text-[11px] tracking-[0.25em] text-[#9B8E94]">
-          BY YUN
+
+        <p
+          className="mt-5"
+          style={{
+            fontFamily: 'var(--font-serif)',
+            fontStyle: 'italic',
+            fontWeight: 300,
+            fontSize: 'clamp(13px, 3.6vw, 16px)',
+            letterSpacing: '0.32em',
+            color: 'var(--gold-deep)',
+            textTransform: 'uppercase',
+          }}
+        >
+          — by Yun —
         </p>
 
-        <div className="mt-5 text-[10px] tracking-[0.5em] text-[#D4829E]" aria-hidden>
-          · · ·
+        {/* Yun の信頼バッジ3つ */}
+        <ul
+          className="mx-auto mt-8 flex flex-col gap-2 text-left"
+          style={{ maxWidth: '24ch' }}
+        >
+          {[
+            '元化粧品研究・商品企画',
+            '生涯ノーファンデ歴29年',
+            'Instagramフォロワー5万人',
+          ].map((label) => (
+            <li
+              key={label}
+              className="flex items-center gap-2.5"
+              style={{
+                fontFamily: 'var(--font-jp)',
+                fontWeight: 500,
+                fontSize: 13,
+                lineHeight: 1.7,
+                letterSpacing: '0.08em',
+                color: 'var(--ink)',
+              }}
+            >
+              <span
+                className="flex items-center justify-center flex-shrink-0"
+                style={{
+                  width: 18,
+                  height: 18,
+                  borderRadius: '50%',
+                  border: '1px solid var(--gold)',
+                  color: 'var(--gold-deep)',
+                  background: 'oklch(0.99 0.012 80)',
+                }}
+                aria-hidden
+              >
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12l5 5 9-11" />
+                </svg>
+              </span>
+              {label}
+            </li>
+          ))}
+        </ul>
+
+        <p
+          className="mx-auto mt-7"
+          style={{
+            fontFamily: 'var(--font-jp-alt)',
+            fontWeight: 400,
+            fontSize: '12.5px',
+            lineHeight: 2,
+            letterSpacing: '0.08em',
+            color: 'var(--ink-soft)',
+            maxWidth: '30ch',
+          }}
+        >
+          ゆんが知識や経験、フォロワーさんの声をもとに監修しています。
+        </p>
+
+        <p
+          className="mx-auto mt-9"
+          style={{
+            fontFamily: 'var(--font-jp-alt)',
+            fontWeight: 400,
+            fontSize: '13px',
+            lineHeight: 2.1,
+            letterSpacing: '0.08em',
+            color: 'var(--ink-soft)',
+            maxWidth: '32ch',
+          }}
+        >
+          たった<strong style={{ color: 'var(--ink)' }}>8問</strong>の診断に答えるだけで、あなたの肌の <strong style={{ color: 'var(--ink)' }}>水分・油分・バリア</strong> などを見える化し、今日からすぐに取り入れられるスキンケアをご提案します。
+        </p>
+
+        {/* CTA */}
+        <div className="mt-12 flex flex-col gap-3 px-2 max-w-sm mx-auto">
+          <Link
+            href="/diagnosis/quiz"
+            className="inline-flex items-center justify-center gap-3 px-9 py-4 transition-all hover:bg-[var(--gold)] hover:text-white"
+            style={{
+              fontFamily: 'var(--font-jp)',
+              fontWeight: 500,
+              fontSize: '14px',
+              letterSpacing: '0.32em',
+              border: '1px solid var(--gold)',
+              color: 'var(--ink)',
+              background: '#fff',
+              boxShadow: '0 18px 40px -28px oklch(0.5 0.06 70 / .35)',
+            }}
+          >
+            診断をはじめる
+            <Arrow />
+          </Link>
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center gap-3 px-9 py-3.5 transition-opacity hover:opacity-70"
+            style={{
+              fontFamily: 'var(--font-sans)',
+              fontWeight: 300,
+              fontSize: '11px',
+              letterSpacing: '0.32em',
+              color: 'var(--ink-mute)',
+              textTransform: 'uppercase',
+            }}
+          >
+            ← Back to Products
+          </Link>
         </div>
-
-        {/* メイン訴求 */}
-        <p className="text-base text-[#4A3F45] leading-[1.9] mt-6 font-serif tracking-wider">
-          肌診断、現在構築中。
-        </p>
-
-        <p className="text-xs text-[#6C757D] leading-[1.9] mt-5 px-2">
-          8問の診断から
-          <br />
-          <span className="text-[#C2185B] font-semibold">あなたに最適なスキンケアの組み合わせ</span>
-          <br />
-          を自動提案する機能を準備中です。
-        </p>
-
-        <p className="text-xs text-[#9B8E94] leading-[1.9] mt-5 font-serif italic">
-          — Coming this season —
-        </p>
       </section>
 
-      {/* 機能予告 */}
-      <section className="px-6 pb-10">
-        <div className="text-center mb-5">
-          <p className="text-[10px] tracking-[0.4em] text-[#D4829E] font-serif">
-            WHAT&apos;S COMING
-          </p>
-          <div className="mt-1 text-[10px] tracking-[0.5em] text-[#D4829E]" aria-hidden>
-            · · ·
-          </div>
-          <h2 className="font-serif text-base text-[#4A3F45] mt-1 tracking-wider">
-            診断でできること
-          </h2>
+      {/* 診断でわかること */}
+      <section className="px-5 pb-14">
+        <div className="flex flex-col items-center gap-2 mb-10">
+          <span
+            style={{
+              fontFamily: 'var(--font-serif)',
+              fontStyle: 'italic',
+              fontWeight: 300,
+              fontSize: '12px',
+              letterSpacing: '0.42em',
+              color: 'var(--gold-deep)',
+              textTransform: 'uppercase',
+            }}
+          >
+            What You Get
+          </span>
+          <span
+            className="block"
+            style={{ width: 1, height: 30, background: 'var(--gold)' }}
+            aria-hidden
+          />
+          <span
+            style={{
+              fontFamily: 'var(--font-jp)',
+              fontSize: '12px',
+              letterSpacing: '0.4em',
+              color: 'var(--ink-soft)',
+            }}
+          >
+            診断でわかること
+          </span>
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-3 max-w-md mx-auto">
           {[
-            {
-              icon: <BeakerIcon />,
-              title: '8問・約2分で肌タイプ判定',
-              text: '6タイプ × 6つの悩みで多軸診断',
-            },
-            {
-              icon: <LayersIcon />,
-              title: 'STEP別ルーティンを自動提案',
-              text: 'クレンジング〜日焼け止めまで6STEP',
-            },
-            {
-              icon: <FlaskIcon />,
-              title: '100種以上から最適商品を選定',
-              text: '元化粧品研究・商品企画監修のスコアリング',
-            },
-            {
-              icon: <CartIcon />,
-              title: '結果はAmazon・楽天で即購入可',
-              text: '迷う時間ゼロで揃う',
-            },
+            { icon: <PentagonIcon />, jp: '肌タイプを6種から判定', en: 'Type · 6 patterns' },
+            { icon: <RadarIcon />, jp: 'グラフで肌に何が足りないかわかる', en: 'See What Your Skin Needs' },
+            { icon: <LeafIcon />, jp: '今日から取り入れる成分提案', en: "Today's Ingredients" },
+            { icon: <SunIcon />, jp: '肌タイプ別の朝晩ケアTips', en: 'Daily Routine Tips' },
           ].map((item) => (
             <div
-              key={item.title}
-              className="flex items-center gap-3 p-4 bg-white/80 backdrop-blur-sm rounded-2xl border border-[#F2EAEF]"
+              key={item.jp}
+              className="flex items-center gap-4 px-5 py-4"
+              style={{
+                background: '#fff',
+                border: '1px solid var(--line-soft)',
+              }}
             >
-              <div className="text-[#D4829E] flex-shrink-0">{item.icon}</div>
-              <div>
-                <p className="text-sm font-semibold text-[#4A3F45]">{item.title}</p>
-                <p className="text-xs text-[#9B8E94] mt-0.5">{item.text}</p>
+              <span
+                className="flex items-center justify-center flex-shrink-0"
+                style={{
+                  width: 36,
+                  height: 36,
+                  borderRadius: '50%',
+                  border: '1px solid var(--gold)',
+                  color: 'var(--gold-deep)',
+                  background:
+                    'radial-gradient(circle at 30% 25%, oklch(0.99 0.008 80), oklch(0.96 0.025 80))',
+                }}
+                aria-hidden
+              >
+                {item.icon}
+              </span>
+              <div className="flex-1 min-w-0">
+                <p
+                  style={{
+                    fontFamily: 'var(--font-jp)',
+                    fontWeight: 500,
+                    fontSize: '13px',
+                    letterSpacing: '0.1em',
+                    color: 'var(--ink)',
+                    lineHeight: 1.5,
+                  }}
+                >
+                  {item.jp}
+                </p>
+                <p
+                  className="mt-0.5"
+                  style={{
+                    fontFamily: 'var(--font-serif)',
+                    fontStyle: 'italic',
+                    fontWeight: 300,
+                    fontSize: '11px',
+                    letterSpacing: '0.18em',
+                    color: 'var(--gold-deep)',
+                  }}
+                >
+                  {item.en}
+                </p>
               </div>
             </div>
           ))}
         </div>
-      </section>
 
-      {/* Instagram通知CTA */}
-      <section className="mx-6 mb-10 p-6 bg-white/80 backdrop-blur-sm rounded-3xl border border-[#F2EAEF] text-center">
-        <p className="text-[10px] tracking-[0.4em] text-[#D4829E] font-serif mb-2">
-          STAY TUNED
-        </p>
-        <h3 className="font-serif text-lg text-[#4A3F45] tracking-wider mb-3">
-          公開のお知らせを受け取る
-        </h3>
-        <p className="text-xs text-[#9B8E94] leading-relaxed mb-4">
-          診断機能の公開・新商品レビューは
-          <br />
-          Instagram で先行案内中
-        </p>
-        <a
-          href="https://www.instagram.com/yun.skincare_"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 px-5 py-2.5 text-xs font-semibold text-white rounded-full active:scale-95 transition-all"
+        {/* 注意書き */}
+        <div
+          className="text-center mx-auto mt-10"
           style={{
-            background:
-              'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)',
+            fontFamily: 'var(--font-jp-alt)',
+            fontSize: '10.5px',
+            lineHeight: 1.9,
+            letterSpacing: '0.06em',
+            color: 'var(--ink-mute)',
+            maxWidth: '34ch',
           }}
         >
-          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-          </svg>
-          @yun.skincare_ をフォロー
-        </a>
-      </section>
-
-      {/* フッター */}
-      <div className="text-center pb-10">
-        <div className="text-[10px] tracking-[0.5em] text-[#D4829E] mb-3" aria-hidden>
-          · · ·
+          <p>※おすすめ商品の自動マッチングは順次公開予定。まずは肌タイプを知ることから。</p>
+          <p className="mt-2">※本診断は医療的な診断ではなく、セルフケアの参考情報です。具体的な皮膚の症状・治療が必要な場合は皮膚科専門医にご相談ください。</p>
         </div>
-        <Link
-          href="/"
-          className="text-xs text-[#9B8E94] hover:text-[#C2185B] transition-colors font-serif italic"
-        >
-          ← 商品一覧に戻る
-        </Link>
-      </div>
+      </section>
     </div>
   )
 }
 
-// ========== 細い線アイコン ==========
 const iconProps = {
-  width: 28,
-  height: 28,
+  width: 16,
+  height: 16,
   viewBox: '0 0 24 24',
   fill: 'none',
   stroke: 'currentColor',
-  strokeWidth: 1.2,
+  strokeWidth: 1,
   strokeLinecap: 'round' as const,
   strokeLinejoin: 'round' as const,
 }
 
-function BeakerIcon() {
+function Arrow() {
+  return (
+    <span
+      className="inline-block w-5 h-px relative"
+      style={{ background: 'currentColor' }}
+      aria-hidden
+    >
+      <span
+        className="absolute -top-[3px] right-0 w-[7px] h-[7px]"
+        style={{
+          borderRight: '1px solid currentColor',
+          borderTop: '1px solid currentColor',
+          transform: 'rotate(45deg)',
+        }}
+      />
+    </span>
+  )
+}
+
+function PentagonIcon() {
   return (
     <svg {...iconProps}>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M8 12l3 3 5-5" />
+      <path d="M12 3l8 6-3 9H7l-3-9 8-6z" />
     </svg>
   )
 }
 
-function LayersIcon() {
+function RadarIcon() {
   return (
     <svg {...iconProps}>
-      <path d="M12 2L2 7l10 5 10-5z" />
-      <path d="M2 17l10 5 10-5" />
-      <path d="M2 12l10 5 10-5" />
+      <path d="M12 2l9 7-3 11H6L3 9l9-7z" />
+      <path d="M12 8l4 3-2 5h-4l-2-5 4-3z" />
     </svg>
   )
 }
 
-function FlaskIcon() {
+function LeafIcon() {
   return (
     <svg {...iconProps}>
-      <path d="M10 3h4v5l4 9a2 2 0 01-2 3H8a2 2 0 01-2-3l4-9z" />
-      <path d="M9 3h6" />
-      <path d="M8.5 14h7" />
+      <path d="M19 4c-9 0-13 6-13 12 0 1 0 2 .3 3 1-.2 2-.3 2.7-.3 6 0 10-5 10-14.7z" />
+      <path d="M6 19c2-5 5-8 10-11" />
     </svg>
   )
 }
 
-function CartIcon() {
+function SunIcon() {
   return (
     <svg {...iconProps}>
-      <circle cx="9" cy="20" r="1.2" />
-      <circle cx="18" cy="20" r="1.2" />
-      <path d="M3 4h2l2.5 11h11l2-7H6" />
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 3v2" />
+      <path d="M12 19v2" />
+      <path d="M3 12h2" />
+      <path d="M19 12h2" />
+      <path d="M5 5l1.5 1.5" />
+      <path d="M17.5 17.5L19 19" />
+      <path d="M19 5l-1.5 1.5" />
+      <path d="M6.5 17.5L5 19" />
     </svg>
   )
 }

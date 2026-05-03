@@ -2,7 +2,8 @@ import { getProducts } from '@/lib/parseCSV'
 import ProductList from '@/components/ProductList'
 import EditorialHero from '@/components/EditorialHero'
 import AboutYun from '@/components/AboutYun'
-import JournalNote from '@/components/JournalNote'
+import ReadShortcuts from '@/components/ReadShortcuts'
+import JournalSection from '@/components/JournalSection'
 import FaqSection from '@/components/FaqSection'
 import { SITE_URL } from '@/lib/siteConfig'
 
@@ -84,6 +85,9 @@ export default function Home() {
       {/* 🌸 エディトリアル風ヒーロー */}
       <EditorialHero />
 
+      {/* 商品リスト前に読み物導線（コラム+Q&A） */}
+      <ReadShortcuts />
+
       {/* About Yun (3 pillars) */}
       <AboutYun />
 
@@ -106,8 +110,8 @@ export default function Home() {
       <div id="products" />
       <ProductList products={products} />
 
-      {/* Journal — note 埋め込み */}
-      <JournalNote />
+      {/* Journal — サイト内記事（コラム + Q&A） */}
+      <JournalSection />
 
       {/* FAQ */}
       <FaqSection />

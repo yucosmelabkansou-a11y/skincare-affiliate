@@ -172,20 +172,6 @@ export default function EditorialHero() {
                 }}
               />
             </span>
-            <span
-              className="absolute -top-2 -right-2 px-2 py-0.5 rounded-full whitespace-nowrap"
-              style={{
-                fontFamily: 'var(--font-serif)',
-                fontStyle: 'italic',
-                fontSize: '10px',
-                color: 'var(--gold-deep)',
-                background: '#fff',
-                border: '1px solid var(--gold)',
-                letterSpacing: '0.12em',
-              }}
-            >
-              soon
-            </span>
           </Link>
         </div>
       </div>
