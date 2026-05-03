@@ -16,48 +16,82 @@ const groupLabelEn: Record<string, string> = {
 
 export default function CategoryNav({ selectedId, onChange }: Props) {
   return (
-    <section className="px-4 pb-6 pt-2 space-y-6">
+    <section
+      className="px-5 pt-10 pb-12 space-y-12"
+      style={{
+        background: 'var(--bg-cream)',
+        borderTop: '1px solid var(--line-soft)',
+      }}
+    >
       {CATEGORY_GROUPS.map((group) => (
         <div key={group.groupId}>
           {/* エディトリアル風セクションヘッダー */}
-          <div className="text-center mb-4">
-            <p className="text-[10px] tracking-[0.4em] text-[#D4829E] font-serif">
-              {groupLabelEn[group.groupId] ?? group.groupLabel}
-            </p>
-            <div
-              className="mt-1 text-[10px] tracking-[0.5em] text-[#D4829E]"
-              aria-hidden
+          <div className="flex flex-col items-center gap-2.5 mb-7">
+            <span
+              style={{
+                fontFamily: 'var(--font-serif)',
+                fontStyle: 'italic',
+                fontWeight: 300,
+                fontSize: 12,
+                letterSpacing: '0.42em',
+                color: 'var(--gold-deep)',
+                textTransform: 'uppercase',
+              }}
             >
-              · · ·
-            </div>
-            <h2 className="font-serif text-base text-[#4A3F45] mt-1 tracking-wider">
+              {groupLabelEn[group.groupId] ?? group.groupLabel}
+            </span>
+            <span
+              className="block"
+              style={{ width: 1, height: 26, background: 'var(--gold)' }}
+              aria-hidden
+            />
+            <span
+              style={{
+                fontFamily: 'var(--font-jp)',
+                fontWeight: 500,
+                fontSize: 12,
+                letterSpacing: '0.4em',
+                color: 'var(--ink-soft)',
+              }}
+            >
               {group.groupLabel}
-            </h2>
+            </span>
           </div>
 
-          <div className="grid grid-cols-4 gap-2">
+          <div className="grid grid-cols-4 gap-2 max-w-md mx-auto">
             {group.categories.map((cat) => {
               const isSelected = selectedId === cat.id
               return (
                 <button
                   key={cat.id}
                   onClick={() => onChange(cat.id)}
-                  className={`flex flex-col items-center gap-1.5 py-3.5 px-1 rounded-2xl text-center transition-all active:scale-95 ${
-                    isSelected
-                      ? 'text-white shadow-sm'
-                      : 'bg-[#FAF6F3] text-[#9B8E94] hover:bg-[#FDF2F6] hover:text-[#C2185B]'
-                  }`}
+                  className="flex flex-col items-center gap-2 py-4 px-1 text-center transition-all active:scale-95"
                   style={
                     isSelected
                       ? {
-                          background:
-                            'linear-gradient(135deg, #D4829E 0%, #C2185B 100%)',
+                          background: '#fff',
+                          border: '1px solid var(--gold)',
+                          color: 'var(--gold-deep)',
+                          boxShadow: '0 14px 30px -22px oklch(0.5 0.06 70 / .35)',
                         }
-                      : undefined
+                      : {
+                          background: '#fff',
+                          border: '1px solid var(--line-soft)',
+                          color: 'var(--ink-mute)',
+                        }
                   }
                 >
-                  <CategoryIcon name={cat.iconKey} size={22} />
-                  <span className="text-[10px] font-medium leading-tight">
+                  <CategoryIcon name={cat.iconKey} size={20} />
+                  <span
+                    style={{
+                      fontFamily: 'var(--font-jp)',
+                      fontWeight: isSelected ? 600 : 500,
+                      fontSize: 10.5,
+                      letterSpacing: '0.08em',
+                      lineHeight: 1.3,
+                      color: isSelected ? 'var(--ink)' : 'var(--ink-soft)',
+                    }}
+                  >
                     {cat.label}
                   </span>
                 </button>
