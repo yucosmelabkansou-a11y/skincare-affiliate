@@ -9,8 +9,7 @@ import {
   type Concern,
 } from '@/lib/diagnosis'
 import { SITE_URL } from '@/lib/siteConfig'
-import MustProducts from '@/components/MustProducts'
-import RoutineSteps from '@/components/RoutineSteps'
+import SkinRadarChart, { TYPICAL_VALUES_BY_TYPE } from '@/components/SkinRadarChart'
 import ShareButtons from './ShareButtons'
 
 // 静的パラメータ生成（SSG）
@@ -20,7 +19,7 @@ export function generateStaticParams() {
 
 type Props = {
   params: Promise<{ type: string }>
-  searchParams: Promise<{ concern?: string }>
+  searchParams: Promise<{ concern?: string; scores?: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -52,15 +51,83 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
+// scores クエリパラメータをパース、無ければタイプ別デフォルト
+function parseScores(
+  scoresParam: string | undefined,
+  type: SkinType,
+): [number, number, number, number, number] {
+  if (scoresParam) {
+    const arr = scoresParam.split(',').map((n) => parseInt(n, 10))
+    if (arr.length === 5 && arr.every((n) => !isNaN(n))) {
+      return arr as [number, number, number, number, number]
+    }
+  }
+  return TYPICAL_VALUES_BY_TYPE[type] || TYPICAL_VALUES_BY_TYPE.normal
+}
+
+// タイプ別「今日からできる」Tips（即実践可能・成分以外のライフスタイル系）
+const TODAYS_TIPS: Record<SkinType, { tip: string; why: string }[]> = {
+  dry: [
+    { tip: '洗顔は ぬるま湯（32〜34℃）で短めに', why: '熱いお湯や長時間の洗顔は、必要な皮脂やうるおい成分を奪う一因に。30秒〜1分を目安に' },
+    { tip: '化粧水は手で2〜3回に分けて重ねづけ', why: '少量を重ねる方が、角層にうるおいが行き渡りやすくなります' },
+    { tip: '寝室に加湿器を置く（湿度50〜60%）', why: '寝ている間の乾燥が、翌朝のコンディションを左右します' },
+  ],
+  oily: [
+    { tip: '洗顔は朝晩2回まで（こすらず泡で）', why: '洗いすぎはバリア機能を弱め、かえってテカリやニキビの一因に。摩擦も毛穴の敵です' },
+    { tip: '日中のテカリは押さえ取り＋ミスト保湿', why: 'こすって取ると刺激で皮脂が増えやすいので、押さえて吸い取るのが基本' },
+    { tip: '化粧水後は必ず軽い保湿でうるおいを閉じ込める', why: '保湿を省くと「乾燥→皮脂が出やすい」状態になりやすい' },
+  ],
+  combination: [
+    { tip: 'Tゾーンと頬で量を変える「部位別ケア」', why: '同じ量を全顔に塗ると、テカる部分・乾く部分の両方が悪化しやすい' },
+    { tip: 'クレンジングは部位別の処方を意識', why: '頬は優しく短時間、Tゾーンはやや丁寧めが理想' },
+    { tip: '夏はジェル、冬はクリームに切替', why: '季節で皮脂量が変わるので、保湿剤のテクスチャーも変える' },
+  ],
+  sensitive: [
+    { tip: '新製品は腕の内側で2日テストしてから顔に', why: 'パッチテストで肌に合うかを確認すれば、トラブルを減らせます' },
+    { tip: 'ステップを最小限に（化粧水＋クリームでもOK）', why: '成分の数が多いほど、刺激の可能性も増えます' },
+    { tip: '入浴後はできるだけ早く保湿（目安5分以内、遅くとも10分以内）', why: '入浴後10分以内で角層水分が大きく低下するという報告もあり、早めの保湿でうるおいキープ' },
+  ],
+  aging: [
+    { tip: '日焼け止めは曇り・室内・冬も365日', why: '紫外線（特にUVA）はガラス越しにも届き、肌印象の変化に大きく影響' },
+    { tip: '夜のレチノールは少量から週2〜3回でスタート', why: 'はじめは低頻度・低濃度で。肌の慣れを見ながら頻度を上げる' },
+    { tip: '枕カバーは週1〜2回洗濯、肌が荒れやすい人はもっとこまめに', why: '雑菌や摩擦は肌コンディションに影響しやすい。シルク素材も摩擦軽減の選択肢' },
+  ],
+  normal: [
+    { tip: '季節の変わり目に肌チェックの習慣を', why: '良い状態は変化を見逃しやすい。週1で観察するクセを' },
+    { tip: '攻める前に基本を磨く', why: '高機能美容液を足す前に、洗顔・保湿・UVの3点を整える' },
+    { tip: '睡眠時間を肌のバロメーターに', why: '6時間未満が続くと、整った肌でもコンディションが崩れやすい' },
+  ],
+}
+
+// 成分の解説（肌質を知らない初心者向け／化粧品の標榜可能範囲に準拠）
+const INGREDIENT_INFO: Record<string, { what: string; effect: string }> = {
+  'セラミド': { what: '角層のバリアを構成する脂質', effect: 'うるおいを抱え込み、肌をすこやかに保つ' },
+  'ヒアルロン酸': { what: '高い保水力を持つ成分', effect: '最大6L程度の水を抱えると言われる、保湿のベース' },
+  'グリセリン': { what: '高い保湿力を持つ多価アルコール', effect: '角層にうるおいを与え、柔らかな肌印象に' },
+  'スクワラン': { what: '皮脂と相性の良いオイル成分', effect: 'うるおいを閉じ込めるフタの役割' },
+  'ビタミンC誘導体': { what: 'ビタミンCを安定化させた成分', effect: '透明感のある印象とキメの整った肌をサポート' },
+  'ナイアシンアミド': { what: 'ビタミンB3の一種', effect: '医薬部外品では「乾燥小ジワを目立たなくする」「メラニンの生成を抑え、シミ・そばかすを防ぐ」有効成分としても使われる多機能成分' },
+  'サリチル酸': { what: '角質柔軟作用のあるBHA', effect: '毛穴の汚れをやさしくケアし、なめらかな肌印象に' },
+  'グリチルリチン酸': { what: '甘草由来の成分', effect: '肌荒れを防ぐ成分として医薬部外品にも使われる' },
+  'BG': { what: '低刺激な多価アルコール', effect: 'ベタつかずうるおいを肌に留める' },
+  'アラントイン': { what: '植物などにも含まれる成分', effect: '肌荒れを防ぐ成分として医薬部外品にも使われる' },
+  'パンテノール': { what: 'プロビタミンB5', effect: 'うるおいを与え、肌のキメを整える' },
+  'レチノール': { what: 'ビタミンA誘導体', effect: 'ハリ感のある肌印象に。医薬部外品では「乾燥小ジワを目立たなくする」有効成分としても使われる' },
+  'ペプチド': { what: 'アミノ酸が連なった美容成分', effect: 'ハリ・弾力のある肌印象をサポート' },
+}
+
 export default async function ResultPage({ params, searchParams }: Props) {
   const { type } = await params
-  const { concern: concernParam } = await searchParams
+  const { concern: concernParam, scores: scoresParam } = await searchParams
   const result = resultTypes[type as SkinType]
   if (!result) notFound()
 
   const concern = (concernParam as Concern | undefined) && concernLabels[concernParam as Concern]
     ? (concernParam as Concern)
     : undefined
+
+  const radarValues = parseScores(scoresParam, type as SkinType)
+  const tips = TODAYS_TIPS[type as SkinType]
 
   // 構造化データ
   const breadcrumbJsonLd = {
@@ -96,7 +163,10 @@ export default async function ResultPage({ params, searchParams }: Props) {
   }
 
   return (
-    <div className="max-w-2xl mx-auto min-h-screen" style={{ backgroundColor: result.bgColor }}>
+    <div
+      className="max-w-2xl mx-auto min-h-screen"
+      style={{ background: 'var(--bg-cream)' }}
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
@@ -107,94 +177,349 @@ export default async function ResultPage({ params, searchParams }: Props) {
       />
 
       {/* パンくず */}
-      <nav className="px-4 pt-4 text-xs text-[#9B8E94] tracking-wider" aria-label="パンくず">
-        <Link href="/" className="hover:text-[#C2185B] transition-colors">
-          ホーム
-        </Link>
-        <span className="mx-2" style={{ color: result.themeColor }}>/</span>
-        <Link href="/diagnosis" className="hover:text-[#C2185B] transition-colors">
-          肌診断
-        </Link>
-        <span className="mx-2" style={{ color: result.themeColor }}>/</span>
-        <span className="text-[#4A3F45]">{result.name}</span>
+      <nav
+        className="px-5 pt-5 text-[10px]"
+        style={{ color: 'var(--ink-mute)', letterSpacing: '0.2em' }}
+        aria-label="パンくず"
+      >
+        <Link href="/" className="hover:opacity-70 transition-opacity">ホーム</Link>
+        <span className="mx-2">/</span>
+        <Link href="/diagnosis" className="hover:opacity-70 transition-opacity">肌診断</Link>
+        <span className="mx-2">/</span>
+        <span style={{ color: 'var(--ink)' }}>{result.name}</span>
       </nav>
 
       {/* 結果ヒーロー */}
-      <section className="px-6 pt-8 pb-8 text-center">
-        <div className="text-[10px] tracking-[0.5em] mb-2" style={{ color: result.themeColor }} aria-hidden>
-          · · · · ·
-        </div>
-        <p
-          className="font-serif text-[11px] tracking-[0.4em] mb-2"
-          style={{ color: result.themeColor }}
-        >
-          DIAGNOSIS RESULT
-        </p>
+      <section className="px-5 pt-10 pb-8 text-center">
+        <SectionLabel en="Diagnosis Result" jp="あなたの診断結果" />
 
-        <div className="bg-white rounded-3xl p-7 shadow-sm border border-white/60 mt-4">
-          <div className="text-5xl mb-3" aria-hidden>
-            {result.emoji}
-          </div>
+        <div
+          className="mx-auto mt-6 px-7 py-9"
+          style={{
+            background: '#fff',
+            border: '1px solid var(--line-soft)',
+            maxWidth: 460,
+          }}
+        >
           <p
-            className="font-serif text-[11px] tracking-[0.35em] mb-1"
-            style={{ color: result.themeColor }}
+            style={{
+              fontFamily: 'var(--font-serif)',
+              fontStyle: 'italic',
+              fontWeight: 300,
+              fontSize: '11px',
+              letterSpacing: '0.32em',
+              color: 'var(--gold-deep)',
+              textTransform: 'uppercase',
+              marginBottom: 10,
+            }}
           >
             {result.tagEn}
           </p>
-          <h1 className="font-serif text-2xl font-medium text-[#4A3F45] mb-3 tracking-wider">
+          <h1
+            style={{
+              fontFamily: 'var(--font-jp)',
+              fontWeight: 500,
+              fontSize: 'clamp(20px, 5.6vw, 26px)',
+              letterSpacing: '0.14em',
+              color: 'var(--ink)',
+              marginBottom: 18,
+            }}
+          >
             {result.name}
           </h1>
           <span
-            className="inline-block text-[11px] font-medium px-4 py-1 rounded-full border tracking-wider"
+            className="inline-block px-4 py-1.5"
             style={{
-              color: result.themeColor,
-              borderColor: result.themeColor,
-              backgroundColor: `${result.themeColor}10`,
+              fontFamily: 'var(--font-jp)',
+              fontWeight: 500,
+              fontSize: 11,
+              letterSpacing: '0.18em',
+              color: 'var(--gold-deep)',
+              border: '1px solid var(--gold)',
+              background: 'oklch(0.99 0.012 80)',
+              borderRadius: 999,
             }}
           >
             {result.badge}
           </span>
 
           {concern && (
-            <div className="mt-4 pt-4 border-t border-[#F2EAEF]">
-              <p className="text-[10px] text-[#9B8E94] mb-1 tracking-wider font-serif italic">
+            <div
+              className="mt-5 pt-4"
+              style={{ borderTop: '1px solid var(--line-soft)' }}
+            >
+              <p
+                style={{
+                  fontFamily: 'var(--font-serif)',
+                  fontStyle: 'italic',
+                  fontWeight: 300,
+                  fontSize: 10,
+                  letterSpacing: '0.32em',
+                  color: 'var(--ink-mute)',
+                  textTransform: 'uppercase',
+                  marginBottom: 4,
+                }}
+              >
                 main concern
               </p>
-              <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#C2185B]">
-                <span>{concernLabels[concern].emoji}</span>
+              <span
+                style={{
+                  fontFamily: 'var(--font-jp)',
+                  fontWeight: 500,
+                  fontSize: 13,
+                  letterSpacing: '0.1em',
+                  color: 'var(--ink)',
+                }}
+              >
                 {concernLabels[concern].label}
               </span>
             </div>
           )}
 
-          <p className="text-sm text-[#6C757D] leading-[1.9] text-left mt-5">
+          <p
+            className="mt-6 text-left"
+            style={{
+              fontFamily: 'var(--font-jp-alt)',
+              fontWeight: 400,
+              fontSize: 13,
+              lineHeight: 2.1,
+              letterSpacing: '0.08em',
+              color: 'var(--ink-soft)',
+            }}
+          >
             {result.description}
           </p>
         </div>
+      </section>
 
-        {/* ゆんコメント */}
-        <div className="mt-4 mx-2 p-4 bg-white/85 rounded-2xl border border-white/60">
-          <div className="flex items-start gap-2">
-            <div className="text-lg flex-shrink-0">💬</div>
-            <div className="text-left">
-              <p className="font-serif italic text-[11px] text-[#C2185B] mb-1 tracking-wider">
-                a note from yun
+      {/* 五角形レーダーチャート */}
+      <section className="px-5 pb-12">
+        <SectionLabel en="Skin Profile" jp="あなたの肌マップ" />
+        <div
+          className="mx-auto mt-2 px-5 py-8"
+          style={{
+            background: '#fff',
+            border: '1px solid var(--line-soft)',
+            maxWidth: 460,
+          }}
+        >
+          <SkinRadarChart values={radarValues} themeColor="oklch(0.58 0.095 75)" size={260} />
+          <p
+            className="mx-auto mt-6 text-center"
+            style={{
+              fontFamily: 'var(--font-jp-alt)',
+              fontWeight: 400,
+              fontSize: 11.5,
+              lineHeight: 1.9,
+              letterSpacing: '0.06em',
+              color: 'var(--ink-mute)',
+              maxWidth: '32ch',
+            }}
+          >
+            5軸で見たあなたの肌の傾向。低い軸が、優先的にケアしたいポイントです。
+          </p>
+        </div>
+      </section>
+
+      {/* ゆんコメント */}
+      <section className="px-5 pb-10">
+        <div
+          className="mx-auto px-6 py-5"
+          style={{
+            background: 'oklch(0.985 0.012 80)',
+            border: '1px solid var(--line-soft)',
+            maxWidth: 460,
+          }}
+        >
+          <p
+            style={{
+              fontFamily: 'var(--font-serif)',
+              fontStyle: 'italic',
+              fontWeight: 300,
+              fontSize: 11,
+              letterSpacing: '0.32em',
+              color: 'var(--gold-deep)',
+              textTransform: 'uppercase',
+              marginBottom: 10,
+            }}
+          >
+            A Note from Yun
+          </p>
+          <p
+            style={{
+              fontFamily: 'var(--font-jp)',
+              fontWeight: 500,
+              fontSize: 13,
+              lineHeight: 2,
+              letterSpacing: '0.08em',
+              color: 'var(--ink)',
+            }}
+          >
+            {result.yunComment}
+          </p>
+        </div>
+      </section>
+
+      {/* 今日からできる Tips */}
+      <section className="px-5 pb-12">
+        <SectionLabel en="Today's Tips" jp="今日からできる3つのこと" />
+        <div className="space-y-3 max-w-md mx-auto">
+          {tips.map((t, i) => (
+            <div
+              key={i}
+              className="px-5 py-4"
+              style={{ background: '#fff', border: '1px solid var(--line-soft)' }}
+            >
+              <div className="flex items-baseline gap-3 mb-2">
+                <span
+                  style={{
+                    fontFamily: 'var(--font-serif)',
+                    fontStyle: 'italic',
+                    fontWeight: 300,
+                    fontSize: 18,
+                    color: 'var(--gold-deep)',
+                  }}
+                >
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <p
+                  style={{
+                    fontFamily: 'var(--font-jp)',
+                    fontWeight: 500,
+                    fontSize: 13.5,
+                    lineHeight: 1.65,
+                    letterSpacing: '0.08em',
+                    color: 'var(--ink)',
+                  }}
+                >
+                  {t.tip}
+                </p>
+              </div>
+              <p
+                className="pl-7"
+                style={{
+                  fontFamily: 'var(--font-jp-alt)',
+                  fontWeight: 400,
+                  fontSize: 11.5,
+                  lineHeight: 1.8,
+                  letterSpacing: '0.06em',
+                  color: 'var(--ink-mute)',
+                }}
+              >
+                {t.why}
               </p>
-              <p className="text-xs text-[#4A3F45] leading-relaxed">{result.yunComment}</p>
             </div>
-          </div>
+          ))}
+        </div>
+      </section>
+
+      {/* おすすめ成分 */}
+      <section className="px-5 pb-12">
+        <SectionLabel en="Recommended Ingredients" jp="取り入れたい成分" />
+        <div className="grid grid-cols-2 gap-3 max-w-md mx-auto">
+          {result.recommendedIngredients.map((ing) => {
+            const info = INGREDIENT_INFO[ing]
+            return (
+              <article
+                key={ing}
+                className="px-4 py-4"
+                style={{
+                  background: '#fff',
+                  border: '1px solid var(--line-soft)',
+                }}
+              >
+                <p
+                  style={{
+                    fontFamily: 'var(--font-jp)',
+                    fontWeight: 600,
+                    fontSize: 13,
+                    letterSpacing: '0.1em',
+                    color: 'var(--ink)',
+                    marginBottom: 8,
+                    lineHeight: 1.3,
+                  }}
+                >
+                  {ing}
+                </p>
+                {info && (
+                  <>
+                    <p
+                      style={{
+                        fontFamily: 'var(--font-serif)',
+                        fontStyle: 'italic',
+                        fontWeight: 300,
+                        fontSize: 9.5,
+                        letterSpacing: '0.18em',
+                        color: 'var(--gold-deep)',
+                        textTransform: 'uppercase',
+                        marginBottom: 4,
+                      }}
+                    >
+                      What
+                    </p>
+                    <p
+                      style={{
+                        fontFamily: 'var(--font-jp-alt)',
+                        fontSize: 11,
+                        lineHeight: 1.65,
+                        letterSpacing: '0.04em',
+                        color: 'var(--ink-soft)',
+                        marginBottom: 8,
+                      }}
+                    >
+                      {info.what}
+                    </p>
+                    <p
+                      style={{
+                        fontFamily: 'var(--font-serif)',
+                        fontStyle: 'italic',
+                        fontWeight: 300,
+                        fontSize: 9.5,
+                        letterSpacing: '0.18em',
+                        color: 'var(--gold-deep)',
+                        textTransform: 'uppercase',
+                        marginBottom: 4,
+                      }}
+                    >
+                      Why
+                    </p>
+                    <p
+                      style={{
+                        fontFamily: 'var(--font-jp-alt)',
+                        fontSize: 11,
+                        lineHeight: 1.65,
+                        letterSpacing: '0.04em',
+                        color: 'var(--ink-soft)',
+                      }}
+                    >
+                      {info.effect}
+                    </p>
+                  </>
+                )}
+              </article>
+            )
+          })}
         </div>
       </section>
 
       {/* 特徴 */}
-      <section className="px-5 pb-6">
-        <SectionHeading enLabel="YOUR SKIN" jpLabel="あなたの肌の特徴" themeColor={result.themeColor} />
-        <ul className="space-y-2">
+      <section className="px-5 pb-12">
+        <SectionLabel en="Your Skin Traits" jp="あなたの肌の特徴" />
+        <ul className="space-y-2 max-w-md mx-auto">
           {result.features.map((feature, i) => (
             <li
               key={i}
-              className="text-sm text-[#4A3F45] bg-white p-3.5 rounded-xl border-l-[3px] leading-snug"
-              style={{ borderLeftColor: result.themeColor }}
+              className="px-4 py-3"
+              style={{
+                background: '#fff',
+                fontFamily: 'var(--font-jp-alt)',
+                fontWeight: 400,
+                fontSize: 12.5,
+                lineHeight: 1.7,
+                letterSpacing: '0.06em',
+                color: 'var(--ink-soft)',
+                borderLeft: '2px solid var(--gold)',
+              }}
             >
               {feature}
             </li>
@@ -202,162 +527,258 @@ export default async function ResultPage({ params, searchParams }: Props) {
         </ul>
       </section>
 
-      {/* おすすめケア */}
-      <section className="px-5 pb-6">
-        <SectionHeading enLabel="HOW TO CARE" jpLabel="おすすめスキンケア" themeColor={result.themeColor} />
-        <div className="space-y-2.5">
-          {result.cares.map((care, i) => (
-            <div key={i} className="flex items-start gap-3 p-4 bg-white rounded-2xl border border-white shadow-sm">
-              <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0"
-                style={{ backgroundColor: `${result.themeColor}20` }}
-              >
-                {care.icon}
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-[#343A40] mb-0.5">{care.title}</p>
-                <p className="text-xs text-[#6C757D] leading-relaxed">{care.text}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 重視すべき成分 */}
-      <section className="px-5 pb-6">
-        <SectionHeading enLabel="KEY INGREDIENTS" jpLabel="重視すべき成分" themeColor={result.themeColor} />
-        <p className="text-xs text-[#9B8E94] mb-3 text-center font-serif italic">
-          元化粧品研究・商品企画ゆんが選ぶ、あなたの肌タイプに効く成分
-        </p>
-        <div className="flex flex-wrap gap-2 justify-center">
-          {result.recommendedIngredients.map((ing, i) => (
-            <span
-              key={i}
-              className="text-xs px-3 py-1.5 bg-white rounded-full border font-medium"
-              style={{ borderColor: result.themeColor, color: result.themeColor }}
-            >
-              {ing}
-            </span>
-          ))}
-        </div>
-      </section>
-
       {/* NGケア */}
-      <section className="px-5 pb-6">
-        <SectionHeading enLabel="AVOID THIS" jpLabel="避けたいNGケア" themeColor={result.themeColor} />
-        <ul className="space-y-2">
+      <section className="px-5 pb-12">
+        <SectionLabel en="Avoid This" jp="避けたいNGケア" />
+        <ul className="space-y-2 max-w-md mx-auto">
           {result.ngList.map((ng, i) => (
             <li
               key={i}
-              className="text-sm text-[#A85959] bg-white p-3 rounded-xl border border-[#F5DDE5] leading-snug"
+              className="px-4 py-3"
+              style={{
+                background: '#fff',
+                fontFamily: 'var(--font-jp-alt)',
+                fontWeight: 400,
+                fontSize: 12.5,
+                lineHeight: 1.7,
+                letterSpacing: '0.06em',
+                color: 'var(--ink-soft)',
+                border: '1px solid var(--line-soft)',
+              }}
             >
-              ✕ {ng}
+              <span style={{ color: 'var(--gold-deep)', marginRight: 8 }}>×</span>
+              {ng}
             </li>
           ))}
         </ul>
       </section>
 
-      {/* ⭐ ゆんMUSTアイテム */}
-      <MustProducts
-        skinType={type as SkinType}
-        concern={concern}
-        themeColor={result.themeColor}
-      />
-
-      {/* 🌸 ゆんおすすめルーティン（STEP別） */}
-      <RoutineSteps
-        skinType={type as SkinType}
-        concern={concern}
-        themeColor={result.themeColor}
-      />
-
-      {/* シェアボタン */}
-      <section className="px-5 pb-6">
-        <div className="bg-white rounded-2xl p-5 text-center">
-          <h2 className="text-sm font-bold text-[#343A40] mb-3">
-            📲 結果をシェアする
-          </h2>
-          <ShareButtons resultName={result.name} type={type} />
-        </div>
-      </section>
-
-      {/* アクション */}
-      <section className="px-5 pb-10 text-center space-y-3">
-        <Link
-          href="/diagnosis/quiz"
-          className="block w-full py-3.5 text-xs font-semibold text-white rounded-full shadow-md active:scale-95 transition-all tracking-[0.2em]"
+      {/* 商品提案 Coming Soon */}
+      <section className="px-5 pb-12">
+        <SectionLabel en="Product Match" jp="あなた専用ピックアップ" />
+        <div
+          className="mx-auto px-6 py-10 text-center"
           style={{
-            background: 'linear-gradient(135deg, #D4829E 0%, #C2185B 100%)',
+            background:
+              'linear-gradient(180deg, oklch(0.985 0.012 80), oklch(0.96 0.018 75))',
+            border: '1px solid var(--line-soft)',
+            maxWidth: 460,
           }}
         >
-          RETAKE QUIZ
-        </Link>
-        <Link
-          href="/"
-          className="block w-full py-3 text-xs font-medium text-[#4A3F45] bg-white border border-[#F2EAEF] rounded-full active:scale-95 transition-all tracking-[0.2em]"
-        >
-          BACK TO PRODUCTS
-        </Link>
+          <p
+            style={{
+              fontFamily: 'var(--font-serif)',
+              fontStyle: 'italic',
+              fontWeight: 300,
+              fontSize: 12,
+              letterSpacing: '0.4em',
+              color: 'var(--gold-deep)',
+              textTransform: 'uppercase',
+              marginBottom: 10,
+            }}
+          >
+            Coming Soon
+          </p>
+          <h3
+            style={{
+              fontFamily: 'var(--font-jp)',
+              fontWeight: 500,
+              fontSize: 15,
+              letterSpacing: '0.18em',
+              color: 'var(--ink)',
+              marginBottom: 14,
+              lineHeight: 1.6,
+            }}
+          >
+            あなたの肌タイプ別
+            <br />
+            朝晩のおすすめ商品ルーティン
+          </h3>
+          <p
+            className="mx-auto"
+            style={{
+              fontFamily: 'var(--font-jp-alt)',
+              fontWeight: 400,
+              fontSize: 12,
+              lineHeight: 1.95,
+              letterSpacing: '0.06em',
+              color: 'var(--ink-soft)',
+              maxWidth: '28ch',
+            }}
+          >
+            診断結果からあなたに合う商品を、200近いアイテムから自動マッチングする機能を準備中です。
+          </p>
+          <p
+            className="mt-5"
+            style={{
+              fontFamily: 'var(--font-jp-alt)',
+              fontWeight: 400,
+              fontSize: 11,
+              lineHeight: 1.8,
+              letterSpacing: '0.06em',
+              color: 'var(--ink-mute)',
+            }}
+          >
+            それまでは、上記「取り入れたい成分」を参考に
+            <br />
+            <Link
+              href="/"
+              className="underline"
+              style={{ color: 'var(--gold-deep)' }}
+            >
+              全商品ラインナップ
+            </Link>
+            から探してみてください。
+          </p>
+        </div>
       </section>
 
-      {/* Instagram CTA */}
-      <footer className="px-5 pb-10 pt-6 text-center border-t border-white/60">
-        <div className="text-[10px] tracking-[0.5em] text-[#D4829E] mb-3" aria-hidden>
-          · · ·
+      {/* シェア & アクション */}
+      <section className="px-5 pb-10 text-center">
+        <SectionLabel en="Share Your Result" jp="結果をシェア" />
+        <div
+          className="mx-auto px-5 py-5 mb-6"
+          style={{
+            background: '#fff',
+            border: '1px solid var(--line-soft)',
+            maxWidth: 460,
+          }}
+        >
+          <ShareButtons resultName={result.name} type={type} />
         </div>
-        <p className="text-xs text-[#9B8E94] mb-3 leading-relaxed">
-          最新のレビューや新商品情報は
-          <br />
-          Instagram で発信中
+
+        <div className="flex flex-col gap-3 max-w-sm mx-auto">
+          <Link
+            href="/diagnosis/quiz"
+            className="inline-flex items-center justify-center gap-3 px-9 py-3.5 transition-all hover:bg-[var(--gold)] hover:text-white"
+            style={{
+              fontFamily: 'var(--font-jp)',
+              fontWeight: 500,
+              fontSize: 13,
+              letterSpacing: '0.32em',
+              border: '1px solid var(--gold)',
+              color: 'var(--ink)',
+              background: '#fff',
+            }}
+          >
+            診断をやり直す
+          </Link>
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center gap-3 px-9 py-3.5 transition-opacity hover:opacity-70"
+            style={{
+              fontFamily: 'var(--font-sans)',
+              fontWeight: 300,
+              fontSize: 11,
+              letterSpacing: '0.32em',
+              color: 'var(--ink-mute)',
+              textTransform: 'uppercase',
+            }}
+          >
+            ← Back to Products
+          </Link>
+        </div>
+      </section>
+
+      {/* 免責事項 */}
+      <section className="px-5 pb-8">
+        <div
+          className="mx-auto px-5 py-4 text-center"
+          style={{
+            background: 'oklch(0.985 0.012 80)',
+            border: '1px solid var(--line-soft)',
+            maxWidth: 460,
+          }}
+        >
+          <p
+            style={{
+              fontFamily: 'var(--font-jp-alt)',
+              fontWeight: 400,
+              fontSize: 10.5,
+              lineHeight: 1.85,
+              letterSpacing: '0.04em',
+              color: 'var(--ink-mute)',
+            }}
+          >
+            ※本診断は医療的な診断ではなく、セルフケアの参考情報です。
+            <br />
+            肌の症状が長く続く・悪化する場合は皮膚科専門医にご相談ください。
+            <br />
+            記載の成分情報は医薬品的な効能効果を保証するものではありません。
+          </p>
+        </div>
+      </section>
+
+      {/* Footer Instagram */}
+      <footer
+        className="px-5 py-12 text-center"
+        style={{ borderTop: '1px solid var(--line-soft)' }}
+      >
+        <p
+          className="mb-3"
+          style={{
+            fontFamily: 'var(--font-jp-alt)',
+            fontSize: 11.5,
+            lineHeight: 1.9,
+            letterSpacing: '0.06em',
+            color: 'var(--ink-soft)',
+          }}
+        >
+          最新の編集情報は Instagram で配信中
         </p>
         <a
           href="https://www.instagram.com/yun.skincare_"
           target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 px-5 py-2.5 text-xs font-semibold text-white rounded-full"
+          rel="me noopener noreferrer"
           style={{
-            background:
-              'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)',
+            fontFamily: 'var(--font-sans)',
+            fontWeight: 300,
+            fontSize: 11,
+            letterSpacing: '0.32em',
+            color: 'var(--ink-soft)',
+            textTransform: 'lowercase',
           }}
+          className="hover:opacity-70 transition-opacity"
         >
-          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-          </svg>
-          @yun.skincare_ をフォロー
+          @yun.skincare_
         </a>
       </footer>
     </div>
   )
 }
 
-// ========== セクション見出し（エディトリアル風） ==========
-function SectionHeading({
-  enLabel,
-  jpLabel,
-  themeColor,
-}: {
-  enLabel: string
-  jpLabel: string
-  themeColor: string
-}) {
+// ========== セクション見出し（共通エディトリアル）==========
+function SectionLabel({ en, jp }: { en: string; jp: string }) {
   return (
-    <div className="text-center mb-4">
-      <p
-        className="font-serif text-[10px] tracking-[0.4em]"
-        style={{ color: themeColor }}
+    <div className="flex flex-col items-center gap-2 mb-8">
+      <span
+        style={{
+          fontFamily: 'var(--font-serif)',
+          fontStyle: 'italic',
+          fontWeight: 300,
+          fontSize: 12,
+          letterSpacing: '0.42em',
+          color: 'var(--gold-deep)',
+          textTransform: 'uppercase',
+        }}
       >
-        {enLabel}
-      </p>
-      <div
-        className="mt-1 text-[10px] tracking-[0.5em]"
-        style={{ color: themeColor }}
+        {en}
+      </span>
+      <span
+        className="block"
+        style={{ width: 1, height: 28, background: 'var(--gold)' }}
         aria-hidden
+      />
+      <span
+        style={{
+          fontFamily: 'var(--font-jp)',
+          fontSize: 12,
+          letterSpacing: '0.4em',
+          color: 'var(--ink-soft)',
+        }}
       >
-        · · ·
-      </div>
-      <h2 className="font-serif text-base text-[#4A3F45] mt-1 tracking-wider">
-        {jpLabel}
-      </h2>
+        {jp}
+      </span>
     </div>
   )
 }

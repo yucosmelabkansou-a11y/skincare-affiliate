@@ -90,34 +90,76 @@ export default function QuizPage() {
     <div
       className="max-w-2xl mx-auto min-h-screen"
       style={{
-        background:
-          'linear-gradient(180deg, #FDF5F8 0%, #FAF0F2 50%, #F5EDE8 100%)',
+        background: `
+          radial-gradient(60% 60% at 80% 5%, oklch(0.96 0.025 30 / .5), transparent 70%),
+          radial-gradient(50% 60% at 10% 95%, oklch(0.97 0.02 80 / .7), transparent 70%),
+          linear-gradient(180deg, var(--bg-ivory) 0%, var(--bg-cream) 60%, var(--bg-warm) 100%)
+        `,
       }}
     >
       {/* プログレスバー */}
-      <div className="sticky top-0 z-10 bg-white/85 backdrop-blur-md border-b border-[#F2EAEF]">
+      <div
+        className="sticky top-0 z-10 backdrop-blur-md"
+        style={{
+          background: 'oklch(0.985 0.008 85 / 0.9)',
+          borderBottom: '1px solid var(--line-soft)',
+        }}
+      >
         <div className="px-4 py-3">
           <div className="flex items-center justify-between mb-2">
-            <Link href="/diagnosis" className="text-xs text-[#9B8E94] hover:text-[#C2185B] font-serif italic">
+            <Link
+              href="/diagnosis"
+              className="transition-opacity hover:opacity-70"
+              style={{
+                fontFamily: 'var(--font-serif)',
+                fontStyle: 'italic',
+                fontWeight: 300,
+                fontSize: 11,
+                letterSpacing: '0.18em',
+                color: 'var(--ink-mute)',
+              }}
+            >
               ← トップへ
             </Link>
-            <p className="text-[10px] tracking-[0.3em] text-[#D4829E] font-serif">
-              QUESTION {String(currentIndex + 1).padStart(2, '0')} / {String(questions.length).padStart(2, '0')}
+            <p
+              style={{
+                fontFamily: 'var(--font-serif)',
+                fontStyle: 'italic',
+                fontWeight: 300,
+                fontSize: 10,
+                letterSpacing: '0.32em',
+                color: 'var(--gold-deep)',
+                textTransform: 'uppercase',
+              }}
+            >
+              Question {String(currentIndex + 1).padStart(2, '0')} / {String(questions.length).padStart(2, '0')}
             </p>
             <button
               onClick={handleReset}
-              className="text-xs text-[#9B8E94] hover:text-[#C2185B] font-serif italic"
+              className="transition-opacity hover:opacity-70"
               aria-label="最初からやり直す"
+              style={{
+                fontFamily: 'var(--font-serif)',
+                fontStyle: 'italic',
+                fontWeight: 300,
+                fontSize: 11,
+                letterSpacing: '0.18em',
+                color: 'var(--ink-mute)',
+              }}
             >
               reset
             </button>
           </div>
-          <div className="h-[3px] bg-[#F2EAEF] rounded-full overflow-hidden">
+          <div
+            className="h-[2px] overflow-hidden"
+            style={{ background: 'var(--line-soft)' }}
+          >
             <div
-              className="h-full transition-all duration-500 ease-out rounded-full"
+              className="h-full transition-all duration-500 ease-out"
               style={{
                 width: `${progress}%`,
-                background: 'linear-gradient(90deg, #D4829E 0%, #C2185B 100%)',
+                background:
+                  'linear-gradient(90deg, var(--gold) 0%, var(--gold-deep) 100%)',
               }}
             />
           </div>
@@ -125,41 +167,104 @@ export default function QuizPage() {
       </div>
 
       {/* 質問本体 */}
-      <div className="px-5 pt-10 pb-16">
+      <div className="px-5 pt-12 pb-16">
         <div key={currentIndex} className="animate-fade-in">
-          {/* 装飾ドット */}
-          <div className="text-center text-[10px] tracking-[0.5em] text-[#D4829E] mb-4" aria-hidden>
-            · · ·
+          {/* eyebrow rule */}
+          <div
+            className="flex items-center justify-center gap-3 mb-5"
+            aria-hidden
+          >
+            <span
+              className="block w-7 h-px"
+              style={{ background: 'var(--gold)' }}
+            />
+            <span
+              style={{
+                fontFamily: 'var(--font-serif)',
+                fontStyle: 'italic',
+                fontWeight: 300,
+                fontSize: 10,
+                letterSpacing: '0.42em',
+                color: 'var(--gold-deep)',
+                textTransform: 'uppercase',
+              }}
+            >
+              Q. {String(currentIndex + 1).padStart(2, '0')}
+            </span>
+            <span
+              className="block w-7 h-px"
+              style={{ background: 'var(--gold)' }}
+            />
           </div>
 
-          <h1 className="text-lg font-bold text-[#4A3F45] leading-relaxed mb-2 text-center">
+          <h1
+            className="text-center mx-auto"
+            style={{
+              fontFamily: 'var(--font-jp)',
+              fontWeight: 500,
+              fontSize: 'clamp(17px, 4.6vw, 21px)',
+              lineHeight: 1.7,
+              letterSpacing: '0.08em',
+              color: 'var(--ink)',
+              wordBreak: 'keep-all',
+              maxWidth: '24ch',
+            }}
+          >
             {currentQuestion.text}
           </h1>
           {currentQuestion.subtext && (
-            <p className="text-xs text-[#9B8E94] mb-6 text-center font-serif italic">
+            <p
+              className="text-center mt-3"
+              style={{
+                fontFamily: 'var(--font-serif)',
+                fontStyle: 'italic',
+                fontWeight: 300,
+                fontSize: 12,
+                letterSpacing: '0.12em',
+                color: 'var(--ink-mute)',
+              }}
+            >
               — {currentQuestion.subtext} —
             </p>
           )}
 
           {/* 選択肢 */}
-          <div className="space-y-2.5 mt-7">
+          <div className="space-y-2.5 mt-9 max-w-md mx-auto">
             {currentQuestion.options.map((option, i) => {
               const isSelected = answers[currentIndex] === i
               return (
                 <button
                   key={i}
                   onClick={() => handleSelect(i)}
-                  className={`w-full text-left p-4 rounded-2xl border transition-all active:scale-[0.98] flex items-center gap-3 ${
+                  className="w-full text-left px-4 py-4 transition-all active:scale-[0.98] flex items-center gap-3"
+                  style={
                     isSelected
-                      ? 'border-[#C2185B] bg-white shadow-[0_4px_20px_rgba(212,130,158,0.18)]'
-                      : 'border-[#F2EAEF] bg-white/80 hover:border-[#E8C7D4] hover:bg-white'
-                  }`}
+                      ? {
+                          background: '#fff',
+                          border: '1px solid var(--gold)',
+                          boxShadow:
+                            '0 14px 32px -22px oklch(0.5 0.06 70 / .35)',
+                        }
+                      : {
+                          background: '#fff',
+                          border: '1px solid var(--line-soft)',
+                        }
+                  }
                 >
-                  {option.emoji && <span className="text-xl flex-shrink-0">{option.emoji}</span>}
+                  {option.emoji && (
+                    <span className="text-xl flex-shrink-0">
+                      {option.emoji}
+                    </span>
+                  )}
                   <span
-                    className={`text-sm leading-snug ${
-                      isSelected ? 'text-[#4A3F45] font-semibold' : 'text-[#4A3F45]'
-                    }`}
+                    style={{
+                      fontFamily: 'var(--font-jp)',
+                      fontWeight: isSelected ? 600 : 500,
+                      fontSize: 13.5,
+                      lineHeight: 1.7,
+                      letterSpacing: '0.06em',
+                      color: 'var(--ink)',
+                    }}
                   >
                     {option.label}
                   </span>
@@ -170,10 +275,18 @@ export default function QuizPage() {
 
           {/* 戻るボタン */}
           {currentIndex > 0 && (
-            <div className="mt-9 text-center">
+            <div className="mt-10 text-center">
               <button
                 onClick={handleBack}
-                className="text-xs text-[#9B8E94] hover:text-[#C2185B] py-2 px-4 font-serif italic transition-colors"
+                className="transition-opacity hover:opacity-70 py-2 px-4"
+                style={{
+                  fontFamily: 'var(--font-serif)',
+                  fontStyle: 'italic',
+                  fontWeight: 300,
+                  fontSize: 12,
+                  letterSpacing: '0.18em',
+                  color: 'var(--ink-mute)',
+                }}
               >
                 ← 前の質問に戻る
               </button>
