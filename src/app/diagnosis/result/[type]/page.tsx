@@ -413,11 +413,11 @@ export default async function ResultPage({ params, searchParams }: Props) {
         </div>
       </section>
 
-      {/* おすすめ成分 */}
+      {/* おすすめ成分（最初の2つだけに絞る）*/}
       <section className="px-5 pb-12">
-        <SectionLabel en="Recommended Ingredients" jp="取り入れたい成分" />
+        <SectionLabel en="Recommended Ingredients" jp="まず取り入れたい成分" />
         <div className="grid grid-cols-2 gap-3 max-w-md mx-auto">
-          {result.recommendedIngredients.map((ing) => {
+          {result.recommendedIngredients.slice(0, 2).map((ing) => {
             const info = INGREDIENT_INFO[ing]
             return (
               <article

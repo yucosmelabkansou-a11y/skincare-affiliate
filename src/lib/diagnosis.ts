@@ -179,7 +179,7 @@ export const resultTypes: Record<SkinType, ResultType> = {
     ],
     recommendedIngredients: ['セラミド', 'ヒアルロン酸', 'グリセリン', 'スクワラン'],
     yunComment:
-      '乾燥肌は「攻める保湿」より「優しく重ねる保湿」が私の正解。冬は乳液を2回塗ることもあるよ。',
+      '乾燥肌は「攻める保湿」より「優しく重ねる保湿」がゆん的に正解です！冬は乳液を2回塗ることもありますよ。',
   },
   oily: {
     type: 'oily',
@@ -209,7 +209,7 @@ export const resultTypes: Record<SkinType, ResultType> = {
     ],
     recommendedIngredients: ['ビタミンC誘導体', 'ナイアシンアミド', 'サリチル酸', 'グリチルリチン酸'],
     yunComment:
-      '皮脂は「敵」じゃない、肌を守ってくれる存在。取りすぎず、整えてあげるのが私の正解。',
+      '皮脂は「敵」じゃなく、肌を守ってくれる存在です！取りすぎず、整えてあげるのがゆん的に正解です。',
   },
   combination: {
     type: 'combination',
@@ -239,7 +239,7 @@ export const resultTypes: Record<SkinType, ResultType> = {
     ],
     recommendedIngredients: ['ナイアシンアミド', 'ヒアルロン酸', 'セラミド', 'BG'],
     yunComment:
-      '混合肌は「全顔1パターンのケア」が一番もったいない。頬と鼻で量を変えるだけで印象が変わるよ。',
+      '混合肌は「全顔1パターンのケア」が一番もったいないんです！頬と鼻で量を変えるだけで印象がぐっと変わりますよ。',
   },
   sensitive: {
     type: 'sensitive',
@@ -269,7 +269,7 @@ export const resultTypes: Record<SkinType, ResultType> = {
     ],
     recommendedIngredients: ['セラミド', 'グリチルリチン酸', 'パンテノール', 'アラントイン'],
     yunComment:
-      '敏感肌は「足すケア」より「引くケア」が私の正解。赤みが出た時は化粧水＋ワセリンだけに切り替えるよ。',
+      '敏感肌は「足すケア」より「引くケア」がゆん的に正解です！赤みが出た時は化粧水＋ワセリンだけに切り替えています。',
   },
   aging: {
     type: 'aging',
@@ -299,7 +299,7 @@ export const resultTypes: Record<SkinType, ResultType> = {
     ],
     recommendedIngredients: ['レチノール', 'ナイアシンアミド', 'ビタミンC誘導体', 'ペプチド'],
     yunComment:
-      'エイジングは「予防が最強」。私が辿り着いた「変わらず見える」最大の鍵は、UVケアと睡眠の2つだよ。',
+      'エイジングは「予防が最強」です！ゆんが辿り着いた「変わらず見える」最大の鍵は、UVケアと睡眠の2つですよ。',
   },
   normal: {
     type: 'normal',
@@ -329,7 +329,7 @@ export const resultTypes: Record<SkinType, ResultType> = {
     ],
     recommendedIngredients: ['ヒアルロン酸', 'ビタミンC誘導体', 'ナイアシンアミド', 'セラミド'],
     yunComment:
-      'バランス肌は「キープが一番難しい」。攻めずに、でも手は抜かない。これが意外と難しいんだよね。',
+      'バランス肌は「キープが一番難しい」んです！攻めずに、でも手は抜かない。これが意外と難しいですよね。',
   },
 }
 

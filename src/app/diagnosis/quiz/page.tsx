@@ -236,7 +236,7 @@ export default function QuizPage() {
                 <button
                   key={i}
                   onClick={() => handleSelect(i)}
-                  className="w-full text-left px-4 py-4 transition-all active:scale-[0.98] flex items-center gap-3"
+                  className="w-full text-left px-5 py-4 transition-all active:scale-[0.98] flex items-center gap-3"
                   style={
                     isSelected
                       ? {
@@ -251,11 +251,21 @@ export default function QuizPage() {
                         }
                   }
                 >
-                  {option.emoji && (
-                    <span className="text-xl flex-shrink-0">
-                      {option.emoji}
-                    </span>
-                  )}
+                  {/* 選択番号 (絵文字の代わりにエディトリアルなナンバリング) */}
+                  <span
+                    className="flex-shrink-0"
+                    style={{
+                      fontFamily: 'var(--font-serif)',
+                      fontStyle: 'italic',
+                      fontWeight: 300,
+                      fontSize: 13,
+                      letterSpacing: '0.04em',
+                      color: isSelected ? 'var(--gold-deep)' : 'var(--ink-mute)',
+                      width: 24,
+                    }}
+                  >
+                    {String.fromCharCode(65 + i)}.
+                  </span>
                   <span
                     style={{
                       fontFamily: 'var(--font-jp)',
