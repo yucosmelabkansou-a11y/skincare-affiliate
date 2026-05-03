@@ -25,7 +25,7 @@ export default function SearchBar({ value, onChange }: Props) {
         type="text"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        placeholder="毛穴 レチノール…スペース区切りで複数検索"
+        placeholder="セラミド、ナイアシンアミド、毛穴…成分・悩みで検索"
         className="w-full pl-9 pr-8 py-2.5 text-sm border border-[#E9ECEF] rounded-xl bg-white text-[#343A40] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4DB6AC]/40"
       />
       {value && (

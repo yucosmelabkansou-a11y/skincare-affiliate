@@ -39,17 +39,23 @@ export function getProducts(): Product[] {
           image_filename, amazon_url, rakuten_url,
           is_pick, instagram_url,
           is_yun_must, must_tags_raw, yun_must_comment,
+          key_ingredients_raw,
         ] = fields
         const raw = image_filename?.trim() ?? ''
         const normalized = raw.includes('.') ? raw : raw + '.jpg'
+        // 悩みタグの区切り：カテゴリ名「シミ・くすみ」「皮脂・テカリ」「角質・ザラつき」が
+        // 中黒を含むので、カンマ区切りを優先。カンマ無し時のみ中黒/読点で分割（旧データ互換）
+        const tagsTrimmed = (tagsRaw ?? '').trim()
+        const tags = tagsTrimmed.includes(',')
+          ? tagsTrimmed.split(',').map((t) => t.trim()).filter(Boolean)
+          : tagsTrimmed.split(/[、]/).map((t) => t.trim()).filter(Boolean)
         return {
           id: id.trim(),
           category: category?.trim() ?? '',
           name: name.trim(),
           brand: brand.trim(),
           price: price?.trim() ?? '',
-          // タグ区切り文字: カンマ(,) と中黒(・) の両方に対応（CSV入力のバラツキを吸収）
-          tags: tagsRaw.trim().split(/[,・]/).map((t) => t.trim()).filter((t) => t !== ''),
+          tags,
           review: review.trim(),
           image_filename: normalized,
           amazon_url: amazon_url?.trim() ?? '',
@@ -59,6 +65,11 @@ export function getProducts(): Product[] {
           is_yun_must: is_yun_must?.trim() === 'true',
           must_tags: (must_tags_raw ?? '').trim().split(',').map((t) => t.trim()).filter((t) => t !== ''),
           yun_must_comment: yun_must_comment?.trim() ?? '',
+          key_ingredients: (key_ingredients_raw ?? '')
+            .trim()
+            .split(',')
+            .map((t) => t.trim())
+            .filter((t) => t !== '' && t !== '-'),
         }
       })
   } catch (error) {

@@ -32,6 +32,7 @@ export default function ProductList({ products }: Props) {
         if (!matchByTag && !matchByCategory) return false
       }
       // スペース区切りAND検索（全キーワードにマッチ）
+      // 検索対象: 商品名 / ブランド / カテゴリ / 悩みタグ / 主要成分 / 商品説明
       if (searchQuery.trim() !== '') {
         const keywords = searchQuery.toLowerCase().split(/\s+/).filter(Boolean)
         const searchTarget = [
@@ -39,6 +40,8 @@ export default function ProductList({ products }: Props) {
           p.brand,
           p.category,
           ...p.tags,
+          ...(p.key_ingredients || []),
+          p.review,
         ].join(' ').toLowerCase()
         if (!keywords.every((kw) => searchTarget.includes(kw))) return false
       }
