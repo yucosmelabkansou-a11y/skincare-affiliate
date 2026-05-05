@@ -10,6 +10,7 @@ import {
 } from '@/lib/diagnosis'
 import { SITE_URL } from '@/lib/siteConfig'
 import SkinRadarChart, { TYPICAL_VALUES_BY_TYPE } from '@/components/SkinRadarChart'
+import DiagnosisProductMatch from '@/components/DiagnosisProductMatch'
 import ShareButtons from './ShareButtons'
 
 // 静的パラメータ生成（SSG）
@@ -553,84 +554,26 @@ export default async function ResultPage({ params, searchParams }: Props) {
         </ul>
       </section>
 
-      {/* 商品提案 Coming Soon */}
-      <section className="px-5 pb-12">
-        <SectionLabel en="Product Match" jp="あなた専用ピックアップ" />
-        <div
-          className="mx-auto px-6 py-10 text-center"
+      {/* Product Match — あなた専用ピックアップ */}
+      <DiagnosisProductMatch skinType={type as SkinType} />
+
+      {/* 全商品ラインナップへの導線 */}
+      <section className="px-5 pb-10 text-center">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-3 px-7 py-3 transition-opacity hover:opacity-70"
           style={{
-            background:
-              'linear-gradient(180deg, oklch(0.985 0.012 80), oklch(0.96 0.018 75))',
-            border: '1px solid var(--line-soft)',
-            maxWidth: 460,
+            fontFamily: 'var(--font-jp)',
+            fontWeight: 500,
+            fontSize: 12,
+            letterSpacing: '0.24em',
+            color: 'var(--ink)',
+            border: '1px solid var(--ink)',
+            background: 'transparent',
           }}
         >
-          <p
-            style={{
-              fontFamily: 'var(--font-serif)',
-              fontStyle: 'italic',
-              fontWeight: 300,
-              fontSize: 12,
-              letterSpacing: '0.4em',
-              color: 'var(--gold-deep)',
-              textTransform: 'uppercase',
-              marginBottom: 10,
-            }}
-          >
-            Coming Soon
-          </p>
-          <h3
-            style={{
-              fontFamily: 'var(--font-jp)',
-              fontWeight: 500,
-              fontSize: 15,
-              letterSpacing: '0.18em',
-              color: 'var(--ink)',
-              marginBottom: 14,
-              lineHeight: 1.6,
-            }}
-          >
-            あなたの肌タイプ別
-            <br />
-            朝晩のおすすめ商品ルーティン
-          </h3>
-          <p
-            className="mx-auto"
-            style={{
-              fontFamily: 'var(--font-jp-alt)',
-              fontWeight: 400,
-              fontSize: 12,
-              lineHeight: 1.95,
-              letterSpacing: '0.06em',
-              color: 'var(--ink-soft)',
-              maxWidth: '28ch',
-            }}
-          >
-            診断結果からあなたに合う商品を、200近いアイテムから自動マッチングする機能を準備中です。
-          </p>
-          <p
-            className="mt-5"
-            style={{
-              fontFamily: 'var(--font-jp-alt)',
-              fontWeight: 400,
-              fontSize: 11,
-              lineHeight: 1.8,
-              letterSpacing: '0.06em',
-              color: 'var(--ink-mute)',
-            }}
-          >
-            それまでは、上記「取り入れたい成分」を参考に
-            <br />
-            <Link
-              href="/"
-              className="underline"
-              style={{ color: 'var(--gold-deep)' }}
-            >
-              全商品ラインナップ
-            </Link>
-            から探してみてください。
-          </p>
-        </div>
+          全商品ラインナップを見る →
+        </Link>
       </section>
 
       {/* シェア & アクション */}
