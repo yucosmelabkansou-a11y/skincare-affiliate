@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { getAllSlugs, getArticle, getAllArticles, resolveCta, splitBodyAtMiddleH2 } from '@/lib/articles'
 import ArticleCTA from '@/components/ArticleCTA'
+import ArticleAuthor from '@/components/ArticleAuthor'
 import ArticleCard from '@/components/ArticleCard'
 import { SITE_URL } from '@/lib/siteConfig'
 
@@ -229,6 +230,8 @@ export default async function QaPage({ params }: Props) {
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{a.body}</ReactMarkdown>
         </article>
       )}
+
+      <ArticleAuthor />
 
       <ArticleCTA variant="end" target={cta.end} />
 
