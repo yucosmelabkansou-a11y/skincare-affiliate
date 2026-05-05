@@ -124,8 +124,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
-  // Google Search Console 認証用（取得後にここへ貼り付け）
-  // verification: { google: 'your-verification-code' },
+  verification: { google: 'cxrwG5YhuWfdg011oR7waVThjmZWjj9hBb0ir9JDdrk' },
 }
 
 export default function RootLayout({
