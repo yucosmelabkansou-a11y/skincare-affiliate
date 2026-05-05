@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import { getAllSlugs, getArticle, getAllArticles } from '@/lib/articles'
+import { getAllSlugs, getArticle, getAllArticles, resolveCta, splitBodyAtMiddleH2 } from '@/lib/articles'
 import ArticleCTA from '@/components/ArticleCTA'
 import ArticleCard from '@/components/ArticleCard'
 import { SITE_URL } from '@/lib/siteConfig'
@@ -53,6 +53,10 @@ export default async function QaPage({ params }: Props) {
       a.tags && x.tags ? a.tags.some((t) => x.tags!.includes(t)) : false,
     )
     .slice(0, 3)
+
+  const cta = resolveCta(a)
+  const showMid = cta.mid !== 'none' && cta.mid !== cta.end
+  const split = showMid ? splitBodyAtMiddleH2(a.body) : null
 
   // FAQPage 構造化データ（Q&A記事は特に Q: / A: 形式に最適）
   const faqMatches = Array.from(
@@ -201,14 +205,32 @@ export default async function QaPage({ params }: Props) {
         )}
       </header>
 
-      <article
-        className="px-6 pb-8 prose-yun"
-        style={{ fontFamily: 'var(--font-jp)', color: 'var(--ink)' }}
-      >
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{a.body}</ReactMarkdown>
-      </article>
+      {split ? (
+        <>
+          <article
+            className="px-6 pb-4 prose-yun"
+            style={{ fontFamily: 'var(--font-jp)', color: 'var(--ink)' }}
+          >
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{split.before}</ReactMarkdown>
+          </article>
+          <ArticleCTA variant="mid" target={cta.mid} />
+          <article
+            className="px-6 pb-8 prose-yun"
+            style={{ fontFamily: 'var(--font-jp)', color: 'var(--ink)' }}
+          >
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{split.after}</ReactMarkdown>
+          </article>
+        </>
+      ) : (
+        <article
+          className="px-6 pb-8 prose-yun"
+          style={{ fontFamily: 'var(--font-jp)', color: 'var(--ink)' }}
+        >
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{a.body}</ReactMarkdown>
+        </article>
+      )}
 
-      <ArticleCTA variant="end" />
+      <ArticleCTA variant="end" target={cta.end} />
 
       {a.tags && a.tags.length > 0 && (
         <div className="px-6 pb-8 flex flex-wrap gap-2 justify-center">

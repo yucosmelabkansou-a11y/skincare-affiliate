@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import { getAllSlugs, getArticle, getAllArticles } from '@/lib/articles'
+import { getAllSlugs, getArticle, getAllArticles, resolveCta, splitBodyAtMiddleH2 } from '@/lib/articles'
 import ArticleCTA from '@/components/ArticleCTA'
 import ArticleCard from '@/components/ArticleCard'
 import { SITE_URL } from '@/lib/siteConfig'
@@ -57,6 +57,27 @@ export default async function ColumnPage({ params }: Props) {
     )
     .slice(0, 3)
 
+  // CTA戦略を解決（mid と end が同一 target なら mid を出さない）
+  const cta = resolveCta(a)
+  const showMid = cta.mid !== 'none' && cta.mid !== cta.end
+  const split = showMid ? splitBodyAtMiddleH2(a.body) : null
+
+  // FAQ 構造化データ（## Q. xxx → A. xxx 形式があれば自動付与してリッチリザルト狙い）
+  const faqMatches = Array.from(
+    a.body.matchAll(/##\s*Q\.\s*([^\n]+)[\s\S]*?A\.\s*([^\n]+)/g),
+  ).slice(0, 10)
+  const faqJsonLd = faqMatches.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqMatches.map(([, q, ans]) => ({
+          '@type': 'Question',
+          name: q.trim(),
+          acceptedAnswer: { '@type': 'Answer', text: ans.trim() },
+        })),
+      }
+    : null
+
   const articleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -105,6 +126,12 @@ export default async function ColumnPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
 
       {/* パンくず */}
       <nav
@@ -184,19 +211,34 @@ export default async function ColumnPage({ params }: Props) {
         )}
       </header>
 
-      {/* 記事本文 */}
-      <article
-        className="px-6 pb-8 prose-yun"
-        style={{
-          fontFamily: 'var(--font-jp)',
-          color: 'var(--ink)',
-        }}
-      >
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{a.body}</ReactMarkdown>
-      </article>
+      {/* 記事本文（mid CTA を H2 中盤で挟む） */}
+      {split ? (
+        <>
+          <article
+            className="px-6 pb-4 prose-yun"
+            style={{ fontFamily: 'var(--font-jp)', color: 'var(--ink)' }}
+          >
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{split.before}</ReactMarkdown>
+          </article>
+          <ArticleCTA variant="mid" target={cta.mid} />
+          <article
+            className="px-6 pb-8 prose-yun"
+            style={{ fontFamily: 'var(--font-jp)', color: 'var(--ink)' }}
+          >
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{split.after}</ReactMarkdown>
+          </article>
+        </>
+      ) : (
+        <article
+          className="px-6 pb-8 prose-yun"
+          style={{ fontFamily: 'var(--font-jp)', color: 'var(--ink)' }}
+        >
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{a.body}</ReactMarkdown>
+        </article>
+      )}
 
       {/* 末尾CTA */}
-      <ArticleCTA variant="end" />
+      <ArticleCTA variant="end" target={cta.end} />
 
       {/* タグ */}
       {a.tags && a.tags.length > 0 && (

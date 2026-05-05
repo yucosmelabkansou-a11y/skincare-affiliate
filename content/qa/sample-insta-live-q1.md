@@ -8,6 +8,9 @@ tags:
   - レチノール
   - インスタライブ
 noteUrl: https://note.com/yun_skincare/n/example-qa1
+# CTA戦略: Q&A は「自分に合う成分か知りたい」読者向け → 中盤で肌診断、末尾で商品一覧
+midCta: diagnosis
+endCta: products
 ---
 
 ## Q. 敏感肌でレチノールデビューしたいけど、ピリつかないか不安です
