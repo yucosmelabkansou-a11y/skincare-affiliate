@@ -124,7 +124,12 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
-  verification: { google: 'cxrwG5YhuWfdg011oR7waVThjmZWjj9hBb0ir9JDdrk' },
+  verification: {
+    google: [
+      'cxrwG5YhuWfdg011oR7waVThjmZWjj9hBb0ir9JDdrk',  // 旧 vercel.app プロパティ
+      'g7s6lmKldWmDcwaBpdYtL07ent4F6xWKOFyucNqRuvA',  // 新 www.yun-skin-care.com プロパティ
+    ],
+  },
 }
 
 export default function RootLayout({
