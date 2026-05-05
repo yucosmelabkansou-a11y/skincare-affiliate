@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import { Inter, Noto_Sans_JP, Cormorant_Garamond, Shippori_Mincho, Italiana, Jost } from 'next/font/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_DESCRIPTION } from '@/lib/siteConfig'
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 
 const inter = Inter({
   subsets: ['latin'],
@@ -135,6 +138,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-[var(--bg-cream)] text-[var(--ink)] font-jp antialiased">
         {children}
       </body>
+      {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
     </html>
   )
 }
