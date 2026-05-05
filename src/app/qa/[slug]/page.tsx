@@ -165,12 +165,12 @@ export default async function QaPage({ params }: Props) {
           style={{
             fontFamily: 'var(--font-jp)',
             fontWeight: 500,
-            fontSize: 'clamp(21px, 5.6vw, 28px)',
-            lineHeight: 1.7,
-            letterSpacing: '0.08em',
+            fontSize: 'clamp(20px, 5.4vw, 28px)',
+            lineHeight: 1.6,
+            letterSpacing: '0.06em',
             color: 'var(--ink)',
-            wordBreak: 'keep-all',
-            maxWidth: '24ch',
+            overflowWrap: 'anywhere',
+            maxWidth: '32ch',
           }}
         >
           {a.title}

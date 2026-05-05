@@ -58,10 +58,10 @@ export default function ArticleCard({ article }: { article: Article }) {
             fontFamily: 'var(--font-jp)',
             fontWeight: 500,
             fontSize: 16,
-            lineHeight: 1.7,
-            letterSpacing: '0.08em',
+            lineHeight: 1.6,
+            letterSpacing: '0.06em',
             color: 'var(--ink)',
-            wordBreak: 'keep-all',
+            overflowWrap: 'anywhere',
           }}
         >
           {article.title}
