@@ -7,6 +7,13 @@ import JournalSection from '@/components/JournalSection'
 import FaqSection from '@/components/FaqSection'
 import { SITE_URL } from '@/lib/siteConfig'
 
+function parseYenPrice(priceStr: string): number | null {
+  const match = priceStr.match(/¥\s*([\d,]+)/)
+  if (!match) return null
+  const num = Number(match[1].replace(/,/g, ''))
+  return Number.isFinite(num) && num > 0 ? num : null
+}
+
 export default function Home() {
   const products = getProducts()
 
@@ -44,26 +51,32 @@ export default function Home() {
     '@type': 'ItemList',
     name: 'ゆんが厳選したスキンケア・ベースメイク',
     numberOfItems: products.length,
-    itemListElement: products.slice(0, 30).map((p, idx) => ({
-      '@type': 'ListItem',
-      position: idx + 1,
-      item: {
-        '@type': 'Product',
-        name: p.name,
-        brand: { '@type': 'Brand', name: p.brand },
-        category: p.category,
-        image: p.image_filename ? `${SITE_URL}/images/${p.image_filename}` : undefined,
-        description: p.review,
-        offers:
-          p.amazon_url || p.rakuten_url
-            ? {
-                '@type': 'Offer',
-                url: p.amazon_url || p.rakuten_url,
-                availability: 'https://schema.org/InStock',
-              }
-            : undefined,
-      },
-    })),
+    itemListElement: products.slice(0, 30).map((p, idx) => {
+      const offerPrice = parseYenPrice(p.price)
+      const offerUrl = p.amazon_url || p.rakuten_url
+      return {
+        '@type': 'ListItem',
+        position: idx + 1,
+        item: {
+          '@type': 'Product',
+          name: p.name,
+          brand: { '@type': 'Brand', name: p.brand },
+          category: p.category,
+          image: p.image_filename ? `${SITE_URL}/images/${p.image_filename}` : undefined,
+          description: p.review,
+          offers:
+            offerPrice && offerUrl
+              ? {
+                  '@type': 'Offer',
+                  url: offerUrl,
+                  price: offerPrice,
+                  priceCurrency: 'JPY',
+                  availability: 'https://schema.org/InStock',
+                }
+              : undefined,
+        },
+      }
+    }),
   }
 
   return (
