@@ -197,10 +197,19 @@ body {
   border: 1px solid var(--line-soft);
 }
 .prose-yun table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   width: 100%;
   margin: 1.6em 0;
-  border-collapse: collapse;
   font-size: 13px;
+}
+.prose-yun table thead,
+.prose-yun table tbody {
+  display: table;
+  width: max-content;
+  min-width: 100%;
+  border-collapse: collapse;
 }
 .prose-yun th,
 .prose-yun td {
@@ -208,11 +217,24 @@ body {
   padding: 8px 12px;
   text-align: left;
   color: var(--ink-soft);
+  white-space: normal;
+  vertical-align: middle;
+  min-width: 88px;
 }
 .prose-yun th {
   background: oklch(0.97 0.012 80);
   font-weight: 600;
   color: var(--ink);
+  white-space: nowrap;
+}
+/* テーブル内画像は商品サムネとして小さく */
+.prose-yun table img {
+  display: block;
+  margin: 0 auto;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border: none;
 }
 
 /* Modal animations */
