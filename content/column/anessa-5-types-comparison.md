@@ -20,23 +20,21 @@ endCta: products
 
 「アネッサって種類が多くて、結局どれを使えばいいの？」とよく聞かれます。元化粧品研究のゆんが、何年もローテーションで使い続けてきたアネッサのお気に入りを5本、肌悩み別の使い分けにまとめました🌸
 
-## あなたの肌・悩みに合うのはどれ？
+## あなたの悩みに合うのはどれ？
 
-まずは「自分の肌×叶えたいこと」から、ぴったりの1本を見つけてください。
+まずは「叶えたいこと」から、ぴったりの1本を見つけてください。
 
-| あなたの肌・悩み | おすすめ | こんな1本 |
-|---|---|---|
-| 乾燥肌・日中の乾燥が気になる | ① ジェル NB | オートモイストバランスで水分を一定に保つ |
-| くすみ・色ムラを補正したい | ② ブライトニング NA | m-トラネキサム酸＋ラベンダーピンクで透明感 |
-| 朝の時短ケアをしたい | ③ デイセラム N | 美容液＋下地＋UVが1本で完結 |
-| 絶対に焼きたくない（レジャー） | ④ ミルク NA | オートリペア×オートブースターで最強防御 |
-| 日中の塗り直し用が欲しい | ⑤ ブラッシュオン パウダー | ブラシ一体型で外出先でもサッと塗り直し |
+| 画像 | 商品 | こんな人に | 価格 | Amazon | 楽天 |
+|---|---|---|---|---|---|
+| ![ジェル NB](/images/IMG_0874.jpg) | ① ジェル NB | 乾燥肌・日中の乾燥 | 40g ¥1,496 | [→ 購入](https://www.amazon.co.jp/dp/B0GFL5YFTX?tag=onamzyyy0410m-22) | [→ 購入](https://hb.afl.rakuten.co.jp/ichiba/280df31e.cc217036.280df31f.ad07d749/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F406689%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
+| ![ブライトニング NA](/images/IMG_0875.jpg) | ② ブライトニング NA | くすみ・色ムラ補正 | 40g ¥1,496 | [→ 購入](https://www.amazon.co.jp/dp/B0CST17MT5?tag=onamzyyy0410m-22) | [→ 購入](https://hb.afl.rakuten.co.jp/ichiba/280df31e.cc217036.280df31f.ad07d749/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F406690%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
+| ![デイセラム N](/images/IMG_0880.jpg) | ③ デイセラム N | 朝の時短ケア | 30mL ¥3,498 | [→ 購入](https://www.amazon.co.jp/dp/B0DSPDHCWT?tag=onamzyyy0410m-22) | [→ 購入](https://hb.afl.rakuten.co.jp/ichiba/3a7a3323.623c5a77.3a7a3324.f3eeec80/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fyayoi-cosme%2F20977%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
+| 画像準備中 | ④ ミルク NA | 海・スポーツで絶対焼かない | 60mL | [→ 探す](https://www.amazon.co.jp/s?k=%E3%82%A2%E3%83%8D%E3%83%83%E3%82%B5+%E3%83%91%E3%83%BC%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88UV+%E3%82%B9%E3%82%AD%E3%83%B3%E3%82%B1%E3%82%A2%E3%83%9F%E3%83%AB%E3%82%AF+NA&i=beauty&tag=onamzyyy0410m-22) | [→ 探す](https://search.rakuten.co.jp/search/mall/%E3%82%A2%E3%83%8D%E3%83%83%E3%82%B5+%E3%83%91%E3%83%BC%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88UV+%E3%82%B9%E3%82%AD%E3%83%B3%E3%82%B1%E3%82%A2%E3%83%9F%E3%83%AB%E3%82%AF+NA/) |
+| 画像準備中 | ⑤ ブラッシュオン パウダー | 日中の塗り直し用 | — | [→ 探す](https://www.amazon.co.jp/s?k=%E3%82%A2%E3%83%8D%E3%83%83%E3%82%B5+%E3%83%91%E3%83%BC%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88UV+%E3%83%96%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%82%AA%E3%83%B3+%E3%83%91%E3%82%A6%E3%83%80%E3%83%BC&i=beauty&tag=onamzyyy0410m-22) | [→ 探す](https://search.rakuten.co.jp/search/mall/%E3%82%A2%E3%83%8D%E3%83%83%E3%82%B5+%E3%83%96%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%82%AA%E3%83%B3+%E3%83%91%E3%82%A6%E3%83%80%E3%83%BC/) |
 
-自分の肌タイプそのものが分からない方は、先に[2分でできる肌タイプ診断](/diagnosis)を済ませてから、各製品の解説に進んでください。
+迷ったら[2分でできる肌タイプ診断](/diagnosis)から。
 
 ## ① ジェル NB｜毎日使う快適UV
-
-![アネッサ パーフェクトUV スキンケアジェル NB](/images/IMG_0874.jpg)
 
 > Point：オートモイストバランス技術で肌上の水分を一定に保つ、デイリー枠のレギュラー。
 
@@ -48,14 +46,10 @@ endCta: products
 
 中核は「オートモイストバランス技術」。湿度変化に応じて肌上の水分を自動で調整してくれるので、乾燥もベタつきも感じにくいのが強みです。アクアブースターEXは、汗・水でUV膜が密着強化されるアネッサの代名詞的UV技術。紫外線散乱剤不使用なので、白浮きやモロモロカスが出にくいのもデイリー向きの理由です。
 
-> ★ こんな人におすすめ：乾燥肌〜混合肌で、毎日続けやすいアネッサを1本選びたい方。
-
 🛒 アネッサ パーフェクトUV スキンケアジェル NB 40g ¥1,496  
 [Amazon](https://www.amazon.co.jp/dp/B0GFL5YFTX?tag=onamzyyy0410m-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/280df31e.cc217036.280df31f.ad07d749/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F406689%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
 
 ## ② ブライトニング NA｜美白＋下地UV
-
-![アネッサ ブライトニングUV ジェル NA](/images/IMG_0875.jpg)
 
 > Point：m-トラネキサム酸でシミ予防＋ラベンダーピンクで黄ぐすみ補正。1本で薬用UVと下地を兼ねる。
 
@@ -67,14 +61,10 @@ endCta: products
 
 紫外線を防ぎながら、美白有効成分m-トラネキサム酸でシミ・そばかすを予防する薬用UV。「3種の忍ばせパール」によるラベンダーピンクが瞬時に黄ぐすみを補正してくれるので、トーンアップ下地としても優秀です。
 
-> ★ こんな人におすすめ：黄ぐすみ・色ムラが気になる方。WEB会議や撮影日に「ファンデは塗りたくないけど顔色は整えたい」方。
-
 🛒 アネッサ ブライトニングUV ジェル NA 40g ¥1,496（医薬部外品）  
 [Amazon](https://www.amazon.co.jp/dp/B0CST17MT5?tag=onamzyyy0410m-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/280df31e.cc217036.280df31f.ad07d749/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F406690%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
 
 ## ③ デイセラム N｜次世代の日中美容UV
-
-![アネッサ デイセラム N](/images/IMG_0880.jpg)
 
 > Point：紫外線を美容効果のある光に変換する「サンデュアルケア技術」搭載。朝の美容液＋下地＋UVが1本で完結。
 
@@ -85,8 +75,6 @@ endCta: products
 | 独自技術 | サンデュアルケア（光変換）／美白有効成分配合 |
 
 紫外線を「防ぐ」だけでなく、肌にとって有益な光に変換するという発想の日中用UV美容乳液。美白有効成分とヒアルロン酸も配合されていて、シミ予防とうるおい補給を同時に行えます。朝の時短ケアと、年齢に応じたうるおいケアを両立したい方向き。
-
-> ★ こんな人におすすめ：朝の美容液→下地→UVを1ステップで終わらせたい忙しい大人。
 
 🛒 アネッサ デイセラム N 30mL ¥3,498（医薬部外品）  
 [Amazon](https://www.amazon.co.jp/dp/B0DSPDHCWT?tag=onamzyyy0410m-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/3a7a3323.623c5a77.3a7a3324.f3eeec80/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fyayoi-cosme%2F20977%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
@@ -105,8 +93,6 @@ endCta: products
 
 表情の動きでできる微細なヨレを自動で修復する「オートリペア技術」、そして汗・水・熱でUV膜が密着強化される「オートブースター技術」を搭載した、アネッサのレジャー枠最強モデル。海・スポーツ・長時間外出など「絶対焼きたくない日」のシールドとして頼れる1本です。
 
-> ★ こんな人におすすめ：海・スポーツ・長時間外出など、汗や水に強いUV膜が欲しい方。
-
 🛒 アネッサ パーフェクトUV スキンケアミルク NA 60mL  
 [Amazonで探す](https://www.amazon.co.jp/s?k=%E3%82%A2%E3%83%8D%E3%83%83%E3%82%B5+%E3%83%91%E3%83%BC%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88UV+%E3%82%B9%E3%82%AD%E3%83%B3%E3%82%B1%E3%82%A2%E3%83%9F%E3%83%AB%E3%82%AF+NA&i=beauty&tag=onamzyyy0410m-22) ／ [楽天で探す](https://search.rakuten.co.jp/search/mall/%E3%82%A2%E3%83%8D%E3%83%83%E3%82%B5+%E3%83%91%E3%83%BC%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88UV+%E3%82%B9%E3%82%AD%E3%83%B3%E3%82%B1%E3%82%A2%E3%83%9F%E3%83%AB%E3%82%AF+NA/)
 
@@ -122,8 +108,6 @@ endCta: products
 | 設計 | ブラシ一体型／皮脂吸着パウダー |
 
 UVは「塗ったあと」より「塗り直し」で効きが決まる、というのが大人スキンケアの真実。このパウダーはブラシ一体型なので、手も汚さず、メイクの上からこすらず塗り直せます。皮脂吸着パウダーが日中のテカリと赤み・色ムラを自然にカバーしてくれるので、夕方の顔疲れ対策にも◎。
-
-> ★ こんな人におすすめ：日中にメイクの上からUVを塗り直したい方。テカリや皮脂崩れが気になる方。
 
 > ★ 注意：このパウダー単体だけだとUV対策には不十分です。必ずベース（①〜④のいずれか）と組み合わせて、日中の塗り直し用として使うのが正解です。
 
