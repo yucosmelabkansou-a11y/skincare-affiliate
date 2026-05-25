@@ -86,7 +86,7 @@ export default function ArticleAuthor() {
             textAlign: 'justify',
           }}
         >
-          化粧品メーカーで研究・商品企画として勤務した知見と、生涯ノーファンデ29年で磨いた素肌の感覚を活かして、SNSや流行の成分に左右されず<strong style={{ color: 'var(--ink)', fontWeight: 500 }}>本当に使ってよかったアイテムを成分とコスパで厳選</strong>しています。Instagramフォロワー5.7万人。
+          化粧品メーカーで研究・商品企画として勤務した経験と、29年ノーファンデで自分の肌に試し続けてきた目線から、SNSや流行の成分に左右されず<strong style={{ color: 'var(--ink)', fontWeight: 500 }}>本当に使ってよかったアイテムを成分・技術とコスパで厳選</strong>しています。Instagramフォロワー5.8万人。
         </p>
 
         {/* CTA: Instagram */}
