@@ -54,6 +54,10 @@ endCta: products
 
 ◎ 紫外線散乱剤不使用なので、白浮きやモロモロカスが出にくく、どの下地とも相性◎
 
+> 🎯 こんな人におすすめ  
+> ・乾燥肌〜混合肌で、毎日続けやすいアネッサを1本選びたい方  
+> ・ベタつかず白浮きしないデイリーUVが欲しい方
+
 🛒 アネッサ パーフェクトUV スキンケアジェル NB 40g ¥1,496  
 [Amazon](https://www.amazon.co.jp/dp/B0GFL5YFTX?tag=onamzyyy0410m-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/280df31e.cc217036.280df31f.ad07d749/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F406689%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
 
@@ -74,6 +78,10 @@ endCta: products
 瞬時に黄ぐすみを補正してくれて、自然な透明感
 
 ◎ 1本で薬用UV＋下地として使えるから、ファンデを足さなくても顔色が整う
+
+> 🎯 こんな人におすすめ  
+> ・黄ぐすみ・色ムラが気になる方  
+> ・WEB会議や撮影日など、ファンデは塗らずに顔色を整えたい方
 
 🛒 アネッサ ブライトニングUV ジェル NA 40g ¥1,496（医薬部外品）  
 [Amazon](https://www.amazon.co.jp/dp/B0CST17MT5?tag=onamzyyy0410m-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/280df31e.cc217036.280df31f.ad07d749/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F406690%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
@@ -96,6 +104,10 @@ endCta: products
 
 ◎ 朝の美容液＋下地＋UVが1本で完結。年齢に応じたうるおいケアと時短を両立
 
+> 🎯 こんな人におすすめ  
+> ・朝の美容液→下地→UVを1ステップで終わらせたい忙しい大人  
+> ・紫外線を「ただ防ぐ」だけでなく、美肌効果も同時に欲しい方
+
 🛒 アネッサ デイセラム N 30mL ¥3,498（医薬部外品）  
 [Amazon](https://www.amazon.co.jp/dp/B0DSPDHCWT?tag=onamzyyy0410m-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/3a7a3323.623c5a77.3a7a3324.f3eeec80/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fyayoi-cosme%2F20977%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
 
@@ -117,6 +129,10 @@ endCta: products
 
 ◎ 海・スポーツ・長時間外出など「絶対焼きたくない日」のシールド枠
 
+> 🎯 こんな人におすすめ  
+> ・海・スポーツ・長時間外出など、汗や水に強いUV膜が欲しい方  
+> ・「絶対に焼きたくない日」のシールド枠を1本持っておきたい方
+
 🛒 アネッサ パーフェクトUV スキンケアミルク NA 60mL  
 [Amazonで探す](https://www.amazon.co.jp/s?k=%E3%82%A2%E3%83%8D%E3%83%83%E3%82%B5+%E3%83%91%E3%83%BC%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88UV+%E3%82%B9%E3%82%AD%E3%83%B3%E3%82%B1%E3%82%A2%E3%83%9F%E3%83%AB%E3%82%AF+NA&i=beauty&tag=onamzyyy0410m-22) ／ [楽天で探す](https://search.rakuten.co.jp/search/mall/%E3%82%A2%E3%83%8D%E3%83%83%E3%82%B5+%E3%83%91%E3%83%BC%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88UV+%E3%82%B9%E3%82%AD%E3%83%B3%E3%82%B1%E3%82%A2%E3%83%9F%E3%83%AB%E3%82%AF+NA/)
 
@@ -136,6 +152,10 @@ endCta: products
 日中のテカリ・赤み・色ムラを自然にカバーして、夕方の顔疲れ対策にも◎
 
 ◎ UVは「塗り直し」で効きが決まる。塗り足し用としてベース1本＋これが鉄板
+
+> 🎯 こんな人におすすめ  
+> ・日中にメイクの上から手軽にUVを塗り直したい方  
+> ・テカリや皮脂崩れが気になる方
 
 > ★ 注意：このパウダー単体だけだとUV対策には不十分です。必ずベース（①〜④のいずれか）と組み合わせて、日中の塗り直し用として使うのが正解です。
 

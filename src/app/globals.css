@@ -171,8 +171,10 @@ body {
 }
 .prose-yun blockquote {
   margin: 1.6em 0;
-  padding: 1em 1.4em;
-  border-left: 2px solid var(--gold);
+  padding: 1.1em 1.4em;
+  border: 1px solid var(--gold);
+  border-left: 3px solid var(--gold);
+  border-radius: 6px;
   background: oklch(0.985 0.012 80);
   font-family: var(--font-jp-alt);
   font-style: normal;
