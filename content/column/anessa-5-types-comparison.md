@@ -46,7 +46,13 @@ endCta: products
 | SPF/PA | SPF50+・PA++++／耐水性★★ |
 | 独自技術 | オートモイストバランス／アクアブースターEX |
 
-中核は「オートモイストバランス技術」。湿度変化に応じて肌上の水分を自動で調整してくれるので、乾燥もベタつきも感じにくいのが強みです。アクアブースターEXは、汗・水でUV膜が密着強化されるアネッサの代名詞的UV技術。紫外線散乱剤不使用なので、白浮きやモロモロカスが出にくいのもデイリー向きの理由です。
+⭐️「オートモイストバランス技術」  
+湿度変化に応じて肌上の水分を自動で調整してくれるので、乾燥もベタつきも感じにくい
+
+◎ アクアブースターEX  
+汗・水でUV膜が密着強化されるアネッサの代名詞的UV技術
+
+◎ 紫外線散乱剤不使用なので、白浮きやモロモロカスが出にくく、どの下地とも相性◎
 
 🛒 アネッサ パーフェクトUV スキンケアジェル NB 40g ¥1,496  
 [Amazon](https://www.amazon.co.jp/dp/B0GFL5YFTX?tag=onamzyyy0410m-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/280df31e.cc217036.280df31f.ad07d749/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F406689%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
@@ -61,7 +67,13 @@ endCta: products
 | SPF/PA | SPF50+・PA++++ |
 | 有効成分 | m-トラネキサム酸（メラニン生成抑制） |
 
-紫外線を防ぎながら、美白有効成分m-トラネキサム酸でシミ・そばかすを予防する薬用UV。「3種の忍ばせパール」によるラベンダーピンクが瞬時に黄ぐすみを補正してくれるので、トーンアップ下地としても優秀です。
+⭐️ m-トラネキサム酸（美白有効成分）  
+紫外線を防ぎながらシミ・そばかすを予防する薬用UV処方
+
+◎ 3種の忍ばせパール（ラベンダーピンク）  
+瞬時に黄ぐすみを補正してくれて、自然な透明感
+
+◎ 1本で薬用UV＋下地として使えるから、ファンデを足さなくても顔色が整う
 
 🛒 アネッサ ブライトニングUV ジェル NA 40g ¥1,496（医薬部外品）  
 [Amazon](https://www.amazon.co.jp/dp/B0CST17MT5?tag=onamzyyy0410m-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/280df31e.cc217036.280df31f.ad07d749/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F406690%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
@@ -76,7 +88,13 @@ endCta: products
 | SPF/PA | SPF50+・PA++++ |
 | 独自技術 | サンデュアルケア（光変換）／美白有効成分配合 |
 
-紫外線を「防ぐ」だけでなく、肌にとって有益な光に変換するという発想の日中用UV美容乳液。美白有効成分とヒアルロン酸も配合されていて、シミ予防とうるおい補給を同時に行えます。朝の時短ケアと、年齢に応じたうるおいケアを両立したい方向き。
+⭐️「サンデュアルケア技術」  
+紫外線を防ぐだけでなく、肌に有益な光に変換するという発想の日中用UV美容乳液
+
+◎ 美白有効成分＋ヒアルロン酸  
+シミ予防とうるおい補給を同時に叶える
+
+◎ 朝の美容液＋下地＋UVが1本で完結。年齢に応じたうるおいケアと時短を両立
 
 🛒 アネッサ デイセラム N 30mL ¥3,498（医薬部外品）  
 [Amazon](https://www.amazon.co.jp/dp/B0DSPDHCWT?tag=onamzyyy0410m-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/3a7a3323.623c5a77.3a7a3324.f3eeec80/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fyayoi-cosme%2F20977%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
@@ -91,7 +109,13 @@ endCta: products
 | SPF/PA | SPF50+・PA++++／耐水性★★ |
 | 独自技術 | オートリペア技術／オートブースター技術 |
 
-表情の動きでできる微細なヨレを自動で修復する「オートリペア技術」、そして汗・水・熱でUV膜が密着強化される「オートブースター技術」を搭載した、アネッサのレジャー枠最強モデル。海・スポーツ・長時間外出など「絶対焼きたくない日」のシールドとして頼れる1本です。
+⭐️「オートリペア技術」  
+表情の動きでできる微細なヨレを自動で修復してUV膜をキープ
+
+◎「オートブースター技術」  
+汗・水・熱でUV膜が逆に密着強化されるアネッサ最強の防御技術
+
+◎ 海・スポーツ・長時間外出など「絶対焼きたくない日」のシールド枠
 
 🛒 アネッサ パーフェクトUV スキンケアミルク NA 60mL  
 [Amazonで探す](https://www.amazon.co.jp/s?k=%E3%82%A2%E3%83%8D%E3%83%83%E3%82%B5+%E3%83%91%E3%83%BC%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88UV+%E3%82%B9%E3%82%AD%E3%83%B3%E3%82%B1%E3%82%A2%E3%83%9F%E3%83%AB%E3%82%AF+NA&i=beauty&tag=onamzyyy0410m-22) ／ [楽天で探す](https://search.rakuten.co.jp/search/mall/%E3%82%A2%E3%83%8D%E3%83%83%E3%82%B5+%E3%83%91%E3%83%BC%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88UV+%E3%82%B9%E3%82%AD%E3%83%B3%E3%82%B1%E3%82%A2%E3%83%9F%E3%83%AB%E3%82%AF+NA/)
@@ -105,7 +129,13 @@ endCta: products
 | 容量・価格 | （化粧品／パウダータイプ） |
 | 設計 | ブラシ一体型／皮脂吸着パウダー |
 
-UVは「塗ったあと」より「塗り直し」で効きが決まる、というのが大人スキンケアの真実。このパウダーはブラシ一体型なので、手も汚さず、メイクの上からこすらず塗り直せます。皮脂吸着パウダーが日中のテカリと赤み・色ムラを自然にカバーしてくれるので、夕方の顔疲れ対策にも◎。
+⭐️ ブラシ一体型構造  
+手を汚さず、メイクの上からこすらず塗り直せる
+
+◎ 皮脂吸着パウダー  
+日中のテカリ・赤み・色ムラを自然にカバーして、夕方の顔疲れ対策にも◎
+
+◎ UVは「塗り直し」で効きが決まる。塗り足し用としてベース1本＋これが鉄板
 
 > ★ 注意：このパウダー単体だけだとUV対策には不十分です。必ずベース（①〜④のいずれか）と組み合わせて、日中の塗り直し用として使うのが正解です。
 
