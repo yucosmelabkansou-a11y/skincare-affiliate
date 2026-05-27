@@ -102,7 +102,11 @@ body {
 }
 .prose-yun strong {
   color: var(--ink);
-  font-weight: 600;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--gold);
 }
 .prose-yun em {
   font-family: var(--font-serif);
