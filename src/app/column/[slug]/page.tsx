@@ -1,8 +1,17 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown, { type Components } from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+
+// 横スクロール可能なテーブルラッパー（スマホでセル列がズレるのを防ぐ）
+const mdComponents: Components = {
+  table: ({ node, ...props }) => (
+    <div className="table-wrapper">
+      <table {...props} />
+    </div>
+  ),
+}
 import { getAllSlugs, getArticle, getAllArticles, resolveCta, splitBodyAtMiddleH2 } from '@/lib/articles'
 import ArticleCTA from '@/components/ArticleCTA'
 import ArticleAuthor from '@/components/ArticleAuthor'
@@ -219,14 +228,14 @@ export default async function ColumnPage({ params }: Props) {
             className="px-6 pb-4 prose-yun"
             style={{ fontFamily: 'var(--font-jp)', color: 'var(--ink)' }}
           >
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{split.before}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]} components={mdComponents}>{split.before}</ReactMarkdown>
           </article>
           <ArticleCTA variant="mid" target={cta.mid} />
           <article
             className="px-6 pb-8 prose-yun"
             style={{ fontFamily: 'var(--font-jp)', color: 'var(--ink)' }}
           >
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{split.after}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]} components={mdComponents}>{split.after}</ReactMarkdown>
           </article>
         </>
       ) : (
@@ -234,7 +243,7 @@ export default async function ColumnPage({ params }: Props) {
           className="px-6 pb-8 prose-yun"
           style={{ fontFamily: 'var(--font-jp)', color: 'var(--ink)' }}
         >
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{a.body}</ReactMarkdown>
+          <ReactMarkdown remarkPlugins={[remarkGfm]} components={mdComponents}>{a.body}</ReactMarkdown>
         </article>
       )}
 

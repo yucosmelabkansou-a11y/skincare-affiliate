@@ -102,7 +102,11 @@ body {
 }
 .prose-yun strong {
   color: var(--ink);
-  font-weight: 600;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--gold);
 }
 .prose-yun em {
   font-family: var(--font-serif);
@@ -167,8 +171,10 @@ body {
 }
 .prose-yun blockquote {
   margin: 1.6em 0;
-  padding: 1em 1.4em;
-  border-left: 2px solid var(--gold);
+  padding: 1.1em 1.4em;
+  border: 1px solid var(--gold);
+  border-left: 3px solid var(--gold);
+  border-radius: 6px;
   background: oklch(0.985 0.012 80);
   font-family: var(--font-jp-alt);
   font-style: normal;
@@ -196,11 +202,20 @@ body {
   max-width: 100%;
   border: 1px solid var(--line-soft);
 }
+/* table を div でラップする wrapper (ReactMarkdown の component override で生成) */
+.prose-yun .table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.6em -8px;
+  padding: 0 8px;
+}
 .prose-yun table {
-  width: 100%;
-  margin: 1.6em 0;
+  width: max-content;
+  min-width: 100%;
+  margin: 0;
   border-collapse: collapse;
   font-size: 13px;
+  table-layout: auto;
 }
 .prose-yun th,
 .prose-yun td {
@@ -208,11 +223,41 @@ body {
   padding: 8px 12px;
   text-align: left;
   color: var(--ink-soft);
+  white-space: normal;
+  vertical-align: middle !important;
+  min-width: 88px;
 }
 .prose-yun th {
   background: oklch(0.97 0.012 80);
   font-weight: 600;
   color: var(--ink);
+  white-space: nowrap;
+  text-align: center;
+}
+/* テーブル内画像は商品サムネとして小さく (specificity 強化) */
+.prose-yun table tbody td img,
+.prose-yun table img {
+  display: block !important;
+  margin: 0 auto !important;
+  width: 60px !important;
+  height: 60px !important;
+  max-width: 60px !important;
+  max-height: 60px !important;
+  object-fit: contain !important;
+  border: none !important;
+  padding: 0 !important;
+}
+/* 画像セルの幅を固定 (1列目を画像列と想定) */
+.prose-yun table tbody td:first-child {
+  width: 76px;
+  min-width: 76px;
+  max-width: 76px;
+  padding: 6px !important;
+  text-align: center;
+}
+/* 全行で同じ高さに揃える */
+.prose-yun table tbody tr {
+  height: 80px;
 }
 
 /* Modal animations */
