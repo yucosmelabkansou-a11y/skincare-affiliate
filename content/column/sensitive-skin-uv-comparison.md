@@ -18,7 +18,10 @@ tags:
   - ラロッシュポゼ
 midCta: diagnosis
 endCta: products
+hero: /images/sensitive-uv-cover.jpg
 ---
+
+![敏感肌UV 5本 使い分け 比較](/images/sensitive-uv-cover.jpg)
 
 > 本記事はアフィリエイト広告を掲載しています。
 

@@ -16,7 +16,10 @@ tags:
   - 乳液
 midCta: diagnosis
 endCta: products
+hero: /images/elixir-cover.jpg
 ---
+
+![エリクシール デーケアレボリューション UV乳液4種 比較](/images/elixir-cover.jpg)
 
 > 本記事はアフィリエイト広告を掲載しています。
 

@@ -16,7 +16,10 @@ tags:
   - トーンアップ
 midCta: diagnosis
 endCta: products
+hero: /images/anessa-cover.jpg
 ---
+
+![アネッサ おすすめ5選 比較](/images/anessa-cover.jpg)
 
 > 本記事はアフィリエイト広告を掲載しています。
 
