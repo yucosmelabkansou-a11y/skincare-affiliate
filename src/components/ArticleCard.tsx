@@ -21,6 +21,19 @@ export default function ArticleCard({ article }: { article: Article }) {
         border: '1px solid var(--line-soft)',
       }}
     >
+      {article.hero && (
+        <img
+          src={article.hero}
+          alt=""
+          loading="lazy"
+          style={{
+            width: '100%',
+            height: 'auto',
+            display: 'block',
+            borderBottom: '1px solid var(--line-soft)',
+          }}
+        />
+      )}
       <article className="px-5 py-6">
         <div className="flex items-baseline gap-3 mb-3">
           <span

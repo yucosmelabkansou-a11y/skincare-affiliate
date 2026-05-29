@@ -16,6 +16,7 @@ tags:
   - トーンアップ
 midCta: diagnosis
 endCta: products
+hero: /images/anessa-cover.jpg
 ---
 
 > 本記事はアフィリエイト広告を掲載しています。
@@ -223,7 +224,14 @@ A. 乾燥肌〜混合肌で「アネッサデビュー」なら、ゆんは ① 
 
 自分の肌タイプから逆算して1本を選びたい方は、まず[2分でできる肌タイプ診断](/diagnosis)から。
 
+**実際の質感や仕上がりも見てから選びたい方へ**  
+この5本を実際に使い分けている様子を、ゆんのInstagramで写真つきで紹介しています。テクスチャーや色みのリアルがいちばん伝わるので、迷ったら保存して、お買い物のときに見返してみてください。
+
+[![この5本の比較をInstagramで見る](/images/anessa-cover.jpg)](https://www.instagram.com/p/DX9K9OMmBnj/)
+
+📷 [この5本の比較をInstagramで見る →](https://www.instagram.com/p/DX9K9OMmBnj/)
+
 ---
 
 この記事の出典・参考：
-- [アネッサ｜資生堂（ブランドサイト）](https://www.anessa.shiseido.co.jp/)
+- [アネッサ｜資生堂（ブランドサイト）](https://www.shiseido.co.jp/anessa/)
