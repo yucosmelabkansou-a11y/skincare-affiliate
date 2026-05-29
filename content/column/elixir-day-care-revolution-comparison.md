@@ -229,6 +229,8 @@ A. エイジングケアを軸に「まず1本」なら、ゆんは ① ba を�
 
 ---
 
+※掲載している商品画像は[資生堂公式サイト](https://www.shiseido.co.jp/elixir/)より引用しています。
+
 この記事の出典・参考：
 - [エリクシール｜資生堂（ブランドサイト）](https://www.shiseido.co.jp/elixir/)
 - [デーケアレボリューション 特集ページ｜資生堂](https://www.shiseido.co.jp/elixir/promotion/daycare/)
