@@ -22,28 +22,17 @@ export default function ArticleCard({ article }: { article: Article }) {
       }}
     >
       {article.hero && (
-        <div
+        <img
+          src={article.hero}
+          alt=""
+          loading="lazy"
           style={{
             width: '100%',
-            aspectRatio: '3 / 2',
-            overflow: 'hidden',
-            background: 'var(--bg-cream)',
+            height: 'auto',
+            display: 'block',
             borderBottom: '1px solid var(--line-soft)',
           }}
-        >
-          <img
-            src={article.hero}
-            alt=""
-            loading="lazy"
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              objectPosition: 'center top',
-              display: 'block',
-            }}
-          />
-        </div>
+        />
       )}
       <article className="px-5 py-6">
         <div className="flex items-baseline gap-3 mb-3">
