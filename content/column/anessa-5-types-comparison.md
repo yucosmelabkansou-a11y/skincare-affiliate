@@ -36,6 +36,8 @@ endCta: products
 
 迷ったら[2分でできる肌タイプ診断](/diagnosis)から。
 
+📷 詳しくはこちらでも解説しています → [ゆんのInstagram投稿を見る](https://www.instagram.com/p/DX9K9OMmBnj/)
+
 ## ① アネッサ ジェル NB｜毎日使う快適UV
 
 > 肌の水分を一定に保って快適！毎日使いたいノーファンデのスタメンUV
