@@ -226,4 +226,4 @@ A. 乾燥肌〜混合肌で「アネッサデビュー」なら、ゆんは ① 
 ---
 
 この記事の出典・参考：
-- [アネッサ｜資生堂（ブランドサイト）](https://www.anessa.shiseido.co.jp/)
+- [アネッサ｜資生堂（ブランドサイト）](https://www.shiseido.co.jp/anessa/)
