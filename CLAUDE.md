@@ -264,3 +264,86 @@ git push origin main
   skincare-affiliate/            ← Next.jsプロジェクト本体
   Instagram投稿案.md             ← サイト紹介用のInstagram投稿テキスト案
 ```
+
+---
+
+# 比較コラム記事の作り方（アネッサ型テンプレート）
+
+複数商品を比較するコラム記事（例：アネッサ5選、敏感肌UV、エリクシール デーケアレボリューション）は、
+すべて **アネッサ記事（`content/column/anessa-5-types-comparison.md`）と同じ構成** に揃える。
+新しい比較記事の依頼が来たら、アネッサ記事を雛形にして以下の順番で組み立てること。
+
+## ファイルと仕組み
+
+- 記事は **`content/column/<slug>.md`**（Markdown＋frontmatter）。DBなし。
+- ルーティング：`src/app/column/[slug]/page.tsx`（slug＝ファイル名）。`react-markdown`＋`remark-gfm`でレンダリング。
+- frontmatter：`title` / `description` / `publishedAt` / `updatedAt` / `tags` / `midCta`（通常 `diagnosis`）/ `endCta`（通常 `products`）/ `hero`（表紙画像パス）。
+- `## Q. 〜` 形式があると FAQ 構造化データ（リッチリザルト）が自動付与される。Q&Aは必ずこの形式で書く。
+- midCta は本文中盤のH2で自動挿入されるので、本文に診断CTAを手書きする必要はない。
+
+## 本文の構成（この順番で固定）
+
+1. `> 本記事はアフィリエイト広告を掲載しています。`（必須・冒頭）
+2. 導入文（ゆんの一人称。「これを読めば自分に合う1本が見つかる」型のフック＋🌸などの絵文字）
+3. `## あなたの悩みに合うのはどれ？` ＋ 比較表（列：`画像 | 商品 | こんな人に | 価格 | Amazon | 楽天`）
+4. `迷ったら[2分でできる肌タイプ診断](/diagnosis)から。`
+5. （任意）選び方の軸／共通成分など、その記事独自の解説H2
+6. 各商品セクション `## ① 商品名｜キャッチ` を商品数ぶん。各セクションは必ず次の並び：
+   - `> ` タグライン（成分名の羅列はしない。ベネフィット中心。成分は下で説明する）
+   - `項目 | 内容` テーブル（容量・価格／SPF・PA／有効成分 or 主な成分／区分 など）
+   - `⭐️ **主役の独自技術/有効成分**`（太字。ゴールド下線でレンダリングされる）＋説明
+   - `◎ ポイント`（2〜3個）
+   - `> 🎯 こんな人におすすめ`（・で2項目。blockquoteでカード化される）
+   - `> ★ 注意：〜`（短所・注意点。blockquoteでカード化）
+   - `🛒 商品名 容量 価格` ＋ 改行2スペース ＋ `[Amazon](URL) ／ [楽天](URL)`（公式があれば先頭に `[公式](URL) ／`）
+7. シーン別の使い分け（表 or A/Bパターン）
+8. `## おすすめ◯本まとめ`（列：`画像 | 商品 | 区分 | 強み`）
+9. `## Q. 〜`（A. 〜）を3〜4個
+10. `## まとめ｜〜`
+11. **Instagram誘導CTA**（まとめの後、出典の前）：
+    - リード文（太字見出し＋「保存して買い物のとき見返してね」と誘導。**冒頭に貼らない**）
+    - クリックで投稿に飛ぶ表紙画像：`[![alt](/images/<topic>-cover.jpg)](Instagram投稿URL)`
+    - テキストリンク：`📷 [この◯本の比較をInstagramで見る →](Instagram投稿URL)`
+    - Instagram投稿URLは末尾の `?igsh=...` を外して `https://www.instagram.com/p/XXXX/` の形にする
+12. `---` ＋ `この記事の出典・参考：`（公式サイト・各製品公式ページのリンク）
+
+## 画像
+
+- 商品画像・表紙画像は **`public/images/`** に置く（webpはjpgへ変換、白背景・幅600〜1080目安）。
+- **公式商品画像**：資生堂などブランド公式の商品ページから取得可（`og:image` / 商品写真）。
+  - ブランドサイトは **`https://www.shiseido.co.jp/{brand}/`**（旧サブドメイン `www.{brand}.shiseido.co.jp` は現在つながらない）。
+  - 公式画像を使ったら出典末尾に `※掲載している商品画像は[ブランド公式](URL)より引用しています。` を入れる。
+- **フィード表紙画像**（Instagramの表紙）：`<topic>-cover.jpg` で保存し、
+  - frontmatter `hero:` に設定（SNSシェアのOG画像になる）
+  - 記事一覧カードのサムネに自動表示（`src/components/ArticleCard.tsx` が `hero` を全体表示）
+  - 上記の誘導CTAでクリック画像として使う
+  - **本文の冒頭には置かない**（記事H1とタイトルが二重になるため）
+
+## アフィリエイトリンク（重要）
+
+- **Amazon**：`https://amzn.to/XXXX`（ユーザー生成の短縮アフィリ）または `https://www.amazon.co.jp/dp/<ASIN>?tag=onamzyyy0410m-22`。
+- **楽天**：`https://hb.afl.rakuten.co.jp/ichiba/.../?pc=...&link_type=hybrid_url&ut=...`（aflハイブリッド）。
+  **これはユーザーの楽天アフィリエイトアカウントでしか生成できない。Claudeは作れない。**
+- 直リンクが手元に無いときは **検索リンク**を仮置きし（`amazon.co.jp/s?k=...&tag=...` / `search.rakuten.co.jp/search/mall/...`）、
+  **ASINや楽天aflは推測せず、ユーザーに直リンクを依頼する**（取り違え・トラッキング欠落を防ぐ）。
+- 既存の直リンクは **`public/data/products.csv`** に入っていることがある（商品名で検索して流用可）。
+- 比較表と各商品の🛒ボタンの **両方** を必ず同じ直リンクに揃える（片方だけ検索リンクが残りがち）。
+- amzn.to がどの商品か不明なときは `curl -sL -o /dev/null -w "%{url_effective}"` で展開してASIN確認。
+
+## プレビューと公開（Vercel）
+
+- 制作中は **プレビューブランチ**（例 `preview/<topic>`）で作業し push → Vercelが自動でプレビューデプロイ。
+- プレビュー/本番URLの取得（GitHub Deployment経由）：
+  ```bash
+  SHA=$(git rev-parse HEAD)
+  DID=$(gh api repos/yucosmelabkansou-a11y/skincare-affiliate/deployments --jq ".[] | select(.sha==\"$SHA\") | .id" | head -1)
+  gh api repos/yucosmelabkansou-a11y/skincare-affiliate/deployments/$DID/statuses --jq '.[0] | .state+"|"+(.environment//"?")+"|"+(.environment_url//"none")'
+  ```
+  `environment_url`（`*-<hash>.vercel.app`）がスマホでも開ける確認用URL。`environment` が `Production` なら本番。
+- **本番公開**：`main` にマージ → push。本番ドメインは **https://www.yun-skin-care.com**
+  （`skincare-affiliate.vercel.app` は本番ドメインへ301リダイレクト。`*-<hash>.vercel.app` プレビューは対象外）。
+
+## ローカル確認
+
+- `.claude/launch.json` の `dev`（`npm run dev` / port 3000）を使う。初回コンパイルが60秒前後かかるので注意。
+- 記事URL：`http://localhost:3000/column/<slug>`。
