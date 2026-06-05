@@ -1,11 +1,11 @@
 // 診断結果ページの「あなた専用ピックアップ」セクション
 // 3商品カードを表示。各カードは画像・ブランド・商品名・"なぜあなたに" コピー・Amazon/楽天 リンク
 
-import Link from 'next/link'
 import type { SkinType } from '@/lib/diagnosis'
 import { selectMatchedProducts, buildWhyForYouCopy, type MatchedPick } from '@/lib/diagnosis-matcher'
 import { getProducts } from '@/lib/parseCSV'
 import SectionLabel from './SectionLabel'
+import AffiliateLink from './AffiliateLink'
 
 const SLOT_LABELS: Record<string, string> = {
   '化粧水': '推し化粧水',
@@ -208,10 +208,14 @@ function MatchCard({ pick, skinType }: { pick: MatchedPick; skinType: SkinType }
         // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
       >
         {product.amazon_url && (
-          <Link
+          <AffiliateLink
             href={product.amazon_url}
-            target="_blank"
-            rel="sponsored noopener"
+            store="amazon"
+            productId={product.id}
+            productName={product.name}
+            brand={product.brand}
+            placement="product_match"
+            skinType={skinType}
             className="flex-1 py-3 text-center transition-opacity hover:opacity-70"
             style={{
               fontFamily: 'var(--font-jp)',
@@ -223,13 +227,17 @@ function MatchCard({ pick, skinType }: { pick: MatchedPick; skinType: SkinType }
             }}
           >
             Amazon →
-          </Link>
+          </AffiliateLink>
         )}
         {product.rakuten_url && (
-          <Link
+          <AffiliateLink
             href={product.rakuten_url}
-            target="_blank"
-            rel="sponsored noopener"
+            store="rakuten"
+            productId={product.id}
+            productName={product.name}
+            brand={product.brand}
+            placement="product_match"
+            skinType={skinType}
             className="flex-1 py-3 text-center transition-opacity hover:opacity-70"
             style={{
               fontFamily: 'var(--font-jp)',
@@ -240,7 +248,7 @@ function MatchCard({ pick, skinType }: { pick: MatchedPick; skinType: SkinType }
             }}
           >
             楽天 →
-          </Link>
+          </AffiliateLink>
         )}
       </div>
 

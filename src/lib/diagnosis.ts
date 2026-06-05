@@ -52,11 +52,11 @@ export const questions: Question[] = [
     subtext: '直感で1番気になるものを選んでね',
     category: 'concern',
     options: [
-      { label: 'シミ・くすみ（明るくしたい）', emoji: '🌑', scores: { aging: 3 }, concern: 'spots' },
+      { label: 'シミ・くすみ（明るくしたい）', emoji: '🌑', scores: { aging: 2 }, concern: 'spots' },
       { label: 'シワ・たるみ（年齢サイン）', emoji: '🪞', scores: { aging: 3 }, concern: 'wrinkles' },
-      { label: '毛穴の開き・黒ずみ', emoji: '🕳️', scores: { oily: 2 }, concern: 'pores' },
+      { label: '毛穴の開き・黒ずみ', emoji: '🕳️', scores: { oily: 2, combination: 1 }, concern: 'pores' },
       { label: '乾燥・粉ふき・つっぱり', emoji: '🏜️', scores: { dry: 3 }, concern: 'dryness' },
-      { label: 'ニキビ・吹き出物', emoji: '🔴', scores: { oily: 2 }, concern: 'acne' },
+      { label: 'ニキビ・吹き出物', emoji: '🔴', scores: { oily: 2, sensitive: 1 }, concern: 'acne' },
       { label: '赤み・ヒリヒリ・ピリつき', emoji: '🌸', scores: { sensitive: 3 }, concern: 'redness' },
     ],
   },
@@ -67,10 +67,10 @@ export const questions: Question[] = [
     category: 'scene',
     options: [
       { label: '写真に写った時', emoji: '📸', scores: { aging: 1 } },
-      { label: 'メイクのノリが悪い時', emoji: '💄', scores: { dry: 1, oily: 1 } },
+      { label: 'メイクのノリが悪い時', emoji: '💄', scores: { combination: 1, dry: 1 } },
       { label: '鏡を間近で見た時', emoji: '🪞', scores: { aging: 1 } },
       { label: '触った時のザラつき・カサつき', emoji: '☝️', scores: { dry: 2 } },
-      { label: '朝起きた時の顔の状態', emoji: '🔆', scores: { oily: 1, dry: 1 } },
+      { label: '朝起きた時の顔の状態', emoji: '🔆', scores: { oily: 1 } },
     ],
   },
   {
@@ -79,10 +79,10 @@ export const questions: Question[] = [
     subtext: '何もつけてない素肌の状態',
     category: 'skinType',
     options: [
-      { label: '全体的にしっとり、ベタつかない', emoji: '✨', scores: { normal: 3 } },
-      { label: 'パリッとして突っ張る感じ', emoji: '💧', scores: { dry: 3 } },
-      { label: 'ベタっと脂っぽい', emoji: '🛢️', scores: { oily: 3 } },
-      { label: 'Tゾーンだけテカって頬は乾く', emoji: '🎭', scores: { combination: 3 } },
+      { label: '全体的にしっとり、ベタつかない', emoji: '✨', scores: { normal: 4 } },
+      { label: 'パリッとして突っ張る感じ', emoji: '💧', scores: { dry: 4 } },
+      { label: 'ベタっと脂っぽい', emoji: '🛢️', scores: { oily: 4 } },
+      { label: 'Tゾーンだけテカって頬は乾く', emoji: '🎭', scores: { combination: 4 } },
     ],
   },
   {
@@ -91,9 +91,9 @@ export const questions: Question[] = [
     subtext: '初めて使ったコスメへの肌の反応',
     category: 'barrier',
     options: [
-      { label: '何も起きない、しっとりしてる', emoji: '😌', scores: { normal: 2 } },
+      { label: '何も起きない、しっとりしてる', emoji: '😌', scores: { normal: 3 } },
       { label: 'ピリピリ・赤みが出やすい', emoji: '😣', scores: { sensitive: 3 } },
-      { label: 'ニキビができやすい', emoji: '😢', scores: { oily: 1, sensitive: 1 } },
+      { label: 'ニキビができやすい', emoji: '😢', scores: { oily: 2, sensitive: 1 } },
       { label: '余計乾燥する', emoji: '🥲', scores: { dry: 2, sensitive: 1 } },
       { label: '今までも何度も合わないことがあった', emoji: '😭', scores: { sensitive: 3 } },
     ],
@@ -106,9 +106,9 @@ export const questions: Question[] = [
     options: [
       { label: '真冬（乾燥がひどくなる）', emoji: '❄️', scores: { dry: 2 } },
       { label: '春・秋（花粉や季節の変わり目）', emoji: '🌸', scores: { sensitive: 3 } },
-      { label: '真夏（テカリ・崩れ）', emoji: '☀️', scores: { oily: 2 } },
-      { label: '生理前・寝不足の時', emoji: '🌙', scores: { sensitive: 1, oily: 1 } },
-      { label: '特に変わらない', emoji: '😊', scores: { normal: 2 } },
+      { label: '真夏（テカリ・崩れ）', emoji: '☀️', scores: { oily: 2, combination: 1 } },
+      { label: '生理前・寝不足の時', emoji: '🌙', scores: { sensitive: 1 } },
+      { label: '特に変わらない', emoji: '😊', scores: { normal: 3 } },
     ],
   },
   {
@@ -117,7 +117,7 @@ export const questions: Question[] = [
     subtext: 'エイジングサインの自覚度',
     category: 'aging',
     options: [
-      { label: '特にない', emoji: '🌟', scores: { normal: 1 } },
+      { label: '特にない', emoji: '🌟', scores: { normal: 2 } },
       { label: 'ファンデが小ジワに溜まる', emoji: '✏️', scores: { dry: 1, aging: 2 } },
       { label: 'ほうれい線・たるみが気になる', emoji: '😔', scores: { aging: 3 } },
       { label: 'ハリやツヤが減った気がする', emoji: '🫧', scores: { aging: 2 } },
@@ -129,7 +129,7 @@ export const questions: Question[] = [
     subtext: '今のお手入れスタイル',
     category: 'routine',
     options: [
-      { label: '水だけ or 化粧水のみで時短派', emoji: '🚿', scores: { oily: 1 } },
+      { label: '水だけ or 化粧水のみで時短派', emoji: '🚿', scores: { normal: 1 } },
       { label: '化粧水＋乳液の基本セット', emoji: '🧴', scores: { normal: 1 } },
       { label: '美容液までしっかり多段階', emoji: '💎', scores: { aging: 1 } },
       { label: '何が合うか分からなくて迷子', emoji: '🤔', scores: { sensitive: 2 } },
@@ -371,8 +371,8 @@ export function calculateResult(answers: Answers): DiagnosisResult {
     const option = question.options[answerIndex]
     if (!option) return
 
-    // Q1の悩みは×3の重みで該当タイプにブースト
-    const weight = qIndex === 0 ? 3 : 1
+    // Q1の悩みは×2の重みで該当タイプにブースト（×3は土台タイプを過剰決定するため是正）
+    const weight = qIndex === 0 ? 2 : 1
     if (option.scores) {
       for (const [type, val] of Object.entries(option.scores)) {
         scores[type as SkinType] += (val ?? 0) * weight
@@ -383,13 +383,20 @@ export function calculateResult(answers: Answers): DiagnosisResult {
     }
   })
 
-  // 最高スコアのタイプを判定
+  // 混合肌の派生検出：脂性と乾燥のシグナルが同時に高い＝Tゾーン脂×頬乾燥＝混合肌。
+  // 両者の重なり（min）を混合肌スコアへ加算する。
+  scores.combination += Math.min(scores.oily, scores.dry)
+
+  // 最高スコアのタイプを判定。
+  // 同点時は「先頭タイプが勝つ」旧ロジックを廃止し、実世界での多さ順を明示的な優先順位にする
+  // （是正後の配点では同点はほとんど発生しないが、発生時の偏りをなくすため）。
+  const tieBreakPriority: SkinType[] = ['combination', 'dry', 'normal', 'oily', 'sensitive', 'aging']
+  const maxScore = Math.max(...Object.values(scores))
   let primaryType: SkinType = 'normal'
-  let maxScore = -1
-  for (const [type, score] of Object.entries(scores)) {
-    if (score > maxScore) {
-      maxScore = score
-      primaryType = type as SkinType
+  for (const type of tieBreakPriority) {
+    if (scores[type] === maxScore) {
+      primaryType = type
+      break
     }
   }
 

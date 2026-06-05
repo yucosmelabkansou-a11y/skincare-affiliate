@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { Product } from '@/types/product'
 import InstagramEmbed from './InstagramEmbed'
+import AffiliateLink from './AffiliateLink'
 
 type Props = {
   product: Product | null
@@ -77,24 +78,30 @@ export default function ProductModal({ product, onClose }: Props) {
         {(product.amazon_url || product.rakuten_url) && (
           <div className="sticky bottom-0 left-0 right-0 bg-white border-t border-[#E9ECEF] px-5 py-3 flex gap-3">
             {product.amazon_url && (
-              <a
+              <AffiliateLink
                 href={product.amazon_url}
-                target="_blank"
-                rel="noopener noreferrer"
+                store="amazon"
+                productId={product.id}
+                productName={product.name}
+                brand={product.brand}
+                placement="product_modal"
                 className="flex-1 py-3 text-sm font-semibold text-white bg-[#FF9900] rounded-xl text-center hover:bg-[#e88a00] active:scale-95 transition-all"
               >
                 Amazonで見る 🛒
-              </a>
+              </AffiliateLink>
             )}
             {product.rakuten_url && (
-              <a
+              <AffiliateLink
                 href={product.rakuten_url}
-                target="_blank"
-                rel="noopener noreferrer"
+                store="rakuten"
+                productId={product.id}
+                productName={product.name}
+                brand={product.brand}
+                placement="product_modal"
                 className="flex-1 py-3 text-sm font-semibold text-white bg-[#BF0000] rounded-xl text-center hover:bg-[#a80000] active:scale-95 transition-all"
               >
                 楽天で見る
-              </a>
+              </AffiliateLink>
             )}
           </div>
         )}

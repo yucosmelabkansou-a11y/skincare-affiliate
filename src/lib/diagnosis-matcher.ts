@@ -117,14 +117,37 @@ export function selectMatchedProducts(
   return result.sort((a, b) => b.score - a.score).slice(0, maxPicks)
 }
 
+// 肌タイプごとの「ベネフィットの締め」フレーズ（薬機法に配慮し効能断定を避ける）
+const SKIN_TYPE_BENEFIT: Record<SkinType, string> = {
+  dry:         'うるおいを抱え込む肌印象へ',
+  oily:        'テカリ・毛穴の目立ちにくい肌印象へ',
+  combination: '水分と皮脂のバランスを整えたい方に',
+  sensitive:   'ゆらぎがちな肌をやさしく守りたい方に',
+  aging:       'ハリ・ツヤのある肌印象をサポート',
+  normal:      'いまの良い状態をキープしたい方に',
+}
+
 /**
  * 「なぜあなたに？」一行コピーをマッチした要素から動的生成。
- * 例: 「セラミド配合 × 乾燥肌のうるおいケアに」
+ * 成分マッチがあれば「成分配合。〜印象へ」、なければ悩みタグ＋ベネフィットで締める。
+ * 例: 「レチノール配合。ハリ・ツヤのある肌印象をサポート」
  */
 export function buildWhyForYouCopy(pick: MatchedPick, skinType: SkinType): string {
-  const reasons = pick.reasons.slice(0, 2)
-  if (reasons.length === 0) {
-    return `${resultTypes[skinType].badge}の方に`
+  const benefit = SKIN_TYPE_BENEFIT[skinType]
+  const ingredientSet = new Set(resultTypes[skinType].recommendedIngredients)
+
+  // reasons には「悩みタグ」と「推奨成分」が混ざっているので分離する
+  const matchedIngredients = pick.reasons.filter((r) => ingredientSet.has(r)).slice(0, 2)
+
+  if (matchedIngredients.length > 0) {
+    return `${matchedIngredients.join('・')}配合。${benefit}`
   }
-  return reasons.map((r) => `✓ ${r}`).join(' ／ ')
+
+  // 成分マッチが無ければ悩みタグを使う
+  const concern = pick.reasons.find((r) => !ingredientSet.has(r))
+  if (concern) {
+    return `${concern}が気になる方へ。${benefit}`
+  }
+
+  return `${resultTypes[skinType].badge}の方に。${benefit}`
 }

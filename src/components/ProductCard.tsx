@@ -1,6 +1,7 @@
 'use client'
 
 import { Product } from '@/types/product'
+import AffiliateLink from './AffiliateLink'
 
 type Props = {
   product: Product
@@ -79,24 +80,30 @@ export default function ProductCard({ product, onClick }: Props) {
         {(product.amazon_url || product.rakuten_url) && (
           <div className="flex gap-1.5 mt-3" onClick={(e) => e.stopPropagation()}>
             {product.amazon_url && (
-              <a
+              <AffiliateLink
                 href={product.amazon_url}
-                target="_blank"
-                rel="noopener noreferrer"
+                store="amazon"
+                productId={product.id}
+                productName={product.name}
+                brand={product.brand}
+                placement="product_card"
                 className="flex-1 text-center px-2 py-1 text-[10px] font-medium text-[#4A3F45] border border-[#E8C7D4] hover:bg-[#FDF2F6] rounded-full transition-colors tracking-wider"
               >
                 Amazon
-              </a>
+              </AffiliateLink>
             )}
             {product.rakuten_url && (
-              <a
+              <AffiliateLink
                 href={product.rakuten_url}
-                target="_blank"
-                rel="noopener noreferrer"
+                store="rakuten"
+                productId={product.id}
+                productName={product.name}
+                brand={product.brand}
+                placement="product_card"
                 className="flex-1 text-center px-2 py-1 text-[10px] font-medium text-[#4A3F45] border border-[#E8C7D4] hover:bg-[#FDF2F6] rounded-full transition-colors tracking-wider"
               >
                 楽天
-              </a>
+              </AffiliateLink>
             )}
           </div>
         )}
