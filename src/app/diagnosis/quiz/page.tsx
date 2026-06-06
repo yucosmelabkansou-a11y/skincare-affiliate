@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import { sendGAEvent } from '@next/third-parties/google'
 import Link from 'next/link'
 import { questions, calculateResult, type Answers } from '@/lib/diagnosis'
 
@@ -25,6 +26,9 @@ export default function QuizPage() {
       // ignore
     }
     setHydrated(true)
+    sendGAEvent('event', 'diagnosis_start', {
+      question_count: questions.length,
+    })
   }, [])
 
   // 回答を保存
@@ -55,6 +59,11 @@ export default function QuizPage() {
         const params = new URLSearchParams()
         if (result.concern) params.set('concern', result.concern)
         const query = params.toString()
+        sendGAEvent('event', 'diagnosis_complete', {
+          skin_type: result.primaryType,
+          concern: result.concern ?? 'none',
+          question_count: questions.length,
+        })
         router.push(`/diagnosis/result/${result.primaryType}${query ? `?${query}` : ''}`)
       }
     }, 350)

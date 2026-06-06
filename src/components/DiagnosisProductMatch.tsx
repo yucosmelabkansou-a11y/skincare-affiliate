@@ -15,17 +15,40 @@ const SLOT_LABELS: Record<string, string> = {
   '洗顔':   '推し洗顔',
 }
 
-export default function DiagnosisProductMatch({ skinType }: { skinType: SkinType }) {
+const USE_GUIDE: Partial<Record<SkinType, Partial<Record<string, string>>>> = {
+  aging: {
+    '49': 'まず1本なら：夜の化粧水でハリ感の土台づくりに',
+    '9': '朝に使うなら：スキンケア後のUV乳液として時短に',
+    '71': '悩みを攻めるなら：朝晩の美容液ステップに追加',
+  },
+  oily: {
+    '233': 'まず1本なら：朝晩の化粧水で軽くうるおい補給',
+    '222': '夜に使うなら：保湿を抜かず、寝る前のジェルマスクに',
+    '227': '悩みを攻めるなら：毛穴・皮脂が気になる部分中心に',
+  },
+}
+
+type Props = {
+  skinType: SkinType
+  variant?: 'full' | 'compact'
+}
+
+export default function DiagnosisProductMatch({ skinType, variant = 'full' }: Props) {
   const products = getProducts()
   const picks = selectMatchedProducts(products, skinType, 3)
+  const isCompact = variant === 'compact'
+  const placement = isCompact ? 'product_match_top' : 'product_match'
 
   if (picks.length === 0) {
     return null
   }
 
   return (
-    <section className="px-5 pb-12">
-      <SectionLabel en="Product Match" jp="あなた専用ピックアップ" />
+    <section className={isCompact ? 'px-5 pb-12' : 'px-5 pb-12'}>
+      <SectionLabel
+        en={isCompact ? 'First Picks' : 'Product Match'}
+        jp={isCompact ? 'まずはこの3点から' : 'あなた専用ピックアップ'}
+      />
 
       <p
         className="text-center mx-auto mb-7"
@@ -36,27 +59,54 @@ export default function DiagnosisProductMatch({ skinType }: { skinType: SkinType
           lineHeight: 1.95,
           letterSpacing: '0.06em',
           color: 'var(--ink-soft)',
-          maxWidth: '32ch',
+          maxWidth: isCompact ? '30ch' : '32ch',
         }}
       >
-        診断結果と肌タイプから、200近いアイテムの中から
-        <br />
-        元化粧品研究・商品企画ゆんが厳選した3点
+        {isCompact ? (
+          <>
+            診断直後にまず見てほしい、
+            <br />
+            肌タイプ別の推しセット
+          </>
+        ) : (
+          <>
+            診断結果と肌タイプから、200近いアイテムの中から
+            <br />
+            元化粧品研究・商品企画ゆんが厳選した3点
+          </>
+        )}
       </p>
 
       <div className="space-y-4 max-w-md mx-auto">
         {picks.map((pick) => (
-          <MatchCard key={pick.product.id} pick={pick} skinType={skinType} />
+          <MatchCard
+            key={pick.product.id}
+            pick={pick}
+            skinType={skinType}
+            compact={isCompact}
+            placement={placement}
+          />
         ))}
       </div>
     </section>
   )
 }
 
-function MatchCard({ pick, skinType }: { pick: MatchedPick; skinType: SkinType }) {
+function MatchCard({
+  pick,
+  skinType,
+  compact,
+  placement,
+}: {
+  pick: MatchedPick
+  skinType: SkinType
+  compact: boolean
+  placement: string
+}) {
   const { product, slot, isOverride } = pick
   const slotLabel = SLOT_LABELS[slot] ?? slot
   const why = buildWhyForYouCopy(pick, skinType)
+  const useGuide = USE_GUIDE[skinType]?.[product.id]
 
   return (
     <article
@@ -101,13 +151,13 @@ function MatchCard({ pick, skinType }: { pick: MatchedPick; skinType: SkinType }
         </span>
       )}
 
-      <div className="flex gap-4 p-5 pt-9">
+      <div className={`flex gap-4 ${compact ? 'p-4 pt-8' : 'p-5 pt-9'}`}>
         {/* 商品画像 */}
         <div
           className="flex-shrink-0 relative"
           style={{
-            width: 100,
-            height: 100,
+            width: compact ? 84 : 100,
+            height: compact ? 84 : 100,
             background: 'oklch(0.97 0.008 80)',
             borderRadius: 2,
             overflow: 'hidden',
@@ -144,7 +194,7 @@ function MatchCard({ pick, skinType }: { pick: MatchedPick; skinType: SkinType }
             style={{
               fontFamily: 'var(--font-jp)',
               fontWeight: 500,
-              fontSize: 13,
+              fontSize: compact ? 12.5 : 13,
               lineHeight: 1.5,
               letterSpacing: '0.04em',
               color: 'var(--ink)',
@@ -169,11 +219,11 @@ function MatchCard({ pick, skinType }: { pick: MatchedPick; skinType: SkinType }
 
       {/* なぜあなたに */}
       <div
-        className="px-5 pb-3"
+        className={`${compact ? 'px-4' : 'px-5'} pb-3`}
         style={{
           fontFamily: 'var(--font-jp-alt)',
           fontWeight: 400,
-          fontSize: 11.5,
+          fontSize: compact ? 11 : 11.5,
           lineHeight: 1.7,
           letterSpacing: '0.05em',
           color: 'var(--gold-deep)',
@@ -181,6 +231,22 @@ function MatchCard({ pick, skinType }: { pick: MatchedPick; skinType: SkinType }
       >
         {why}
       </div>
+
+      {useGuide && (
+        <div
+          className={`${compact ? 'px-4' : 'px-5'} pb-3`}
+          style={{
+            fontFamily: 'var(--font-jp-alt)',
+            fontWeight: 400,
+            fontSize: compact ? 10.5 : 11,
+            lineHeight: 1.65,
+            letterSpacing: '0.05em',
+            color: 'var(--ink-soft)',
+          }}
+        >
+          {useGuide}
+        </div>
+      )}
 
       {/* ゆんコメント（is_yun_must の場合のみ） */}
       {product.is_yun_must && product.yun_must_comment && (
@@ -214,7 +280,7 @@ function MatchCard({ pick, skinType }: { pick: MatchedPick; skinType: SkinType }
             productId={product.id}
             productName={product.name}
             brand={product.brand}
-            placement="product_match"
+            placement={placement}
             skinType={skinType}
             className="flex-1 py-3 text-center transition-opacity hover:opacity-70"
             style={{
@@ -236,7 +302,7 @@ function MatchCard({ pick, skinType }: { pick: MatchedPick; skinType: SkinType }
             productId={product.id}
             productName={product.name}
             brand={product.brand}
-            placement="product_match"
+            placement={placement}
             skinType={skinType}
             className="flex-1 py-3 text-center transition-opacity hover:opacity-70"
             style={{

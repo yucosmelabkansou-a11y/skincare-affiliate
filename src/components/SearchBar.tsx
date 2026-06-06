@@ -3,9 +3,15 @@
 type Props = {
   value: string
   onChange: (v: string) => void
+  onSearchCommit?: (v: string) => void
 }
 
-export default function SearchBar({ value, onChange }: Props) {
+export default function SearchBar({ value, onChange, onSearchCommit }: Props) {
+  const handleCommit = () => {
+    const query = value.trim()
+    if (query) onSearchCommit?.(query)
+  }
+
   return (
     <div className="relative w-full">
       <svg
@@ -25,6 +31,12 @@ export default function SearchBar({ value, onChange }: Props) {
         type="text"
         value={value}
         onChange={(e) => onChange(e.target.value)}
+        onBlur={handleCommit}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            handleCommit()
+          }
+        }}
         placeholder="セラミド、ナイアシンアミド、毛穴…成分・悩みで検索"
         className="w-full pl-9 pr-8 py-2.5 text-sm border border-[#E9ECEF] rounded-xl bg-white text-[#343A40] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4DB6AC]/40"
       />

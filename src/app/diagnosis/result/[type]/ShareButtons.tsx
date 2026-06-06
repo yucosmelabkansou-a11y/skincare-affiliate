@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { sendGAEvent } from '@next/third-parties/google'
 import { SITE_URL } from '@/lib/siteConfig'
 
 type Props = {
@@ -25,6 +26,10 @@ export default function ShareButtons({ resultName, type }: Props) {
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(shareWithUrl)
+      sendGAEvent('event', 'result_share', {
+        method: 'copy',
+        skin_type: type,
+      })
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     } catch {
@@ -37,6 +42,10 @@ export default function ShareButtons({ resultName, type }: Props) {
     const igText = `ゆんさん、肌診断やってみました！\n\n私のタイプは「${resultName}」でした🌸\n\n結果ページはここ👇\n${SITE_URL}/diagnosis/result/${type}`
     try {
       await navigator.clipboard.writeText(igText)
+      sendGAEvent('event', 'result_share', {
+        method: 'instagram_dm',
+        skin_type: type,
+      })
       setIgFlow('copied')
       setTimeout(() => setIgFlow('idle'), 4000)
     } catch {
@@ -52,6 +61,12 @@ export default function ShareButtons({ resultName, type }: Props) {
           href={xUrl}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() =>
+            sendGAEvent('event', 'result_share', {
+              method: 'x',
+              skin_type: type,
+            })
+          }
           className="flex flex-col items-center gap-1 px-4 py-2 bg-black text-white rounded-xl text-xs font-medium active:scale-95 transition-all"
           aria-label="Xでシェア"
         >
@@ -64,6 +79,12 @@ export default function ShareButtons({ resultName, type }: Props) {
           href={lineUrl}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() =>
+            sendGAEvent('event', 'result_share', {
+              method: 'line',
+              skin_type: type,
+            })
+          }
           className="flex flex-col items-center gap-1 px-4 py-2 bg-[#06C755] text-white rounded-xl text-xs font-medium active:scale-95 transition-all"
           aria-label="LINEでシェア"
         >

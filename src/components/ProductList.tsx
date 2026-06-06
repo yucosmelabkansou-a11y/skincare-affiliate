@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import { sendGAEvent } from '@next/third-parties/google'
 import { Product } from '@/types/product'
 import { CATEGORIES, CATEGORY_GROUPS } from '@/lib/categories'
 import SearchBar from './SearchBar'
@@ -52,6 +53,28 @@ export default function ProductList({ products }: Props) {
   const handleCategoryChange = (id: string) => {
     setSelectedCategoryId(id)
     setSearchQuery('')
+    sendGAEvent('event', 'filter_apply', {
+      filter_type: 'category',
+      filter_value: id,
+    })
+  }
+
+  const handleProductOpen = (product: Product) => {
+    setSelectedProduct(product)
+    sendGAEvent('event', 'product_modal_open', {
+      product_id: product.id,
+      product_name: product.name,
+      brand: product.brand,
+      category: product.category,
+    })
+  }
+
+  const handleSearchCommit = (query: string) => {
+    sendGAEvent('event', 'search_submit', {
+      search_term: query,
+      result_count: filtered.length,
+      category: selectedCategoryId,
+    })
   }
 
   return (
@@ -59,7 +82,7 @@ export default function ProductList({ products }: Props) {
       {/* ===== トップビュー（Pick + カテゴリーグリッド） ===== */}
       {isTopView && (
         <>
-          <WeeklyPicks products={products} onSelect={setSelectedProduct} />
+          <WeeklyPicks products={products} onSelect={handleProductOpen} />
           <CategoryNav selectedId={selectedCategoryId} onChange={handleCategoryChange} />
         </>
       )}
@@ -99,6 +122,7 @@ export default function ProductList({ products }: Props) {
           <SearchBar
             value={searchQuery}
             onChange={setSearchQuery}
+            onSearchCommit={handleSearchCommit}
           />
         </div>
       </div>
@@ -135,7 +159,7 @@ export default function ProductList({ products }: Props) {
                 <ProductCard
                   key={product.id}
                   product={product}
-                  onClick={() => setSelectedProduct(product)}
+                  onClick={() => handleProductOpen(product)}
                 />
               ))}
             </div>

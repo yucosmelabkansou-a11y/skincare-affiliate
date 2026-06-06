@@ -1,5 +1,8 @@
+'use client'
+
 // 記事内/末尾のコンバージョンCTA（肌診断 + 商品一覧へ誘導）
 
+import { sendGAEvent } from '@next/third-parties/google'
 import Link from 'next/link'
 import type { CtaTarget } from '@/lib/articles'
 
@@ -80,6 +83,12 @@ export default function ArticleCTA({ variant = 'end', target = 'both' }: Props) 
               </p>
               <Link
                 href={c.href}
+                onClick={() =>
+                  sendGAEvent('event', 'article_cta_click', {
+                    target: key,
+                    variant,
+                  })
+                }
                 className={
                   c.primary
                     ? 'inline-flex items-center justify-center gap-3 px-7 py-3.5 transition-all hover:bg-[var(--gold)] hover:text-white'

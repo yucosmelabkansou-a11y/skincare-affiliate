@@ -293,6 +293,9 @@ export default async function ResultPage({ params, searchParams }: Props) {
         </div>
       </section>
 
+      {/* Product Match — 診断直後の推しセット */}
+      <DiagnosisProductMatch skinType={type as SkinType} variant="compact" />
+
       {/* 五角形レーダーチャート */}
       <section className="px-5 pb-12">
         <SectionLabel en="Skin Profile" jp="あなたの肌マップ" />
