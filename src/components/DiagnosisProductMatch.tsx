@@ -50,17 +50,16 @@ export default function DiagnosisProductMatch({ skinType, variant = 'full' }: Pr
   const products = getProducts()
   const picks = selectMatchedProducts(products, skinType, 3)
   const isCompact = variant === 'compact'
-  const placement = isCompact ? 'product_match_top' : 'product_match'
 
-  if (picks.length === 0) {
+  if (!isCompact && picks.length === 0) {
     return null
   }
 
   return (
-    <section className={isCompact ? 'px-5 pb-12' : 'px-5 pb-12'}>
+    <section className="px-5 pb-12">
       <SectionLabel
-        en={isCompact ? 'First Picks' : 'Product Match'}
-        jp={isCompact ? 'まずはこの3点から' : 'あなた専用ピックアップ'}
+        en={isCompact ? 'First Pick' : 'Product Match'}
+        jp={isCompact ? 'まず1つ買うなら' : '揃えるならこの3点'}
       />
 
       <p
@@ -77,9 +76,9 @@ export default function DiagnosisProductMatch({ skinType, variant = 'full' }: Pr
       >
         {isCompact ? (
           <>
-            診断直後にまず見てほしい、
+            診断直後に迷わないように、
             <br />
-            肌タイプ別の推しセット
+            いちばん始めやすい1点だけ
           </>
         ) : (
           <>
@@ -97,17 +96,19 @@ export default function DiagnosisProductMatch({ skinType, variant = 'full' }: Pr
         />
       )}
 
-      <div className="space-y-4 max-w-md mx-auto">
-        {picks.map((pick) => (
-          <MatchCard
-            key={pick.product.id}
-            pick={pick}
-            skinType={skinType}
-            compact={isCompact}
-            placement={placement}
-          />
-        ))}
-      </div>
+      {!isCompact && (
+        <div className="space-y-4 max-w-md mx-auto">
+          {picks.map((pick) => (
+            <MatchCard
+              key={pick.product.id}
+              pick={pick}
+              skinType={skinType}
+              compact={false}
+              placement="product_match"
+            />
+          ))}
+        </div>
+      )}
     </section>
   )
 }
