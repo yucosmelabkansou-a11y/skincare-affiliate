@@ -28,6 +28,19 @@ const USE_GUIDE: Partial<Record<SkinType, Partial<Record<string, string>>>> = {
   },
 }
 
+const FIRST_BUY_CTA: Partial<Record<SkinType, { productId: string; title: string; copy: string }>> = {
+  aging: {
+    productId: '9',
+    title: 'まず1つ買うなら：朝のUV乳液',
+    copy: '毎朝使う日焼け止めを美容UV乳液に置き換えると、時短しながら大人肌のくすみ感も自然に補正できます。',
+  },
+  oily: {
+    productId: '233',
+    title: 'まず1つ買うなら：軽い薬用化粧水',
+    copy: '皮脂が気になる肌こそ保湿を抜かないのが大事。朝晩のベースに、さっぱり使える1本から始めやすいです。',
+  },
+}
+
 type Props = {
   skinType: SkinType
   variant?: 'full' | 'compact'
@@ -77,6 +90,13 @@ export default function DiagnosisProductMatch({ skinType, variant = 'full' }: Pr
         )}
       </p>
 
+      {isCompact && (
+        <FirstBuyCallout
+          skinType={skinType}
+          products={products}
+        />
+      )}
+
       <div className="space-y-4 max-w-md mx-auto">
         {picks.map((pick) => (
           <MatchCard
@@ -89,6 +109,125 @@ export default function DiagnosisProductMatch({ skinType, variant = 'full' }: Pr
         ))}
       </div>
     </section>
+  )
+}
+
+function FirstBuyCallout({
+  skinType,
+  products,
+}: {
+  skinType: SkinType
+  products: ReturnType<typeof getProducts>
+}) {
+  const cta = FIRST_BUY_CTA[skinType]
+  if (!cta) return null
+
+  const product = products.find((p) => p.id === cta.productId)
+  if (!product) return null
+
+  return (
+    <aside
+      className="max-w-md mx-auto mb-5 overflow-hidden"
+      style={{
+        background: 'oklch(0.985 0.012 80)',
+        border: '1px solid var(--gold)',
+        borderRadius: 4,
+      }}
+      aria-label="まず1つ買うなら"
+    >
+      <div className="px-4 py-4">
+        <p
+          style={{
+            fontFamily: 'var(--font-serif)',
+            fontStyle: 'italic',
+            fontWeight: 300,
+            fontSize: 10,
+            letterSpacing: '0.28em',
+            color: 'var(--gold-deep)',
+            textTransform: 'uppercase',
+            marginBottom: 7,
+          }}
+        >
+          Start Here
+        </p>
+        <h3
+          style={{
+            fontFamily: 'var(--font-jp)',
+            fontWeight: 600,
+            fontSize: 13,
+            lineHeight: 1.6,
+            letterSpacing: '0.08em',
+            color: 'var(--ink)',
+            marginBottom: 8,
+          }}
+        >
+          {cta.title}
+        </h3>
+        <p
+          style={{
+            fontFamily: 'var(--font-jp-alt)',
+            fontWeight: 400,
+            fontSize: 11.5,
+            lineHeight: 1.75,
+            letterSpacing: '0.05em',
+            color: 'var(--ink-soft)',
+          }}
+        >
+          {cta.copy}
+        </p>
+      </div>
+
+      <div
+        className="flex border-t"
+        style={{ borderColor: 'var(--line-soft)' }}
+      >
+        {product.amazon_url && (
+          <AffiliateLink
+            href={product.amazon_url}
+            store="amazon"
+            productId={product.id}
+            productName={product.name}
+            brand={product.brand}
+            placement="first_buy_cta"
+            skinType={skinType}
+            className="flex-1 py-3 text-center transition-opacity hover:opacity-70"
+            style={{
+              fontFamily: 'var(--font-jp)',
+              fontWeight: 600,
+              fontSize: 11,
+              letterSpacing: '0.16em',
+              color: 'var(--ink)',
+              background: '#fff',
+              borderRight: product.rakuten_url ? '1px solid var(--line-soft)' : 'none',
+            }}
+          >
+            Amazonで見る →
+          </AffiliateLink>
+        )}
+        {product.rakuten_url && (
+          <AffiliateLink
+            href={product.rakuten_url}
+            store="rakuten"
+            productId={product.id}
+            productName={product.name}
+            brand={product.brand}
+            placement="first_buy_cta"
+            skinType={skinType}
+            className="flex-1 py-3 text-center transition-opacity hover:opacity-70"
+            style={{
+              fontFamily: 'var(--font-jp)',
+              fontWeight: 600,
+              fontSize: 11,
+              letterSpacing: '0.16em',
+              color: 'var(--ink)',
+              background: '#fff',
+            }}
+          >
+            楽天で見る →
+          </AffiliateLink>
+        )}
+      </div>
+    </aside>
   )
 }
 
