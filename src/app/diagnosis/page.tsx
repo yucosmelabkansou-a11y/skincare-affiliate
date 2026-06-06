@@ -192,7 +192,7 @@ export default function DiagnosisStartPage() {
                 Pore Type · 16 questions
               </p>
               <p style={{ fontFamily: 'var(--font-jp)', fontSize: 13, fontWeight: 600, color: 'var(--ink)', letterSpacing: '0.06em' }}>
-                毛穴タイプ診断もある →
+                毛穴タイプ診断はこちら →
               </p>
             </div>
           </Link>
