@@ -655,6 +655,34 @@ export default async function ResultPage({ params, searchParams }: Props) {
         </div>
       </section>
 
+      {/* 毛穴診断への誘導 */}
+      <section className="px-5 pb-2">
+        <Link
+          href="/pore-diagnosis"
+          className="flex items-center gap-4 px-5 py-4 transition-all hover:opacity-80"
+          style={{
+            background: 'linear-gradient(135deg, oklch(0.97 0.018 80), oklch(0.94 0.025 75))',
+            border: '1px solid oklch(0.87 0.03 75)',
+            borderRadius: 10,
+            textDecoration: 'none',
+          }}
+        >
+          <span style={{ fontSize: 28, flexShrink: 0 }}>🔍</span>
+          <div style={{ flex: 1 }}>
+            <p style={{ fontFamily: 'var(--font-sans)', fontSize: 9, letterSpacing: '0.16em', color: 'var(--gold-deep)', textTransform: 'uppercase' as const, marginBottom: 3 }}>
+              Next Diagnosis
+            </p>
+            <p style={{ fontFamily: 'var(--font-jp)', fontSize: 14, fontWeight: 700, color: 'var(--ink)', marginBottom: 2, letterSpacing: '0.04em' }}>
+              毛穴タイプも診断してみませんか？
+            </p>
+            <p style={{ fontFamily: 'var(--font-jp-alt)', fontSize: 11, color: 'var(--ink-soft)' }}>
+              開き・詰まり・たるみ・メラニン…原因別ケアがわかります
+            </p>
+          </div>
+          <span style={{ color: 'var(--gold)', fontSize: 18, flexShrink: 0 }}>→</span>
+        </Link>
+      </section>
+
       {/* Footer Instagram */}
       <footer
         className="px-5 py-12 text-center"

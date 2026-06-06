@@ -174,6 +174,30 @@ export default function DiagnosisStartPage() {
           たった<strong style={{ color: 'var(--ink)' }}>8問</strong>の診断に答えるだけで、あなたの肌の <strong style={{ color: 'var(--ink)' }}>水分・油分・バリア</strong> などを見える化し、今日からすぐに取り入れられるスキンケアをご提案します。
         </p>
 
+        {/* 毛穴診断カード */}
+        <div className="mt-8 mx-auto max-w-xs px-2">
+          <Link
+            href="/pore-diagnosis"
+            className="flex items-center gap-4 px-5 py-4 transition-all hover:opacity-80"
+            style={{
+              background: 'linear-gradient(135deg, oklch(0.97 0.018 80), oklch(0.94 0.025 75))',
+              border: '1px solid oklch(0.87 0.03 75)',
+              borderRadius: 8,
+              textDecoration: 'none',
+            }}
+          >
+            <span style={{ fontSize: 26, flexShrink: 0 }}>🔍</span>
+            <div style={{ flex: 1 }}>
+              <p style={{ fontFamily: 'var(--font-sans)', fontSize: 9, letterSpacing: '0.16em', color: 'var(--gold-deep)', textTransform: 'uppercase' as const, marginBottom: 2 }}>
+                Pore Type · 16 questions
+              </p>
+              <p style={{ fontFamily: 'var(--font-jp)', fontSize: 13, fontWeight: 600, color: 'var(--ink)', letterSpacing: '0.06em' }}>
+                毛穴タイプ診断もある →
+              </p>
+            </div>
+          </Link>
+        </div>
+
         {/* CTA */}
         <div className="mt-12 flex flex-col gap-3 px-2 max-w-sm mx-auto">
           <Link
