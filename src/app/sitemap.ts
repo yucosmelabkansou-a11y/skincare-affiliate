@@ -1,12 +1,14 @@
 import type { MetadataRoute } from 'next'
 import { allSkinTypes } from '@/lib/diagnosis'
 import { getAllArticles } from '@/lib/articles'
+import { getAllProductSlugs } from '@/lib/product-pages'
 import { SITE_URL } from '@/lib/siteConfig'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
   const columns = getAllArticles('column')
   const qas = getAllArticles('qa')
+  const productSlugs = getAllProductSlugs()
 
   return [
     {
@@ -58,6 +60,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         : now,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
+    })),
+    ...productSlugs.map((slug) => ({
+      url: `${SITE_URL}/products/${slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
     })),
   ]
 }
