@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { Product } from '@/types/product'
 import AffiliateLink from './AffiliateLink'
 
@@ -21,12 +22,12 @@ export default function ProductCard({ product, onClick }: Props) {
           🧴
         </div>
         {product.image_filename && (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <Image
             src={`/images/${product.image_filename}`}
             alt={product.name}
-            className="absolute inset-0 w-full h-full object-cover"
-            loading="eager"
+            fill
+            sizes="(max-width: 640px) 50vw, 224px"
+            className="object-cover"
             onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
           />
         )}

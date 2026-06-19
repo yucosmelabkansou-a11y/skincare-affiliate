@@ -35,7 +35,6 @@ export default function ProductModal({ product, onClose }: Props) {
               fill
               sizes="(max-width: 640px) 100vw, 512px"
               className="object-cover"
-              unoptimized
             />
           )}
         </div>

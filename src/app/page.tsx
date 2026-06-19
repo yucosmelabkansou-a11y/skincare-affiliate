@@ -1,6 +1,7 @@
 import { getProducts } from '@/lib/parseCSV'
 import ProductList from '@/components/ProductList'
 import EditorialHero from '@/components/EditorialHero'
+import GuideRanking from '@/components/GuideRanking'
 import AboutYun from '@/components/AboutYun'
 import ReadShortcuts from '@/components/ReadShortcuts'
 import JournalSection from '@/components/JournalSection'
@@ -97,6 +98,9 @@ export default function Home() {
 
       {/* 🌸 エディトリアル風ヒーロー */}
       <EditorialHero />
+
+      {/* 迷ったらここから — 悩み別おすすめ導線（商品クリックまで最短） */}
+      <GuideRanking />
 
       {/* 商品リスト前に読み物導線（コラム+Q&A） */}
       <ReadShortcuts />

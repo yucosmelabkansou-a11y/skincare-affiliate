@@ -27,7 +27,7 @@
   /* 本文用：和文セリフ優先 */
   --font-jp: var(--font-jp-serif), var(--font-noto-sans-jp), 'Hiragino Mincho ProN', serif;
   --font-jp-alt: var(--font-noto-sans-jp), 'Hiragino Sans', sans-serif;
-  --font-sans: var(--font-jost), var(--font-inter), system-ui, sans-serif;
+  --font-sans: var(--font-jost), system-ui, sans-serif;
   --font-serif: var(--font-serif), 'Cormorant Garamond', 'Georgia', serif;
   --font-script: var(--font-script), 'Italiana', 'Cormorant Garamond', serif;
 }

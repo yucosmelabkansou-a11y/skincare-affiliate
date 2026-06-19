@@ -1,6 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    // AVIF優先（WebPより2〜3割小さい）。変換結果のキャッシュを31日保持して
+    // Vercelの再変換コストを抑える（商品画像は差し替え時にファイル名が変わる運用）
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 2678400,
+  },
   async redirects() {
     return [
       {

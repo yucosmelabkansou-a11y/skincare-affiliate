@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/qa`,
     title: 'インスタライブQ&A一覧｜yun.skincare_',
     description: 'フォロワーからの肌悩み相談に元化粧品研究員ゆんが回答するQ&A集。',
-    images: ['/og-image.jpg'],
+    // OGP画像は app/opengraph-image.tsx で自動付与
   },
 }
 

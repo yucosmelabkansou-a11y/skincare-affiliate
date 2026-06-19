@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { sendGAEvent } from '@next/third-parties/google'
 import { Product } from '@/types/product'
 import { CATEGORIES, CATEGORY_GROUPS } from '@/lib/categories'
@@ -19,6 +19,55 @@ export default function ProductList({ products }: Props) {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategoryId, setSelectedCategoryId] = useState('all')
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
+
+  // 診断結果ページなどからの内部リンク（/?cat=sunscreen など）で初期フィルターを反映
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const cat = params.get('cat')
+    const q = params.get('q')
+    let applied = false
+    if (q) {
+      setSearchQuery(q)
+      applied = true
+    }
+    if (cat && CATEGORIES.some((c) => c.id === cat)) {
+      setSelectedCategoryId(cat)
+      applied = true
+    }
+    if (applied) {
+      requestAnimationFrame(() => {
+        document
+          .getElementById('product-list')
+          ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      })
+    }
+  }, [])
+
+  // 同一ページ内（トップの「迷ったらここから」カードなど）からのフィルター切替
+  useEffect(() => {
+    const onSetFilter = (e: Event) => {
+      const detail = (e as CustomEvent).detail as { cat?: string; q?: string } | undefined
+      let applied = false
+      if (detail?.q !== undefined) {
+        setSearchQuery(detail.q)
+        applied = true
+      }
+      if (detail?.cat && CATEGORIES.some((c) => c.id === detail.cat)) {
+        setSelectedCategoryId(detail.cat)
+        if (detail.q === undefined) setSearchQuery('')
+        applied = true
+      }
+      if (applied) {
+        requestAnimationFrame(() => {
+          document
+            .getElementById('product-list')
+            ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        })
+      }
+    }
+    window.addEventListener('yun:set-filter', onSetFilter)
+    return () => window.removeEventListener('yun:set-filter', onSetFilter)
+  }, [])
 
   // トップ表示かどうか（カテゴリー・検索未選択）
   const isTopView = selectedCategoryId === 'all' && searchQuery === ''
@@ -88,7 +137,7 @@ export default function ProductList({ products }: Props) {
       )}
 
       {/* ===== 検索 / フィルター ===== */}
-      <div className={`${isTopView ? '' : 'sticky top-0 z-30 bg-white/95 backdrop-blur-sm border-b border-[#F2EAEF]'} `}>
+      <div id="product-list" className={`${isTopView ? '' : 'sticky top-0 z-30 bg-white/95 backdrop-blur-sm border-b border-[#F2EAEF]'} scroll-mt-2`}>
         {/* カテゴリー選択中: グループ別コンパクトタブ */}
         {!isTopView && (
           <div className="px-4 pt-3 pb-1 space-y-2">

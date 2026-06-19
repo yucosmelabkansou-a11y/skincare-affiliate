@@ -21,6 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    {
+      url: `${SITE_URL}/pore-diagnosis`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
     ...allSkinTypes.map((type) => ({
       url: `${SITE_URL}/diagnosis/result/${type}`,
       lastModified: now,

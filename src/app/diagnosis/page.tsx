@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: '肌診断｜2分でわかる、あなたの肌タイプ｜yun.skincare_',
     description:
       '8問の診断であなたの肌タイプを判定。五角形グラフで肌の状態を可視化し、今日からできる改善案とおすすめ成分を提案。',
-    images: ['/og-image.jpg'],
+    // OGP画像は app/opengraph-image.tsx で自動付与
   },
 }
 

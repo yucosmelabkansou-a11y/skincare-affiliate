@@ -7,7 +7,8 @@
 //
 // 計測パラメータ（GA4 のカスタムディメンション/指標として登録すると分析しやすい）:
 //   store        … 'amazon' | 'rakuten'
-//   placement    … 'product_match' | 'product_card' | 'product_modal' など
+//   page_type    … 'diagnosis_result' | 'product_list' | 'column' など、押された画面の種類
+//   placement    … 'top3' | 'product_match' | 'product_card' | 'product_modal' など画面内の配置
 //   product_id   … products.csv の id
 //   product_name … 商品名
 //   brand        … ブランド名
@@ -25,6 +26,7 @@ type Props = {
   productName?: string
   brand?: string
   placement: string
+  pageType?: string
   skinType?: string
   className?: string
   style?: CSSProperties
@@ -38,6 +40,7 @@ export default function AffiliateLink({
   productName,
   brand,
   placement,
+  pageType,
   skinType,
   className,
   style,
@@ -46,6 +49,7 @@ export default function AffiliateLink({
   const handleClick = () => {
     sendGAEvent('event', 'affiliate_click', {
       store,
+      page_type: pageType ?? 'other',
       placement,
       product_id: productId ?? '',
       product_name: productName ?? '',

@@ -4,8 +4,13 @@
 import type { SkinType } from '@/lib/diagnosis'
 import { selectMatchedProducts, buildWhyForYouCopy, type MatchedPick } from '@/lib/diagnosis-matcher'
 import { getProducts } from '@/lib/parseCSV'
+import type { ReactNode } from 'react'
+import type { Product } from '@/types/product'
 import SectionLabel from './SectionLabel'
 import AffiliateLink from './AffiliateLink'
+
+// 診断結果ページ経由のアフィリエイトクリックを GA4 で識別するための page_type 値
+const PAGE_TYPE = 'diagnosis_result'
 
 const SLOT_LABELS: Record<string, string> = {
   '化粧水': '推し化粧水',
@@ -43,13 +48,66 @@ const FIRST_BUY_CTA: Partial<Record<SkinType, { productId: string; title: string
 
 type Props = {
   skinType: SkinType
-  variant?: 'full' | 'compact'
+  variant?: 'full' | 'compact' | 'top3'
+  // top3 variant の見出しを上書きしたいとき（例：敏感肌ページの「ゆん厳選」）
+  heading?: { en: string; jp: string }
+  // top3 variant の説明文を上書きしたいとき
+  lead?: ReactNode
 }
 
-export default function DiagnosisProductMatch({ skinType, variant = 'full' }: Props) {
+export default function DiagnosisProductMatch({ skinType, variant = 'full', heading, lead }: Props) {
   const products = getProducts()
   const picks = selectMatchedProducts(products, skinType, 3)
   const isCompact = variant === 'compact'
+
+  // ファーストビュー直下の「この肌タイプにおすすめTOP3」セクション
+  if (variant === 'top3') {
+    if (picks.length === 0) return null
+    return (
+      <section className="px-5 pt-2 pb-12">
+        <SectionLabel
+          en={heading?.en ?? 'Best 3 for You'}
+          jp={heading?.jp ?? 'この肌タイプにおすすめTOP3'}
+        />
+
+        <p
+          className="text-center mx-auto mb-4"
+          style={{
+            fontFamily: 'var(--font-jp-alt)',
+            fontWeight: 400,
+            fontSize: 12,
+            lineHeight: 1.95,
+            letterSpacing: '0.06em',
+            color: 'var(--ink-soft)',
+            maxWidth: '32ch',
+          }}
+        >
+          {lead ?? (
+            <>
+              200近いアイテムから、元化粧品研究・商品企画ゆんが
+              <br />
+              あなたの肌タイプに厳選した3点です
+            </>
+          )}
+        </p>
+
+        <AffiliateDisclosure />
+
+        <div className="space-y-4 max-w-md mx-auto">
+          {picks.map((pick, i) => (
+            <MatchCard
+              key={pick.product.id}
+              pick={pick}
+              skinType={skinType}
+              compact={false}
+              placement="top3"
+              rank={i + 1}
+            />
+          ))}
+        </div>
+      </section>
+    )
+  }
 
   if (!isCompact && picks.length === 0) {
     return null
@@ -190,6 +248,7 @@ function FirstBuyCallout({
             productName={product.name}
             brand={product.brand}
             placement="first_buy_cta"
+            pageType={PAGE_TYPE}
             skinType={skinType}
             className="flex-1 py-3 text-center transition-opacity hover:opacity-70"
             style={{
@@ -213,6 +272,7 @@ function FirstBuyCallout({
             productName={product.name}
             brand={product.brand}
             placement="first_buy_cta"
+            pageType={PAGE_TYPE}
             skinType={skinType}
             className="flex-1 py-3 text-center transition-opacity hover:opacity-70"
             style={{
@@ -237,11 +297,13 @@ function MatchCard({
   skinType,
   compact,
   placement,
+  rank,
 }: {
   pick: MatchedPick
   skinType: SkinType
   compact: boolean
   placement: string
+  rank?: number
 }) {
   const { product, slot, isOverride } = pick
   const slotLabel = SLOT_LABELS[slot] ?? slot
@@ -257,9 +319,9 @@ function MatchCard({
         borderRadius: 4,
       }}
     >
-      {/* スロットラベル（推し○○） */}
+      {/* スロットラベル（推し○○）。TOP3 では順位バッジを兼ねる */}
       <div
-        className="absolute top-0 left-0 px-3 py-1 z-10"
+        className="absolute top-0 left-0 flex items-center gap-1.5 px-3 py-1 z-10"
         style={{
           background: 'var(--gold)',
           color: '#fff',
@@ -269,6 +331,20 @@ function MatchCard({
           letterSpacing: '0.18em',
         }}
       >
+        {rank && (
+          <span
+            style={{
+              fontFamily: 'var(--font-serif)',
+              fontStyle: 'italic',
+              fontWeight: 400,
+              fontSize: 12,
+              letterSpacing: '0.04em',
+            }}
+          >
+            No.{rank}
+          </span>
+        )}
+        {rank && <span style={{ opacity: 0.6 }}>｜</span>}
         {slotLabel}
       </div>
 
@@ -407,56 +483,8 @@ function MatchCard({
         </div>
       )}
 
-      {/* Amazon・楽天 ボタン */}
-      <div
-        className="flex gap-0 border-t"
-        style={{ borderColor: 'var(--line-soft)' }}
-        // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
-      >
-        {product.amazon_url && (
-          <AffiliateLink
-            href={product.amazon_url}
-            store="amazon"
-            productId={product.id}
-            productName={product.name}
-            brand={product.brand}
-            placement={placement}
-            skinType={skinType}
-            className="flex-1 py-3 text-center transition-opacity hover:opacity-70"
-            style={{
-              fontFamily: 'var(--font-jp)',
-              fontWeight: 500,
-              fontSize: 11,
-              letterSpacing: '0.18em',
-              color: 'var(--ink)',
-              borderRight: product.rakuten_url ? '1px solid var(--line-soft)' : 'none',
-            }}
-          >
-            Amazon →
-          </AffiliateLink>
-        )}
-        {product.rakuten_url && (
-          <AffiliateLink
-            href={product.rakuten_url}
-            store="rakuten"
-            productId={product.id}
-            productName={product.name}
-            brand={product.brand}
-            placement={placement}
-            skinType={skinType}
-            className="flex-1 py-3 text-center transition-opacity hover:opacity-70"
-            style={{
-              fontFamily: 'var(--font-jp)',
-              fontWeight: 500,
-              fontSize: 11,
-              letterSpacing: '0.18em',
-              color: 'var(--ink)',
-            }}
-          >
-            楽天 →
-          </AffiliateLink>
-        )}
-      </div>
+      {/* Amazon・楽天 ボタン（スマホで押しやすい大きめサイズ） */}
+      <BuyButtons product={product} placement={placement} skinType={skinType} />
 
       {/* 編集者厳選マーク（debug 用に minimal、本番でも残す） */}
       {isOverride && (
@@ -475,5 +503,98 @@ function MatchCard({
         </div>
       )}
     </article>
+  )
+}
+
+// Amazon・楽天 の大きめ購入ボタン（スマホで押しやすい高さ・タップ領域）
+// Amazon = ゴールド塗り、楽天 = 白地ゴールド文字。淡ピンク・ベージュの世界観に合わせる。
+function BuyButtons({
+  product,
+  placement,
+  skinType,
+}: {
+  product: Product
+  placement: string
+  skinType: SkinType
+}) {
+  const hasBoth = Boolean(product.amazon_url) && Boolean(product.rakuten_url)
+
+  const baseStyle = {
+    minHeight: 52,
+    fontFamily: 'var(--font-jp)',
+    fontWeight: 600,
+    fontSize: 13,
+    letterSpacing: '0.12em',
+  } as const
+
+  return (
+    <div
+      className="flex border-t"
+      style={{ borderColor: 'var(--line-soft)' }}
+    >
+      {product.amazon_url && (
+        <AffiliateLink
+          href={product.amazon_url}
+          store="amazon"
+          productId={product.id}
+          productName={product.name}
+          brand={product.brand}
+          placement={placement}
+          pageType={PAGE_TYPE}
+          skinType={skinType}
+          className="flex-1 flex items-center justify-center gap-1 transition-opacity hover:opacity-80 active:opacity-70"
+          style={{
+            ...baseStyle,
+            color: '#fff',
+            background: 'linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%)',
+            borderRight: hasBoth ? '1px solid #fff' : 'none',
+          }}
+        >
+          Amazonで見る <span aria-hidden>→</span>
+        </AffiliateLink>
+      )}
+      {product.rakuten_url && (
+        <AffiliateLink
+          href={product.rakuten_url}
+          store="rakuten"
+          productId={product.id}
+          productName={product.name}
+          brand={product.brand}
+          placement={placement}
+          pageType={PAGE_TYPE}
+          skinType={skinType}
+          className="flex-1 flex items-center justify-center gap-1 transition-opacity hover:opacity-80 active:opacity-70"
+          style={{
+            ...baseStyle,
+            color: 'var(--gold-deep)',
+            background: '#fff',
+          }}
+        >
+          楽天で見る <span aria-hidden>→</span>
+        </AffiliateLink>
+      )}
+    </div>
+  )
+}
+
+// PR・アフィリエイトリンクを含む旨の表記（景表法・ステマ規制対応）
+function AffiliateDisclosure() {
+  return (
+    <p
+      className="text-center mx-auto mb-6"
+      style={{
+        fontFamily: 'var(--font-jp-alt)',
+        fontWeight: 400,
+        fontSize: 10.5,
+        lineHeight: 1.7,
+        letterSpacing: '0.04em',
+        color: 'var(--ink-mute)',
+        maxWidth: '34ch',
+      }}
+    >
+      ※本ページにはPR・アフィリエイトリンクが含まれます。
+      <br />
+      購入で当サイトが収益を得る場合がありますが、商品はゆんが肌タイプ目線で選んでいます。
+    </p>
   )
 }

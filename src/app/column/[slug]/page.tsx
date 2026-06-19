@@ -37,7 +37,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `${SITE_URL}/column/${a.slug}`,
       title: a.title,
       description: a.description || a.title,
-      images: a.hero ? [a.hero] : ['/og-image.jpg'],
+      // hero があればそれを、無ければ app/opengraph-image.tsx の自動生成画像を使用
+      images: a.hero ? [a.hero] : undefined,
       publishedTime: a.publishedAt,
       modifiedTime: a.updatedAt || a.publishedAt,
       authors: ['ゆん（yun.skincare_）'],
@@ -47,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title: a.title,
       description: a.description || a.title,
-      images: ['/og-image.jpg'],
+      images: a.hero ? [a.hero] : undefined,
     },
   }
 }

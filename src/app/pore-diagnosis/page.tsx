@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: '毛穴タイプ診断｜3分でわかる、あなたの毛穴の原因｜yun.skincare_',
     description:
       '16問の診断で毛穴タイプを特定。開き・詰まり・黒ずみ・たるみ・乾燥など原因別ケアがわかります。',
-    images: ['/og-image.jpg'],
+    // OGP画像は app/opengraph-image.tsx で自動付与
   },
 }
 

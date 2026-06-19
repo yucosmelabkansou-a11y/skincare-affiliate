@@ -11,6 +11,8 @@ import {
 import { SITE_URL } from '@/lib/siteConfig'
 import SkinRadarChart, { TYPICAL_VALUES_BY_TYPE } from '@/components/SkinRadarChart'
 import DiagnosisProductMatch from '@/components/DiagnosisProductMatch'
+import SensitiveResult from '@/components/SensitiveResult'
+import RelatedReads from '@/components/RelatedReads'
 import ShareButtons from './ShareButtons'
 
 // 静的パラメータ生成（SSG）
@@ -42,7 +44,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `${SITE_URL}/diagnosis/result/${type}`,
       title: `私の肌タイプは「${result.name}」でした🌸`,
       description: `元化粧品研究・商品企画監修の肌診断でわかった、私の肌タイプと最適なケア方法。`,
-      images: ['/og-image.jpg'],
     },
     twitter: {
       card: 'summary_large_image',
@@ -122,6 +123,11 @@ export default async function ResultPage({ params, searchParams }: Props) {
   const { concern: concernParam, scores: scoresParam } = await searchParams
   const result = resultTypes[type as SkinType]
   if (!result) notFound()
+
+  // 敏感肌はクリック率改善のため専用レイアウトを使用
+  if ((type as SkinType) === 'sensitive') {
+    return <SensitiveResult />
+  }
 
   const concern = (concernParam as Concern | undefined) && concernLabels[concernParam as Concern]
     ? (concernParam as Concern)
@@ -293,8 +299,8 @@ export default async function ResultPage({ params, searchParams }: Props) {
         </div>
       </section>
 
-      {/* Product Match — 診断直後の推しセット */}
-      <DiagnosisProductMatch skinType={type as SkinType} variant="compact" />
+      {/* この肌タイプにおすすめTOP3 — ファーストビュー直下の主CTA */}
+      <DiagnosisProductMatch skinType={type as SkinType} variant="top3" />
 
       {/* 五角形レーダーチャート */}
       <section className="px-5 pb-12">
@@ -557,8 +563,8 @@ export default async function ResultPage({ params, searchParams }: Props) {
         </ul>
       </section>
 
-      {/* Product Match — あなた専用ピックアップ */}
-      <DiagnosisProductMatch skinType={type as SkinType} />
+      {/* 関連して読みたい（結果→関連記事の内部リンク） */}
+      <RelatedReads tags={[result.name, ...result.recommendedIngredients]} />
 
       {/* 全商品ラインナップへの導線 */}
       <section className="px-5 pb-10 text-center">

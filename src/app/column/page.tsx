@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/column`,
     title: 'コラム一覧｜yun.skincare_',
     description: '元化粧品研究・商品企画ゆんが綴るスキンケアコラム。',
-    images: ['/og-image.jpg'],
+    // OGP画像は app/opengraph-image.tsx で自動付与
   },
 }
 

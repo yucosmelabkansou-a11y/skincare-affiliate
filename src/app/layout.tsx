@@ -1,27 +1,25 @@
 import type { Metadata } from 'next'
-import { Inter, Noto_Sans_JP, Cormorant_Garamond, Shippori_Mincho, Italiana, Jost } from 'next/font/google'
+import { Noto_Sans_JP, Cormorant_Garamond, Shippori_Mincho, Italiana, Jost } from 'next/font/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_DESCRIPTION } from '@/lib/siteConfig'
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
-
 const notoSansJP = Noto_Sans_JP({
   subsets: ['latin'],
   variable: '--font-noto-sans-jp',
   display: 'swap',
+  // 日本語フォントは unicode-range 分割された全ファイルが preload されてしまい
+  // 初期表示を数秒ブロックするため、preload せず使用グリフ分だけ遅延取得させる
+  preload: false,
 })
 
 // エディトリアル英字セリフ体（見出し・ブランド名）
+// 実際に使用しているのは 300/400 のみ（500/600 はpreloadフォントを増やすだけなので削減）
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
+  weight: ['300', '400'],
   style: ['normal', 'italic'],
   variable: '--font-serif',
   display: 'swap',
@@ -33,6 +31,7 @@ const shipporiMincho = Shippori_Mincho({
   weight: ['400', '500', '600', '700'],
   variable: '--font-jp-serif',
   display: 'swap',
+  preload: false, // 同上（日本語フォントの preload 爆発対策）
 })
 
 // 装飾用スクリプト体（ワードマーク "Skin&Care"）
@@ -105,20 +104,12 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'yun.skincare_ - 元化粧品研究・商品企画×29年ノーファンデが厳選するスキンケア',
-      },
-    ],
+    // OGP画像は app/opengraph-image.tsx で自動生成・自動付与される
   },
   twitter: {
     card: 'summary_large_image',
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: ['/og-image.jpg'],
     creator: '@yun.skincare_',
   },
   icons: {
@@ -138,7 +129,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ja" className={`${inter.variable} ${notoSansJP.variable} ${cormorant.variable} ${shipporiMincho.variable} ${italiana.variable} ${jost.variable}`}>
+    <html lang="ja" className={`${notoSansJP.variable} ${cormorant.variable} ${shipporiMincho.variable} ${italiana.variable} ${jost.variable}`}>
       <body className="min-h-screen bg-[var(--bg-cream)] text-[var(--ink)] font-jp antialiased">
         {children}
       </body>
