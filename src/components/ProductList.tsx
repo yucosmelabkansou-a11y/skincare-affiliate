@@ -15,10 +15,16 @@ type Props = {
   products: Product[]
 }
 
+// 初期描画を絞ってDOM/HTMLサイズを軽くする（モバイルの体感速度・hydration負荷対策）。
+// 残りは「もっと見る」で段階的に追加描画する。
+const INITIAL_VISIBLE = 24
+const LOAD_MORE_STEP = 24
+
 export default function ProductList({ products }: Props) {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategoryId, setSelectedCategoryId] = useState('all')
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
+  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE)
 
   // 診断結果ページなどからの内部リンク（/?cat=sunscreen など）で初期フィルターを反映
   useEffect(() => {
@@ -98,6 +104,14 @@ export default function ProductList({ products }: Props) {
       return true
     })
   }, [products, searchQuery, selectedCategoryId])
+
+  // 検索・カテゴリーが変わったら初期件数に戻す
+  useEffect(() => {
+    setVisibleCount(INITIAL_VISIBLE)
+  }, [searchQuery, selectedCategoryId])
+
+  const visible = filtered.slice(0, visibleCount)
+  const hasMore = filtered.length > visibleCount
 
   const handleCategoryChange = (id: string) => {
     setSelectedCategoryId(id)
@@ -204,7 +218,7 @@ export default function ProductList({ products }: Props) {
               </div>
             )}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              {filtered.map((product) => (
+              {visible.map((product) => (
                 <ProductCard
                   key={product.id}
                   product={product}
@@ -212,6 +226,49 @@ export default function ProductList({ products }: Props) {
                 />
               ))}
             </div>
+
+            {hasMore && (
+              <div className="flex flex-col items-center mt-8 mb-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    const next = visibleCount + LOAD_MORE_STEP
+                    setVisibleCount(next)
+                    sendGAEvent('event', 'load_more', {
+                      category: selectedCategoryId,
+                      shown: Math.min(next, filtered.length),
+                      total: filtered.length,
+                    })
+                  }}
+                  className="inline-flex items-center justify-center gap-3 px-10 transition-all hover:bg-[var(--gold)] hover:text-white"
+                  style={{
+                    fontFamily: 'var(--font-jp)',
+                    fontWeight: 500,
+                    fontSize: 13,
+                    letterSpacing: '0.24em',
+                    color: 'var(--ink)',
+                    border: '1px solid var(--gold)',
+                    background: '#fff',
+                    minHeight: 52,
+                    borderRadius: 4,
+                  }}
+                >
+                  もっと見る
+                  <span aria-hidden>＋</span>
+                </button>
+                <p
+                  className="mt-2.5"
+                  style={{
+                    fontFamily: 'var(--font-jp-alt)',
+                    fontSize: 11,
+                    letterSpacing: '0.06em',
+                    color: 'var(--ink-mute)',
+                  }}
+                >
+                  {visible.length} / {filtered.length} 件を表示中
+                </p>
+              </div>
+            )}
           </>
         )}
       </main>
