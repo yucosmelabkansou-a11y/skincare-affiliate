@@ -43,25 +43,39 @@ A. できます。「保湿（うるおいを守る）」だけでなく「保�
 
 おすすめ製品：
 
-🛒 ミノン アミノモイスト モイストチャージ ローション II もっとしっとりタイプ  
-アミノ酸系で"水を蓄えられる肌"を目指す処方。敏感肌・乾燥肌向け。  
-[Amazon](https://www.amazon.co.jp/dp/B00SAS1BWA?tag=onamzyyy0410m-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/37b19720.08bc207d.37b19721.21e05540/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24-cosmetics%2F4987107670397%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D)
+```product
+name: ミノン アミノモイスト モイストチャージ ローション II もっとしっとりタイプ
+desc: アミノ酸系で"水を蓄えられる肌"を目指す処方。敏感肌・乾燥肌向け。
+image: https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24-cosmetics/cabinet/397/4987107670397.jpg
+amazon: https://www.amazon.co.jp/dp/B00SAS1BWA?tag=onamzyyy0410m-22
+rakuten: https://hb.afl.rakuten.co.jp/ichiba/37b19720.08bc207d.37b19721.21e05540/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24-cosmetics%2F4987107670397%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D
+```
 
-🛒 キュレル 潤浸保湿 化粧水 III とてもしっとり  
-自社のセラミドケア成分でうるおいを守る。敏感肌のロングセラー。  
-[Amazon](https://www.amazon.co.jp/s?k=%E3%82%AD%E3%83%A5%E3%83%AC%E3%83%AB%20%E6%BD%A4%E6%B5%B8%E4%BF%9D%E6%B9%BF%20%E5%8C%96%E7%B2%A7%E6%B0%B4%20III%20%E3%81%A8%E3%81%A6%E3%82%82%E3%81%97%E3%81%A3%E3%81%A8%E3%82%8A&tag=onamzyyy0410m-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/3dad1d0f.759e27e6.3dad1d10.6c584782/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fladydrugplus%2F4901301236180%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D)
+```product
+name: キュレル 潤浸保湿 化粧水 III とてもしっとり
+desc: 自社のセラミドケア成分でうるおいを守る。敏感肌のロングセラー。
+image: https://thumbnail.image.rakuten.co.jp/@0_mall/ladydrugplus/cabinet/pic117/4901301236180_1.jpg
+amazon: https://www.amazon.co.jp/s?k=%E3%82%AD%E3%83%A5%E3%83%AC%E3%83%AB%20%E6%BD%A4%E6%B5%B8%E4%BF%9D%E6%B9%BF%20%E5%8C%96%E7%B2%A7%E6%B0%B4%20III%20%E3%81%A8%E3%81%A6%E3%82%82%E3%81%97%E3%81%A3%E3%81%A8%E3%82%8A&tag=onamzyyy0410m-22
+rakuten: https://hb.afl.rakuten.co.jp/ichiba/3dad1d0f.759e27e6.3dad1d10.6c584782/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fladydrugplus%2F4901301236180%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D
+```
 
-🛒 ソフィーナ BASIC＋ うるおいターボ化粧水／乳液（2026年8月8日発売・オープン価格）  
-空気中の水分を自ら呼び込む処方＋高浸透セラミドケア。無香料・アルコールフリー・パラベンフリーで土台づくりに。  
-[Amazon](https://www.amazon.co.jp/s?k=%E3%82%BD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%8A%20BASIC%EF%BC%8B%20%E3%81%86%E3%82%8B%E3%81%8A%E3%81%84%E3%82%BF%E3%83%BC%E3%83%9C&tag=onamzyyy0410m-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%8A%20BASIC%EF%BC%8B%20%E3%81%86%E3%82%8B%E3%81%8A%E3%81%84%E3%82%BF%E3%83%BC%E3%83%9C/)
+```product
+name: ソフィーナ BASIC＋ うるおいターボ化粧水／乳液（2026年8月8日発売・オープン価格）
+desc: 空気中の水分を自ら呼び込む処方＋高浸透セラミドケア。無香料・アルコールフリー・パラベンフリーで土台づくりに。
+amazon: https://www.amazon.co.jp/s?k=%E3%82%BD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%8A%20BASIC%EF%BC%8B%20%E3%81%86%E3%82%8B%E3%81%8A%E3%81%84%E3%82%BF%E3%83%BC%E3%83%9C&tag=onamzyyy0410m-22
+rakuten: https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%8A%20BASIC%EF%BC%8B%20%E3%81%86%E3%82%8B%E3%81%8A%E3%81%84%E3%82%BF%E3%83%BC%E3%83%9C/
+```
 
 ## Q. 40代だけど、新しいソフィーナベーシック（低価格帯シリーズ）はおすすめ？ソフィーナiPの方がいい？
 
 A. どちらか一方ではなく"組み合わせ"が一番おすすめです。ベーシックは化粧水・乳液で土台を整えるシンプル設計。土台はコストを抑え、攻めのケア（シワ・ハリ・美白の美容液）はソフィーナIPなどを重ねるのが効率的です。化粧水・乳液にはお金をかけすぎず、美容液に投資するのがコスパの良い考え方。ステップを減らしたい方はエリクシールやアクアレーベルの「化粧水＋美容液」でまとめるのも◎。
 
-🛒 アクアレーベル ブライトニングエマルジョン EX  
-プチプラの定番。化粧水＋美容液をまとめたい人に。  
-[Amazon](https://www.amazon.co.jp/dp/B0CSSYHV5F?tag=onamzyyy0410m-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/25975d9e.71fe88ac.25975d9f.e6936bc6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4909978180300%2F)
+```product
+name: アクアレーベル ブライトニングエマルジョン EX
+desc: プチプラの定番。化粧水＋美容液をまとめたい人に。
+amazon: https://www.amazon.co.jp/dp/B0CSSYHV5F?tag=onamzyyy0410m-22
+rakuten: https://hb.afl.rakuten.co.jp/hgc/25975d9e.71fe88ac.25975d9f.e6936bc6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4909978180300%2F
+```
 
 ---
 
@@ -71,17 +85,27 @@ A. どちらか一方ではなく"組み合わせ"が一番おすすめです。
 
 A. アネッサ・アリーで十分にロングUVAをカバーできる可能性があります。ジエチルアミノヒドロキシベンゾイル安息香酸ヘキシルや、ビスエチルヘキシルオキシフェノールメトキシフェニルトリアジンなどの成分がロングUVAまでカバーできるとされています。ただし配合量などでロングUVAの防御力は変わります。アネッサ・アリーはノンケミにこだわらず、こうした吸収剤を上手に組み合わせて"徹底的に守る"ことに特化したブランドです。
 
-🛒 アネッサ パーフェクトUV スキンケアミルク NA  
-ロングUVA対策なら、やさしい黄色のジェルより金のミルク系がおすすめ。湿度に応答して肌の水分量を調整。  
-[Amazon](https://www.amazon.co.jp/dp/B0CSSVF9GQ?tag=onamzyyy0410m-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/25975d9e.71fe88ac.25975d9f.e6936bc6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4909978147105%2F)
+```product
+name: アネッサ パーフェクトUV スキンケアミルク NA
+desc: ロングUVA対策なら、やさしい黄色のジェルより金のミルク系がおすすめ。湿度に応答して肌の水分量を調整。
+amazon: https://www.amazon.co.jp/dp/B0CSSVF9GQ?tag=onamzyyy0410m-22
+rakuten: https://hb.afl.rakuten.co.jp/hgc/25975d9e.71fe88ac.25975d9f.e6936bc6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4909978147105%2F
+```
 
-🛒 アリィー クロノビューティ ジェルUV EX  
-同じくロングUVAに比較的強い吸収剤を配合。汗・水に強い。  
-[Amazon](https://www.amazon.co.jp/dp/B09NCS9SDJ?tag=onamzyyy0410m-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/25975d9e.71fe88ac.25975d9f.e6936bc6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4973167057742%2F)
+```product
+name: アリィー クロノビューティ ジェルUV EX
+desc: 同じくロングUVAに比較的強い吸収剤を配合。汗・水に強い。
+amazon: https://www.amazon.co.jp/dp/B09NCS9SDJ?tag=onamzyyy0410m-22
+rakuten: https://hb.afl.rakuten.co.jp/hgc/25975d9e.71fe88ac.25975d9f.e6936bc6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4973167057742%2F
+```
 
-🛒 エリクシール デーケアレボリューション ブライトニング +ba  
-日中の美白ケアもできるUV乳液下地。夏は水っぽさが気になる場面もあるため使用感の好みで。  
-[Amazon](https://www.amazon.co.jp/dp/B07H2KM1JR?tag=onamzyyy0410m-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/280df31e.cc217036.280df31f.ad07d749/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4909978207656%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D)
+```product
+name: エリクシール デーケアレボリューション ブライトニング +ba
+desc: 日中の美白ケアもできるUV乳液下地。夏は水っぽさが気になる場面もあるため使用感の好みで。
+image: https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/656/4909978207656.jpg
+amazon: https://www.amazon.co.jp/dp/B07H2KM1JR?tag=onamzyyy0410m-22
+rakuten: https://hb.afl.rakuten.co.jp/ichiba/280df31e.cc217036.280df31f.ad07d749/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4909978207656%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D
+```
 
 ## Q. 日焼け止めと下地、どちらかをオイルベースにするなら順番は？
 
@@ -133,9 +157,13 @@ A. 乳液なら冷蔵庫でOK（3か月程度の休止まで）。クリーム�
 
 A. 体用はAmazon「タオル研究所」、顔用は使い捨てのクレンジングタオルを愛用しています。タオルは1年ごとに買い替え、顔用は摩擦・雑菌が気になる方に厚手の使い捨てがおすすめです。
 
-🛒 タオル研究所 ボリュームリッチ #003 バスタオル（4枚セット）  
-ホテル仕様の厚手・高速吸水・綿100%・480GSM。  
-[Amazon](https://www.amazon.co.jp/dp/B086WCF1KR?tag=onamzyyy0410m-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/554eb350.7de184af.554eb351.6b5da318/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkokolohas-style%2Fka-202605193%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D)
+```product
+name: タオル研究所 ボリュームリッチ #003 バスタオル（4枚セット）
+desc: ホテル仕様の厚手・高速吸水・綿100%・480GSM。
+image: https://thumbnail.image.rakuten.co.jp/@0_gold/kokolohas-style/atmr/020260319114751.jpg
+amazon: https://www.amazon.co.jp/dp/B086WCF1KR?tag=onamzyyy0410m-22
+rakuten: https://hb.afl.rakuten.co.jp/ichiba/554eb350.7de184af.554eb351.6b5da318/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkokolohas-style%2Fka-202605193%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D
+```
 
 ---
 
