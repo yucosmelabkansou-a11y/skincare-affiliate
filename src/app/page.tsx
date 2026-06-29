@@ -26,7 +26,7 @@ export default function Home() {
     alternateName: 'ゆんのスキンケアまとめ',
     url: SITE_URL,
     description:
-      'Instagram5.7万人フォロワーのゆん（元化粧品研究・商品企画／生涯ノーファンデ歴29年）が厳選したスキンケア・ベースメイク163アイテム。',
+      'Instagram6万人フォロワーのゆん（元化粧品研究・商品企画／生涯ノーファンデ歴29年）が厳選したスキンケア・ベースメイク163アイテム。',
     inLanguage: 'ja-JP',
     potentialAction: {
       '@type': 'SearchAction',
@@ -43,7 +43,7 @@ export default function Home() {
     url: SITE_URL,
     jobTitle: '元化粧品研究・商品企画／スキンケアインフルエンサー',
     description:
-      '生涯ノーファンデ歴29年、元化粧品研究・商品企画としての知見を活かし、本当に使ってよかったスキンケアアイテムを発信。Instagramフォロワー5.7万人。',
+      '生涯ノーファンデ歴29年、元化粧品研究・商品企画としての知見を活かし、本当に使ってよかったスキンケアアイテムを発信。Instagramフォロワー6万人。',
     sameAs: ['https://www.instagram.com/yun.skincare_'],
   }
 
