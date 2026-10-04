@@ -4,6 +4,7 @@
 import type { SkinType } from '@/lib/diagnosis'
 import { selectMatchedProducts, buildWhyForYouCopy, type MatchedPick } from '@/lib/diagnosis-matcher'
 import { getProducts } from '@/lib/parseCSV'
+import { getProductImageSrc } from '@/lib/productImage'
 import type { ReactNode } from 'react'
 import type { Product } from '@/types/product'
 import SectionLabel from './SectionLabel'
@@ -56,7 +57,7 @@ type Props = {
 }
 
 export default function DiagnosisProductMatch({ skinType, variant = 'full', heading, lead }: Props) {
-  const products = getProducts()
+  const products = getProducts().filter((product) => product.is_published)
   const picks = selectMatchedProducts(products, skinType, 3)
   const isCompact = variant === 'compact'
 
@@ -379,10 +380,10 @@ function MatchCard({
             overflow: 'hidden',
           }}
         >
-          {product.image_filename && (
+          {getProductImageSrc(product) && (
             // eslint-disable-next-line @next/next/no-img-element
             <img
-              src={`/images/${product.image_filename}`}
+              src={getProductImageSrc(product)}
               alt={product.name}
               className="absolute inset-0 w-full h-full object-cover"
               loading="lazy"

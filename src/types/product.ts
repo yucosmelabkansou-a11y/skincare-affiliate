@@ -7,6 +7,8 @@ export type Product = {
   tags: string[]            // 悩みカテゴリ（乾燥/毛穴/シミ・くすみ 等、12カテゴリから1〜2個）
   review: string
   image_filename: string
+  image_url: string
+  is_published: boolean
   amazon_url: string
   rakuten_url: string
   is_pick: boolean

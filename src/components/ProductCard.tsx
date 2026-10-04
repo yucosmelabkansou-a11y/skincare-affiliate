@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { Product } from '@/types/product'
+import { getProductImageSrc } from '@/lib/productImage'
 import AffiliateLink from './AffiliateLink'
 
 type Props = {
@@ -10,6 +11,8 @@ type Props = {
 }
 
 export default function ProductCard({ product, onClick }: Props) {
+  const imageSrc = getProductImageSrc(product)
+
   return (
     <button
       onClick={onClick}
@@ -21,15 +24,26 @@ export default function ProductCard({ product, onClick }: Props) {
         <div className="absolute inset-0 flex items-center justify-center text-3xl text-[#E8C7D4]">
           🧴
         </div>
-        {product.image_filename && (
-          <Image
-            src={`/images/${product.image_filename}`}
-            alt={product.name}
-            fill
-            sizes="(max-width: 640px) 50vw, 224px"
-            className="object-cover"
-            onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
-          />
+        {imageSrc && (
+          imageSrc.startsWith('https://') ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={imageSrc}
+              alt={product.name}
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
+            />
+          ) : (
+            <Image
+              src={imageSrc}
+              alt={product.name}
+              fill
+              sizes="(max-width: 640px) 50vw, 224px"
+              className="object-cover"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
+            />
+          )
         )}
 
         {/* Instagram badge */}

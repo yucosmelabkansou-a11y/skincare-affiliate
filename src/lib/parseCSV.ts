@@ -39,7 +39,7 @@ export function getProducts(): Product[] {
           image_filename, amazon_url, rakuten_url,
           is_pick, instagram_url,
           is_yun_must, must_tags_raw, yun_must_comment,
-          key_ingredients_raw,
+          key_ingredients_raw, image_url, is_published,
         ] = fields
         const raw = image_filename?.trim() ?? ''
         const normalized = raw.includes('.') ? raw : raw + '.jpg'
@@ -58,6 +58,10 @@ export function getProducts(): Product[] {
           tags,
           review: review.trim(),
           image_filename: normalized,
+          image_url: image_url?.trim() ?? '',
+          is_published: is_published === undefined || is_published.trim() === ''
+            ? true
+            : is_published.trim() === 'true',
           amazon_url: amazon_url?.trim() ?? '',
           rakuten_url: rakuten_url?.trim() ?? '',
           is_pick: is_pick?.trim() === 'true',

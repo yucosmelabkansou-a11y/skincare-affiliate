@@ -1,4 +1,5 @@
 import { getProducts } from '@/lib/parseCSV'
+import { getProductImageSrc } from '@/lib/productImage'
 import ProductList from '@/components/ProductList'
 import EditorialHero from '@/components/EditorialHero'
 import GuideRanking from '@/components/GuideRanking'
@@ -16,7 +17,8 @@ function parseYenPrice(priceStr: string): number | null {
 }
 
 export default function Home() {
-  const products = getProducts()
+  const allProducts = getProducts()
+  const products = allProducts.filter((product) => product.is_published)
 
   // 構造化データ（JSON-LD）— 検索結果リッチ表示用
   const websiteJsonLd = {
@@ -63,7 +65,11 @@ export default function Home() {
           name: p.name,
           brand: { '@type': 'Brand', name: p.brand },
           category: p.category,
-          image: p.image_filename ? `${SITE_URL}/images/${p.image_filename}` : undefined,
+          image: (() => {
+            const imageSrc = getProductImageSrc(p)
+            if (!imageSrc) return undefined
+            return imageSrc.startsWith('/') ? `${SITE_URL}${imageSrc}` : imageSrc
+          })(),
           description: p.review,
           offers:
             offerPrice && offerUrl

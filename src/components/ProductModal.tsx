@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { Product } from '@/types/product'
+import { getProductImageSrc } from '@/lib/productImage'
 import InstagramEmbed from './InstagramEmbed'
 import AffiliateLink from './AffiliateLink'
 
@@ -12,6 +13,7 @@ type Props = {
 
 export default function ProductModal({ product, onClose }: Props) {
   if (!product) return null
+  const imageSrc = getProductImageSrc(product)
 
   return (
     <div
@@ -28,14 +30,23 @@ export default function ProductModal({ product, onClose }: Props) {
           <div className="absolute inset-0 flex items-center justify-center text-6xl text-gray-200">
             🧴
           </div>
-          {product.image_filename && (
-            <Image
-              src={`/images/${product.image_filename}`}
-              alt={product.name}
-              fill
-              sizes="(max-width: 640px) 100vw, 512px"
-              className="object-cover"
-            />
+          {imageSrc && (
+            imageSrc.startsWith('https://') ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={imageSrc}
+                alt={product.name}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            ) : (
+              <Image
+                src={imageSrc}
+                alt={product.name}
+                fill
+                sizes="(max-width: 640px) 100vw, 512px"
+                className="object-cover"
+              />
+            )
           )}
         </div>
 

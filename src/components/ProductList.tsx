@@ -8,7 +8,6 @@ import SearchBar from './SearchBar'
 import ProductCard from './ProductCard'
 import ProductModal from './ProductModal'
 import CategoryNav from './CategoryNav'
-import WeeklyPicks from './WeeklyPicks'
 import CategoryIcon from './icons/CategoryIcon'
 
 type Props = {
@@ -142,12 +141,9 @@ export default function ProductList({ products }: Props) {
 
   return (
     <>
-      {/* ===== トップビュー（Pick + カテゴリーグリッド） ===== */}
+      {/* ===== トップビュー（カテゴリーグリッド） ===== */}
       {isTopView && (
-        <>
-          <WeeklyPicks products={products} onSelect={handleProductOpen} />
-          <CategoryNav selectedId={selectedCategoryId} onChange={handleCategoryChange} />
-        </>
+        <CategoryNav selectedId={selectedCategoryId} onChange={handleCategoryChange} />
       )}
 
       {/* ===== 検索 / フィルター ===== */}
