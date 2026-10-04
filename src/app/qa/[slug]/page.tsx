@@ -1,11 +1,27 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import ReactMarkdown from 'react-markdown'
+import { isValidElement, type ReactNode } from 'react'
+import ReactMarkdown, { type Components } from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { getAllSlugs, getArticle, getAllArticles, resolveCta, splitBodyAtMiddleH2 } from '@/lib/articles'
+import ArticleProductCard from '@/components/ArticleProductCard'
 import ArticleCTA from '@/components/ArticleCTA'
 import ArticleAuthor from '@/components/ArticleAuthor'
+
+// Markdown のフェンスドコードブロック ```product を商品カードに差し替える
+const markdownComponents: Components = {
+  pre({ children }) {
+    const child = Array.isArray(children) ? children[0] : children
+    if (isValidElement(child)) {
+      const props = child.props as { className?: string; children?: ReactNode }
+      if (typeof props.className === 'string' && props.className.includes('language-product')) {
+        return <ArticleProductCard raw={String(props.children ?? '')} />
+      }
+    }
+    return <pre>{children}</pre>
+  },
+}
 import ArticleCard from '@/components/ArticleCard'
 import { SITE_URL } from '@/lib/siteConfig'
 
@@ -213,14 +229,14 @@ export default async function QaPage({ params }: Props) {
             className="px-6 pb-4 prose-yun"
             style={{ fontFamily: 'var(--font-jp)', color: 'var(--ink)' }}
           >
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{split.before}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>{split.before}</ReactMarkdown>
           </article>
           <ArticleCTA variant="mid" target={cta.mid} />
           <article
             className="px-6 pb-8 prose-yun"
             style={{ fontFamily: 'var(--font-jp)', color: 'var(--ink)' }}
           >
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{split.after}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>{split.after}</ReactMarkdown>
           </article>
         </>
       ) : (
@@ -228,7 +244,7 @@ export default async function QaPage({ params }: Props) {
           className="px-6 pb-8 prose-yun"
           style={{ fontFamily: 'var(--font-jp)', color: 'var(--ink)' }}
         >
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{a.body}</ReactMarkdown>
+          <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>{a.body}</ReactMarkdown>
         </article>
       )}
 

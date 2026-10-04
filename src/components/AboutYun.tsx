@@ -73,7 +73,7 @@ export default function AboutYun() {
           rightBorder
         />
         <Pillar
-          title={<>Instagram<br />5.7万人</>}
+          title={<>Instagram<br />6万人</>}
           en="@yun.skincare_"
           icon={<SparkleIcon />}
         />
