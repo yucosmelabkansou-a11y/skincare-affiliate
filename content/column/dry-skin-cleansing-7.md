@@ -26,13 +26,13 @@ hero: /images/dry-skin-cleansing-7-cover.jpg
 
 | 画像 | 商品 | こんな人に | 容量・価格（税込） | Amazon | 楽天 |
 |---|---|---|---|---|---|
-| ![ジョンソン ベビーオイルの商品画像](/images/dry-skin-cleansing-7-01.jpg) | ① ジョンソン ベビーオイル 無香料 | 吸い取る手順を含めてベビーオイルの使い方を検討したい | 300mL・参考900円※ | [商品を見る](https://link.amazon/B0iIwXtQ3) | [商品を見る](https://hb.afl.rakuten.co.jp/ichiba/280df595.2b7ebe0c.280df596.b4c8bd3c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fladydrug%2F4901730075404%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
-| ![ビフェスタの商品画像](/images/dry-skin-cleansing-7-02.jpg) | ② ビフェスタ ミセラーアイメイクアップリムーバー | 目元・口元の濃いメイクを先に落としたい | 145mL・参考836円※ | [280mLを見る](https://link.amazon/B08UG6rA3) | [商品を見る](https://hb.afl.rakuten.co.jp/ichiba/2c9b55ec.133d6de7.2c9b55ed.4f4923fe/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmatsukiyo%2F4902806314946%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
-| ![ミノンの商品画像](/images/dry-skin-cleansing-7-03.jpg) | ③ ミノン アミノモイスト エッセンス クレンジングオイル | 厚みのあるオイルの洗い心地を選びたい | 120mL・参考1,870円※ | [120mL＋サンプルを見る](https://link.amazon/B02JyuzeQ) | [商品を見る](https://hb.afl.rakuten.co.jp/ichiba/37b19720.08bc207d.37b19721.21e05540/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24-cosmetics%2F4987107677228%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
-| ![オルビスの商品画像](/images/dry-skin-cleansing-7-04.jpg) | ④ オルビス ザ クレンジング オイル | メイクや毛穴汚れの落としやすさを重視したい | 120mL・2,200円 | [商品を見る](https://link.amazon/B01ExpuBU) | [商品を見る](https://hb.afl.rakuten.co.jp/ichiba/373d6002.128cad32.373d6003.401ff5a4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Forbis-shop%2Fo0087%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
-| ![ビオレの商品画像](/images/dry-skin-cleansing-7-05.jpg) | ⑤ ビオレ ザ クレンズ オイルミストメイク落とし | くるくるなじませる手間を減らしたい | 120mL・参考1,790円※ | [商品を見る](https://link.amazon/B05YksIcC) | [商品を見る](https://hb.afl.rakuten.co.jp/ichiba/37b19720.08bc207d.37b19721.21e05540/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24-cosmetics%2F4901301447876%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
-| ![ファンケルの商品画像](/images/dry-skin-cleansing-7-06.jpg) | ⑥ ファンケル マイルドクレンジング オイル | うるおいを守る洗浄設計を重視したい | 120mL・1,980円 | [商品を見る](https://link.amazon/B048iRPty) | [商品を見る](https://hb.afl.rakuten.co.jp/ichiba/37b19720.08bc207d.37b19721.21e05540/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24-cosmetics%2F4908049688790%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
-| ![カルテHDの商品画像](/images/dry-skin-cleansing-7-07.jpg) | ⑦ カルテHD モイスチュア クレンジング オイルジェル | 厚みのあるジェルが好き | 130g・1,320円 | [商品を見る](https://link.amazon/B00wG8l32) | [商品を見る](https://hb.afl.rakuten.co.jp/ichiba/27dc5d25.20fbf0c3.27dc5d26.b63ce9f1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftsuruha%2F10153357%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
+| ![ジョンソン ベビーオイルの商品画像](/images/dry-skin-cleansing-7-01.jpg#square=149,343,640,960,1280) | ① ジョンソン ベビーオイル 無香料 | 吸い取る手順を含めてベビーオイルの使い方を検討したい | 300mL・参考900円※ | [商品を見る](https://link.amazon/B0iIwXtQ3) | [商品を見る](https://hb.afl.rakuten.co.jp/ichiba/280df595.2b7ebe0c.280df596.b4c8bd3c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fladydrug%2F4901730075404%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
+| ![ビフェスタの商品画像](/images/dry-skin-cleansing-7-02.jpg#square=105,305,700,960,1280) | ② ビフェスタ ミセラーアイメイクアップリムーバー | 目元・口元の濃いメイクを先に落としたい | 145mL・参考836円※ | [280mLを見る](https://link.amazon/B08UG6rA3) | [商品を見る](https://hb.afl.rakuten.co.jp/ichiba/2c9b55ec.133d6de7.2c9b55ed.4f4923fe/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmatsukiyo%2F4902806314946%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
+| ![ミノンの商品画像](/images/dry-skin-cleansing-7-03.jpg#square=157,333,580,960,1280) | ③ ミノン アミノモイスト エッセンス クレンジングオイル | 厚みのあるオイルの洗い心地を選びたい | 120mL・参考1,870円※ | [120mL＋サンプルを見る](https://link.amazon/B02JyuzeQ) | [商品を見る](https://hb.afl.rakuten.co.jp/ichiba/37b19720.08bc207d.37b19721.21e05540/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24-cosmetics%2F4987107677228%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
+| ![オルビスの商品画像](/images/dry-skin-cleansing-7-04.jpg#square=139,322,620,960,1280) | ④ オルビス ザ クレンジング オイル | メイクや毛穴汚れの落としやすさを重視したい | 120mL・2,200円 | [商品を見る](https://link.amazon/B01ExpuBU) | [商品を見る](https://hb.afl.rakuten.co.jp/ichiba/373d6002.128cad32.373d6003.401ff5a4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Forbis-shop%2Fo0087%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
+| ![ビオレの商品画像](/images/dry-skin-cleansing-7-05.jpg#square=184,316,580,960,1280) | ⑤ ビオレ ザ クレンズ オイルミストメイク落とし | くるくるなじませる手間を減らしたい | 120mL・参考1,790円※ | [商品を見る](https://link.amazon/B05YksIcC) | [商品を見る](https://hb.afl.rakuten.co.jp/ichiba/37b19720.08bc207d.37b19721.21e05540/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24-cosmetics%2F4901301447876%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
+| ![ファンケルの商品画像](/images/dry-skin-cleansing-7-06.jpg#square=158,296,590,960,1280) | ⑥ ファンケル マイルドクレンジング オイル | うるおいを守る洗浄設計を重視したい | 120mL・1,980円 | [商品を見る](https://link.amazon/B048iRPty) | [商品を見る](https://hb.afl.rakuten.co.jp/ichiba/37b19720.08bc207d.37b19721.21e05540/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24-cosmetics%2F4908049688790%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
+| ![カルテHDの商品画像](/images/dry-skin-cleansing-7-07.jpg#square=0,0,1280,1280,1280) | ⑦ カルテHD モイスチュア クレンジング オイルジェル | 厚みのあるジェルが好き | 130g・1,320円 | [商品を見る](https://link.amazon/B00wG8l32) | [商品を見る](https://hb.afl.rakuten.co.jp/ichiba/27dc5d25.20fbf0c3.27dc5d26.b63ce9f1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftsuruha%2F10153357%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
 
 ※「参考」は元投稿の価格で、販売店・時期によって変わります。その他は公式掲載価格（2026年10月7日確認）。ビフェスタのAmazonリンクは280mL、ミノンのAmazonリンクは120mL本体にサンプルが付いたセットです。使い心地の評価は私個人の感想です。仕様・手順の補足は本文をご覧ください。
 
@@ -45,6 +45,8 @@ hero: /images/dry-skin-cleansing-7-cover.jpg
 目元だけ落ちにくいならポイント用を併用。手順を減らしたいならW洗顔不要のものを選ぶ。「乳化不要」と「W洗顔不要」は別なので、ここも確認しましょう。
 
 ## ① ジョンソン ベビーオイル 無香料｜私が長く続けている吸い取るケア
+
+![ジョンソン ベビーオイル 無香料の撮影写真](/images/dry-skin-cleansing-7-01.jpg#square=149,343,640,960,1280)
 
 > 保湿オイルを使った落とすケア。洗い流すクレンジングとは手順が異なります。
 
@@ -72,6 +74,8 @@ hero: /images/dry-skin-cleansing-7-cover.jpg
 
 ## ② ビフェスタ ミセラーアイメイクアップリムーバー｜濃い目元・口元に
 
+![ビフェスタ ミセラーアイメイクアップリムーバーの撮影写真](/images/dry-skin-cleansing-7-02.jpg#square=105,305,700,960,1280)
+
 > 落ちにくいポイントメイクは、先になじませてやさしくオフ。
 
 | 項目 | 内容 |
@@ -91,12 +95,14 @@ hero: /images/dry-skin-cleansing-7-cover.jpg
 > ・マスカラやリップを重ねる方  
 > ・顔全体用とは別に、ポイント用を持ちたい方
 
-> ★ 注意：「しみにくい」は私の感想です。目に入らないように使い、強くこすらないでください。Instagram表紙写真のヘッドは私が交換したもので、商品の標準仕様ではありません。
+> ★ 注意：「しみにくい」は私の感想です。目に入らないように使い、強くこすらないでください。掲載写真のヘッドは私が交換したもので、商品の標準仕様ではありません。
 
 🛒 ビフェスタ ミセラーアイメイクアップリムーバー 145mL 参考836円  
 [公式](https://www.mandom.co.jp/products/detail.html?id=013131) ／ [Amazonで280mLを見る](https://link.amazon/B08UG6rA3) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/2c9b55ec.133d6de7.2c9b55ed.4f4923fe/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmatsukiyo%2F4902806314946%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
 
 ## ③ ミノン アミノモイスト エッセンス クレンジングオイル｜厚みのある洗い心地
+
+![ミノン アミノモイスト エッセンス クレンジングオイルの撮影写真](/images/dry-skin-cleansing-7-03.jpg#square=157,333,580,960,1280)
 
 > ベースメイクを落としながら、肌あたりも大切にしたい日に。
 
@@ -124,6 +130,8 @@ hero: /images/dry-skin-cleansing-7-cover.jpg
 
 ## ④ オルビス ザ クレンジング オイル｜メイクのなじみやすさとすすぎやすさ
 
+![オルビス ザ クレンジング オイルの撮影写真](/images/dry-skin-cleansing-7-04.jpg#square=139,322,620,960,1280)
+
 > しっかりメイクの日も、毛穴汚れまでさっぱり落としたい方へ。
 
 | 項目 | 内容 |
@@ -149,6 +157,8 @@ hero: /images/dry-skin-cleansing-7-cover.jpg
 [公式](https://www.orbis.co.jp/small/1201053/) ／ [Amazon](https://link.amazon/B01ExpuBU) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/373d6002.128cad32.373d6003.401ff5a4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Forbis-shop%2Fo0087%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
 
 ## ⑤ ビオレ ザ クレンズ オイルミストメイク落とし｜手順を減らしたい日に
+
+![ビオレ ザ クレンズ オイルミストメイク落としの撮影写真](/images/dry-skin-cleansing-7-05.jpg#square=184,316,580,960,1280)
 
 > 顔全体に吹きかけて洗い流す。旅行でも重宝しているミストタイプ。
 
@@ -176,6 +186,8 @@ hero: /images/dry-skin-cleansing-7-cover.jpg
 
 ## ⑥ ファンケル マイルドクレンジング オイル｜うるおいを守る洗浄設計に注目
 
+![ファンケル マイルドクレンジング オイルの撮影写真](/images/dry-skin-cleansing-7-06.jpg#square=158,296,590,960,1280)
+
 > メイクを落とす力と、洗い上がりのしっとり感を両立したい方へ。
 
 | 項目 | 内容 |
@@ -201,6 +213,8 @@ hero: /images/dry-skin-cleansing-7-cover.jpg
 [公式](https://www.fancl.co.jp/beauty/item/3727b/) ／ [Amazon](https://link.amazon/B048iRPty) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/37b19720.08bc207d.37b19721.21e05540/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24-cosmetics%2F4908049688790%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
 
 ## ⑦ カルテHD モイスチュア クレンジング オイルジェル｜もっちりしたジェルが好きな方に
+
+![カルテHD モイスチュア クレンジング オイルジェルの撮影写真](/images/dry-skin-cleansing-7-07.jpg#square=0,0,1280,1280,1280)
 
 > 私は日焼け止めだけの日によく選ぶ、厚みのあるオイルジェル。
 
@@ -244,13 +258,13 @@ hero: /images/dry-skin-cleansing-7-cover.jpg
 
 | 画像 | 商品 | 区分・役割 | 特徴 |
 |---|---|---|---|
-| ![ジョンソン ベビーオイル](/images/dry-skin-cleansing-7-01.jpg) | ① ジョンソン | 化粧品・保湿オイル | なじませて吸い取る美容用途も公式で紹介 |
-| ![ビフェスタ](/images/dry-skin-cleansing-7-02.jpg) | ② ビフェスタ | 化粧品・ポイント用 | 2層式。コットンで約10秒なじませる |
-| ![ミノン](/images/dry-skin-cleansing-7-03.jpg) | ③ ミノン | 化粧品・顔全体用 | クッション感。乳化してからすすぐ |
-| ![オルビス](/images/dry-skin-cleansing-7-04.jpg) | ④ オルビス | 化粧品・顔全体用 | 超微粒子技術と再付着を防ぐ設計 |
-| ![ビオレ](/images/dry-skin-cleansing-7-05.jpg) | ⑤ ビオレ | 化粧品・顔全体用 | ミスト式。乳化・W洗顔不要 |
-| ![ファンケル](/images/dry-skin-cleansing-7-06.jpg) | ⑥ ファンケル | 化粧品・顔全体用 | 洗浄成分の大きさに着目した設計 |
-| ![カルテHD](/images/dry-skin-cleansing-7-07.jpg) | ⑦ カルテHD | 医薬部外品・顔全体用 | オイル状に変わるジェル、肌あれ防止有効成分 |
+| ![ジョンソン ベビーオイル](/images/dry-skin-cleansing-7-01.jpg#square=149,343,640,960,1280) | ① ジョンソン | 化粧品・保湿オイル | なじませて吸い取る美容用途も公式で紹介 |
+| ![ビフェスタ](/images/dry-skin-cleansing-7-02.jpg#square=105,305,700,960,1280) | ② ビフェスタ | 化粧品・ポイント用 | 2層式。コットンで約10秒なじませる |
+| ![ミノン](/images/dry-skin-cleansing-7-03.jpg#square=157,333,580,960,1280) | ③ ミノン | 化粧品・顔全体用 | クッション感。乳化してからすすぐ |
+| ![オルビス](/images/dry-skin-cleansing-7-04.jpg#square=139,322,620,960,1280) | ④ オルビス | 化粧品・顔全体用 | 超微粒子技術と再付着を防ぐ設計 |
+| ![ビオレ](/images/dry-skin-cleansing-7-05.jpg#square=184,316,580,960,1280) | ⑤ ビオレ | 化粧品・顔全体用 | ミスト式。乳化・W洗顔不要 |
+| ![ファンケル](/images/dry-skin-cleansing-7-06.jpg#square=158,296,590,960,1280) | ⑥ ファンケル | 化粧品・顔全体用 | 洗浄成分の大きさに着目した設計 |
+| ![カルテHD](/images/dry-skin-cleansing-7-07.jpg#square=0,0,1280,1280,1280) | ⑦ カルテHD | 医薬部外品・顔全体用 | オイル状に変わるジェル、肌あれ防止有効成分 |
 
 ## Q. 乾燥肌ならオイルクレンジングは避けたほうがいい？
 
@@ -293,6 +307,4 @@ A. 日焼け止めの落とし方表示に従います。石けん・洗顔料�
 - [ファンケル マイルドクレンジング オイル・公式製品情報](https://www.fancl.co.jp/beauty/item/3727b/)、[2026年リニューアル発売資料](https://www.fancl.jp/news/20250095/pdf/20251204_maiukre.pdf)、[W洗顔の公式FAQ](https://faq.fancl.co.jp/faq/show/263?site_domain=default)
 - [カルテHD オイルジェル・公式製品情報と使用FAQ](https://carte-beauty.com/site/g/gPHCL/)
 
-※表紙写真・個人の使用感は、ゆんのInstagram投稿画像に基づきます。使用感には個人差があります。
-
-※比較表の商品画像は、[ジョンソン](https://www.johnsonsbaby.jp/oil/johnsons-baby-oil-unscented)、[ビフェスタ](https://www.bifesta.jp/product/cleansing/)、[ミノン](https://www.daiichisankyo-hc.co.jp/newsroom/release/minon260611.html)、[オルビス](https://www.orbis.co.jp/small/1201053/)、[花王](https://www.kao-kirei.com/ja/item/khg/biore/4901301447876/)、[ファンケル](https://www.fancl.co.jp/beauty/item/3727b/)、[カルテHD](https://carte-beauty.com/site/g/gPHCL/)の公式サイトより引用しています。
+※掲載写真と個人の使用感は、ゆんのInstagram投稿・撮影写真に基づきます。使用感には個人差があります。
