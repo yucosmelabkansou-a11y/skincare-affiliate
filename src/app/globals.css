@@ -102,6 +102,11 @@ body {
   margin: 1.1em 0;
   color: var(--ink-soft);
 }
+.prose-yun .affiliate-disclosure {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #767676;
+}
 .prose-yun strong {
   color: var(--ink);
   font-weight: 700;

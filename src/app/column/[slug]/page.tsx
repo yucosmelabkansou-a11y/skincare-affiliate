@@ -7,6 +7,13 @@ import remarkGfm from 'remark-gfm'
 
 // 横スクロール可能なテーブルラッパー（スマホでセル列がズレるのを防ぐ）
 const mdComponents: Components = {
+  p: ({ node, children, ...props }) => {
+    const content = node?.children
+    const isDisclosure = content?.length === 1
+      && content[0].type === 'text'
+      && content[0].value === '本記事はアフィリエイト広告を掲載しています。'
+    return <p {...props} className={isDisclosure ? 'affiliate-disclosure' : undefined}>{children}</p>
+  },
   img: ({ node, src, alt, ...props }) => {
     void node
     const [source, crop] = typeof src === 'string' ? src.split('#square=') : []
