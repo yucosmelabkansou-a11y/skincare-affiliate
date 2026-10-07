@@ -38,7 +38,7 @@ export default function ArticleCTA({ variant = 'end', target = 'both' }: Props) 
       className={isEnd ? 'my-10 mx-auto px-6 py-7' : 'my-9 mx-auto px-6 py-6'}
       style={{
         background:
-          'linear-gradient(180deg, oklch(0.985 0.012 80), oklch(0.96 0.018 75))',
+          'var(--bg-warm)',
         border: '1px solid var(--line-soft)',
         maxWidth: 540,
       }}
@@ -49,10 +49,10 @@ export default function ArticleCTA({ variant = 'end', target = 'both' }: Props) 
           className="text-center mb-5"
           style={{
             fontFamily: 'var(--font-serif)',
-            fontStyle: 'italic',
-            fontWeight: 300,
-            fontSize: 12,
-            letterSpacing: '0.4em',
+            fontStyle: 'normal',
+            fontWeight: 400,
+            fontSize: 13,
+            letterSpacing: '0.04em',
             color: 'var(--gold-deep)',
             textTransform: 'uppercase',
           }}
@@ -73,7 +73,7 @@ export default function ArticleCTA({ variant = 'end', target = 'both' }: Props) 
                 style={{
                   fontFamily: 'var(--font-jp-alt)',
                   fontWeight: 400,
-                  fontSize: 12.5,
+                  fontSize: 13,
                   lineHeight: 1.85,
                   letterSpacing: '0.06em',
                   color: 'var(--ink-soft)',
@@ -100,7 +100,7 @@ export default function ArticleCTA({ variant = 'end', target = 'both' }: Props) 
                         fontFamily: 'var(--font-jp)',
                         fontWeight: 500,
                         fontSize: 13,
-                        letterSpacing: '0.24em',
+                        letterSpacing: '0.04em',
                         border: '1px solid var(--gold)',
                         color: 'var(--ink)',
                         background: '#fff',
@@ -108,8 +108,8 @@ export default function ArticleCTA({ variant = 'end', target = 'both' }: Props) 
                     : {
                         fontFamily: 'var(--font-jp)',
                         fontWeight: 500,
-                        fontSize: 12.5,
-                        letterSpacing: '0.24em',
+                        fontSize: 13,
+                        letterSpacing: '0.04em',
                         border: '1px solid var(--ink)',
                         color: 'var(--ink)',
                         background: 'transparent',

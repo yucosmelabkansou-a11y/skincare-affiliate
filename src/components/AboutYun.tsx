@@ -7,7 +7,7 @@ export default function AboutYun() {
   return (
     <section
       id="about"
-      className="px-5 py-20"
+      className="about-section"
       style={{ background: 'var(--bg-cream)' }}
       aria-labelledby="about-heading"
     >
@@ -24,7 +24,7 @@ export default function AboutYun() {
           fontWeight: 500,
           fontSize: 'clamp(15px, 4vw, 18px)',
           lineHeight: 2,
-          letterSpacing: '0.16em',
+          letterSpacing: '0.04em',
           color: 'var(--ink)',
           maxWidth: '24ch',
         }}
@@ -39,20 +39,22 @@ export default function AboutYun() {
         style={{
           fontFamily: 'var(--font-jp-alt)',
           fontWeight: 400,
-          fontSize: '12.5px',
+          fontSize: 13,
           lineHeight: 2.2,
-          letterSpacing: '0.1em',
+          letterSpacing: '0.04em',
           color: 'var(--ink-soft)',
           maxWidth: '32ch',
         }}
       >
-        生涯ノーファンデ歴29年で磨いた素肌の感覚と、
+        29年間、毎日ノーファンデ。
         <br />
         元化粧品研究・商品企画として培った知見から、
         <br />
-        本当に使ってよかった200近いアイテムから、
+        処方設計や使い心地、価格まで見ながら、
         <br />
-        あなたに合ったものをお届けします。
+        スキンケア選びのポイントをお伝えします。
+        <br />
+        現在は化粧品の企画開発を支援する会社を経営しています。
       </p>
 
       {/* 3 pillars */}
@@ -67,15 +69,15 @@ export default function AboutYun() {
           rightBorder
         />
         <Pillar
-          title={<>生涯<br />ノーファンデ29年</>}
+          title={<>29年間、<br />毎日ノーファンデ</>}
           en="Bare Skin"
           icon={<MirrorIcon />}
           rightBorder
         />
         <Pillar
-          title={<>Instagram<br />5.7万人</>}
+          title={<>Instagram<br />6万人超え</>}
           en="@yun.skincare_"
-          icon={<SparkleIcon />}
+          icon={<MirrorIcon />}
         />
       </div>
     </section>
@@ -103,11 +105,11 @@ function Pillar({
         style={{
           width: 38,
           height: 38,
-          borderRadius: '50%',
+          borderRadius: 8,
           border: '1px solid var(--gold)',
           color: 'var(--gold-deep)',
           background:
-            'radial-gradient(circle at 30% 25%, oklch(0.99 0.008 80), oklch(0.96 0.025 80))',
+            'var(--bg-warm)',
         }}
         aria-hidden
       >
@@ -117,9 +119,9 @@ function Pillar({
         style={{
           fontFamily: 'var(--font-jp)',
           fontWeight: 500,
-          fontSize: '11px',
+          fontSize: 13,
           lineHeight: 1.6,
-          letterSpacing: '0.12em',
+          letterSpacing: '0.04em',
           color: 'var(--ink)',
           marginBottom: 6,
           wordBreak: 'keep-all',
@@ -130,10 +132,10 @@ function Pillar({
       <p
         style={{
           fontFamily: 'var(--font-serif)',
-          fontStyle: 'italic',
-          fontWeight: 300,
-          fontSize: '10px',
-          letterSpacing: '0.18em',
+          fontStyle: 'normal',
+          fontWeight: 400,
+          fontSize: 13,
+          letterSpacing: '0.04em',
           color: 'var(--gold-deep)',
         }}
       >
@@ -170,21 +172,6 @@ function MirrorIcon() {
       <circle cx="12" cy="9" r="5.5" />
       <path d="M12 14.5V22" />
       <path d="M9 19h6" />
-    </svg>
-  )
-}
-
-function SparkleIcon() {
-  return (
-    <svg {...iconProps}>
-      <path d="M12 3v6" />
-      <path d="M12 15v6" />
-      <path d="M3 12h6" />
-      <path d="M15 12h6" />
-      <path d="M5.5 5.5l3 3" />
-      <path d="M15.5 15.5l3 3" />
-      <path d="M18.5 5.5l-3 3" />
-      <path d="M8.5 15.5l-3 3" />
     </svg>
   )
 }

@@ -23,18 +23,14 @@ export const metadata: Metadata = {
 export default function PoreDiagnosisPage() {
   return (
     <div
-      className="max-w-2xl mx-auto min-h-screen relative overflow-hidden"
+      className="pore-shell min-h-screen relative"
       style={{ background: 'var(--bg-cream)' }}
     >
       {/* 背景グラデ */}
       <div
         className="absolute inset-0 -z-10"
         style={{
-          background: `
-            radial-gradient(60% 70% at 80% 10%, oklch(0.96 0.025 30 / .45), transparent 70%),
-            radial-gradient(50% 60% at 10% 90%, oklch(0.97 0.02 80 / .6), transparent 70%),
-            linear-gradient(180deg, var(--bg-ivory) 0%, var(--bg-cream) 60%, var(--bg-warm) 100%)
-          `,
+          background: 'var(--bg-cream)',
         }}
         aria-hidden
       />

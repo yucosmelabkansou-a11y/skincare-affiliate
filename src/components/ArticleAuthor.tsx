@@ -25,10 +25,10 @@ export default function ArticleAuthor() {
           <span
             style={{
               fontFamily: 'var(--font-serif)',
-              fontStyle: 'italic',
-              fontWeight: 300,
-              fontSize: 11,
-              letterSpacing: '0.4em',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              fontSize: 13,
+              letterSpacing: '0.04em',
               color: 'var(--gold-deep)',
               textTransform: 'uppercase',
             }}
@@ -50,7 +50,7 @@ export default function ArticleAuthor() {
             fontFamily: 'var(--font-jp)',
             fontWeight: 500,
             fontSize: 15,
-            letterSpacing: '0.16em',
+            letterSpacing: '0.04em',
             color: 'var(--ink)',
             marginBottom: 8,
           }}
@@ -62,14 +62,14 @@ export default function ArticleAuthor() {
           style={{
             fontFamily: 'var(--font-jp)',
             fontWeight: 400,
-            fontSize: 11.5,
+            fontSize: 13,
             lineHeight: 1.7,
-            letterSpacing: '0.14em',
+            letterSpacing: '0.04em',
             color: 'var(--gold-deep)',
             marginBottom: 18,
           }}
         >
-          元化粧品研究・商品企画 ／ 生涯ノーファンデ歴29年
+          元化粧品研究・商品企画 ／ 29年間、毎日ノーファンデ
         </p>
 
         {/* Bio */}
@@ -78,7 +78,7 @@ export default function ArticleAuthor() {
           style={{
             fontFamily: 'var(--font-jp-alt)',
             fontWeight: 400,
-            fontSize: 12.5,
+            fontSize: 13,
             lineHeight: 2,
             letterSpacing: '0.06em',
             color: 'var(--ink-soft)',
@@ -86,7 +86,7 @@ export default function ArticleAuthor() {
             textAlign: 'justify',
           }}
         >
-          化粧品メーカーで研究・商品企画として勤務した経験と、29年ノーファンデで自分の肌に試し続けてきた目線から、SNSや流行の成分に左右されず<strong style={{ color: 'var(--ink)', fontWeight: 500 }}>本当に使ってよかったアイテムを成分・技術とコスパで厳選</strong>しています。Instagramフォロワー5.8万人。
+          化粧品メーカーで研究・商品企画を経験し、現在は化粧品の企画開発を支援する会社を経営しています。29年間、毎日ノーファンデで過ごしてきた目線も活かし、SNSや流行の成分に左右されず<strong style={{ color: 'var(--ink)', fontWeight: 500 }}>本当に使ってよかったアイテムを成分・技術とコスパで厳選</strong>しています。Instagramフォロワー6万人超え。
         </p>
 
         {/* CTA: Instagram */}
@@ -98,10 +98,10 @@ export default function ArticleAuthor() {
             className="inline-flex items-center gap-2 transition-opacity hover:opacity-70"
             style={{
               fontFamily: 'var(--font-serif)',
-              fontStyle: 'italic',
-              fontWeight: 300,
-              fontSize: 12,
-              letterSpacing: '0.32em',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              fontSize: 13,
+              letterSpacing: '0.04em',
               color: 'var(--gold-deep)',
             }}
           >

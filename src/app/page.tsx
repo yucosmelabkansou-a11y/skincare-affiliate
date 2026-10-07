@@ -7,7 +7,8 @@ import AboutYun from '@/components/AboutYun'
 import ReadShortcuts from '@/components/ReadShortcuts'
 import JournalSection from '@/components/JournalSection'
 import FaqSection from '@/components/FaqSection'
-import { SITE_URL } from '@/lib/siteConfig'
+import InstagramPosts from '@/components/InstagramPosts'
+import { SITE_URL, SITE_DESCRIPTION } from '@/lib/siteConfig'
 
 function parseYenPrice(priceStr: string): number | null {
   const match = priceStr.match(/¥\s*([\d,]+)/)
@@ -27,8 +28,7 @@ export default function Home() {
     name: 'yun.skincare_',
     alternateName: 'ゆんのスキンケアまとめ',
     url: SITE_URL,
-    description:
-      'Instagram5.7万人フォロワーのゆん（元化粧品研究・商品企画／生涯ノーファンデ歴29年）が厳選したスキンケア・ベースメイク163アイテム。',
+    description: SITE_DESCRIPTION,
     inLanguage: 'ja-JP',
     potentialAction: {
       '@type': 'SearchAction',
@@ -45,7 +45,7 @@ export default function Home() {
     url: SITE_URL,
     jobTitle: '元化粧品研究・商品企画／スキンケアインフルエンサー',
     description:
-      '生涯ノーファンデ歴29年、元化粧品研究・商品企画としての知見を活かし、本当に使ってよかったスキンケアアイテムを発信。Instagramフォロワー5.7万人。',
+      '29年間、毎日ノーファンデ。現在は化粧品の企画開発を支援する会社を経営。元化粧品研究・商品企画としての知見を活かし、本当に使ってよかったスキンケアアイテムを発信。Instagramフォロワー6万人超え。',
     sameAs: ['https://www.instagram.com/yun.skincare_'],
   }
 
@@ -87,7 +87,7 @@ export default function Home() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="home-page page-shell">
       {/* JSON-LD 構造化データ */}
       <script
         type="application/ld+json"
@@ -112,16 +112,16 @@ export default function Home() {
       <ReadShortcuts />
 
       {/* About Yun (3 pillars) */}
-      <AboutYun />
+
 
       {/* 注意書き（コンパクト） */}
       <div
         className="px-5 pt-6 pb-3 text-center space-y-0.5"
         style={{
           fontFamily: 'var(--font-jp-alt)',
-          fontSize: '10px',
+          fontSize: 13,
           color: 'var(--ink-mute)',
-          letterSpacing: '0.08em',
+          letterSpacing: '0.04em',
           lineHeight: 1.8,
         }}
       >
@@ -137,7 +137,9 @@ export default function Home() {
       <JournalSection />
 
       {/* FAQ */}
+      <AboutYun />
       <FaqSection />
+      <InstagramPosts />
 
       {/* Footer — エディトリアル統一トーン */}
       <footer
@@ -160,9 +162,9 @@ export default function Home() {
         <div
           style={{
             fontFamily: 'var(--font-sans)',
-            fontWeight: 300,
-            fontSize: 10,
-            letterSpacing: '0.4em',
+            fontWeight: 400,
+            fontSize: 13,
+            letterSpacing: '0.04em',
             color: 'var(--ink-soft)',
             textTransform: 'uppercase',
             marginBottom: 22,
@@ -175,16 +177,18 @@ export default function Home() {
           className="mx-auto mb-5"
           style={{
             fontFamily: 'var(--font-jp-alt)',
-            fontSize: 11.5,
+            fontSize: 13,
             lineHeight: 2,
-            letterSpacing: '0.08em',
+            letterSpacing: '0.04em',
             color: 'var(--ink-soft)',
             maxWidth: 360,
           }}
         >
-          元化粧品研究・商品企画 × 生涯ノーファンデ歴29年のゆん。
+          元化粧品研究・商品企画のゆん。29年間、毎日ノーファンデ。
           <br />
-          本当に使ってよかった200近いアイテムを編集してお届けします。
+          現在は化粧品の企画開発を支援する会社を経営しています。
+          <br />
+          成分・処方や使い心地、価格を見ながら、スキンケア選びに役立つ情報をお届けします。
         </p>
 
         <a
@@ -194,9 +198,9 @@ export default function Home() {
           className="inline-flex items-center gap-2 mb-6 transition-opacity hover:opacity-70"
           style={{
             fontFamily: 'var(--font-sans)',
-            fontWeight: 300,
-            fontSize: 11,
-            letterSpacing: '0.32em',
+            fontWeight: 400,
+            fontSize: 13,
+            letterSpacing: '0.04em',
             color: 'var(--ink-soft)',
             textTransform: 'lowercase',
           }}
@@ -208,7 +212,7 @@ export default function Home() {
           className="mx-auto mb-5"
           style={{
             fontFamily: 'var(--font-jp-alt)',
-            fontSize: 9.5,
+            fontSize: 13,
             lineHeight: 1.8,
             letterSpacing: '0.04em',
             color: 'var(--ink-mute)',
@@ -222,10 +226,10 @@ export default function Home() {
         <p
           style={{
             fontFamily: 'var(--font-serif)',
-            fontStyle: 'italic',
-            fontWeight: 300,
-            fontSize: 11,
-            letterSpacing: '0.16em',
+            fontStyle: 'normal',
+            fontWeight: 400,
+            fontSize: 13,
+            letterSpacing: '0.04em',
             color: 'var(--ink-mute)',
           }}
         >

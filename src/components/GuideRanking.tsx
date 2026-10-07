@@ -33,7 +33,7 @@ export default function GuideRanking() {
   }
 
   return (
-    <section className="px-5 pt-8 pb-10" aria-labelledby="guide-ranking-heading">
+    <section className="guide-section" aria-labelledby="guide-ranking-heading">
       <h2 id="guide-ranking-heading" className="sr-only">
         悩み別おすすめから選ぶ
       </h2>
@@ -44,7 +44,7 @@ export default function GuideRanking() {
         style={{
           fontFamily: 'var(--font-jp-alt)',
           fontWeight: 400,
-          fontSize: 12.5,
+          fontSize: 13,
           lineHeight: 1.9,
           letterSpacing: '0.06em',
           color: 'var(--ink-soft)',
@@ -56,7 +56,7 @@ export default function GuideRanking() {
         すぐにチェックできます
       </p>
 
-      <div className="space-y-3 max-w-md mx-auto">
+      <div className="concern-grid">
         {CARDS.map((card) => (
           <Link
             key={card.cat}
@@ -67,7 +67,7 @@ export default function GuideRanking() {
             style={{
               background: '#fff',
               border: '1px solid var(--line-soft)',
-              borderLeft: '2px solid var(--gold)',
+              borderLeft: '0',
               borderRadius: 4,
               textDecoration: 'none',
               minHeight: 68,
@@ -78,8 +78,8 @@ export default function GuideRanking() {
               style={{
                 width: 44,
                 height: 44,
-                borderRadius: 999,
-                background: 'oklch(0.98 0.012 80)',
+                borderRadius: 8,
+                background: 'var(--bg-warm)',
                 border: '1px solid var(--gold-pale)',
                 color: 'var(--gold-deep)',
               }}
@@ -104,7 +104,7 @@ export default function GuideRanking() {
                 style={{
                   fontFamily: 'var(--font-jp-alt)',
                   fontWeight: 400,
-                  fontSize: 11.5,
+                  fontSize: 13,
                   letterSpacing: '0.04em',
                   color: 'var(--ink-mute)',
                 }}
@@ -118,7 +118,7 @@ export default function GuideRanking() {
       </div>
 
       {/* 肌診断で選ぶ */}
-      <div className="max-w-md mx-auto mt-6 text-center">
+      <div className="diagnosis-callout">
         <Link
           href="/diagnosis"
           className="inline-flex items-center justify-center gap-3 w-full px-8 py-4 transition-all hover:bg-[var(--gold)] hover:text-white"
@@ -126,10 +126,10 @@ export default function GuideRanking() {
             fontFamily: 'var(--font-jp)',
             fontWeight: 500,
             fontSize: 13,
-            letterSpacing: '0.24em',
+            letterSpacing: '0.04em',
             border: '1px solid var(--gold)',
             color: 'var(--ink)',
-            background: 'oklch(0.99 0.012 80)',
+            background: 'var(--bg-warm)',
             borderRadius: 4,
             minHeight: 56,
           }}
@@ -142,7 +142,7 @@ export default function GuideRanking() {
           style={{
             fontFamily: 'var(--font-jp-alt)',
             fontWeight: 400,
-            fontSize: 11,
+            fontSize: 13,
             letterSpacing: '0.04em',
             color: 'var(--ink-mute)',
           }}

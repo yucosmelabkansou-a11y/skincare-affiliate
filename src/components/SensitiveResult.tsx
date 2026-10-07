@@ -10,6 +10,8 @@ import { SITE_URL } from '@/lib/siteConfig'
 import DiagnosisProductMatch from './DiagnosisProductMatch'
 import RelatedReads from './RelatedReads'
 import SectionLabel from './SectionLabel'
+import DiagnosisNotice from './DiagnosisNotice'
+import ShareButtons from '@/app/diagnosis/result/[type]/ShareButtons'
 
 const result = resultTypes.sensitive
 
@@ -51,7 +53,7 @@ const FAQ: { q: string; a: string }[] = [
   },
   {
     q: '赤みやヒリつきが出たときはどうすればいい？',
-    a: 'まずは使用を一旦お休みし、化粧水＋ワセリンなど最小限のケアに切り替えて様子を見ます。症状が長く続く・悪化する場合は自己判断せず、皮膚科専門医にご相談ください。',
+    a: 'まずは使用を一旦お休みし、化粧水＋ワセリンなど最小限のケアに切り替えて様子を見ます。',
   },
 ]
 
@@ -95,7 +97,7 @@ export default function SensitiveResult() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto min-h-screen" style={{ background: 'var(--bg-cream)' }}>
+    <div className="result-page sensitive-page page-shell min-h-screen" style={{ background: 'var(--bg-cream)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
@@ -103,7 +105,7 @@ export default function SensitiveResult() {
       {/* パンくず */}
       <nav
         className="px-5 pt-5 text-[10px]"
-        style={{ color: 'var(--ink-mute)', letterSpacing: '0.2em' }}
+        style={{ color: 'var(--ink-mute)', letterSpacing: '0.04em' }}
         aria-label="パンくず"
       >
         <Link href="/" className="hover:opacity-70 transition-opacity">ホーム</Link>
@@ -118,10 +120,10 @@ export default function SensitiveResult() {
         <p
           style={{
             fontFamily: 'var(--font-serif)',
-            fontStyle: 'italic',
-            fontWeight: 300,
-            fontSize: 11,
-            letterSpacing: '0.32em',
+            fontStyle: 'normal',
+            fontWeight: 400,
+            fontSize: 13,
+            letterSpacing: '0.04em',
             color: 'var(--gold-deep)',
             textTransform: 'uppercase',
             marginBottom: 8,
@@ -134,7 +136,7 @@ export default function SensitiveResult() {
             fontFamily: 'var(--font-jp)',
             fontWeight: 500,
             fontSize: 'clamp(22px, 6vw, 28px)',
-            letterSpacing: '0.14em',
+            letterSpacing: '0.04em',
             color: 'var(--ink)',
             marginBottom: 14,
           }}
@@ -146,12 +148,12 @@ export default function SensitiveResult() {
           style={{
             fontFamily: 'var(--font-jp)',
             fontWeight: 500,
-            fontSize: 11,
-            letterSpacing: '0.18em',
+            fontSize: 13,
+            letterSpacing: '0.04em',
             color: 'var(--gold-deep)',
             border: '1px solid var(--gold)',
-            background: 'oklch(0.99 0.012 80)',
-            borderRadius: 999,
+            background: 'var(--bg-warm)',
+            borderRadius: 8,
           }}
         >
           {result.badge}
@@ -188,8 +190,8 @@ export default function SensitiveResult() {
                 <span
                   style={{
                     fontFamily: 'var(--font-serif)',
-                    fontStyle: 'italic',
-                    fontWeight: 300,
+                    fontStyle: 'normal',
+                    fontWeight: 400,
                     fontSize: 18,
                     color: 'var(--gold-deep)',
                   }}
@@ -201,11 +203,11 @@ export default function SensitiveResult() {
                   style={{
                     fontFamily: 'var(--font-jp)',
                     fontWeight: 600,
-                    fontSize: 12,
-                    letterSpacing: '0.1em',
+                    fontSize: 13,
+                    letterSpacing: '0.04em',
                     color: '#fff',
                     background: 'var(--gold)',
-                    borderRadius: 999,
+                    borderRadius: 8,
                   }}
                 >
                   {p.tag}
@@ -228,7 +230,7 @@ export default function SensitiveResult() {
                 style={{
                   fontFamily: 'var(--font-jp-alt)',
                   fontWeight: 400,
-                  fontSize: 12,
+                  fontSize: 13,
                   lineHeight: 1.85,
                   letterSpacing: '0.05em',
                   color: 'var(--ink-mute)',
@@ -267,7 +269,7 @@ export default function SensitiveResult() {
               style={{
                 background: '#fff',
                 border: '1px solid var(--line-soft)',
-                borderLeft: '2px solid var(--gold)',
+                borderLeft: '0',
                 borderRadius: 4,
                 textDecoration: 'none',
                 minHeight: 64,
@@ -290,7 +292,7 @@ export default function SensitiveResult() {
                   style={{
                     fontFamily: 'var(--font-jp-alt)',
                     fontWeight: 400,
-                    fontSize: 11.5,
+                    fontSize: 13,
                     letterSpacing: '0.04em',
                     color: 'var(--ink-mute)',
                   }}
@@ -322,7 +324,7 @@ export default function SensitiveResult() {
                   fontWeight: 500,
                   fontSize: 13.5,
                   lineHeight: 1.7,
-                  letterSpacing: '0.08em',
+                  letterSpacing: '0.04em',
                   color: 'var(--ink)',
                 }}
               >
@@ -330,8 +332,8 @@ export default function SensitiveResult() {
                   <span
                     style={{
                       fontFamily: 'var(--font-serif)',
-                      fontStyle: 'italic',
-                      fontWeight: 300,
+                      fontStyle: 'normal',
+                      fontWeight: 400,
                       fontSize: 13,
                       color: 'var(--gold-deep)',
                       marginRight: 10,
@@ -345,7 +347,7 @@ export default function SensitiveResult() {
                   className="shrink-0 transition-transform group-open:rotate-45"
                   style={{
                     fontFamily: 'var(--font-serif)',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     fontSize: 22,
                     color: 'var(--gold-deep)',
                     marginTop: -2,
@@ -360,7 +362,7 @@ export default function SensitiveResult() {
                 style={{
                   fontFamily: 'var(--font-jp-alt)',
                   fontWeight: 400,
-                  fontSize: 12.5,
+                  fontSize: 13,
                   lineHeight: 2,
                   letterSpacing: '0.06em',
                   color: 'var(--ink-soft)',
@@ -376,6 +378,10 @@ export default function SensitiveResult() {
       {/* 関連して読みたい（結果→関連記事の内部リンク） */}
       <RelatedReads tags={['敏感肌', 'セラミド', '保湿', 'バリア機能', '肌荒れ']} />
 
+      <section className="px-5 pb-10 text-center">
+        <ShareButtons resultName={result.name} summary={result.description} type="sensitive" />
+      </section>
+
       {/* 診断やり直し導線 */}
       <section className="px-5 pb-10 text-center">
         <Link
@@ -385,7 +391,7 @@ export default function SensitiveResult() {
             fontFamily: 'var(--font-jp)',
             fontWeight: 500,
             fontSize: 13,
-            letterSpacing: '0.28em',
+            letterSpacing: '0.04em',
             border: '1px solid var(--gold)',
             color: 'var(--ink)',
             background: '#fff',
@@ -395,34 +401,7 @@ export default function SensitiveResult() {
         </Link>
       </section>
 
-      {/* 免責 */}
-      <section className="px-5 pb-8">
-        <div
-          className="mx-auto px-5 py-4 text-center"
-          style={{
-            background: 'oklch(0.985 0.012 80)',
-            border: '1px solid var(--line-soft)',
-            maxWidth: 460,
-          }}
-        >
-          <p
-            style={{
-              fontFamily: 'var(--font-jp-alt)',
-              fontWeight: 400,
-              fontSize: 10.5,
-              lineHeight: 1.85,
-              letterSpacing: '0.04em',
-              color: 'var(--ink-mute)',
-            }}
-          >
-            ※本診断は医療的な診断ではなく、セルフケアの参考情報です。
-            <br />
-            肌の症状が長く続く・悪化する場合は皮膚科専門医にご相談ください。
-            <br />
-            記載の成分情報は医薬品的な効能効果を保証するものではありません。
-          </p>
-        </div>
-      </section>
+      <DiagnosisNotice />
 
       {/* Footer Instagram */}
       <footer className="px-5 py-12 text-center" style={{ borderTop: '1px solid var(--line-soft)' }}>
@@ -430,7 +409,7 @@ export default function SensitiveResult() {
           className="mb-3"
           style={{
             fontFamily: 'var(--font-jp-alt)',
-            fontSize: 11.5,
+            fontSize: 13,
             lineHeight: 1.9,
             letterSpacing: '0.06em',
             color: 'var(--ink-soft)',
@@ -444,9 +423,9 @@ export default function SensitiveResult() {
           rel="me noopener noreferrer"
           style={{
             fontFamily: 'var(--font-sans)',
-            fontWeight: 300,
-            fontSize: 11,
-            letterSpacing: '0.32em',
+            fontWeight: 400,
+            fontSize: 13,
+            letterSpacing: '0.04em',
             color: 'var(--ink-soft)',
             textTransform: 'lowercase',
           }}

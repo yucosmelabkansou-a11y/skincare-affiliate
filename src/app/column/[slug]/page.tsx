@@ -126,7 +126,7 @@ export default async function ColumnPage({ params }: Props) {
 
   return (
     <div
-      className="max-w-2xl mx-auto min-h-screen"
+      className="reading-detail page-shell min-h-screen"
       style={{ background: 'var(--bg-cream)' }}
     >
       <script
@@ -147,7 +147,7 @@ export default async function ColumnPage({ params }: Props) {
       {/* パンくず */}
       <nav
         className="px-5 pt-5 text-[10px]"
-        style={{ color: 'var(--ink-mute)', letterSpacing: '0.2em' }}
+        style={{ color: 'var(--ink-mute)', letterSpacing: '0.04em' }}
         aria-label="パンくず"
       >
         <Link href="/" className="hover:opacity-70">ホーム</Link>
@@ -163,14 +163,14 @@ export default async function ColumnPage({ params }: Props) {
           className="inline-block px-3 py-1 mb-5"
           style={{
             fontFamily: 'var(--font-serif)',
-            fontStyle: 'italic',
-            fontWeight: 300,
-            fontSize: 11,
-            letterSpacing: '0.32em',
+            fontStyle: 'normal',
+            fontWeight: 400,
+            fontSize: 13,
+            letterSpacing: '0.04em',
             color: 'var(--gold-deep)',
             border: '1px solid var(--gold)',
             textTransform: 'uppercase',
-            borderRadius: 999,
+            borderRadius: 8,
           }}
         >
           Column
@@ -195,9 +195,9 @@ export default async function ColumnPage({ params }: Props) {
         <p
           style={{
             fontFamily: 'var(--font-sans)',
-            fontWeight: 300,
-            fontSize: 11,
-            letterSpacing: '0.28em',
+            fontWeight: 400,
+            fontSize: 13,
+            letterSpacing: '0.04em',
             color: 'var(--ink-mute)',
           }}
         >
@@ -262,9 +262,9 @@ export default async function ColumnPage({ params }: Props) {
               key={t}
               style={{
                 fontFamily: 'var(--font-sans)',
-                fontWeight: 300,
-                fontSize: 10,
-                letterSpacing: '0.18em',
+                fontWeight: 400,
+                fontSize: 13,
+                letterSpacing: '0.04em',
                 color: 'var(--ink-mute)',
                 border: '1px solid var(--line)',
                 padding: '3px 10px',
@@ -283,10 +283,10 @@ export default async function ColumnPage({ params }: Props) {
             <span
               style={{
                 fontFamily: 'var(--font-serif)',
-                fontStyle: 'italic',
-                fontWeight: 300,
-                fontSize: 11,
-                letterSpacing: '0.4em',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                fontSize: 13,
+                letterSpacing: '0.04em',
                 color: 'var(--gold-deep)',
                 textTransform: 'uppercase',
               }}
@@ -313,9 +313,9 @@ export default async function ColumnPage({ params }: Props) {
           className="inline-flex items-center gap-2 transition-opacity hover:opacity-70"
           style={{
             fontFamily: 'var(--font-sans)',
-            fontWeight: 300,
-            fontSize: 11,
-            letterSpacing: '0.32em',
+            fontWeight: 400,
+            fontSize: 13,
+            letterSpacing: '0.04em',
             color: 'var(--ink-mute)',
             textTransform: 'uppercase',
           }}

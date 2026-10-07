@@ -6,7 +6,7 @@ import SectionLabel from './SectionLabel'
 const FAQ_DATA = [
   {
     q: 'どんな基準でアイテムを選んでいますか？',
-    a: '流行や話題性ではなく、「処方の意図が明確か」「使い続けられる価格と量か」「肌が静かに整うか」の3点を必ず通します。元化粧品研究・商品企画としての視点と、生涯ノーファンデ歴29年で磨いた素肌感覚の両方で確かめ、本当に使ってよかった200近いアイテムだけを厳選しています。',
+    a: '流行や話題性ではなく、「処方の意図が明確か」「使い続けられる価格と量か」「肌が静かに整うか」の3点を必ず通します。元化粧品研究・商品企画としての視点と、29年間、毎日ノーファンデで過ごしてきた経験の両方で確かめ、処方設計や使い心地、価格も含めて商品をご紹介しています。',
   },
   {
     q: '掲載商品は購入できますか？',
@@ -14,7 +14,7 @@ const FAQ_DATA = [
   },
   {
     q: '肌悩みからおすすめを知りたいときは？',
-    a: 'カテゴリーや肌悩みでフィルターできる検索機能を用意しています。プチプラ・デパコス・韓国コスメ問わず、お悩み別にスキンケア・ベースメイクをご提案します。今後リリース予定の「肌診断」では、簡単な質問から自動で提案します。',
+    a: 'カテゴリーや肌悩みでフィルターできる検索機能を用意しています。プチプラ・デパコス・韓国コスメ問わず、お悩み別にスキンケア・ベースメイクをご提案します。肌診断（8問）と毛穴診断（16問）を公開しています。回答内容から肌や毛穴の傾向を整理し、ケアや商品選びの参考になる情報を確認できます。',
   },
   {
     q: 'ノーファンデを続けるコツはありますか？',
@@ -22,7 +22,7 @@ const FAQ_DATA = [
   },
   {
     q: '更新やお知らせはどこで受け取れますか？',
-    a: '最新の編集情報は Instagram @yun.skincare_ にてフォロワー5.7万人と一緒に配信中です。新しいアイテムの追加や、肌悩み別の特集はこちらから先行してお届けしています。',
+    a: '最新の編集情報は Instagram @yun.skincare_ にてフォロワー6万人超えと一緒に配信中です。新しいアイテムの追加や、肌悩み別の特集はこちらから先行してお届けしています。',
   },
 ] as const
 
@@ -40,10 +40,10 @@ export default function FaqSection() {
   return (
     <section
       id="faq"
-      className="px-5 py-20"
+      className="faq-section"
       style={{
         background:
-          'linear-gradient(180deg, var(--bg-ivory), var(--bg-cream))',
+          'var(--bg-warm)',
         borderTop: '1px solid var(--line-soft)',
       }}
       aria-labelledby="faq-heading"
@@ -71,7 +71,7 @@ export default function FaqSection() {
                 fontWeight: 500,
                 fontSize: '14px',
                 lineHeight: 1.7,
-                letterSpacing: '0.1em',
+                letterSpacing: '0.04em',
                 color: 'var(--ink)',
               }}
             >
@@ -79,8 +79,8 @@ export default function FaqSection() {
                 <span
                   style={{
                     fontFamily: 'var(--font-serif)',
-                    fontStyle: 'italic',
-                    fontWeight: 300,
+                    fontStyle: 'normal',
+                    fontWeight: 400,
                     fontSize: '13px',
                     color: 'var(--gold-deep)',
                     marginRight: 10,
@@ -94,7 +94,7 @@ export default function FaqSection() {
                 className="shrink-0 transition-transform group-open:rotate-45"
                 style={{
                   fontFamily: 'var(--font-serif)',
-                  fontWeight: 300,
+                  fontWeight: 400,
                   fontSize: 22,
                   color: 'var(--gold-deep)',
                   marginTop: -2,
@@ -109,9 +109,9 @@ export default function FaqSection() {
               style={{
                 fontFamily: 'var(--font-jp-alt)',
                 fontWeight: 400,
-                fontSize: '12.5px',
+                fontSize: 13,
                 lineHeight: 2.1,
-                letterSpacing: '0.08em',
+                letterSpacing: '0.04em',
                 color: 'var(--ink-soft)',
               }}
             >

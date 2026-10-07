@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function ReadShortcuts() {
   return (
     <section
-      className="px-5 pt-10 pb-12"
+      className="read-shortcuts"
       style={{
         background: 'var(--bg-cream)',
         borderTop: '1px solid var(--line-soft)',
@@ -17,9 +17,9 @@ export default function ReadShortcuts() {
         className="flex flex-col items-center gap-1.5 mb-7"
         style={{
           fontFamily: 'var(--font-sans)',
-          fontWeight: 300,
-          letterSpacing: '0.45em',
-          fontSize: '10px',
+          fontWeight: 400,
+          letterSpacing: '0.04em',
+          fontSize: 13,
           color: 'var(--gold-deep)',
           textTransform: 'uppercase',
         }}
@@ -47,11 +47,11 @@ export default function ReadShortcuts() {
             style={{
               width: 36,
               height: 36,
-              borderRadius: '50%',
+              borderRadius: 8,
               border: '1px solid var(--gold)',
               color: 'var(--gold-deep)',
               background:
-                'radial-gradient(circle at 30% 25%, oklch(0.99 0.008 80), oklch(0.96 0.025 80))',
+                'var(--bg-warm)',
             }}
             aria-hidden
           >
@@ -63,7 +63,7 @@ export default function ReadShortcuts() {
               fontWeight: 500,
               fontSize: 13,
               lineHeight: 1.6,
-              letterSpacing: '0.1em',
+              letterSpacing: '0.04em',
               color: 'var(--ink)',
               marginBottom: 4,
               wordBreak: 'keep-all',
@@ -76,10 +76,10 @@ export default function ReadShortcuts() {
           <p
             style={{
               fontFamily: 'var(--font-serif)',
-              fontStyle: 'italic',
-              fontWeight: 300,
-              fontSize: 10,
-              letterSpacing: '0.18em',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              fontSize: 13,
+              letterSpacing: '0.04em',
               color: 'var(--gold-deep)',
               textTransform: 'uppercase',
             }}
@@ -102,11 +102,11 @@ export default function ReadShortcuts() {
             style={{
               width: 36,
               height: 36,
-              borderRadius: '50%',
+              borderRadius: 8,
               border: '1px solid var(--gold)',
               color: 'var(--gold-deep)',
               background:
-                'radial-gradient(circle at 30% 25%, oklch(0.99 0.008 80), oklch(0.96 0.025 80))',
+                'var(--bg-warm)',
             }}
             aria-hidden
           >
@@ -118,7 +118,7 @@ export default function ReadShortcuts() {
               fontWeight: 500,
               fontSize: 13,
               lineHeight: 1.6,
-              letterSpacing: '0.1em',
+              letterSpacing: '0.04em',
               color: 'var(--ink)',
               marginBottom: 4,
               wordBreak: 'keep-all',
@@ -131,10 +131,10 @@ export default function ReadShortcuts() {
           <p
             style={{
               fontFamily: 'var(--font-serif)',
-              fontStyle: 'italic',
-              fontWeight: 300,
-              fontSize: 10,
-              letterSpacing: '0.18em',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              fontSize: 13,
+              letterSpacing: '0.04em',
               color: 'var(--gold-deep)',
               textTransform: 'uppercase',
             }}
@@ -149,7 +149,7 @@ export default function ReadShortcuts() {
         style={{
           fontFamily: 'var(--font-jp-alt)',
           fontWeight: 400,
-          fontSize: 11,
+          fontSize: 13,
           lineHeight: 1.85,
           letterSpacing: '0.06em',
           color: 'var(--ink-mute)',

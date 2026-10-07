@@ -1,0 +1,80 @@
+.consultation {
+  padding: 32px 0 16px;
+  border-top: 1px solid var(--line-soft);
+  text-align: center;
+  color: var(--ink);
+}
+.heading {
+  margin: 0 0 16px;
+  font-family: var(--font-jp);
+  font-size: clamp(22px, 2.3vw, 30px);
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: .02em;
+}
+.help, .status, .fallback {
+  font-family: var(--font-jp-alt);
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+.help { margin: 0 0 24px; }
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.primary, .secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-family: var(--font-jp-alt);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  cursor: pointer;
+  transition: background-color .15s, color .15s;
+}
+.primary {
+  width: min(100%, 360px);
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: #fff;
+  text-decoration: none;
+}
+.secondary {
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.primary:focus-visible, .secondary:focus-visible, .fallback textarea:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+.status { min-height: 1.8em; margin: 12px 0 0; }
+.fallback { text-align: left; margin: 16px auto 0; width: min(100%, 640px); }
+.fallback textarea {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  resize: vertical;
+}
+@media (hover: hover) {
+  .primary:hover { background: #49423c; }
+  .secondary:hover { color: var(--ink); background: var(--bg-warm); }
+}
+@media (min-width: 768px) {
+  .consultation { padding-top: 48px; }
+}

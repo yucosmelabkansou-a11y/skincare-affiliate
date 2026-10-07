@@ -39,7 +39,7 @@ export default function RoutineSteps({ skinType, concern, themeColor }: Props) {
         </p>
       </div>
 
-      <div className="space-y-4 relative">
+      <div className="routine-grid relative">
         {/* 縦の繋ぎ線 */}
         <div
           className="absolute left-[22px] top-3 bottom-3 w-[1px] opacity-40"

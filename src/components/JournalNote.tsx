@@ -57,7 +57,7 @@ export default function JournalNote() {
               height: 380,
               margin: '0 auto',
               background: '#fff',
-              boxShadow: '0 12px 32px -24px oklch(0.45 0.06 70 / .35)',
+              boxShadow: 'none',
             }}
           />
         ))}

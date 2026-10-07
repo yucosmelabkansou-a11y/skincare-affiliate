@@ -12,6 +12,7 @@ import { SITE_URL } from '@/lib/siteConfig'
 import SkinRadarChart, { TYPICAL_VALUES_BY_TYPE } from '@/components/SkinRadarChart'
 import DiagnosisProductMatch from '@/components/DiagnosisProductMatch'
 import SensitiveResult from '@/components/SensitiveResult'
+import DiagnosisNotice from '@/components/DiagnosisNotice'
 import RelatedReads from '@/components/RelatedReads'
 import ShareButtons from './ShareButtons'
 
@@ -171,7 +172,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
 
   return (
     <div
-      className="max-w-2xl mx-auto min-h-screen"
+      className="result-page page-shell min-h-screen"
       style={{ background: 'var(--bg-cream)' }}
     >
       <script
@@ -186,7 +187,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
       {/* パンくず */}
       <nav
         className="px-5 pt-5 text-[10px]"
-        style={{ color: 'var(--ink-mute)', letterSpacing: '0.2em' }}
+        style={{ color: 'var(--ink-mute)', letterSpacing: '0.04em' }}
         aria-label="パンくず"
       >
         <Link href="/" className="hover:opacity-70 transition-opacity">ホーム</Link>
@@ -211,10 +212,10 @@ export default async function ResultPage({ params, searchParams }: Props) {
           <p
             style={{
               fontFamily: 'var(--font-serif)',
-              fontStyle: 'italic',
-              fontWeight: 300,
-              fontSize: '11px',
-              letterSpacing: '0.32em',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              fontSize: 13,
+              letterSpacing: '0.04em',
               color: 'var(--gold-deep)',
               textTransform: 'uppercase',
               marginBottom: 10,
@@ -227,7 +228,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
               fontFamily: 'var(--font-jp)',
               fontWeight: 500,
               fontSize: 'clamp(20px, 5.6vw, 26px)',
-              letterSpacing: '0.14em',
+              letterSpacing: '0.04em',
               color: 'var(--ink)',
               marginBottom: 18,
             }}
@@ -239,12 +240,12 @@ export default async function ResultPage({ params, searchParams }: Props) {
             style={{
               fontFamily: 'var(--font-jp)',
               fontWeight: 500,
-              fontSize: 11,
-              letterSpacing: '0.18em',
+              fontSize: 13,
+              letterSpacing: '0.04em',
               color: 'var(--gold-deep)',
               border: '1px solid var(--gold)',
-              background: 'oklch(0.99 0.012 80)',
-              borderRadius: 999,
+              background: 'var(--bg-warm)',
+              borderRadius: 8,
             }}
           >
             {result.badge}
@@ -258,10 +259,10 @@ export default async function ResultPage({ params, searchParams }: Props) {
               <p
                 style={{
                   fontFamily: 'var(--font-serif)',
-                  fontStyle: 'italic',
-                  fontWeight: 300,
-                  fontSize: 10,
-                  letterSpacing: '0.32em',
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  fontSize: 13,
+                  letterSpacing: '0.04em',
                   color: 'var(--ink-mute)',
                   textTransform: 'uppercase',
                   marginBottom: 4,
@@ -274,7 +275,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
                   fontFamily: 'var(--font-jp)',
                   fontWeight: 500,
                   fontSize: 13,
-                  letterSpacing: '0.1em',
+                  letterSpacing: '0.04em',
                   color: 'var(--ink)',
                 }}
               >
@@ -290,7 +291,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
               fontWeight: 400,
               fontSize: 13,
               lineHeight: 2.1,
-              letterSpacing: '0.08em',
+              letterSpacing: '0.04em',
               color: 'var(--ink-soft)',
             }}
           >
@@ -300,7 +301,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
       </section>
 
       {/* この肌タイプにおすすめTOP3 — ファーストビュー直下の主CTA */}
-      <DiagnosisProductMatch skinType={type as SkinType} variant="top3" />
+
 
       {/* 五角形レーダーチャート */}
       <section className="px-5 pb-12">
@@ -313,13 +314,13 @@ export default async function ResultPage({ params, searchParams }: Props) {
             maxWidth: 460,
           }}
         >
-          <SkinRadarChart values={radarValues} themeColor="oklch(0.58 0.095 75)" size={260} />
+          <SkinRadarChart values={radarValues} themeColor="#9B8179" size={260} />
           <p
             className="mx-auto mt-6 text-center"
             style={{
               fontFamily: 'var(--font-jp-alt)',
               fontWeight: 400,
-              fontSize: 11.5,
+              fontSize: 13,
               lineHeight: 1.9,
               letterSpacing: '0.06em',
               color: 'var(--ink-mute)',
@@ -336,7 +337,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
         <div
           className="mx-auto px-6 py-5"
           style={{
-            background: 'oklch(0.985 0.012 80)',
+            background: 'var(--bg-warm)',
             border: '1px solid var(--line-soft)',
             maxWidth: 460,
           }}
@@ -344,10 +345,10 @@ export default async function ResultPage({ params, searchParams }: Props) {
           <p
             style={{
               fontFamily: 'var(--font-serif)',
-              fontStyle: 'italic',
-              fontWeight: 300,
-              fontSize: 11,
-              letterSpacing: '0.32em',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              fontSize: 13,
+              letterSpacing: '0.04em',
               color: 'var(--gold-deep)',
               textTransform: 'uppercase',
               marginBottom: 10,
@@ -361,7 +362,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
               fontWeight: 500,
               fontSize: 13,
               lineHeight: 2,
-              letterSpacing: '0.08em',
+              letterSpacing: '0.04em',
               color: 'var(--ink)',
             }}
           >
@@ -384,8 +385,8 @@ export default async function ResultPage({ params, searchParams }: Props) {
                 <span
                   style={{
                     fontFamily: 'var(--font-serif)',
-                    fontStyle: 'italic',
-                    fontWeight: 300,
+                    fontStyle: 'normal',
+                    fontWeight: 400,
                     fontSize: 18,
                     color: 'var(--gold-deep)',
                   }}
@@ -398,7 +399,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
                     fontWeight: 500,
                     fontSize: 13.5,
                     lineHeight: 1.65,
-                    letterSpacing: '0.08em',
+                    letterSpacing: '0.04em',
                     color: 'var(--ink)',
                   }}
                 >
@@ -410,7 +411,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
                 style={{
                   fontFamily: 'var(--font-jp-alt)',
                   fontWeight: 400,
-                  fontSize: 11.5,
+                  fontSize: 13,
                   lineHeight: 1.8,
                   letterSpacing: '0.06em',
                   color: 'var(--ink-mute)',
@@ -443,7 +444,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
                     fontFamily: 'var(--font-jp)',
                     fontWeight: 600,
                     fontSize: 13,
-                    letterSpacing: '0.1em',
+                    letterSpacing: '0.04em',
                     color: 'var(--ink)',
                     marginBottom: 8,
                     lineHeight: 1.3,
@@ -456,10 +457,10 @@ export default async function ResultPage({ params, searchParams }: Props) {
                     <p
                       style={{
                         fontFamily: 'var(--font-serif)',
-                        fontStyle: 'italic',
-                        fontWeight: 300,
-                        fontSize: 9.5,
-                        letterSpacing: '0.18em',
+                        fontStyle: 'normal',
+                        fontWeight: 400,
+                        fontSize: 13,
+                        letterSpacing: '0.04em',
                         color: 'var(--gold-deep)',
                         textTransform: 'uppercase',
                         marginBottom: 4,
@@ -470,7 +471,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
                     <p
                       style={{
                         fontFamily: 'var(--font-jp-alt)',
-                        fontSize: 11,
+                        fontSize: 13,
                         lineHeight: 1.65,
                         letterSpacing: '0.04em',
                         color: 'var(--ink-soft)',
@@ -482,10 +483,10 @@ export default async function ResultPage({ params, searchParams }: Props) {
                     <p
                       style={{
                         fontFamily: 'var(--font-serif)',
-                        fontStyle: 'italic',
-                        fontWeight: 300,
-                        fontSize: 9.5,
-                        letterSpacing: '0.18em',
+                        fontStyle: 'normal',
+                        fontWeight: 400,
+                        fontSize: 13,
+                        letterSpacing: '0.04em',
                         color: 'var(--gold-deep)',
                         textTransform: 'uppercase',
                         marginBottom: 4,
@@ -496,7 +497,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
                     <p
                       style={{
                         fontFamily: 'var(--font-jp-alt)',
-                        fontSize: 11,
+                        fontSize: 13,
                         lineHeight: 1.65,
                         letterSpacing: '0.04em',
                         color: 'var(--ink-soft)',
@@ -512,6 +513,8 @@ export default async function ResultPage({ params, searchParams }: Props) {
         </div>
       </section>
 
+      <DiagnosisProductMatch skinType={type as SkinType} variant="top3" />
+
       {/* 特徴 */}
       <section className="px-5 pb-12">
         <SectionLabel en="Your Skin Traits" jp="あなたの肌の特徴" />
@@ -524,11 +527,11 @@ export default async function ResultPage({ params, searchParams }: Props) {
                 background: '#fff',
                 fontFamily: 'var(--font-jp-alt)',
                 fontWeight: 400,
-                fontSize: 12.5,
+                fontSize: 13,
                 lineHeight: 1.7,
                 letterSpacing: '0.06em',
                 color: 'var(--ink-soft)',
-                borderLeft: '2px solid var(--gold)',
+                borderLeft: '0',
               }}
             >
               {feature}
@@ -549,7 +552,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
                 background: '#fff',
                 fontFamily: 'var(--font-jp-alt)',
                 fontWeight: 400,
-                fontSize: 12.5,
+                fontSize: 13,
                 lineHeight: 1.7,
                 letterSpacing: '0.06em',
                 color: 'var(--ink-soft)',
@@ -574,8 +577,8 @@ export default async function ResultPage({ params, searchParams }: Props) {
           style={{
             fontFamily: 'var(--font-jp)',
             fontWeight: 500,
-            fontSize: 12,
-            letterSpacing: '0.24em',
+            fontSize: 13,
+            letterSpacing: '0.04em',
             color: 'var(--ink)',
             border: '1px solid var(--ink)',
             background: 'transparent',
@@ -587,17 +590,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
 
       {/* シェア & アクション */}
       <section className="px-5 pb-10 text-center">
-        <SectionLabel en="Share Your Result" jp="結果をシェア" />
-        <div
-          className="mx-auto px-5 py-5 mb-6"
-          style={{
-            background: '#fff',
-            border: '1px solid var(--line-soft)',
-            maxWidth: 460,
-          }}
-        >
-          <ShareButtons resultName={result.name} type={type} />
-        </div>
+        <ShareButtons resultName={result.name} summary={result.description} type={type} />
 
         <div className="flex flex-col gap-3 max-w-sm mx-auto">
           <Link
@@ -607,7 +600,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
               fontFamily: 'var(--font-jp)',
               fontWeight: 500,
               fontSize: 13,
-              letterSpacing: '0.32em',
+              letterSpacing: '0.04em',
               border: '1px solid var(--gold)',
               color: 'var(--ink)',
               background: '#fff',
@@ -620,9 +613,9 @@ export default async function ResultPage({ params, searchParams }: Props) {
             className="inline-flex items-center justify-center gap-3 px-9 py-3.5 transition-opacity hover:opacity-70"
             style={{
               fontFamily: 'var(--font-sans)',
-              fontWeight: 300,
-              fontSize: 11,
-              letterSpacing: '0.32em',
+              fontWeight: 400,
+              fontSize: 13,
+              letterSpacing: '0.04em',
               color: 'var(--ink-mute)',
               textTransform: 'uppercase',
             }}
@@ -632,62 +625,35 @@ export default async function ResultPage({ params, searchParams }: Props) {
         </div>
       </section>
 
-      {/* 免責事項 */}
-      <section className="px-5 pb-8">
-        <div
-          className="mx-auto px-5 py-4 text-center"
-          style={{
-            background: 'oklch(0.985 0.012 80)',
-            border: '1px solid var(--line-soft)',
-            maxWidth: 460,
-          }}
-        >
-          <p
-            style={{
-              fontFamily: 'var(--font-jp-alt)',
-              fontWeight: 400,
-              fontSize: 10.5,
-              lineHeight: 1.85,
-              letterSpacing: '0.04em',
-              color: 'var(--ink-mute)',
-            }}
-          >
-            ※本診断は医療的な診断ではなく、セルフケアの参考情報です。
-            <br />
-            肌の症状が長く続く・悪化する場合は皮膚科専門医にご相談ください。
-            <br />
-            記載の成分情報は医薬品的な効能効果を保証するものではありません。
-          </p>
-        </div>
-      </section>
-
       {/* 毛穴診断への誘導 */}
       <section className="px-5 pb-2">
         <Link
           href="/pore-diagnosis"
           className="flex items-center gap-4 px-5 py-4 transition-all hover:opacity-80"
           style={{
-            background: 'linear-gradient(135deg, oklch(0.97 0.018 80), oklch(0.94 0.025 75))',
+            background: 'var(--bg-warm)',
             border: '1px solid oklch(0.87 0.03 75)',
             borderRadius: 10,
             textDecoration: 'none',
           }}
         >
-          <span style={{ fontSize: 28, flexShrink: 0 }}>🔍</span>
+
           <div style={{ flex: 1 }}>
-            <p style={{ fontFamily: 'var(--font-sans)', fontSize: 9, letterSpacing: '0.16em', color: 'var(--gold-deep)', textTransform: 'uppercase' as const, marginBottom: 3 }}>
+            <p style={{ fontFamily: 'var(--font-sans)', fontSize: 13, letterSpacing: '0.04em', color: 'var(--gold-deep)', textTransform: 'uppercase' as const, marginBottom: 3 }}>
               Next Diagnosis
             </p>
             <p style={{ fontFamily: 'var(--font-jp)', fontSize: 14, fontWeight: 700, color: 'var(--ink)', marginBottom: 2, letterSpacing: '0.04em' }}>
               毛穴タイプも診断してみませんか？
             </p>
-            <p style={{ fontFamily: 'var(--font-jp-alt)', fontSize: 11, color: 'var(--ink-soft)' }}>
+            <p style={{ fontFamily: 'var(--font-jp-alt)', fontSize: 13, color: 'var(--ink-soft)' }}>
               開き・詰まり・たるみ・メラニン…原因別ケアがわかります
             </p>
           </div>
           <span style={{ color: 'var(--gold)', fontSize: 18, flexShrink: 0 }}>→</span>
         </Link>
       </section>
+
+      <DiagnosisNotice />
 
       {/* Footer Instagram */}
       <footer
@@ -698,7 +664,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
           className="mb-3"
           style={{
             fontFamily: 'var(--font-jp-alt)',
-            fontSize: 11.5,
+            fontSize: 13,
             lineHeight: 1.9,
             letterSpacing: '0.06em',
             color: 'var(--ink-soft)',
@@ -712,9 +678,9 @@ export default async function ResultPage({ params, searchParams }: Props) {
           rel="me noopener noreferrer"
           style={{
             fontFamily: 'var(--font-sans)',
-            fontWeight: 300,
-            fontSize: 11,
-            letterSpacing: '0.32em',
+            fontWeight: 400,
+            fontSize: 13,
+            letterSpacing: '0.04em',
             color: 'var(--ink-soft)',
             textTransform: 'lowercase',
           }}
@@ -730,14 +696,14 @@ export default async function ResultPage({ params, searchParams }: Props) {
 // ========== セクション見出し（共通エディトリアル）==========
 function SectionLabel({ en, jp }: { en: string; jp: string }) {
   return (
-    <div className="flex flex-col items-center gap-2 mb-8">
+    <div className="result-section-heading">
       <span
         style={{
           fontFamily: 'var(--font-serif)',
-          fontStyle: 'italic',
-          fontWeight: 300,
-          fontSize: 12,
-          letterSpacing: '0.42em',
+          fontStyle: 'normal',
+          fontWeight: 400,
+          fontSize: 13,
+          letterSpacing: '0.04em',
           color: 'var(--gold-deep)',
           textTransform: 'uppercase',
         }}
@@ -752,8 +718,8 @@ function SectionLabel({ en, jp }: { en: string; jp: string }) {
       <span
         style={{
           fontFamily: 'var(--font-jp)',
-          fontSize: 12,
-          letterSpacing: '0.4em',
+          fontSize: 13,
+          letterSpacing: '0.04em',
           color: 'var(--ink-soft)',
         }}
       >

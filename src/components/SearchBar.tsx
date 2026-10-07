@@ -28,7 +28,8 @@ export default function SearchBar({ value, onChange, onSearchCommit }: Props) {
         />
       </svg>
       <input
-        type="text"
+        type="search"
+        aria-label="商品を検索"
         value={value}
         onChange={(e) => onChange(e.target.value)}
         onBlur={handleCommit}

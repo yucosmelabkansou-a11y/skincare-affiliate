@@ -1,14 +1,13 @@
 'use client'
 
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo, useEffect, useSyncExternalStore } from 'react'
 import { sendGAEvent } from '@next/third-parties/google'
 import { Product } from '@/types/product'
-import { CATEGORIES, CATEGORY_GROUPS } from '@/lib/categories'
+import { CATEGORIES } from '@/lib/categories'
 import SearchBar from './SearchBar'
 import ProductCard from './ProductCard'
 import ProductModal from './ProductModal'
 import CategoryNav from './CategoryNav'
-import CategoryIcon from './icons/CategoryIcon'
 
 type Props = {
   products: Product[]
@@ -19,27 +18,35 @@ type Props = {
 const INITIAL_VISIBLE = 24
 const LOAD_MORE_STEP = 24
 
+// URLの初期値はhydration後に読み、サーバーの初回HTMLと一致させる。
+const subscribeToInitialSearch = () => () => {}
+const getInitialSearch = () => window.location.search
+const getServerSearch = () => null
+
 export default function ProductList({ products }: Props) {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategoryId, setSelectedCategoryId] = useState('all')
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE)
 
-  // 診断結果ページなどからの内部リンク（/?cat=sunscreen など）で初期フィルターを反映
+  const initialSearch = useSyncExternalStore(subscribeToInitialSearch, getInitialSearch, getServerSearch)
+  const [initialSearchApplied, setInitialSearchApplied] = useState(false)
+
+  // 初期URLは一度だけ取り込む。以後の検索・カテゴリー操作は従来のstateを使う。
+  if (initialSearch !== null && !initialSearchApplied) {
+    setInitialSearchApplied(true)
+    const params = new URLSearchParams(initialSearch)
+    const cat = params.get('cat')
+    const q = params.get('q')
+    if (q) setSearchQuery(q)
+    if (cat && CATEGORIES.some((c) => c.id === cat)) setSelectedCategoryId(cat)
+  }
+
+  // 診断結果ページなどからのリンクでは、初期フィルターを反映した一覧へ移動。
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
     const cat = params.get('cat')
-    const q = params.get('q')
-    let applied = false
-    if (q) {
-      setSearchQuery(q)
-      applied = true
-    }
-    if (cat && CATEGORIES.some((c) => c.id === cat)) {
-      setSelectedCategoryId(cat)
-      applied = true
-    }
-    if (applied) {
+    if (params.get('q') || (cat && CATEGORIES.some((c) => c.id === cat))) {
       requestAnimationFrame(() => {
         document
           .getElementById('product-list')
@@ -104,10 +111,12 @@ export default function ProductList({ products }: Props) {
     })
   }, [products, searchQuery, selectedCategoryId])
 
-  // 検索・カテゴリーが変わったら初期件数に戻す
-  useEffect(() => {
+  // 条件の変化と同じ描画で表示件数を戻し、古い件数での中間描画を避ける。
+  const [previousFilter, setPreviousFilter] = useState({ searchQuery, selectedCategoryId })
+  if (previousFilter.searchQuery !== searchQuery || previousFilter.selectedCategoryId !== selectedCategoryId) {
+    setPreviousFilter({ searchQuery, selectedCategoryId })
     setVisibleCount(INITIAL_VISIBLE)
-  }, [searchQuery, selectedCategoryId])
+  }
 
   const visible = filtered.slice(0, visibleCount)
   const hasMore = filtered.length > visibleCount
@@ -141,53 +150,18 @@ export default function ProductList({ products }: Props) {
 
   return (
     <>
-      {/* ===== トップビュー（カテゴリーグリッド） ===== */}
-      {isTopView && (
-        <CategoryNav selectedId={selectedCategoryId} onChange={handleCategoryChange} />
-      )}
-
-      {/* ===== 検索 / フィルター ===== */}
-      <div id="product-list" className={`${isTopView ? '' : 'sticky top-0 z-30 bg-white/95 backdrop-blur-sm border-b border-[#F2EAEF]'} scroll-mt-2`}>
-        {/* カテゴリー選択中: グループ別コンパクトタブ */}
-        {!isTopView && (
-          <div className="px-4 pt-3 pb-1 space-y-2">
-            {CATEGORY_GROUPS.map((group) => (
-              <div key={group.groupId}>
-                <p className="text-[10px] text-[#9B8E94] mb-1 tracking-wider font-serif italic">{group.groupLabel}</p>
-                <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-0.5">
-                  {group.categories.map((cat) => {
-                    const isSelected = selectedCategoryId === cat.id
-                    return (
-                      <button
-                        key={cat.id}
-                        onClick={() => handleCategoryChange(cat.id)}
-                        className={`shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
-                          isSelected
-                            ? 'bg-[#C2185B] text-white'
-                            : 'bg-[#FAF6F3] text-[#6C757D] hover:bg-[#FDF2F6]'
-                        }`}
-                      >
-                        <CategoryIcon name={cat.iconKey} size={14} />
-                        <span>{cat.label}</span>
-                      </button>
-                    )
-                  })}
-                </div>
-              </div>
-            ))}
+      <section className="catalog-section" aria-label="商品一覧">
+      <div className="catalog-heading"><h2>すべてのアイテム</h2><p>{filtered.length} items</p></div>
+      <div className="catalog-layout">
+        <aside className="catalog-filters" aria-label="商品カテゴリー">
+          <CategoryNav selectedId={selectedCategoryId} onChange={handleCategoryChange} />
+        </aside>
+        <div className="catalog-results">
+          <div id="product-list" className="catalog-search">
+            <SearchBar value={searchQuery} onChange={setSearchQuery} onSearchCommit={handleSearchCommit} />
           </div>
-        )}
-        <div className="px-4 py-3">
-          <SearchBar
-            value={searchQuery}
-            onChange={setSearchQuery}
-            onSearchCommit={handleSearchCommit}
-          />
-        </div>
-      </div>
-
       {/* ===== 商品グリッド ===== */}
-      <main className="px-4 py-4">
+      <div className="catalog-content">
         {!isTopView && (
           <p className="text-xs text-[#9B8E94] mb-3 font-serif italic tracking-wider">
             {filtered.length} items
@@ -202,18 +176,7 @@ export default function ProductList({ products }: Props) {
           </div>
         ) : (
           <>
-            {isTopView && (
-              <div className="text-center mb-5 mt-2">
-                <p className="text-[10px] tracking-[0.4em] text-[#D4829E] font-serif">ALL ITEMS</p>
-                <div className="mt-1 text-[10px] tracking-[0.5em] text-[#D4829E]" aria-hidden>
-                  · · ·
-                </div>
-                <h2 className="font-serif text-lg text-[#4A3F45] mt-1 tracking-wider">
-                  すべてのアイテム
-                </h2>
-              </div>
-            )}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div className="product-grid">
               {visible.map((product) => (
                 <ProductCard
                   key={product.id}
@@ -241,7 +204,7 @@ export default function ProductList({ products }: Props) {
                     fontFamily: 'var(--font-jp)',
                     fontWeight: 500,
                     fontSize: 13,
-                    letterSpacing: '0.24em',
+                    letterSpacing: '0.04em',
                     color: 'var(--ink)',
                     border: '1px solid var(--gold)',
                     background: '#fff',
@@ -256,7 +219,7 @@ export default function ProductList({ products }: Props) {
                   className="mt-2.5"
                   style={{
                     fontFamily: 'var(--font-jp-alt)',
-                    fontSize: 11,
+                    fontSize: 13,
                     letterSpacing: '0.06em',
                     color: 'var(--ink-mute)',
                   }}
@@ -267,7 +230,10 @@ export default function ProductList({ products }: Props) {
             )}
           </>
         )}
-      </main>
+      </div>
+        </div>
+      </div>
+      </section>
 
       <ProductModal
         product={selectedProduct}

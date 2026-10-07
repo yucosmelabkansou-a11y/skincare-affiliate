@@ -16,7 +16,7 @@ export default function JournalSection() {
   return (
     <section
       id="journal"
-      className="px-5 py-20"
+      className="journal-section"
       style={{
         background: 'var(--bg-cream)',
         borderTop: '1px solid var(--line-soft)',
@@ -35,10 +35,10 @@ export default function JournalSection() {
             <span
               style={{
                 fontFamily: 'var(--font-serif)',
-                fontStyle: 'italic',
-                fontWeight: 300,
-                fontSize: 12,
-                letterSpacing: '0.32em',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                fontSize: 13,
+                letterSpacing: '0.04em',
                 color: 'var(--gold-deep)',
                 textTransform: 'uppercase',
               }}
@@ -50,9 +50,9 @@ export default function JournalSection() {
               className="transition-opacity hover:opacity-70"
               style={{
                 fontFamily: 'var(--font-sans)',
-                fontWeight: 300,
-                fontSize: 10.5,
-                letterSpacing: '0.24em',
+                fontWeight: 400,
+                fontSize: 13,
+                letterSpacing: '0.04em',
                 color: 'var(--ink-mute)',
                 textTransform: 'uppercase',
               }}
@@ -75,10 +75,10 @@ export default function JournalSection() {
             <span
               style={{
                 fontFamily: 'var(--font-serif)',
-                fontStyle: 'italic',
-                fontWeight: 300,
-                fontSize: 12,
-                letterSpacing: '0.32em',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                fontSize: 13,
+                letterSpacing: '0.04em',
                 color: 'var(--gold-deep)',
                 textTransform: 'uppercase',
               }}
@@ -90,9 +90,9 @@ export default function JournalSection() {
               className="transition-opacity hover:opacity-70"
               style={{
                 fontFamily: 'var(--font-sans)',
-                fontWeight: 300,
-                fontSize: 10.5,
-                letterSpacing: '0.24em',
+                fontWeight: 400,
+                fontSize: 13,
+                letterSpacing: '0.04em',
                 color: 'var(--ink-mute)',
                 textTransform: 'uppercase',
               }}

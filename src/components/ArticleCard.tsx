@@ -15,7 +15,7 @@ export default function ArticleCard({ article }: { article: Article }) {
   return (
     <Link
       href={href}
-      className="block transition-opacity hover:opacity-80"
+      className="article-card block transition-opacity hover:opacity-80"
       style={{
         background: '#fff',
         border: '1px solid var(--line-soft)',
@@ -40,14 +40,14 @@ export default function ArticleCard({ article }: { article: Article }) {
             className="px-2 py-0.5 inline-block"
             style={{
               fontFamily: 'var(--font-serif)',
-              fontStyle: 'italic',
-              fontWeight: 300,
-              fontSize: 10,
-              letterSpacing: '0.22em',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              fontSize: 13,
+              letterSpacing: '0.04em',
               color: 'var(--gold-deep)',
               border: '1px solid var(--gold)',
               textTransform: 'uppercase',
-              borderRadius: 999,
+              borderRadius: 8,
             }}
           >
             {label.en}
@@ -55,9 +55,9 @@ export default function ArticleCard({ article }: { article: Article }) {
           <span
             style={{
               fontFamily: 'var(--font-sans)',
-              fontWeight: 300,
-              fontSize: 11,
-              letterSpacing: '0.18em',
+              fontWeight: 400,
+              fontSize: 13,
+              letterSpacing: '0.04em',
               color: 'var(--ink-mute)',
             }}
           >
@@ -85,7 +85,7 @@ export default function ArticleCard({ article }: { article: Article }) {
             style={{
               fontFamily: 'var(--font-jp-alt)',
               fontWeight: 400,
-              fontSize: 12,
+              fontSize: 13,
               lineHeight: 1.9,
               letterSpacing: '0.06em',
               color: 'var(--ink-soft)',
@@ -102,9 +102,9 @@ export default function ArticleCard({ article }: { article: Article }) {
                 key={tag}
                 style={{
                   fontFamily: 'var(--font-sans)',
-                  fontWeight: 300,
-                  fontSize: 10,
-                  letterSpacing: '0.16em',
+                  fontWeight: 400,
+                  fontSize: 13,
+                  letterSpacing: '0.04em',
                   color: 'var(--ink-mute)',
                   border: '1px solid var(--line)',
                   padding: '2px 8px',

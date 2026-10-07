@@ -76,7 +76,7 @@ export default function DiagnosisProductMatch({ skinType, variant = 'full', head
           style={{
             fontFamily: 'var(--font-jp-alt)',
             fontWeight: 400,
-            fontSize: 12,
+            fontSize: 13,
             lineHeight: 1.95,
             letterSpacing: '0.06em',
             color: 'var(--ink-soft)',
@@ -85,7 +85,7 @@ export default function DiagnosisProductMatch({ skinType, variant = 'full', head
         >
           {lead ?? (
             <>
-              200近いアイテムから、元化粧品研究・商品企画ゆんが
+              掲載商品の中から、元化粧品研究・商品企画ゆんが
               <br />
               あなたの肌タイプに厳選した3点です
             </>
@@ -94,7 +94,7 @@ export default function DiagnosisProductMatch({ skinType, variant = 'full', head
 
         <AffiliateDisclosure />
 
-        <div className="space-y-4 max-w-md mx-auto">
+        <div className="match-grid">
           {picks.map((pick, i) => (
             <MatchCard
               key={pick.product.id}
@@ -126,7 +126,7 @@ export default function DiagnosisProductMatch({ skinType, variant = 'full', head
         style={{
           fontFamily: 'var(--font-jp-alt)',
           fontWeight: 400,
-          fontSize: 12,
+          fontSize: 13,
           lineHeight: 1.95,
           letterSpacing: '0.06em',
           color: 'var(--ink-soft)',
@@ -141,7 +141,7 @@ export default function DiagnosisProductMatch({ skinType, variant = 'full', head
           </>
         ) : (
           <>
-            診断結果と肌タイプから、200近いアイテムの中から
+            診断結果と肌タイプをもとに、掲載商品の中から
             <br />
             元化粧品研究・商品企画ゆんが厳選した3点
           </>
@@ -156,7 +156,7 @@ export default function DiagnosisProductMatch({ skinType, variant = 'full', head
       )}
 
       {!isCompact && (
-        <div className="space-y-4 max-w-md mx-auto">
+        <div className="match-grid">
           {picks.map((pick) => (
             <MatchCard
               key={pick.product.id}
@@ -189,7 +189,7 @@ function FirstBuyCallout({
     <aside
       className="max-w-md mx-auto mb-5 overflow-hidden"
       style={{
-        background: 'oklch(0.985 0.012 80)',
+        background: 'var(--bg-warm)',
         border: '1px solid var(--gold)',
         borderRadius: 4,
       }}
@@ -199,10 +199,10 @@ function FirstBuyCallout({
         <p
           style={{
             fontFamily: 'var(--font-serif)',
-            fontStyle: 'italic',
-            fontWeight: 300,
-            fontSize: 10,
-            letterSpacing: '0.28em',
+            fontStyle: 'normal',
+            fontWeight: 400,
+            fontSize: 13,
+            letterSpacing: '0.04em',
             color: 'var(--gold-deep)',
             textTransform: 'uppercase',
             marginBottom: 7,
@@ -216,7 +216,7 @@ function FirstBuyCallout({
             fontWeight: 600,
             fontSize: 13,
             lineHeight: 1.6,
-            letterSpacing: '0.08em',
+            letterSpacing: '0.04em',
             color: 'var(--ink)',
             marginBottom: 8,
           }}
@@ -227,7 +227,7 @@ function FirstBuyCallout({
           style={{
             fontFamily: 'var(--font-jp-alt)',
             fontWeight: 400,
-            fontSize: 11.5,
+            fontSize: 13,
             lineHeight: 1.75,
             letterSpacing: '0.05em',
             color: 'var(--ink-soft)',
@@ -255,8 +255,8 @@ function FirstBuyCallout({
             style={{
               fontFamily: 'var(--font-jp)',
               fontWeight: 600,
-              fontSize: 11,
-              letterSpacing: '0.16em',
+              fontSize: 13,
+              letterSpacing: '0.04em',
               color: 'var(--ink)',
               background: '#fff',
               borderRight: product.rakuten_url ? '1px solid var(--line-soft)' : 'none',
@@ -279,8 +279,8 @@ function FirstBuyCallout({
             style={{
               fontFamily: 'var(--font-jp)',
               fontWeight: 600,
-              fontSize: 11,
-              letterSpacing: '0.16em',
+              fontSize: 13,
+              letterSpacing: '0.04em',
               color: 'var(--ink)',
               background: '#fff',
             }}
@@ -313,7 +313,7 @@ function MatchCard({
 
   return (
     <article
-      className="relative overflow-hidden"
+      className="match-card relative overflow-hidden"
       style={{
         background: '#fff',
         border: '1px solid var(--line-soft)',
@@ -328,17 +328,17 @@ function MatchCard({
           color: '#fff',
           fontFamily: 'var(--font-jp)',
           fontWeight: 500,
-          fontSize: 10,
-          letterSpacing: '0.18em',
+          fontSize: 13,
+          letterSpacing: '0.04em',
         }}
       >
         {rank && (
           <span
             style={{
               fontFamily: 'var(--font-serif)',
-              fontStyle: 'italic',
+              fontStyle: 'normal',
               fontWeight: 400,
-              fontSize: 12,
+              fontSize: 13,
               letterSpacing: '0.04em',
             }}
           >
@@ -355,16 +355,16 @@ function MatchCard({
           className="absolute top-2 right-2 px-2 py-0.5 z-10"
           style={{
             background:
-              'linear-gradient(135deg, oklch(0.78 0.10 30) 0%, oklch(0.62 0.14 25) 100%)',
+              'var(--bg-warm)',
             color: '#fff',
             fontFamily: 'var(--font-serif)',
-            fontStyle: 'italic',
-            fontSize: 9,
-            letterSpacing: '0.15em',
-            borderRadius: 999,
+            fontStyle: 'normal',
+            fontSize: 13,
+            letterSpacing: '0.04em',
+            borderRadius: 8,
           }}
         >
-          ★ MUST
+          MUST
         </span>
       )}
 
@@ -375,7 +375,7 @@ function MatchCard({
           style={{
             width: compact ? 84 : 100,
             height: compact ? 84 : 100,
-            background: 'oklch(0.97 0.008 80)',
+            background: 'var(--bg-warm)',
             borderRadius: 2,
             overflow: 'hidden',
           }}
@@ -396,10 +396,10 @@ function MatchCard({
           <p
             style={{
               fontFamily: 'var(--font-serif)',
-              fontStyle: 'italic',
-              fontWeight: 300,
-              fontSize: 10,
-              letterSpacing: '0.18em',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              fontSize: 13,
+              letterSpacing: '0.04em',
               color: 'var(--ink-mute)',
               marginBottom: 3,
             }}
@@ -424,7 +424,7 @@ function MatchCard({
             style={{
               fontFamily: 'var(--font-jp-alt)',
               fontWeight: 400,
-              fontSize: 11,
+              fontSize: 13,
               letterSpacing: '0.06em',
               color: 'var(--ink-mute)',
             }}
@@ -472,14 +472,14 @@ function MatchCard({
           style={{
             fontFamily: 'var(--font-jp-alt)',
             fontWeight: 400,
-            fontSize: 11,
+            fontSize: 13,
             lineHeight: 1.75,
             letterSpacing: '0.05em',
             color: 'var(--ink-soft)',
             fontStyle: 'normal',
           }}
         >
-          <span style={{ color: 'var(--gold-deep)', marginRight: 4 }}>★</span>
+
           {product.yun_must_comment}
         </div>
       )}
@@ -493,9 +493,9 @@ function MatchCard({
           className="absolute bottom-1 right-2"
           style={{
             fontFamily: 'var(--font-serif)',
-            fontStyle: 'italic',
-            fontSize: 9,
-            letterSpacing: '0.15em',
+            fontStyle: 'normal',
+            fontSize: 13,
+            letterSpacing: '0.04em',
             color: 'var(--ink-mute)',
             opacity: 0.5,
           }}
@@ -547,7 +547,7 @@ function BuyButtons({
           style={{
             ...baseStyle,
             color: '#fff',
-            background: 'linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%)',
+            background: 'var(--bg-warm)',
             borderRight: hasBoth ? '1px solid #fff' : 'none',
           }}
         >
@@ -586,7 +586,7 @@ function AffiliateDisclosure() {
       style={{
         fontFamily: 'var(--font-jp-alt)',
         fontWeight: 400,
-        fontSize: 10.5,
+        fontSize: 13,
         lineHeight: 1.7,
         letterSpacing: '0.04em',
         color: 'var(--ink-mute)',

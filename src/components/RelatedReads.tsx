@@ -40,7 +40,7 @@ export default function RelatedReads({ tags = [], max = 3 }: Props) {
             style={{
               background: '#fff',
               border: '1px solid var(--line-soft)',
-              borderLeft: '2px solid var(--gold)',
+              borderLeft: '0',
               borderRadius: 4,
               textDecoration: 'none',
               minHeight: 60,
@@ -50,10 +50,10 @@ export default function RelatedReads({ tags = [], max = 3 }: Props) {
               className="flex-shrink-0"
               style={{
                 fontFamily: 'var(--font-serif)',
-                fontStyle: 'italic',
-                fontWeight: 300,
-                fontSize: 10,
-                letterSpacing: '0.18em',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                fontSize: 13,
+                letterSpacing: '0.04em',
                 color: 'var(--gold-deep)',
                 textTransform: 'uppercase',
               }}
@@ -86,8 +86,8 @@ export default function RelatedReads({ tags = [], max = 3 }: Props) {
           style={{
             fontFamily: 'var(--font-jp)',
             fontWeight: 500,
-            fontSize: 11.5,
-            letterSpacing: '0.16em',
+            fontSize: 13,
+            letterSpacing: '0.04em',
             color: 'var(--ink)',
             border: '1px solid var(--line-soft)',
             background: '#fff',
@@ -102,8 +102,8 @@ export default function RelatedReads({ tags = [], max = 3 }: Props) {
           style={{
             fontFamily: 'var(--font-jp)',
             fontWeight: 500,
-            fontSize: 11.5,
-            letterSpacing: '0.16em',
+            fontSize: 13,
+            letterSpacing: '0.04em',
             color: 'var(--ink)',
             border: '1px solid var(--line-soft)',
             background: '#fff',

@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { useEffect, useRef } from 'react'
 import { Product } from '@/types/product'
 import { getProductImageSrc } from '@/lib/productImage'
 import InstagramEmbed from './InstagramEmbed'
@@ -12,23 +13,31 @@ type Props = {
 }
 
 export default function ProductModal({ product, onClose }: Props) {
+  const dialogRef = useRef<HTMLDialogElement>(null)
+  useEffect(() => {
+    if (!product) return
+    const dialog = dialogRef.current
+    const previous = document.activeElement as HTMLElement | null
+    dialog?.showModal()
+    const overflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      dialog?.close()
+      document.body.style.overflow = overflow
+      previous?.focus()
+    }
+  }, [product])
   if (!product) return null
   const imageSrc = getProductImageSrc(product)
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/50 animate-fade-in"
-      onClick={onClose}
-    >
-      <div
-        className="relative w-full sm:max-w-lg bg-white rounded-t-2xl sm:rounded-2xl shadow-xl max-h-[90vh] overflow-y-auto animate-slide-up"
-        onClick={(e) => e.stopPropagation()}
-      >
+    <dialog ref={dialogRef} className="product-dialog" aria-labelledby="product-dialog-title" onCancel={onClose} onClick={(event) => { if (event.target === event.currentTarget) onClose() }}>
+      <div className="product-dialog-layout">
         {/* Image */}
-        <div className="relative w-full aspect-[4/3] bg-[#F8F9FA]">
+        <div className="dialog-image relative w-full aspect-square">
           {/* 🧴 fallback — always behind the product image */}
           <div className="absolute inset-0 flex items-center justify-center text-6xl text-gray-200">
-            🧴
+            <span className="image-placeholder" aria-hidden />
           </div>
           {imageSrc && (
             imageSrc.startsWith('https://') ? (
@@ -36,15 +45,15 @@ export default function ProductModal({ product, onClose }: Props) {
               <img
                 src={imageSrc}
                 alt={product.name}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-contain"
               />
             ) : (
               <Image
                 src={imageSrc}
                 alt={product.name}
                 fill
-                sizes="(max-width: 640px) 100vw, 512px"
-                className="object-cover"
+                sizes="(max-width: 767px) 100vw, 420px"
+                className="object-contain"
               />
             )
           )}
@@ -53,7 +62,7 @@ export default function ProductModal({ product, onClose }: Props) {
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center bg-white/80 backdrop-blur-sm rounded-full shadow text-gray-600 hover:text-gray-900 transition-colors"
+          className="dialog-close"
           aria-label="閉じる"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,9 +71,9 @@ export default function ProductModal({ product, onClose }: Props) {
         </button>
 
         {/* Content */}
-        <div className="px-5 pt-4 pb-28">
+        <div className="dialog-content">
           <p className="text-xs text-[#6C757D] mb-1">{product.brand}</p>
-          <h2 className="text-lg font-bold text-[#343A40] mb-3 leading-snug">{product.name}</h2>
+          <h2 id="product-dialog-title" className="text-lg font-bold text-[#343A40] mb-3 leading-snug">{product.name}</h2>
 
           {/* Tags */}
           <div className="flex flex-wrap gap-1.5 mb-4">
@@ -86,7 +95,7 @@ export default function ProductModal({ product, onClose }: Props) {
 
         {/* Sticky footer buttons */}
         {(product.amazon_url || product.rakuten_url) && (
-          <div className="sticky bottom-0 left-0 right-0 bg-white border-t border-[#E9ECEF] px-5 py-3 flex gap-3">
+          <div className="dialog-purchase">
             {product.amazon_url && (
               <AffiliateLink
                 href={product.amazon_url}
@@ -97,7 +106,7 @@ export default function ProductModal({ product, onClose }: Props) {
                 placement="product_modal"
                 className="flex-1 py-3 text-sm font-semibold text-white bg-[#FF9900] rounded-xl text-center hover:bg-[#e88a00] active:scale-95 transition-all"
               >
-                Amazonで見る 🛒
+                Amazonで見る
               </AffiliateLink>
             )}
             {product.rakuten_url && (
@@ -116,6 +125,6 @@ export default function ProductModal({ product, onClose }: Props) {
           </div>
         )}
       </div>
-    </div>
+    </dialog>
   )
 }

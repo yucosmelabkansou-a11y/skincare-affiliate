@@ -1,32 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  /* === Editorial palette (cream / gold / blush) === */
-  --bg-cream:    oklch(0.985 0.008 85);
-  --bg-ivory:    oklch(0.975 0.012 80);
-  --bg-warm:     oklch(0.96 0.018 75);
-  --bg-blush:    oklch(0.955 0.020 40);
-  --ink:         oklch(0.22 0.012 70);
-  --ink-soft:    oklch(0.42 0.015 70);
-  --ink-mute:    oklch(0.60 0.015 70);
-  --gold:        oklch(0.72 0.085 80);
-  --gold-deep:   oklch(0.58 0.095 75);
-  --gold-pale:   oklch(0.88 0.045 85);
-  --line:        oklch(0.86 0.020 75);
-  --line-soft:   oklch(0.92 0.015 75);
-  --petal:       oklch(0.88 0.040 25);
-
-  /* legacy aliases (so existing pink components keep working) */
-  --background: #ffffff;
-  --foreground: #6C757D;
+  --bg-cream: #FAF9F7;
+  --bg-ivory: #FFFFFF;
+  --bg-warm: #F3ECE9;
+  --bg-blush: #F3ECE9;
+  --ink: #242220;
+  --ink-soft: #59534E;
+  --ink-mute: #77716C;
+  --gold: #9B8179;
+  --gold-deep: #725C54;
+  --gold-pale: #E8E3DF;
+  --line: #E8E3DF;
+  --line-soft: #E8E3DF;
+  --petal: #F3ECE9;
+  --background: #FAF9F7;
+  --foreground: #242220;
+  --font-editorial-jp: 'Hiragino Mincho ProN', 'Yu Mincho', 'YuMincho', serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  /* 本文用：和文セリフ優先。Edge Requests削減のため和文Webフォント(Noto Sans JP /
-     Shippori Mincho)は廃止し、OS標準の明朝・ゴシックにフォールバックさせる */
-  --font-jp: 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'Yu Mincho', 'YuMincho', 'Noto Serif JP', serif;
+  /* 本文・操作UIはOS標準のsans-serif。大見出しのみeditorial用明朝を使用。 */
+  --font-jp: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
   --font-jp-alt: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif;
   --font-sans: var(--font-jost), system-ui, sans-serif;
   --font-serif: var(--font-serif), 'Cormorant Garamond', 'Georgia', serif;
@@ -86,8 +83,8 @@ body {
   color: var(--ink);
   margin-top: 2em;
   margin-bottom: 0.7em;
-  padding-left: 0.7em;
-  border-left: 2.5px solid var(--gold);
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid var(--line);
 }
 .prose-yun h4 {
   font-family: var(--font-jp);
@@ -175,7 +172,7 @@ body {
   margin: 1.6em 0;
   padding: 1.1em 1.4em;
   border: 1px solid var(--gold);
-  border-left: 3px solid var(--gold);
+
   border-radius: 6px;
   background: oklch(0.985 0.012 80);
   font-family: var(--font-jp-alt);

@@ -140,8 +140,8 @@ export default function SkinRadarChart({
               style={{
                 fontFamily: 'var(--font-jp)',
                 fontWeight: 500,
-                fontSize: 11,
-                letterSpacing: '0.08em',
+                fontSize: 13,
+                letterSpacing: '0.04em',
                 fill: inkSoft,
               }}
             >
@@ -153,7 +153,7 @@ export default function SkinRadarChart({
 
       {/* 凡例（小さく英文） */}
       <div
-        className="mt-3 grid grid-cols-5 gap-2 text-center"
+        className="radar-legend mt-3 grid gap-2 text-center"
         style={{ width: '100%', maxWidth: 360 }}
       >
         {AXIS_LABELS_EN.map((en, i) => (
@@ -161,10 +161,10 @@ export default function SkinRadarChart({
             <span
               style={{
                 fontFamily: 'var(--font-serif)',
-                fontStyle: 'italic',
-                fontWeight: 300,
-                fontSize: 9,
-                letterSpacing: '0.16em',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                fontSize: 13,
+                letterSpacing: '0.04em',
                 color: goldDeepText,
                 textTransform: 'uppercase',
               }}

@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Cormorant_Garamond, Jost } from 'next/font/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
+import './editorial.css'
+import SiteHeader from '@/components/SiteHeader'
 import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_DESCRIPTION } from '@/lib/siteConfig'
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
@@ -86,9 +88,6 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     creator: '@yun.skincare_',
   },
-  icons: {
-    icon: '/favicon.ico',
-  },
   verification: {
     google: [
       'cxrwG5YhuWfdg011oR7waVThjmZWjj9hBb0ir9JDdrk',  // 旧 vercel.app プロパティ
@@ -105,7 +104,8 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${cormorant.variable} ${jost.variable}`}>
       <body className="min-h-screen bg-[var(--bg-cream)] text-[var(--ink)] font-jp antialiased">
-        {children}
+        <SiteHeader />
+        <main id="page-content" tabIndex={-1}>{children}</main>
       </body>
       {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
     </html>

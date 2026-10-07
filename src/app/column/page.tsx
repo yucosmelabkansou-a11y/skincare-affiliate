@@ -7,7 +7,7 @@ import { SITE_URL } from '@/lib/siteConfig'
 export const metadata: Metadata = {
   title: 'コラム一覧｜スキンケアの基礎・成分・考え方',
   description:
-    '元化粧品研究・商品企画／生涯ノーファンデ歴29年のゆんが綴るスキンケアコラム。基礎ケアの順番、注目成分の解説、季節別ケアのコツなど、毎日の美容に役立つ読み物をまとめています。',
+    '元化粧品研究・商品企画を経験し、29年間、毎日ノーファンデで過ごしてきたゆんが綴るスキンケアコラム。基礎ケアの順番、注目成分の解説、季節別ケアのコツなど、毎日の美容に役立つ読み物をまとめています。',
   alternates: { canonical: `${SITE_URL}/column` },
   openGraph: {
     type: 'website',
@@ -23,13 +23,13 @@ export default function ColumnIndexPage() {
 
   return (
     <div
-      className="max-w-2xl mx-auto min-h-screen"
+      className="reading-index page-shell min-h-screen"
       style={{ background: 'var(--bg-cream)' }}
     >
       {/* パンくず */}
       <nav
         className="px-5 pt-5 text-[10px]"
-        style={{ color: 'var(--ink-mute)', letterSpacing: '0.2em' }}
+        style={{ color: 'var(--ink-mute)', letterSpacing: '0.04em' }}
         aria-label="パンくず"
       >
         <Link href="/" className="hover:opacity-70">ホーム</Link>
@@ -43,9 +43,9 @@ export default function ColumnIndexPage() {
           className="flex flex-col items-center gap-1.5 mb-7"
           style={{
             fontFamily: 'var(--font-sans)',
-            fontWeight: 300,
-            letterSpacing: '0.45em',
-            fontSize: '10px',
+            fontWeight: 400,
+            letterSpacing: '0.04em',
+            fontSize: 13,
             color: 'var(--gold-deep)',
             textTransform: 'uppercase',
           }}
@@ -63,7 +63,7 @@ export default function ColumnIndexPage() {
             fontFamily: 'var(--font-jp)',
             fontWeight: 500,
             fontSize: 'clamp(20px, 5.6vw, 26px)',
-            letterSpacing: '0.14em',
+            letterSpacing: '0.04em',
             color: 'var(--ink)',
             wordBreak: 'keep-all',
           }}
@@ -80,7 +80,7 @@ export default function ColumnIndexPage() {
             fontWeight: 400,
             fontSize: 13,
             lineHeight: 2,
-            letterSpacing: '0.08em',
+            letterSpacing: '0.04em',
             color: 'var(--ink-soft)',
             maxWidth: '32ch',
           }}
@@ -98,9 +98,9 @@ export default function ColumnIndexPage() {
             className="text-center py-12"
             style={{
               fontFamily: 'var(--font-jp-alt)',
-              fontSize: 12,
+              fontSize: 13,
               color: 'var(--ink-mute)',
-              letterSpacing: '0.1em',
+              letterSpacing: '0.04em',
             }}
           >
             記事を準備中です。
@@ -122,8 +122,8 @@ export default function ColumnIndexPage() {
           style={{
             fontFamily: 'var(--font-jp)',
             fontWeight: 500,
-            fontSize: 12,
-            letterSpacing: '0.24em',
+            fontSize: 13,
+            letterSpacing: '0.04em',
             color: 'var(--ink)',
             border: '1px solid var(--gold)',
             background: '#fff',

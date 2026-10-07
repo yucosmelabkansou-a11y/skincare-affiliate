@@ -1,6 +1,9 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import PoreProductImage from '@/components/PoreProductImage'
+import DiagnosisNotice from '@/components/DiagnosisNotice'
+import ShareButtons from '@/app/diagnosis/result/[type]/ShareButtons'
 import Link from 'next/link'
 
 // ===== 型定義 =====
@@ -241,25 +244,25 @@ export default function PoreDiagnosisClient() {
 
   // ----- START -----
   if (screen === 'start') return (
-    <div style={{ maxWidth: 600, margin: '0 auto', padding: '0 16px 80px' }}>
+    <div className="pore-page page-shell">
       <div style={{ paddingTop: 24 }}>
-        <Link href="/diagnosis" style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12, color: 'var(--ink-mute)', textDecoration: 'none', letterSpacing: '0.06em' }}>
-          <span>🪞</span><span>肌質タイプ診断はこちら →</span>
+        <Link href="/diagnosis" style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'var(--ink-mute)', textDecoration: 'none', letterSpacing: '0.06em' }}>
+          <span>肌質タイプ診断はこちら →</span>
         </Link>
       </div>
       <div style={{ textAlign: 'center', padding: '48px 16px 40px' }}>
-        <div style={{ width: 80, height: 80, margin: '0 auto 20px', background: 'linear-gradient(135deg, var(--bg-ivory) 0%, oklch(0.93 0.025 75) 100%)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 36 }}>🔍</div>
-        <p style={{ fontFamily: 'var(--font-sans)', fontSize: 10, letterSpacing: '0.18em', color: 'var(--gold-deep)', textTransform: 'uppercase', marginBottom: 12 }}>Pore Type Diagnosis</p>
+
+        <p style={{ fontFamily: 'var(--font-sans)', fontSize: 13, letterSpacing: '0.04em', color: 'var(--gold-deep)', textTransform: 'uppercase', marginBottom: 12 }}>Pore Type Diagnosis</p>
         <h1 style={{ fontFamily: 'var(--font-jp)', fontSize: 'clamp(20px, 5.5vw, 26px)', fontWeight: 700, color: 'var(--ink)', letterSpacing: '0.05em', marginBottom: 12, lineHeight: 1.5 }}>
           あなたの毛穴タイプを<br />診断しましょう
         </h1>
         <p style={{ fontFamily: 'var(--font-jp-alt)', color: 'var(--ink-soft)', fontSize: 13, maxWidth: 360, margin: '0 auto 28px', lineHeight: 1.9, letterSpacing: '0.06em' }}>
           16の質問に答えるだけで、毛穴の悩みの原因とタイプを特定。あなたに合ったスキンケアをご提案します。
         </p>
-        <button onClick={startDiagnosis} style={{ background: 'linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%)', color: '#fff', fontFamily: 'var(--font-jp)', fontWeight: 600, fontSize: 15, letterSpacing: '0.12em', padding: '15px 48px', borderRadius: 50, border: 'none', cursor: 'pointer', boxShadow: '0 4px 20px oklch(0.6 0.08 75 / .3)' }}>
+        <button onClick={startDiagnosis} style={{ background: 'var(--ink)', color: '#fff', fontFamily: 'var(--font-jp)', fontWeight: 600, fontSize: 15, letterSpacing: '0.04em', padding: '15px 48px', borderRadius: 8, border: 'none', cursor: 'pointer', boxShadow: 'none' }}>
           診断スタート →
         </button>
-        <p style={{ marginTop: 10, fontSize: 11, color: 'var(--ink-mute)' }}>所要時間：約2〜3分</p>
+        <p style={{ marginTop: 10, fontSize: 13, color: 'var(--ink-mute)' }}>所要時間：約2〜3分</p>
       </div>
     </div>
   )
@@ -268,32 +271,32 @@ export default function PoreDiagnosisClient() {
   if (screen === 'question') {
     const q = QUESTIONS[currentQ]
     return (
-      <div style={{ maxWidth: 600, margin: '0 auto', padding: '32px 16px 80px' }}>
+      <div className="pore-page page-shell">
         {/* プログレスバー */}
         <div style={{ marginBottom: 24 }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11, color: 'var(--ink-mute)', marginBottom: 8, letterSpacing: '0.08em' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 13, color: 'var(--ink-mute)', marginBottom: 8, letterSpacing: '0.04em' }}>
             <span>質問 {currentQ + 1} / {totalQ}</span>
             <span>{pct}%</span>
           </div>
           <div style={{ background: 'var(--line-soft)', borderRadius: 10, height: 5, overflow: 'hidden' }}>
-            <div style={{ height: '100%', background: 'linear-gradient(90deg, var(--gold), var(--gold-deep))', borderRadius: 10, width: `${pct}%`, transition: 'width 0.4s ease' }} />
+            <div style={{ height: '100%', background: 'var(--bg-warm)', borderRadius: 10, width: `${pct}%`, transition: 'width 0.4s ease' }} />
           </div>
         </div>
         {/* 質問カード */}
-        <div style={{ background: '#fff', borderRadius: 16, padding: '28px 24px', boxShadow: '0 2px 20px oklch(0.3 0.01 70 / .06)' }}>
-          <p style={{ fontFamily: 'var(--font-sans)', fontSize: 10, letterSpacing: '0.14em', color: 'var(--gold-deep)', textTransform: 'uppercase', marginBottom: 10 }}>{q.category}</p>
+        <div style={{ background: '#fff', borderRadius: 8, padding: '28px 24px', boxShadow: 'none' }}>
+          <p style={{ fontFamily: 'var(--font-sans)', fontSize: 13, letterSpacing: '0.04em', color: 'var(--gold-deep)', textTransform: 'uppercase', marginBottom: 10 }}>{q.category}</p>
           <p style={{ fontFamily: 'var(--font-jp)', fontSize: 'clamp(14px, 3.8vw, 16px)', fontWeight: 600, color: 'var(--ink)', lineHeight: 1.7, marginBottom: q.hint ? 8 : 24 }}>{q.text}</p>
-          {q.hint && <p style={{ fontSize: 11, color: 'var(--ink-mute)', marginBottom: 20 }}>{q.hint}</p>}
+          {q.hint && <p style={{ fontSize: 13, color: 'var(--ink-mute)', marginBottom: 20 }}>{q.hint}</p>}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
             {[
               { label: 'はい', emoji: '😊', yes: true },
               { label: 'いいえ', emoji: '🙅', yes: false },
-            ].map(({ label, emoji, yes }) => (
-              <button key={label} onClick={() => answer(yes)} style={{ padding: '14px 8px', borderRadius: 12, border: '1.5px solid var(--line)', background: '#fff', fontFamily: 'var(--font-jp)', fontSize: 14, fontWeight: 600, cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, color: 'var(--ink)', transition: 'all .15s' }}
+            ].map(({ label, yes }) => (
+              <button key={label} onClick={() => answer(yes)} style={{ padding: '14px 8px', borderRadius: 8, border: '1.5px solid var(--line)', background: '#fff', fontFamily: 'var(--font-jp)', fontSize: 14, fontWeight: 600, cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, color: 'var(--ink)', transition: 'all .15s' }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = yes ? 'var(--gold)' : '#9aafbe'; (e.currentTarget as HTMLElement).style.background = yes ? 'oklch(0.97 0.02 80)' : '#f0f4f8' }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--line)'; (e.currentTarget as HTMLElement).style.background = '#fff' }}
               >
-                <span style={{ fontSize: 22 }}>{emoji}</span>
+
                 <span>{label}</span>
               </button>
             ))}
@@ -305,14 +308,21 @@ export default function PoreDiagnosisClient() {
 
   // ----- CRATER -----
   if (screen === 'crater') return (
-    <div style={{ maxWidth: 600, margin: '0 auto', padding: '32px 16px 80px' }}>
-      <div style={{ background: 'linear-gradient(135deg, oklch(0.97 0.015 80), oklch(0.95 0.02 75))', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginBottom: 20 }}>
-        <div style={{ fontSize: 48, marginBottom: 12 }}>🏥</div>
-        <p style={{ fontFamily: 'var(--font-sans)', fontSize: 10, letterSpacing: '0.14em', color: 'var(--gold-deep)', textTransform: 'uppercase', marginBottom: 8 }}>Diagnosis Result</p>
-        <h2 style={{ fontFamily: 'var(--font-jp)', fontSize: 'clamp(18px, 5vw, 22px)', fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>医師への相談をおすすめします</h2>
-        <p style={{ fontFamily: 'var(--font-jp-alt)', fontSize: 13, color: 'var(--ink-soft)', lineHeight: 1.9 }}>クレーター状毛穴（ニキビ跡）の可能性があります。通常の毛穴ケアとは異なるアプローチが必要なため、皮膚科・美容皮膚科への相談をおすすめします。</p>
+    <div className="pore-page page-shell">
+      <div style={{ background: 'var(--bg-warm)', borderRadius: 8, padding: '28px 24px', textAlign: 'center', marginBottom: 20 }}>
+
+        <p style={{ fontFamily: 'var(--font-sans)', fontSize: 13, letterSpacing: '0.04em', color: 'var(--gold-deep)', textTransform: 'uppercase', marginBottom: 8 }}>Diagnosis Result</p>
+        <h2 style={{ fontFamily: 'var(--font-jp)', fontSize: 'clamp(18px, 5vw, 22px)', fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>肌の凹みやニキビ跡が気になる方へ</h2>
+        <p style={{ fontFamily: 'var(--font-jp-alt)', fontSize: 13, color: 'var(--ink-soft)', lineHeight: 1.9 }}>肌の凹みやニキビ跡が気になるという回答がありました。</p>
       </div>
-      <button onClick={reset} style={{ display: 'block', width: '100%', background: 'transparent', border: '1.5px solid var(--line)', color: 'var(--ink-soft)', fontFamily: 'var(--font-jp)', fontSize: 13, padding: '12px 0', borderRadius: 50, cursor: 'pointer', marginTop: 16 }}>↩ もう一度診断する</button>
+      <button onClick={reset} style={{ display: 'block', width: '100%', background: 'transparent', border: '1.5px solid var(--line)', color: 'var(--ink-soft)', fontFamily: 'var(--font-jp)', fontSize: 13, padding: '12px 0', borderRadius: 8, cursor: 'pointer', marginTop: 16 }}>↩ もう一度診断する</button>
+      <ShareButtons
+        resultName="肌の凹みやニキビ跡が気になる方へ"
+        summary="肌の凹みやニキビ跡が気になるという回答がありました。"
+        type="crater"
+        diagnosis="pore"
+      />
+      <DiagnosisNotice />
     </div>
   )
 
@@ -323,51 +333,51 @@ export default function PoreDiagnosisClient() {
   const maxScore = Math.max(1, ...Object.entries(scores).filter(([k]) => k !== 'crater').map(([, v]) => v))
 
   return (
-    <div style={{ maxWidth: 600, margin: '0 auto', padding: '0 16px 80px' }}>
+    <div className="pore-page page-shell">
       {/* ヘッダー */}
       <div style={{ textAlign: 'center', padding: '32px 16px 24px' }}>
-        <p style={{ fontFamily: 'var(--font-sans)', fontSize: 10, letterSpacing: '0.14em', color: 'var(--gold-deep)', textTransform: 'uppercase', marginBottom: 8 }}>Diagnosis Result</p>
+        <p style={{ fontFamily: 'var(--font-sans)', fontSize: 13, letterSpacing: '0.04em', color: 'var(--gold-deep)', textTransform: 'uppercase', marginBottom: 8 }}>Diagnosis Result</p>
         <h2 style={{ fontFamily: 'var(--font-jp)', fontSize: 'clamp(18px, 5vw, 22px)', fontWeight: 700, color: 'var(--ink)' }}>
           あなたは「{data.label}」タイプです
         </h2>
       </div>
 
       {/* タイプカード */}
-      <div style={{ background: 'linear-gradient(135deg, oklch(0.98 0.018 80), oklch(0.95 0.025 75))', border: '1.5px solid oklch(0.88 0.03 75)', borderRadius: 16, padding: '24px 20px', marginBottom: 16, textAlign: 'center' }}>
-        <div style={{ fontSize: 48, marginBottom: 10 }}>{data.icon}</div>
+      <div style={{ background: 'var(--bg-warm)', border: '1.5px solid oklch(0.88 0.03 75)', borderRadius: 8, padding: '24px 20px', marginBottom: 16, textAlign: 'center' }}>
+
         <p style={{ fontFamily: 'var(--font-jp)', fontSize: 'clamp(20px, 5.5vw, 24px)', fontWeight: 800, color: 'var(--gold-deep)', marginBottom: 8, letterSpacing: '0.04em' }}>{data.label}（{data.alias}）</p>
         <p style={{ fontFamily: 'var(--font-jp-alt)', fontSize: 13, color: 'var(--ink-soft)', lineHeight: 1.9 }}>{data.desc}</p>
       </div>
 
       {/* 併発タイプ */}
       {secondType && TYPES[secondType] && (
-        <div style={{ background: 'var(--bg-ivory)', border: '1px solid var(--line-soft)', borderRadius: 12, padding: '14px 18px', marginBottom: 16 }}>
-          <p style={{ fontFamily: 'var(--font-sans)', fontSize: 10, letterSpacing: '0.1em', color: 'var(--ink-mute)', textTransform: 'uppercase', marginBottom: 4 }}>併発傾向あり</p>
+        <div style={{ background: 'var(--bg-ivory)', border: '1px solid var(--line-soft)', borderRadius: 8, padding: '14px 18px', marginBottom: 16 }}>
+          <p style={{ fontFamily: 'var(--font-sans)', fontSize: 13, letterSpacing: '0.04em', color: 'var(--ink-mute)', textTransform: 'uppercase', marginBottom: 4 }}>併発傾向あり</p>
           <p style={{ fontFamily: 'var(--font-jp)', fontSize: 14, fontWeight: 700, color: 'var(--ink-soft)' }}>{TYPES[secondType].label}（{TYPES[secondType].alias}）</p>
         </div>
       )}
 
       {/* スコアバー */}
-      <div style={{ background: '#fff', borderRadius: 14, padding: '18px 18px', marginBottom: 16, boxShadow: '0 2px 12px oklch(0.3 0.01 70 / .05)' }}>
-        <p style={{ fontFamily: 'var(--font-sans)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--ink-mute)', textTransform: 'uppercase', marginBottom: 14 }}>毛穴タイプ スコア</p>
+      <div style={{ background: '#fff', borderRadius: 8, padding: '18px 18px', marginBottom: 16, boxShadow: 'none' }}>
+        <p style={{ fontFamily: 'var(--font-sans)', fontSize: 13, letterSpacing: '0.04em', color: 'var(--ink-mute)', textTransform: 'uppercase', marginBottom: 14 }}>毛穴タイプ スコア</p>
         {(['open_pores', 'clogged_pores', 'black_pores', 'sagging_pores', 'dry_pores', 'melanin_pores', 'vellus_hair_pores'] as const).map(t => (
           <div key={t} style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
-            <span style={{ fontFamily: 'var(--font-jp)', fontSize: 11, color: 'var(--ink-soft)', minWidth: 88 }}>{TYPES[t].label}</span>
+            <span style={{ fontFamily: 'var(--font-jp)', fontSize: 13, color: 'var(--ink-soft)', minWidth: 88 }}>{TYPES[t].label}</span>
             <div style={{ flex: 1, height: 7, background: 'var(--line-soft)', borderRadius: 10, overflow: 'hidden' }}>
-              <div style={{ height: '100%', width: `${((scores[t] ?? 0) / maxScore) * 100}%`, background: 'linear-gradient(90deg, var(--gold), var(--gold-deep))', borderRadius: 10, transition: 'width 0.8s ease' }} />
+              <div style={{ height: '100%', width: `${((scores[t] ?? 0) / maxScore) * 100}%`, background: 'var(--bg-warm)', borderRadius: 10, transition: 'width 0.8s ease' }} />
             </div>
-            <span style={{ fontFamily: 'var(--font-sans)', fontSize: 11, color: 'var(--ink-mute)', minWidth: 20, textAlign: 'right' }}>{scores[t] ?? 0}</span>
+            <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--ink-mute)', minWidth: 20, textAlign: 'right' }}>{scores[t] ?? 0}</span>
           </div>
         ))}
       </div>
 
       {/* アドバイス */}
-      <div style={{ background: '#fff', borderRadius: 14, padding: '20px 20px', marginBottom: 16, boxShadow: '0 2px 12px oklch(0.3 0.01 70 / .05)' }}>
-        <p style={{ fontFamily: 'var(--font-jp)', fontSize: 14, fontWeight: 700, color: 'var(--ink)', marginBottom: 14 }}>💡 あなたへのケアアドバイス</p>
+      <div style={{ background: '#fff', borderRadius: 8, padding: '20px 20px', marginBottom: 16, boxShadow: 'none' }}>
+        <p style={{ fontFamily: 'var(--font-jp)', fontSize: 14, fontWeight: 700, color: 'var(--ink)', marginBottom: 14 }}>あなたへのケアアドバイス</p>
         <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
           {data.advice.map((a, i) => (
             <li key={i} style={{ fontFamily: 'var(--font-jp-alt)', fontSize: 13, color: 'var(--ink-soft)', paddingLeft: 18, position: 'relative', lineHeight: 1.8 }}>
-              <span style={{ position: 'absolute', left: 0, color: 'var(--gold)', fontSize: 10, top: 5 }}>✦</span>
+              <span style={{ position: 'absolute', left: 0, color: 'var(--gold)', fontSize: 13, top: 5 }}>・</span>
               {a}
             </li>
           ))}
@@ -377,30 +387,30 @@ export default function PoreDiagnosisClient() {
       {/* 商品セクション */}
       <div style={{ marginBottom: 24 }}>
         <p style={{ fontFamily: 'var(--font-jp)', fontSize: 15, fontWeight: 700, color: 'var(--ink)', textAlign: 'center', marginBottom: 4 }}>あなたの毛穴タイプに<br />おすすめのアイテム</p>
-        <p style={{ fontFamily: 'var(--font-jp-alt)', fontSize: 12, color: 'var(--ink-mute)', textAlign: 'center', marginBottom: 18 }}>肌研究を重ねたYunが厳選したスキンケア</p>
+        <p style={{ fontFamily: 'var(--font-jp-alt)', fontSize: 13, color: 'var(--ink-mute)', textAlign: 'center', marginBottom: 18 }}>肌研究を重ねたYunが厳選したスキンケア</p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           {products.map((p, i) => (
-            <div key={i} style={{ background: '#fff', borderRadius: 14, overflow: 'hidden', boxShadow: '0 2px 14px oklch(0.3 0.01 70 / .07)', display: 'flex', alignItems: 'stretch' }}>
-              <div style={{ width: 100, minHeight: 100, flexShrink: 0, background: 'oklch(0.97 0.018 80)', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+            <div key={i} style={{ background: '#fff', borderRadius: 8, overflow: 'hidden', boxShadow: 'none', display: 'flex', alignItems: 'stretch' }}>
+              <div style={{ width: 100, minHeight: 100, flexShrink: 0, background: 'var(--bg-warm)', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
                 {p.image
-                  ? <img src={p.image} alt={p.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                  : <span style={{ fontSize: 32, opacity: 0.3 }}>🧴</span>}
+                  ? <PoreProductImage src={p.image} alt={p.name} />
+                  : <span style={{ fontSize: 32, opacity: 0.3 }}><span className="image-placeholder" aria-hidden /></span>}
               </div>
               <div style={{ flex: 1, padding: '12px 14px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <div>
-                  <p style={{ fontFamily: 'var(--font-sans)', fontSize: 9, letterSpacing: '0.1em', color: 'var(--gold-deep)', textTransform: 'uppercase', marginBottom: 3 }}>{p.tag}</p>
-                  <p style={{ fontFamily: 'var(--font-jp)', fontSize: 12, fontWeight: 700, color: 'var(--ink)', marginBottom: 4, lineHeight: 1.4 }}>{p.name}</p>
-                  <p style={{ fontFamily: 'var(--font-jp-alt)', fontSize: 11, color: 'var(--ink-soft)', lineHeight: 1.6, marginBottom: 4 }}>{p.catch}</p>
-                  {p.price && <p style={{ fontFamily: 'var(--font-jp)', fontSize: 12, fontWeight: 700, color: 'var(--gold-deep)', marginBottom: 6 }}>{p.price}</p>}
+                  <p style={{ fontFamily: 'var(--font-sans)', fontSize: 13, letterSpacing: '0.04em', color: 'var(--gold-deep)', textTransform: 'uppercase', marginBottom: 3 }}>{p.tag}</p>
+                  <p style={{ fontFamily: 'var(--font-jp)', fontSize: 13, fontWeight: 700, color: 'var(--ink)', marginBottom: 4, lineHeight: 1.4 }}>{p.name}</p>
+                  <p style={{ fontFamily: 'var(--font-jp-alt)', fontSize: 13, color: 'var(--ink-soft)', lineHeight: 1.6, marginBottom: 4 }}>{p.catch}</p>
+                  {p.price && <p style={{ fontFamily: 'var(--font-jp)', fontSize: 13, fontWeight: 700, color: 'var(--gold-deep)', marginBottom: 6 }}>{p.price}</p>}
                 </div>
                 <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
                   {p.url && (
-                    <a href={p.url} target="_blank" rel="sponsored nofollow noopener" style={{ background: 'linear-gradient(135deg, var(--gold), var(--gold-deep))', color: '#fff', fontFamily: 'var(--font-jp)', fontSize: 11, fontWeight: 600, padding: '6px 12px', borderRadius: 30, textDecoration: 'none', whiteSpace: 'nowrap' }}>
+                    <a href={p.url} target="_blank" rel="sponsored nofollow noopener" style={{ background: 'var(--ink)', color: '#fff', fontFamily: 'var(--font-jp)', fontSize: 13, fontWeight: 600, padding: '6px 12px', borderRadius: 8, textDecoration: 'none', whiteSpace: 'nowrap' }}>
                       {p.btnText}で見る
                     </a>
                   )}
                   {p.rakutenUrl && (
-                    <a href={p.rakutenUrl} target="_blank" rel="sponsored nofollow noopener" style={{ background: 'linear-gradient(135deg, #e85c5c, #c94040)', color: '#fff', fontFamily: 'var(--font-jp)', fontSize: 11, fontWeight: 600, padding: '6px 12px', borderRadius: 30, textDecoration: 'none', whiteSpace: 'nowrap' }}>
+                    <a href={p.rakutenUrl} target="_blank" rel="sponsored nofollow noopener" style={{ background: 'var(--ink)', color: '#fff', fontFamily: 'var(--font-jp)', fontSize: 13, fontWeight: 600, padding: '6px 12px', borderRadius: 8, textDecoration: 'none', whiteSpace: 'nowrap' }}>
                       楽天で見る
                     </a>
                   )}
@@ -412,19 +422,27 @@ export default function PoreDiagnosisClient() {
       </div>
 
       {/* 肌診断への誘導 */}
-      <Link href="/diagnosis" style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'linear-gradient(135deg, oklch(0.97 0.018 80), oklch(0.94 0.025 75))', border: '1.5px solid oklch(0.87 0.03 75)', borderRadius: 12, padding: '18px 20px', textDecoration: 'none', marginBottom: 20 }}>
-        <span style={{ fontSize: 26, flexShrink: 0 }}>🪞</span>
+      <Link href="/diagnosis" style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'var(--bg-warm)', border: '1.5px solid oklch(0.87 0.03 75)', borderRadius: 8, padding: '18px 20px', textDecoration: 'none', marginBottom: 20 }}>
+
         <div style={{ flex: 1 }}>
-          <p style={{ fontFamily: 'var(--font-sans)', fontSize: 9, letterSpacing: '0.14em', color: 'var(--gold-deep)', textTransform: 'uppercase', marginBottom: 2 }}>Also Try</p>
+          <p style={{ fontFamily: 'var(--font-sans)', fontSize: 13, letterSpacing: '0.04em', color: 'var(--gold-deep)', textTransform: 'uppercase', marginBottom: 2 }}>Also Try</p>
           <p style={{ fontFamily: 'var(--font-jp)', fontSize: 13, fontWeight: 700, color: 'var(--ink)', marginBottom: 2 }}>肌質タイプ診断もやってみませんか？</p>
-          <p style={{ fontFamily: 'var(--font-jp-alt)', fontSize: 11, color: 'var(--ink-soft)' }}>乾燥・脂性・混合・敏感…8問でタイプ判定</p>
+          <p style={{ fontFamily: 'var(--font-jp-alt)', fontSize: 13, color: 'var(--ink-soft)' }}>乾燥・脂性・混合・敏感…8問でタイプ判定</p>
         </div>
         <span style={{ color: 'var(--gold)', fontSize: 16, flexShrink: 0 }}>→</span>
       </Link>
 
       <div style={{ textAlign: 'center' }}>
-        <button onClick={reset} style={{ background: 'transparent', border: '1.5px solid var(--line)', color: 'var(--ink-soft)', fontFamily: 'var(--font-jp)', fontSize: 13, padding: '11px 32px', borderRadius: 50, cursor: 'pointer' }}>↩ もう一度診断する</button>
+        <button onClick={reset} style={{ background: 'transparent', border: '1.5px solid var(--line)', color: 'var(--ink-soft)', fontFamily: 'var(--font-jp)', fontSize: 13, padding: '11px 32px', borderRadius: 8, cursor: 'pointer' }}>↩ もう一度診断する</button>
       </div>
+      <ShareButtons
+        resultName={data.label}
+        summary={data.desc}
+        type={mainType}
+        diagnosis="pore"
+        secondaryResult={secondType ? TYPES[secondType]?.label : undefined}
+      />
+      <DiagnosisNotice />
     </div>
   )
 }

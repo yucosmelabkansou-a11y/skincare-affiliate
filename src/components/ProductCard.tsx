@@ -14,15 +14,13 @@ export default function ProductCard({ product, onClick }: Props) {
   const imageSrc = getProductImageSrc(product)
 
   return (
-    <button
-      onClick={onClick}
-      className="w-full text-left bg-white rounded-2xl border border-[#F2EAEF] overflow-hidden active:scale-[0.98] hover:border-[#E8C7D4] hover:shadow-[0_4px_20px_rgba(212,130,158,0.12)] transition-all duration-200"
-    >
+    <article className="product-card">
+      <button type="button" className="product-open" onClick={onClick} aria-label={product.name}>
       {/* Image area */}
-      <div className="relative w-full aspect-square bg-[#FAF6F3]">
+      <div className="product-image relative w-full aspect-square">
         {/* 🧴 fallback */}
         <div className="absolute inset-0 flex items-center justify-center text-3xl text-[#E8C7D4]">
-          🧴
+          <span className="image-placeholder" aria-hidden />
         </div>
         {imageSrc && (
           imageSrc.startsWith('https://') ? (
@@ -30,7 +28,7 @@ export default function ProductCard({ product, onClick }: Props) {
             <img
               src={imageSrc}
               alt={product.name}
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-contain"
               loading="lazy"
               onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
             />
@@ -39,8 +37,8 @@ export default function ProductCard({ product, onClick }: Props) {
               src={imageSrc}
               alt={product.name}
               fill
-              sizes="(max-width: 640px) 50vw, 224px"
-              className="object-cover"
+              sizes="(max-width: 767px) 50vw, (max-width: 1023px) 30vw, 260px"
+              className="object-contain"
               onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
             />
           )
@@ -61,21 +59,21 @@ export default function ProductCard({ product, onClick }: Props) {
             className="absolute top-2 left-2 px-2 py-0.5 text-[9px] font-serif italic text-white rounded-full"
             style={{
               background:
-                'linear-gradient(135deg, #D4829E 0%, #C2185B 100%)',
-              letterSpacing: '0.1em',
+                'var(--bg-warm)',
+              letterSpacing: '0.04em',
             }}
           >
-            ★ MUST
+            MUST
           </span>
         )}
       </div>
 
       {/* Text area */}
-      <div className="p-3">
+      <div className="product-copy">
         <p className="text-[10px] tracking-wider text-[#9B8E94] mb-0.5 font-serif italic">
           {product.brand}
         </p>
-        <p className="text-sm font-semibold text-[#4A3F45] leading-snug line-clamp-2">
+        <p className="text-sm font-semibold text-[#4A3F45] leading-snug">
           {product.name}
         </p>
 
@@ -91,7 +89,9 @@ export default function ProductCard({ product, onClick }: Props) {
           ))}
         </div>
 
-        {/* Buy buttons — 細いアウトライン型で編集感UP */}
+        </div>
+      </button>
+      <div className="product-links">
         {(product.amazon_url || product.rakuten_url) && (
           <div className="flex gap-1.5 mt-3" onClick={(e) => e.stopPropagation()}>
             {product.amazon_url && (
@@ -123,6 +123,6 @@ export default function ProductCard({ product, onClick }: Props) {
           </div>
         )}
       </div>
-    </button>
+    </article>
   )
 }

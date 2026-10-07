@@ -22,18 +22,14 @@ export const metadata: Metadata = {
 export default function DiagnosisStartPage() {
   return (
     <div
-      className="max-w-2xl mx-auto min-h-screen relative overflow-hidden"
+      className="diagnosis-start page-shell"
       style={{ background: 'var(--bg-cream)' }}
     >
       {/* 背景グラデ */}
       <div
         className="absolute inset-0 -z-10"
         style={{
-          background: `
-            radial-gradient(60% 70% at 80% 10%, oklch(0.96 0.025 30 / .55), transparent 70%),
-            radial-gradient(50% 60% at 10% 90%, oklch(0.97 0.02 80 / .7), transparent 70%),
-            linear-gradient(180deg, var(--bg-ivory) 0%, var(--bg-cream) 60%, var(--bg-warm) 100%)
-          `,
+          background: 'var(--bg-warm)',
         }}
         aria-hidden
       />
@@ -41,7 +37,7 @@ export default function DiagnosisStartPage() {
       {/* パンくず */}
       <nav
         className="px-5 pt-5 text-[10px]"
-        style={{ color: 'var(--ink-mute)', letterSpacing: '0.2em' }}
+        style={{ color: 'var(--ink-mute)', letterSpacing: '0.04em' }}
         aria-label="パンくず"
       >
         <Link href="/" className="hover:opacity-70 transition-opacity">ホーム</Link>
@@ -55,9 +51,9 @@ export default function DiagnosisStartPage() {
           className="flex flex-col items-center gap-1.5 mb-6"
           style={{
             fontFamily: 'var(--font-sans)',
-            fontWeight: 300,
-            letterSpacing: '0.45em',
-            fontSize: '10px',
+            fontWeight: 400,
+            letterSpacing: '0.04em',
+            fontSize: 13,
             color: 'var(--gold-deep)',
             textTransform: 'uppercase',
           }}
@@ -76,7 +72,7 @@ export default function DiagnosisStartPage() {
             fontFamily: 'var(--font-jp)',
             fontWeight: 500,
             fontSize: 'clamp(20px, 5.6vw, 28px)',
-            letterSpacing: '0.1em',
+            letterSpacing: '0.04em',
             color: 'var(--ink)',
             wordBreak: 'keep-all',
           }}
@@ -90,10 +86,10 @@ export default function DiagnosisStartPage() {
           className="mt-5"
           style={{
             fontFamily: 'var(--font-serif)',
-            fontStyle: 'italic',
-            fontWeight: 300,
+            fontStyle: 'normal',
+            fontWeight: 400,
             fontSize: 'clamp(13px, 3.6vw, 16px)',
-            letterSpacing: '0.32em',
+            letterSpacing: '0.04em',
             color: 'var(--gold-deep)',
             textTransform: 'uppercase',
           }}
@@ -108,8 +104,8 @@ export default function DiagnosisStartPage() {
         >
           {[
             '元化粧品研究・商品企画',
-            '生涯ノーファンデ歴29年',
-            'Instagramフォロワー5万人',
+            '29年間、毎日ノーファンデ',
+            'Instagramフォロワー6万人超え',
           ].map((label) => (
             <li
               key={label}
@@ -119,7 +115,7 @@ export default function DiagnosisStartPage() {
                 fontWeight: 500,
                 fontSize: 13,
                 lineHeight: 1.7,
-                letterSpacing: '0.08em',
+                letterSpacing: '0.04em',
                 color: 'var(--ink)',
               }}
             >
@@ -128,10 +124,10 @@ export default function DiagnosisStartPage() {
                 style={{
                   width: 18,
                   height: 18,
-                  borderRadius: '50%',
+                  borderRadius: 8,
                   border: '1px solid var(--gold)',
                   color: 'var(--gold-deep)',
-                  background: 'oklch(0.99 0.012 80)',
+                  background: 'var(--bg-warm)',
                 }}
                 aria-hidden
               >
@@ -149,9 +145,9 @@ export default function DiagnosisStartPage() {
           style={{
             fontFamily: 'var(--font-jp-alt)',
             fontWeight: 400,
-            fontSize: '12.5px',
+            fontSize: 13,
             lineHeight: 2,
-            letterSpacing: '0.08em',
+            letterSpacing: '0.04em',
             color: 'var(--ink-soft)',
             maxWidth: '30ch',
           }}
@@ -166,7 +162,7 @@ export default function DiagnosisStartPage() {
             fontWeight: 400,
             fontSize: '13px',
             lineHeight: 2.1,
-            letterSpacing: '0.08em',
+            letterSpacing: '0.04em',
             color: 'var(--ink-soft)',
             maxWidth: '32ch',
           }}
@@ -180,15 +176,15 @@ export default function DiagnosisStartPage() {
             href="/pore-diagnosis"
             className="flex items-center gap-4 px-5 py-4 transition-all hover:opacity-80"
             style={{
-              background: 'linear-gradient(135deg, oklch(0.97 0.018 80), oklch(0.94 0.025 75))',
+              background: 'var(--bg-warm)',
               border: '1px solid oklch(0.87 0.03 75)',
               borderRadius: 8,
               textDecoration: 'none',
             }}
           >
-            <span style={{ fontSize: 26, flexShrink: 0 }}>🔍</span>
+
             <div style={{ flex: 1 }}>
-              <p style={{ fontFamily: 'var(--font-sans)', fontSize: 9, letterSpacing: '0.16em', color: 'var(--gold-deep)', textTransform: 'uppercase' as const, marginBottom: 2 }}>
+              <p style={{ fontFamily: 'var(--font-sans)', fontSize: 13, letterSpacing: '0.04em', color: 'var(--gold-deep)', textTransform: 'uppercase' as const, marginBottom: 2 }}>
                 Pore Type · 16 questions
               </p>
               <p style={{ fontFamily: 'var(--font-jp)', fontSize: 13, fontWeight: 600, color: 'var(--ink)', letterSpacing: '0.06em' }}>
@@ -207,11 +203,11 @@ export default function DiagnosisStartPage() {
               fontFamily: 'var(--font-jp)',
               fontWeight: 500,
               fontSize: '14px',
-              letterSpacing: '0.32em',
+              letterSpacing: '0.04em',
               border: '1px solid var(--gold)',
               color: 'var(--ink)',
               background: '#fff',
-              boxShadow: '0 18px 40px -28px oklch(0.5 0.06 70 / .35)',
+              boxShadow: 'none',
             }}
           >
             診断をはじめる
@@ -222,9 +218,9 @@ export default function DiagnosisStartPage() {
             className="inline-flex items-center justify-center gap-3 px-9 py-3.5 transition-opacity hover:opacity-70"
             style={{
               fontFamily: 'var(--font-sans)',
-              fontWeight: 300,
-              fontSize: '11px',
-              letterSpacing: '0.32em',
+              fontWeight: 400,
+              fontSize: 13,
+              letterSpacing: '0.04em',
               color: 'var(--ink-mute)',
               textTransform: 'uppercase',
             }}
@@ -240,10 +236,10 @@ export default function DiagnosisStartPage() {
           <span
             style={{
               fontFamily: 'var(--font-serif)',
-              fontStyle: 'italic',
-              fontWeight: 300,
-              fontSize: '12px',
-              letterSpacing: '0.42em',
+              fontStyle: 'normal',
+              fontWeight: 400,
+              fontSize: 13,
+              letterSpacing: '0.04em',
               color: 'var(--gold-deep)',
               textTransform: 'uppercase',
             }}
@@ -258,8 +254,8 @@ export default function DiagnosisStartPage() {
           <span
             style={{
               fontFamily: 'var(--font-jp)',
-              fontSize: '12px',
-              letterSpacing: '0.4em',
+              fontSize: 13,
+              letterSpacing: '0.04em',
               color: 'var(--ink-soft)',
             }}
           >
@@ -287,11 +283,11 @@ export default function DiagnosisStartPage() {
                 style={{
                   width: 36,
                   height: 36,
-                  borderRadius: '50%',
+                  borderRadius: 8,
                   border: '1px solid var(--gold)',
                   color: 'var(--gold-deep)',
                   background:
-                    'radial-gradient(circle at 30% 25%, oklch(0.99 0.008 80), oklch(0.96 0.025 80))',
+                    'var(--bg-warm)',
                 }}
                 aria-hidden
               >
@@ -303,7 +299,7 @@ export default function DiagnosisStartPage() {
                     fontFamily: 'var(--font-jp)',
                     fontWeight: 500,
                     fontSize: '13px',
-                    letterSpacing: '0.1em',
+                    letterSpacing: '0.04em',
                     color: 'var(--ink)',
                     lineHeight: 1.5,
                   }}
@@ -314,10 +310,10 @@ export default function DiagnosisStartPage() {
                   className="mt-0.5"
                   style={{
                     fontFamily: 'var(--font-serif)',
-                    fontStyle: 'italic',
-                    fontWeight: 300,
-                    fontSize: '11px',
-                    letterSpacing: '0.18em',
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    fontSize: 13,
+                    letterSpacing: '0.04em',
                     color: 'var(--gold-deep)',
                   }}
                 >
@@ -333,7 +329,7 @@ export default function DiagnosisStartPage() {
           className="text-center mx-auto mt-10"
           style={{
             fontFamily: 'var(--font-jp-alt)',
-            fontSize: '10.5px',
+            fontSize: 13,
             lineHeight: 1.9,
             letterSpacing: '0.06em',
             color: 'var(--ink-mute)',
