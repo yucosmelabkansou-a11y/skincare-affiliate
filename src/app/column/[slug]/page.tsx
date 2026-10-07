@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import type { CSSProperties } from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import ReactMarkdown, { type Components } from 'react-markdown'
@@ -6,6 +7,41 @@ import remarkGfm from 'remark-gfm'
 
 // 横スクロール可能なテーブルラッパー（スマホでセル列がズレるのを防ぐ）
 const mdComponents: Components = {
+  p: ({ node, children, ...props }) => {
+    const content = node?.children
+    const isDisclosure = content?.length === 1
+      && content[0].type === 'text'
+      && content[0].value === '本記事はアフィリエイト広告を掲載しています。'
+    return <p {...props} className={isDisclosure ? 'affiliate-disclosure' : undefined}>{children}</p>
+  },
+  img: ({ node, src, alt, ...props }) => {
+    void node
+    const [source, crop] = typeof src === 'string' ? src.split('#square=') : []
+    const values = crop?.split(',').map(Number)
+    if (source && values?.length === 5 && values.every(Number.isFinite)) {
+      const [x, y, size, width, height] = values
+      if (size > 0 && x >= 0 && y >= 0 && x + size <= width && y + size <= height) {
+        return (
+          <span
+            className="square-product-photo"
+            style={{
+              '--photo-width': `${width / size * 100}%`,
+              '--photo-height': `${height / size * 100}%`,
+              '--photo-left': `${-x / size * 100}%`,
+              '--photo-top': `${-y / size * 100}%`,
+            } as CSSProperties}
+          >
+            {/* Original photo pixels are used for the requested crop. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img {...props} src={source} alt={alt || ''} width={width} height={height} loading="lazy" decoding="async" />
+          </span>
+        )
+      }
+    }
+    // Preserve the existing Markdown image rendering for covers and other articles.
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img {...props} src={src} alt={alt || ''} />
+  },
   table: ({ node, ...props }) => (
     <div className="table-wrapper">
       <table {...props} />

@@ -1,0 +1,33 @@
+{
+  "slug": "replace-with-article-slug",
+  "title": "投稿画像から作成する記事タイトル",
+  "notionPageUrl": null,
+  "instagramUrl": null,
+  "notionColumnStatus": "作成中",
+  "publicationMode": "preview",
+  "images": [],
+  "transcriptionFile": "transcription.md",
+  "sources": [],
+  "questions": [],
+  "articlePath": null,
+  "previewUrl": null,
+  "publicUrl": null,
+  "publishedAt": null,
+  "updatedAt": null,
+  "checks": {
+    "build": "not_run",
+    "desktop": "not_run",
+    "mobile": "not_run",
+    "links": "not_run",
+    "production": "not_run",
+    "fullLint": "not_run",
+    "changedFilesLint": "not_run",
+    "types": "not_run"
+  },
+  "notionSync": {
+    "state": "pending",
+    "lastSyncedAt": null,
+    "pendingProperties": {}
+  },
+  "photoCropFile": "photo-crops.json"
+}

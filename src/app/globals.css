@@ -99,6 +99,11 @@ body {
   margin: 1.1em 0;
   color: var(--ink-soft);
 }
+.prose-yun .affiliate-disclosure {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #767676;
+}
 .prose-yun strong {
   color: var(--ink);
   font-weight: 700;
@@ -201,6 +206,36 @@ body {
   max-width: 100%;
   border: 1px solid var(--line-soft);
 }
+/* Square product photos crop the supplied original without changing its pixels. */
+.prose-yun .square-product-photo {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 1 / 1;
+  margin: 2em auto;
+  overflow: hidden;
+  border: 1px solid var(--line-soft);
+}
+.prose-yun .square-product-photo img {
+  position: absolute;
+  left: var(--photo-left);
+  top: var(--photo-top);
+  width: var(--photo-width) !important;
+  height: var(--photo-height) !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  border: none !important;
+  object-fit: fill !important;
+}
+.prose-yun table .square-product-photo {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border: none;
+}
+
 /* table を div でラップする wrapper (ReactMarkdown の component override で生成) */
 .prose-yun .table-wrapper {
   overflow-x: auto;
