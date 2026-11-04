@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, Jost } from 'next/font/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 import './editorial.css'
@@ -7,24 +6,6 @@ import SiteHeader from '@/components/SiteHeader'
 import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_DESCRIPTION } from '@/lib/siteConfig'
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
-
-// エディトリアル英字セリフ体（見出し・ブランド名・ワードマーク）
-// 実際に使用しているのは 300/400 のみ（500/600 はpreloadフォントを増やすだけなので削減）
-const cormorant = Cormorant_Garamond({
-  subsets: ['latin'],
-  weight: ['300', '400'],
-  style: ['normal', 'italic'],
-  variable: '--font-serif',
-  display: 'swap',
-})
-
-// 細身サンセリフ（eyebrow・スモールキャップス）
-const jost = Jost({
-  subsets: ['latin'],
-  weight: ['300', '400'],
-  variable: '--font-jost',
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -102,7 +83,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ja" className={`${cormorant.variable} ${jost.variable}`}>
+    <html lang="ja">
       <body className="min-h-screen bg-[var(--bg-cream)] text-[var(--ink)] font-jp antialiased">
         <SiteHeader />
         <main id="page-content" tabIndex={-1}>{children}</main>
