@@ -16,22 +16,33 @@
   --petal: #F3ECE9;
   --background: #FAF9F7;
   --foreground: #242220;
-  --font-editorial-jp: 'Hiragino Mincho ProN', 'Yu Mincho', 'YuMincho', serif;
+  /* v4 の補助文字色（header・Hero） */
+  --ink-sub: #5E5953;
+  /* 書体はサイト全体で日本語ゴシック1系統。旧来の書体変数は、他画面から参照されても同じゴシックへ解決する互換エイリアス */
+  --font-gothic: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'YuGothic', 'Meiryo', 'Noto Sans JP', sans-serif;
+  --font-editorial-jp: var(--font-gothic);
+  --font-jp: var(--font-gothic);
+  --font-jp-alt: var(--font-gothic);
+  --font-sans: var(--font-gothic);
+  --font-script: var(--font-gothic);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  /* 本文・操作UIはOS標準のsans-serif。大見出しのみeditorial用明朝を使用。 */
-  --font-jp: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
-  --font-jp-alt: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif;
-  --font-sans: var(--font-jost), system-ui, sans-serif;
-  --font-serif: var(--font-serif), 'Cormorant Garamond', 'Georgia', serif;
-  /* ワードマーク用。装飾体Italianaは廃止し英字セリフ(Cormorant)に寄せる */
-  --font-script: var(--font-serif), 'Cormorant Garamond', 'Georgia', serif;
+  /* Tailwind の font-* ユーティリティも、すべて :root の --font-gothic（同じゴシック）へ解決させる */
+  --font-jp: var(--font-gothic);
+  --font-jp-alt: var(--font-gothic);
+  --font-sans: var(--font-gothic);
+  --font-serif: var(--font-gothic);
+  --font-script: var(--font-gothic);
 }
 
 body {
+  /* layout.tsx の next/font が <html> に --font-serif（Cormorant）と --font-jost（Jost）を定義するため、
+     表示要素のある body 以下で同じゴシックへ上書きする（CSS の読込み順に依存しない） */
+  --font-serif: var(--font-gothic);
+  --font-jost: var(--font-gothic);
   background: var(--bg-cream);
   color: var(--ink);
   -webkit-tap-highlight-color: transparent;
@@ -54,7 +65,7 @@ body {
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
-  font-family: var(--font-jp);
+  font-family: var(--font-gothic);
   font-size: 14px;
   line-height: 2.05;
   letter-spacing: 0.06em;
@@ -63,7 +74,7 @@ body {
   overflow-wrap: anywhere;
 }
 .prose-yun h2 {
-  font-family: var(--font-jp);
+  font-family: var(--font-gothic);
   font-weight: 600;
   font-size: 18px;
   letter-spacing: 0.1em;
@@ -75,7 +86,7 @@ body {
   border-bottom: 1px solid var(--line);
 }
 .prose-yun h3 {
-  font-family: var(--font-jp);
+  font-family: var(--font-gothic);
   font-weight: 600;
   font-size: 15.5px;
   letter-spacing: 0.1em;
@@ -87,7 +98,7 @@ body {
   border-bottom: 1px solid var(--line);
 }
 .prose-yun h4 {
-  font-family: var(--font-jp);
+  font-family: var(--font-gothic);
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.08em;
@@ -113,7 +124,6 @@ body {
   text-decoration-color: var(--gold);
 }
 .prose-yun em {
-  font-family: var(--font-serif);
   font-style: italic;
   color: var(--gold-deep);
 }
@@ -167,7 +177,6 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  font-family: var(--font-serif);
   font-style: italic;
   font-weight: 300;
   font-size: 1em;
@@ -180,7 +189,7 @@ body {
 
   border-radius: 6px;
   background: oklch(0.985 0.012 80);
-  font-family: var(--font-jp-alt);
+  font-family: var(--font-gothic);
   font-style: normal;
   color: var(--ink-soft);
   font-size: 13px;
