@@ -403,5 +403,27 @@ export function calculateResult(answers: Answers): DiagnosisResult {
   return { primaryType, scores, concern }
 }
 
+// 補助表示のみ。主判定・配点・商品選定には影響させない。
+// 1点差以内で、2位が3位より高いときだけ、もう一つの傾向を添える。
+export type SecondaryTendency = { type: SkinType; tied: boolean }
+
+export function getSecondaryTendency(result: DiagnosisResult): SecondaryTendency | undefined {
+  const ranked = Object.entries(result.scores)
+    .filter(([type]) => type !== result.primaryType)
+    .sort((a, b) => b[1] - a[1])
+  const [second, third] = ranked
+  const gap = result.scores[result.primaryType] - second[1]
+  if (gap < 0 || gap > 1 || second[1] <= third[1]) return undefined
+  return { type: second[0] as SkinType, tied: gap === 0 }
+}
+
+export function parseSecondaryTendency(
+  primaryType: SkinType, secondary: unknown, relation: unknown,
+): SecondaryTendency | undefined {
+  if (typeof secondary !== 'string' || !allSkinTypes.includes(secondary as SkinType)
+    || secondary === primaryType || (relation !== 'tied' && relation !== 'close')) return undefined
+  return { type: secondary as SkinType, tied: relation === 'tied' }
+}
+
 // 全タイプのスラッグ（静的生成用）
 export const allSkinTypes: SkinType[] = ['dry', 'oily', 'combination', 'sensitive', 'aging', 'normal']

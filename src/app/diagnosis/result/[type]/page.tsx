@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import {
   resultTypes,
+  parseSecondaryTendency,
   allSkinTypes,
   concernLabels,
   type SkinType,
@@ -13,6 +14,7 @@ import SkinRadarChart, { TYPICAL_VALUES_BY_TYPE } from '@/components/SkinRadarCh
 import DiagnosisProductMatch from '@/components/DiagnosisProductMatch'
 import SensitiveResult from '@/components/SensitiveResult'
 import DiagnosisNotice from '@/components/DiagnosisNotice'
+import DiagnosisTendency from '@/components/DiagnosisTendency'
 import RelatedReads from '@/components/RelatedReads'
 import ShareButtons from './ShareButtons'
 
@@ -23,7 +25,7 @@ export function generateStaticParams() {
 
 type Props = {
   params: Promise<{ type: string }>
-  searchParams: Promise<{ concern?: string; scores?: string }>
+  searchParams: Promise<{ concern?: string; scores?: string; secondary?: string; relation?: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -121,13 +123,15 @@ const INGREDIENT_INFO: Record<string, { what: string; effect: string }> = {
 
 export default async function ResultPage({ params, searchParams }: Props) {
   const { type } = await params
-  const { concern: concernParam, scores: scoresParam } = await searchParams
+  const { concern: concernParam, scores: scoresParam, secondary: secondaryParam, relation } = await searchParams
   const result = resultTypes[type as SkinType]
   if (!result) notFound()
 
+  const secondary = parseSecondaryTendency(type as SkinType, secondaryParam, relation)
+
   // 敏感肌はクリック率改善のため専用レイアウトを使用
   if ((type as SkinType) === 'sensitive') {
-    return <SensitiveResult />
+    return <SensitiveResult secondary={secondary} />
   }
 
   const concern = (concernParam as Concern | undefined) && concernLabels[concernParam as Concern]
@@ -250,6 +254,8 @@ export default async function ResultPage({ params, searchParams }: Props) {
           >
             {result.badge}
           </span>
+
+          <DiagnosisTendency primaryType={type as SkinType} secondary={secondary} />
 
           {concern && (
             <div

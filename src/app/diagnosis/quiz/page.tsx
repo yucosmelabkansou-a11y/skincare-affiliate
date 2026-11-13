@@ -4,7 +4,7 @@ import { useState, useEffect, useSyncExternalStore } from 'react'
 import { useRouter } from 'next/navigation'
 import { sendGAEvent } from '@next/third-parties/google'
 import Link from 'next/link'
-import { questions, calculateResult, type Answers } from '@/lib/diagnosis'
+import { questions, calculateResult, getSecondaryTendency, type Answers } from '@/lib/diagnosis'
 
 const STORAGE_KEY = 'yun_skincare_diagnosis_answers'
 
@@ -75,6 +75,11 @@ function QuizQuestions() {
         const result = calculateResult(newAnswers)
         const params = new URLSearchParams()
         if (result.concern) params.set('concern', result.concern)
+        const secondary = getSecondaryTendency(result)
+        if (secondary) {
+          params.set('secondary', secondary.type)
+          params.set('relation', secondary.tied ? 'tied' : 'close')
+        }
         const query = params.toString()
         sendGAEvent('event', 'diagnosis_complete', {
           skin_type: result.primaryType,

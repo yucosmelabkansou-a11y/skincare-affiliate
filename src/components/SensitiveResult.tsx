@@ -5,12 +5,13 @@
 // スマホ閲覧最優先（縦積み・大きめタップ領域・max-w-md 中央寄せ）。
 
 import Link from 'next/link'
-import { resultTypes } from '@/lib/diagnosis'
+import { resultTypes, type SecondaryTendency } from '@/lib/diagnosis'
 import { SITE_URL } from '@/lib/siteConfig'
 import DiagnosisProductMatch from './DiagnosisProductMatch'
 import RelatedReads from './RelatedReads'
 import SectionLabel from './SectionLabel'
 import DiagnosisNotice from './DiagnosisNotice'
+import DiagnosisTendency from './DiagnosisTendency'
 import ShareButtons from '@/app/diagnosis/result/[type]/ShareButtons'
 
 const result = resultTypes.sensitive
@@ -57,7 +58,7 @@ const FAQ: { q: string; a: string }[] = [
   },
 ]
 
-export default function SensitiveResult() {
+export default function SensitiveResult({ secondary }: { secondary?: SecondaryTendency }) {
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -158,6 +159,7 @@ export default function SensitiveResult() {
         >
           {result.badge}
         </span>
+        <DiagnosisTendency primaryType="sensitive" secondary={secondary} />
 
         <p
           className="mt-6 mx-auto text-left"
