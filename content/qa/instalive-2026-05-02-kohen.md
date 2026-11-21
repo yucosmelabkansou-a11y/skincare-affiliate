@@ -85,13 +85,13 @@ A. 正直にお伝えすると：
 
 🛒 オバジ オバジC25 セラム NEO【ピュアビタミンCの最高峰】  
 高濃度ピュアビタミンC配合 / ロート製薬独自の浸透技術で水溶性VCが届く / 1本使いきりで薄シミの変化を実感できる人も。  
-[Amazon](https://www.amazon.co.jp/dp/B08TJGNB8R?tag=onamzyyy0410m-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%82%AA%E3%83%90%E3%82%B8C25%E3%82%BB%E3%83%A9%E3%83%A0NEO/)
+[Amazon](https://www.amazon.co.jp/dp/B08TJGNB8R?tag=yyy0410mmm-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%82%AA%E3%83%90%E3%82%B8C25%E3%82%BB%E3%83%A9%E3%83%A0NEO/)
 
 1本だけで「絶対薄くなる」は確約できないのが正直なところ。時間もかかるし、刺激でかえって炎症→色素沈着になるリスクも。
 
 🛒 資生堂 アクアレーベル ブライトニングエマルジョン EX【4MSK配合のプチプラ】  
 4MSK配合（メラニン排出促進＋生成抑制）/ 美白＋保湿のW機能 / プチプラで通年使える。  
-[Amazon](https://www.amazon.co.jp/dp/B0CSSYHV5F?tag=onamzyyy0410m-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%82%A2%E3%82%AF%E3%82%A2%E3%83%AC%E3%83%BC%E3%83%99%E3%83%AB+%E3%83%96%E3%83%A9%E3%82%A4%E3%83%88%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%A8%E3%83%9E%E3%83%AB%E3%82%B8%E3%83%A7%E3%83%B3+EX/)
+[Amazon](https://www.amazon.co.jp/dp/B0CSSYHV5F?tag=yyy0410mmm-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%82%A2%E3%82%AF%E3%82%A2%E3%83%AC%E3%83%BC%E3%83%99%E3%83%AB+%E3%83%96%E3%83%A9%E3%82%A4%E3%83%88%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%A8%E3%83%9E%E3%83%AB%E3%82%B8%E3%83%A7%E3%83%B3+EX/)
 
 🏥 濃いシミは美容医療を検討する選択肢も
 
@@ -109,7 +109,7 @@ Lv.1：ビタミンC誘導体に切り替える
 
 🛒 花王 モイスチュアマイルドホワイト 化粧水【アスコルビルグルコシド配合】  
 ビタミンC誘導体（アスコルビルグルコシド）が有効成分 / 保湿効果もあってピリピリしにくい / 敏感肌・初めての美白ケアにも◎。  
-[Amazon](https://www.amazon.co.jp/dp/B071KFNTPZ?tag=onamzyyy0410m-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%82%A4%E3%82%B9%E3%83%81%E3%83%A5%E3%82%A2%E3%83%9E%E3%82%A4%E3%83%AB%E3%83%89%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88+%E5%8C%96%E7%B2%A7%E6%B0%B4/)
+[Amazon](https://www.amazon.co.jp/dp/B071KFNTPZ?tag=yyy0410mmm-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%82%A4%E3%82%B9%E3%83%81%E3%83%A5%E3%82%A2%E3%83%9E%E3%82%A4%E3%83%AB%E3%83%89%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88+%E5%8C%96%E7%B2%A7%E6%B0%B4/)
 
 Lv.2：他の美白成分に変える
 
@@ -144,7 +144,7 @@ A. これも非常に多い相談です。原因と4つの対策をまとめま�
 
 🛒 トゥヴェール ナノエマルジョン【シャビシャビ系セラミド乳液】  
 シャビシャビなテクスチャでもろもろが出にくい / セラミド配合で保湿は確保 / 朝のとろみ控えめスキンケアに最適。  
-[Amazon](https://www.amazon.co.jp/dp/B01LX1FX5B?tag=onamzyyy0410m-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A5%E3%83%B4%E3%82%A7%E3%83%BC%E3%83%AB+%E3%83%8A%E3%83%8E%E3%82%A8%E3%83%9E%E3%83%AB%E3%82%B8%E3%83%A7%E3%83%B3/)
+[Amazon](https://www.amazon.co.jp/dp/B01LX1FX5B?tag=yyy0410mmm-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A5%E3%83%B4%E3%82%A7%E3%83%BC%E3%83%AB+%E3%83%8A%E3%83%8E%E3%82%A8%E3%83%9E%E3%83%AB%E3%82%B8%E3%83%A7%E3%83%B3/)
 
 朝はサラサラ＆セラミド系にしておくと、もろもろ問題は劇的に改善します✨
 
@@ -167,11 +167,11 @@ A. 肝斑はシミと混在することが多く、自己判断は危険です�
 
 🛒 肌ラボ 白潤プレミアム 薬用浸透美白化粧水【トラネキサム酸配合プチプラ】  
 トラネキサム酸（有効成分）配合 / プチプラで毎日たっぷり使える / 浸透型ヒアルロン酸でしっとり。  
-[Amazon](https://www.amazon.co.jp/dp/B0C3QGLJ71?tag=onamzyyy0410m-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E8%82%8C%E3%83%A9%E3%83%9C+%E7%99%BD%E6%BD%A4%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%E3%83%A0+%E5%8C%96%E7%B2%A7%E6%B0%B4/)
+[Amazon](https://www.amazon.co.jp/dp/B0C3QGLJ71?tag=yyy0410mmm-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E8%82%8C%E3%83%A9%E3%83%9C+%E7%99%BD%E6%BD%A4%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%E3%83%A0+%E5%8C%96%E7%B2%A7%E6%B0%B4/)
 
 🛒 ちふれ 薬用 美白 化粧水 TA【シンプル処方の継続派】  
 トラネキサム酸（有効成分）配合 / シンプル処方でゆらぎ肌でも使いやすい / 通年使えるコスパ。  
-[Amazon](https://www.amazon.co.jp/dp/B0C844QHTB?tag=onamzyyy0410m-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%81%A1%E3%81%B5%E3%82%8C+%E8%96%AC%E7%94%A8%E7%BE%8E%E7%99%BD%E5%8C%96%E7%B2%A7%E6%B0%B4+TA/)
+[Amazon](https://www.amazon.co.jp/dp/B0C844QHTB?tag=yyy0410mmm-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%81%A1%E3%81%B5%E3%82%8C+%E8%96%AC%E7%94%A8%E7%BE%8E%E7%99%BD%E5%8C%96%E7%B2%A7%E6%B0%B4+TA/)
 
 化粧品のトラネキサム酸は予防レベルとして使い、改善は内服＋皮膚科が現実的なルート。下手に美容医療に走らず、まず診断を大事にしてください🏥
 
@@ -200,7 +200,7 @@ A. 結論：60歳「特有」のものはなく、基本に忠実が一番。
 
 🛒 なめらか本舗 薬用リンクルアイクリーム ホワイト【ナイアシンアミド入り目元用】  
 ナイアシンアミド配合（シワ改善有効成分） / 目元のピンポイントケアに / プチプラで毎日続けやすい。  
-[Amazon](https://www.amazon.co.jp/dp/B0CB89ZR7C?tag=onamzyyy0410m-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%81%AA%E3%82%81%E3%82%89%E3%81%8B%E6%9C%AC%E8%88%97+%E3%83%AA%E3%83%B3%E3%82%AF%E3%83%AB%E3%82%A2%E3%82%A4%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%A0+%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88/)
+[Amazon](https://www.amazon.co.jp/dp/B0CB89ZR7C?tag=yyy0410mmm-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%81%AA%E3%82%81%E3%82%89%E3%81%8B%E6%9C%AC%E8%88%97+%E3%83%AA%E3%83%B3%E3%82%AF%E3%83%AB%E3%82%A2%E3%82%A4%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%A0+%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88/)
 
 ## Q. 混合肌でTゾーン皮脂、それ以外は乾燥敏感肌。洗顔とスキンケアは？
 
@@ -213,17 +213,17 @@ A. 洗顔は「皮脂を取りすぎないもの」を選ぶのが鉄則。
 
 🛒 LAGOM セルアップ ジェルトゥウォーター クレンザー【韓国発の優しい朝洗顔】  
 ジェル→水の質感変化で摩擦少なめ / 皮脂を取りすぎない設計 / 朝洗顔に特化、敏感肌でも使いやすい。  
-[Amazon](https://www.amazon.co.jp/dp/B07PJ52QSB?tag=onamzyyy0410m-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/LAGOM+%E3%82%B8%E3%82%A7%E3%83%AB%E3%83%88%E3%82%A5%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC/)
+[Amazon](https://www.amazon.co.jp/dp/B07PJ52QSB?tag=yyy0410mmm-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/LAGOM+%E3%82%B8%E3%82%A7%E3%83%AB%E3%83%88%E3%82%A5%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC/)
 
 ✅ スキンケアの推し
 
 🛒 キュレル 化粧水 II（しっとり）【乾燥敏感肌の王道】  
 セラミド機能成分配合 / 肌荒れ防止有効成分アラントイン配合 / 乾燥敏感肌のド真ん中ターゲット。  
-[Amazon](https://www.amazon.co.jp/dp/B001JF0MQC?tag=onamzyyy0410m-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%82%AD%E3%83%A5%E3%83%AC%E3%83%AB+%E5%8C%96%E7%B2%A7%E6%B0%B4+II+%E3%81%97%E3%81%A3%E3%81%A8%E3%82%8A/)
+[Amazon](https://www.amazon.co.jp/dp/B001JF0MQC?tag=yyy0410mmm-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%82%AD%E3%83%A5%E3%83%AC%E3%83%AB+%E5%8C%96%E7%B2%A7%E6%B0%B4+II+%E3%81%97%E3%81%A3%E3%81%A8%E3%82%8A/)
 
 🛒 dプログラム バイタライジング＆クリア ローション EX【ハリと敏感肌ケアの両立】  
 ハリ・シワが気になる敏感肌向け / 使用感が秀逸（高くてもリピートしたい1本） / 揺らぎ肌のエイジング期に。  
-[Amazon](https://www.amazon.co.jp/dp/B07V52BLJ6?tag=onamzyyy0410m-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/d%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0+%E3%83%90%E3%82%A4%E3%82%BF%E3%83%A9%E3%82%A4%E3%82%B8%E3%83%B3%E3%82%B0/)
+[Amazon](https://www.amazon.co.jp/dp/B07V52BLJ6?tag=yyy0410mmm-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/d%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0+%E3%83%90%E3%82%A4%E3%82%BF%E3%83%A9%E3%82%A4%E3%82%B8%E3%83%B3%E3%82%B0/)
 
 dプロはバイタライジング＆クリア（青）がハリ向き、乾燥時期はモイストケア（ピンク）にチェンジが◎。冬はカルテHDも追加で最強です。
 
@@ -243,17 +243,17 @@ A. 正直に言うと、ジャー容器のオールインワンは"忙しい人�
 
 🛒 ミノン アミノモイスト エイジングケア ミルククリーム【チューブ時短保湿】  
 チューブで出しやすい / 敏感肌設計の低刺激処方 / アミノ酸・ペプチド配合のエイジングケア。  
-[Amazon](https://www.amazon.co.jp/s?k=%E3%83%9F%E3%83%8E%E3%83%B3+%E3%82%A2%E3%83%9F%E3%83%8E%E3%83%A2%E3%82%A4%E3%82%B9%E3%83%88+%E3%82%A8%E3%82%A4%E3%82%B8%E3%83%B3%E3%82%B0%E3%82%B1%E3%82%A2&tag=onamzyyy0410m-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8E%E3%83%B3+%E3%82%A8%E3%82%A4%E3%82%B8%E3%83%B3%E3%82%B0%E3%82%B1%E3%82%A2+%E3%83%9F%E3%83%AB%E3%82%AF%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%A0/)
+[Amazon](https://www.amazon.co.jp/s?k=%E3%83%9F%E3%83%8E%E3%83%B3+%E3%82%A2%E3%83%9F%E3%83%8E%E3%83%A2%E3%82%A4%E3%82%B9%E3%83%88+%E3%82%A8%E3%82%A4%E3%82%B8%E3%83%B3%E3%82%B0%E3%82%B1%E3%82%A2&tag=yyy0410mmm-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8E%E3%83%B3+%E3%82%A8%E3%82%A4%E3%82%B8%E3%83%B3%E3%82%B0%E3%82%B1%E3%82%A2+%E3%83%9F%E3%83%AB%E3%82%AF%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%A0/)
 
 🛒 エストラ アトバリア365クリーム【韓国セラミドケアの定番】  
 セラミド配合のバリアケアクリーム / 朝晩兼用OK / チューブ容器で時短。  
-[Amazon](https://www.amazon.co.jp/dp/B09YDCCJBJ?tag=onamzyyy0410m-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%82%A8%E3%82%B9%E3%83%88%E3%83%A9+%E3%82%A2%E3%83%88%E3%83%90%E3%83%AA%E3%82%A2365/)
+[Amazon](https://www.amazon.co.jp/dp/B09YDCCJBJ?tag=yyy0410mmm-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%82%A8%E3%82%B9%E3%83%88%E3%83%A9+%E3%82%A2%E3%83%88%E3%83%90%E3%83%AA%E3%82%A2365/)
 
 ✅ 王道のオールインワンも1個あると便利
 
 🛒 肌ラボ 極潤 パーフェクトゲル【プチプラオールインワンの定番】  
 ヒアルロン酸4種配合のオールインワン / コスパ最強（1,000円前後） / 眠い・しんどい時の「最後の砦」。  
-[Amazon](https://www.amazon.co.jp/dp/B00BQV0LT2?tag=onamzyyy0410m-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E8%82%8C%E3%83%A9%E3%83%9C+%E6%A5%B5%E6%BD%A4+%E3%83%91%E3%83%BC%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88%E3%82%B2%E3%83%AB/)
+[Amazon](https://www.amazon.co.jp/dp/B00BQV0LT2?tag=yyy0410mmm-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E8%82%8C%E3%83%A9%E3%83%9C+%E6%A5%B5%E6%BD%A4+%E3%83%91%E3%83%BC%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88%E3%82%B2%E3%83%AB/)
 
 なめらか本舗のオールインワン系も◎。「眠くてしんどい時の最後の砦」として1個ストックしておくと、肌調子が崩れにくくなりますよ💤
 
@@ -279,19 +279,19 @@ A. たくさんは飲んでないんですが、続けやすい&エビデンス�
 
 🛒 シナールEX顆粒e 60包【第3類医薬品ビタミンC・シオノギ】  
 シオノギヘルスケア製の信頼ブランド / ビタミンC高配合 / 朝・夜のカプセル/顆粒として続けやすい。  
-[Amazon](https://www.amazon.co.jp/dp/B07GBB2KL3?tag=onamzyyy0410m-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%82%B7%E3%83%8A%E3%83%BC%E3%83%ABEX%E9%A1%86%E7%B2%92e/)
+[Amazon](https://www.amazon.co.jp/dp/B07GBB2KL3?tag=yyy0410mmm-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%82%B7%E3%83%8A%E3%83%BC%E3%83%ABEX%E9%A1%86%E7%B2%92e/)
 
 ちょっと苦みあり。それでも配合量重視ならこちら。
 
 🛒 新エバユースEC 60包【ビタミンC＋E・第3類医薬品・第一三共】  
 ビタミンC 2,000mg＋天然型ビタミンE 300mg配合（3包あたり） / 顆粒タイプで美味しい / 第一三共ヘルスケア製。  
-[Amazon](https://www.amazon.co.jp/dp/B000YZL9X8?tag=onamzyyy0410m-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E6%96%B0%E3%82%A8%E3%83%90%E3%83%A6%E3%83%BC%E3%82%B9EC/)
+[Amazon](https://www.amazon.co.jp/dp/B000YZL9X8?tag=yyy0410mmm-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E6%96%B0%E3%82%A8%E3%83%90%E3%83%A6%E3%83%BC%E3%82%B9EC/)
 
 シナールより美味しくて続けやすいので昼用に🌞 第一三共製品なので品質も安心。
 
 🛒 オルビス ディフェンセラ ピーチ【日本初の"肌のトクホ"】  
 米由来グルコシルセラミドが有効成分 / 特定保健用食品（トクホ、日本初の肌系） / ピーチ味で美味しいから続く。  
-[Amazon](https://www.amazon.co.jp/dp/B07LFP89NP?tag=onamzyyy0410m-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%82%AA%E3%83%AB%E3%83%93%E3%82%B9+%E3%83%87%E3%82%A3%E3%83%95%E3%82%A7%E3%83%B3%E3%82%BB%E3%83%A9+%E3%83%94%E3%83%BC%E3%83%81/)
+[Amazon](https://www.amazon.co.jp/dp/B07LFP89NP?tag=yyy0410mmm-22) ／ [楽天](https://search.rakuten.co.jp/search/mall/%E3%82%AA%E3%83%AB%E3%83%93%E3%82%B9+%E3%83%87%E3%82%A3%E3%83%95%E3%82%A7%E3%83%B3%E3%82%BB%E3%83%A9+%E3%83%94%E3%83%BC%E3%83%81/)
 
 🛒 粉雪コラーゲン【楽天で人気のコラーゲンペプチド】  
 魚由来・豚由来から選べる / コーヒー・ヨーグルト・味噌汁に溶けやすい / 1〜2年継続で肌の水分量UP実感。  

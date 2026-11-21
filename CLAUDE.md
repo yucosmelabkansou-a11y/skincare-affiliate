@@ -323,7 +323,7 @@ git push origin main
 
 ## アフィリエイトリンク（重要）
 
-- **Amazon**：`https://amzn.to/XXXX`（ユーザー生成の短縮アフィリ）または `https://www.amazon.co.jp/dp/<ASIN>?tag=onamzyyy0410m-22`。
+- **Amazon**：`https://amzn.to/XXXX`（ユーザー生成の短縮アフィリ）または `https://www.amazon.co.jp/dp/<ASIN>?tag=yyy0410mmm-22`。
 - **楽天**：`https://hb.afl.rakuten.co.jp/ichiba/.../?pc=...&link_type=hybrid_url&ut=...`（aflハイブリッド）。
   **これはユーザーの楽天アフィリエイトアカウントでしか生成できない。Claudeは作れない。**
 - 直リンクが手元に無いときは **検索リンク**を仮置きし（`amazon.co.jp/s?k=...&tag=...` / `search.rakuten.co.jp/search/mall/...`）、

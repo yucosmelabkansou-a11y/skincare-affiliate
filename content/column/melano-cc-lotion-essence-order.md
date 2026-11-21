@@ -77,7 +77,7 @@ hero: /images/melano-cc-lotion-normal.jpg
 
 | 商品 | こんな人に | 購入 |
 |---|---|---|
-| ![メラノCC 薬用しみ 集中対策 プレミアム美容液](/images/IMG_2787.jpg) メラノCC 薬用しみ 集中対策 プレミアム美容液 | ニキビ跡っぽい色ムラ・毛穴・皮脂が気になる部分を集中ケアしたい人 | [Amazon](https://www.amazon.co.jp/dp/B0BCVS9ZV5?tag=onamzyyy0410m-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/280df31e.cc217036.280df31f.ad07d749/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4987241168583%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
+| ![メラノCC 薬用しみ 集中対策 プレミアム美容液](/images/IMG_2787.jpg) メラノCC 薬用しみ 集中対策 プレミアム美容液 | ニキビ跡っぽい色ムラ・毛穴・皮脂が気になる部分を集中ケアしたい人 | [Amazon](https://www.amazon.co.jp/dp/B0BCVS9ZV5?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/280df31e.cc217036.280df31f.ad07d749/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4987241168583%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
 
 プレミアム美容液は、美白有効成分の活性型ビタミンCに加えて、ビタミンB6、アラントイン、イソプロピルメチルフェノールなども配合されています。
 
