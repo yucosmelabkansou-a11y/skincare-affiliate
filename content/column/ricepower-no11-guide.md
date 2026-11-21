@@ -129,7 +129,7 @@ tags:
 
 **こんな人に**：乾燥とシワ、両方が気になり始めた人／先行美容液に投資したい人
 
-[Amazon（D＋）](https://www.amazon.co.jp/dp/B079HVTBNP?tag=onamzyyy0410m-22) ／ [Amazon（W＋）](https://www.amazon.co.jp/dp/B0BYYP365Z?tag=onamzyyy0410m-22)
+[Amazon（D＋）](https://www.amazon.co.jp/dp/B079HVTBNP?tag=yyy0410mmm-22) ／ [Amazon（W＋）](https://www.amazon.co.jp/dp/B0BYYP365Z?tag=yyy0410mmm-22)
 
 ### 3. アトピスマイルフォルテ バリアチューニングセラム（勇心酒造）
 
