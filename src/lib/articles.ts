@@ -43,6 +43,19 @@ function dateStr(v: unknown): string | undefined {
   return String(v)
 }
 
+// 公開文面に残してはいけない内部用の文言
+const FORBIDDEN_IN_BODY = ['実装時に設定']
+
+function assertNoPlaceholders(file: string, body: string) {
+  for (const word of FORBIDDEN_IN_BODY) {
+    if (body.includes(word)) {
+      throw new Error(
+        `[content check] ${file} に内部用プレースホルダー「${word}」が残っています。リンク・画像を設定するか削除してください。`,
+      )
+    }
+  }
+}
+
 function readDir(type: ArticleType): Article[] {
   const dir = path.join(ROOT, type)
   if (!fs.existsSync(dir)) return []
@@ -53,6 +66,8 @@ function readDir(type: ArticleType): Article[] {
       const full = path.join(dir, file)
       const raw = fs.readFileSync(full, 'utf-8')
       const { data, content } = matter(raw)
+      // 公開前の内部用プレースホルダーが残っていたらビルドを失敗させる（予約公開前の記事も対象）
+      assertNoPlaceholders(file, content)
       const slug = file.replace(/\.md$/, '')
       const fm = data as Record<string, unknown>
       return {
