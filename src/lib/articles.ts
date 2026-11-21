@@ -14,6 +14,7 @@ export type ArticleFrontmatter = {
   description?: string
   publishedAt: string  // YYYY-MM-DD
   updatedAt?: string
+  publishAt?: string   // 予約公開（ISO 8601, 例: 2026-11-22T08:00:00+09:00）。この時刻まで一覧・本文・サイトマップから除外
   tags?: string[]      // 例: ['乾燥','セラミド']
   hero?: string        // 画像パス（任意）
   noteUrl?: string     // 元のnote URL（参考保存）
@@ -62,6 +63,7 @@ function readDir(type: ArticleType): Article[] {
         description: fm.description ? String(fm.description) : undefined,
         publishedAt: dateStr(fm.publishedAt) || '',
         updatedAt: dateStr(fm.updatedAt),
+        publishAt: fm.publishAt ? (fm.publishAt instanceof Date ? fm.publishAt.toISOString() : String(fm.publishAt)) : undefined,
         liveDate: dateStr(fm.liveDate),
         tags: Array.isArray(fm.tags) ? fm.tags.map(String) : undefined,
         hero: fm.hero ? String(fm.hero) : undefined,
@@ -69,6 +71,12 @@ function readDir(type: ArticleType): Article[] {
         midCta: parseCtaTarget(fm.midCta),
         endCta: parseCtaTarget(fm.endCta),
       } as Article
+    })
+    // 予約公開：publishAt が未来の記事は公開しない（ISR の再生成時に判定される）
+    .filter((a) => {
+      if (!a.publishAt) return true
+      const t = Date.parse(a.publishAt)
+      return Number.isNaN(t) || t <= Date.now()
     })
 }
 

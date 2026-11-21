@@ -67,3 +67,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ]
 }
+
+// 予約公開（articles.ts の publishAt）を反映するため10分ごとに再生成
+export const revalidate = 600
