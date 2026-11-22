@@ -215,6 +215,40 @@ body {
   max-width: 100%;
   border: 1px solid var(--line-soft);
 }
+/* 製品見出し：製品名の左にメーカー公式の商品画像を表示 */
+.prose-yun h2:has(> img),
+.prose-yun h3:has(> img) {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.prose-yun h2 img,
+.prose-yun h3 img {
+  flex: none;
+  display: inline-block;
+  width: 84px;
+  height: 84px;
+  margin: 0;
+  padding: 4px;
+  vertical-align: middle;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--line-soft);
+  border-radius: 8px;
+}
+/* リンク内のサムネイル（Instagram・YouTube・商品ページなど）は文字の左に小さく並べる */
+.prose-yun a > img {
+  display: inline-block !important;
+  width: 56px !important;
+  height: 56px !important;
+  margin: 0 0.7em 0 0 !important;
+  padding: 2px;
+  vertical-align: middle;
+  object-fit: cover;
+  background: #fff;
+  border: 1px solid var(--line-soft);
+  border-radius: 6px;
+}
 /* Square product photos crop the supplied original without changing its pixels. */
 .prose-yun .square-product-photo {
   display: block;

@@ -20,10 +20,10 @@ tags:
 どちらも医薬部外品で、シワ改善有効成分は同じ「ナイアシンアミド」。それでも、保湿へのアプローチと使い心地ははっきり違います。この記事では、メーカー公式の開発情報と、実際に両方を使った私の印象をもとに、「結局、自分にはどっちが合うか」を整理します。
 
 ※本記事は、Instagramで投稿した比較（2026-10-12）を、メーカー公式情報をもとに加筆・再構成したものです。元の投稿はこちら：
-https://www.instagram.com/p/DeZS7tUmLWt/
+[![Instagram元投稿のサムネイル](/images/links/ig-wrinkle.jpg) Instagramの元投稿を見る](https://www.instagram.com/p/DeZS7tUmLWt/)
 
 動画でも比較のポイントを話しています：
-ゆん｜日本向けYouTubeチャンネル https://www.youtube.com/@yun.skincare
+ゆん｜日本向けYouTubeチャンネル [![YouTubeチャンネル「ゆん」](/images/links/yt-yun-skincare.jpg) YouTubeチャンネルを見る](https://www.youtube.com/@yun.skincare)
 
 ---
 
@@ -66,7 +66,7 @@ https://www.instagram.com/p/DeZS7tUmLWt/
 
 ---
 
-## 商品1：ソフィーナ iP 薬用 角層トリートメント 深層化粧液
+## ![ソフィーナ iP 薬用 角層トリートメント 深層化粧液](/images/products/sofina-ip-shinsou-lotion.jpg) 商品1：ソフィーナ iP 薬用 角層トリートメント 深層化粧液
 
 ### スペック
 
@@ -82,7 +82,7 @@ https://www.instagram.com/p/DeZS7tUmLWt/
 | 使用量 | 直径2.5cmの円に広がるくらい。朝夜の洗顔後に使用 |
 | 香り | フレッシュハーバルエナジーの香り |
 
-### メーカー公式の仕組み
+### 仕組み
 
 花王の公式情報によると、この化粧液は有効成分ナイアシンアミドが真皮まで浸透してシワを改善し、あわせてメラニンの生成を抑えてシミ・そばかすを防ぐ医薬部外品です。
 
@@ -110,7 +110,7 @@ https://www.instagram.com/p/DeZS7tUmLWt/
 
 ---
 
-## 商品2：ONE BY KOSÉ ザ リンクレス ローション
+## ![ONE BY KOSÉ ザ リンクレス ローション](/images/products/onekose-wrinkless-lotion.jpg) 商品2：ONE BY KOSÉ ザ リンクレス ローション
 
 ### スペック
 
@@ -127,7 +127,7 @@ https://www.instagram.com/p/DeZS7tUmLWt/
 | 香り | 心やすらぐグリーンフローラルの香り |
 | その他 | アレルギーテスト済み、パッチテスト済み、スティンギング（皮膚刺激感）テスト済み、ノンコメドジェニックテスト済み（すべての方にアレルギーや皮膚刺激が起きない、コメド（ニキビのもと）ができないというわけではありません） |
 
-### メーカー公式の仕組み
+### 仕組み
 
 コーセーの公式商品情報では、「浅いシワも年齢ジワも改善する高保湿シワ改善化粧水」と位置づけられています。シワ改善有効成分はナイアシンアミドです。
 
@@ -209,10 +209,10 @@ A. どちらもあります。ソフィーナ iPはレフィル150mL（¥3,190�
 人気や成分名だけでなく、自分の肌悩みと好みの使用感に合わせて選ぶことが、エイジングケアを続ける一番の近道です。
 
 もとの比較投稿（Instagram）：
-https://www.instagram.com/p/DeZS7tUmLWt/
+[![Instagram元投稿のサムネイル](/images/links/ig-wrinkle.jpg) Instagramの元投稿を見る](https://www.instagram.com/p/DeZS7tUmLWt/)
 
 動画での解説（YouTube）：
-https://www.youtube.com/@yun.skincare
+[![YouTubeチャンネル「ゆん」](/images/links/yt-yun-skincare.jpg) YouTubeチャンネルを見る](https://www.youtube.com/@yun.skincare)
 
 自分の肌タイプから選びたい方は、このサイトの肌診断もあわせてどうぞ。
 
@@ -225,7 +225,7 @@ https://www.youtube.com/@yun.skincare
 - 花王 SOFINA iP ブランドサイト https://www.sofina.co.jp/ip/
 - コーセー ONE BY KOSÉ ザ リンクレス ローション 商品情報（販売名・全成分・使用法：メーカー商品情報を掲載するドラッグセイムス公式通販・LOHACO等の掲載内容で確認）
 - VOCE・美的の特集記事（ケラトMF複合成分a／セラミドケア成分eの構成成分の脚注、価格の編集部調べ表記の確認用）
-- 元投稿：Yun Instagram 2026-10-12 https://www.instagram.com/p/DeZS7tUmLWt/
+- 元投稿：Yun Instagram 2026-10-12 [![Instagram元投稿のサムネイル](/images/links/ig-wrinkle.jpg) Instagramの元投稿を見る](https://www.instagram.com/p/DeZS7tUmLWt/)
 
 ---
 

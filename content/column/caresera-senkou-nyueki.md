@@ -18,8 +18,8 @@ tags:
 
 もとのInstagram投稿はこちらです。動画でも使い方を話しています。
 
-- Instagram投稿：https://www.instagram.com/p/DfXBv9fmEGd/
-- YouTube（ゆん｜元化粧品研究×生涯ノーファンデ肌）：https://www.youtube.com/@yun.skincare
+- Instagram投稿：[![Instagram元投稿のサムネイル](/images/links/ig-caresera.jpg) Instagramの元投稿を見る](https://www.instagram.com/p/DfXBv9fmEGd/)
+- YouTube（ゆん｜元化粧品研究×生涯ノーファンデ肌）：[![YouTubeチャンネル「ゆん」](/images/links/yt-yun-skincare.jpg) YouTubeチャンネルを見る](https://www.youtube.com/@yun.skincare)
 
 ※本記事の「メーカー情報」は各社公式発表・公式商品情報に基づき、「ゆんの感想」は実際に使っているゆん個人の使用感です。分けて記載しています。
 
@@ -29,7 +29,7 @@ tags:
 |---|---|---|---|---|
 | 乾燥＋美白ケア | ケアセラ AP 高保湿先行バリア乳液 | ちふれ 美白化粧水 TA | アクアレーベル トリートメントミルク（ブライトニング） | 約¥4,620 |
 | 乾燥＋シワ・ハリケア | ケアセラ AP 高保湿先行バリア乳液 | エリクシール リフトモイスト ローション ba | なめらか本舗 薬用リンクル乳液 ホワイト | 約¥6,490 |
-| 乾燥＋肌荒れ予防 | ケアセラ AP 高保湿先行バリア乳液 | イハダ 薬用ローション | カルテHD モイスチュア エマルジョン |  |
+| 乾燥＋肌荒れ予防 | ケアセラ AP 高保湿先行バリア乳液 | イハダ 薬用ローション | カルテHD モイスチュア エマルジョン | 約¥5,610 |
 
 ※ケアセラはオープン価格のため、合計は目安です。
 
@@ -39,7 +39,7 @@ tags:
 
 先行乳液は、洗顔後いちばん最初に使う乳液です。通常の乳液が「化粧水のあとに油分でフタをする」役割なのに対し、先行乳液は「洗顔直後の肌をうるおいでほぐし、その後の化粧水や美容液のなじみを助ける」ために設計されています。洗顔後、肌の水分は時間とともに蒸発していくため、最初の1品をすぐ塗れるかどうかが乾燥感を左右します。
 
-### ケアセラの使い方（メーカー公式情報）
+### ケアセラの使い方
 
 ロート製薬の公式案内では、洗顔後すぐに、手のひらに適量（2プッシュ）をとり、顔全体にやさしくなじませます。その後はいつもの化粧水・美容液・乳液の順で重ねます。
 
@@ -47,7 +47,7 @@ tags:
 
 ゆんが特によく使うのは、お風呂上がりの「とりあえず保湿」です。お風呂から上がったらまずケアセラを塗り、その間にドライヤーで髪を乾かし、終わってから化粧水以降をゆっくり重ねる方法です。先に塗っておくと時間が経っても乾燥が気になりにくく、肌のごわつきがやわらいで次のスキンケアがなじみやすい感覚があるとのこと。忙しい日は、ミスト化粧水で軽くうるおいを補給してからケアセラを重ねる時短パターンもよく使うそうです。
 
-## 主役｜ケアセラ AP 高保湿先行バリア乳液（ロート製薬）
+## ![ケアセラ AP 高保湿先行バリア乳液](/images/products/carecera-ap-senkou-milk.jpg) 主役｜ケアセラ AP 高保湿先行バリア乳液（ロート製薬）
 
 | 項目 | 内容 |
 |---|---|
@@ -55,13 +55,13 @@ tags:
 | メーカー | ロート製薬 |
 | 分類 | 化粧品 |
 | 容量 | 130mL（つめかえ用 130mL あり） |
-| 価格 | オープン価格（参考：約¥1,870） |
+| 価格 | オープン価格（ロート製薬公式通販の販売価格 ¥1,870・税込） |
 | 特徴成分（すべて保湿成分） | 8種の天然型セラミド、ペプチドCP、グリチルリチン酸2K、ワセリン |
 | その他 | 低刺激性、弱酸性、無香料、パラベンフリー、アルコール（エタノール）フリー、敏感肌の方の協力によるパッチテスト済み、アレルギーテスト済み（すべての方にアレルギー・刺激が起こらないわけではありません） |
 
-[Amazon](https://www.amazon.co.jp/dp/B0D9YDRN1Q/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00px3sa.fhleme7b.g00px3sa.fhlen7d0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fenergy%2Fal-4987241195206-ha%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fenergy%2Fi%2F10092002%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
+[![ケアセラ AP 高保湿先行バリア乳液](/images/products/carecera-ap-senkou-milk.jpg)](https://www.amazon.co.jp/dp/B0D9YDRN1Q/ref=nosim?tag=yyy0410mmm-22) [Amazon](https://www.amazon.co.jp/dp/B0D9YDRN1Q/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00px3sa.fhleme7b.g00px3sa.fhlen7d0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fenergy%2Fal-4987241195206-ha%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fenergy%2Fi%2F10092002%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
 
-### 仕組み（メーカー公式情報）
+### 仕組み
 
 - **8種の天然型セラミド（保湿成分）**：発酵セラミドプラスを含む8種を配合。内訳は、ジヒドロキシリグノセロイルフィトスフィンゴシン、セラミド6II、セラミド1、セラミド2、セラミド3、セラミドEOS、カプロオイルスフィンゴシン、カプロオイルフィトスフィンゴシンの8つで、角層のうるおいを補います。発酵セラミドプラスは、このうちジヒドロキシリグノセロイルフィトスフィンゴシンとセラミド6IIを指すロート製薬の呼称です。
 - **ワセリンの高圧乳化技術**：保湿成分のワセリンを高圧乳化で毛穴の約30分の1のサイズまで微細化することで、ベタつきを抑えながらうるおいのベールで肌を守る設計です。高圧乳化により界面活性剤の量を少なくできた点も、開発担当者が公式記事で明かしています。
@@ -76,7 +76,7 @@ tags:
 
 美白ケアは「メラニンの生成を抑え、シミ・ソバカスを防ぐ」予防のケアです。乾燥対策の先行乳液に、美白有効成分入りの化粧水と乳液を重ねます。
 
-### ちふれ 美白化粧水 TA（ちふれ化粧品）
+### ![ちふれ 美白化粧水 TA](/images/products/chifure-ta-lotion.jpg) ちふれ 美白化粧水 TA（ちふれ化粧品）
 
 | 項目 | 内容 |
 |---|---|
@@ -87,11 +87,11 @@ tags:
 | 保湿成分 | ヒアルロン酸ナトリウム（2）、トレハロース、濃グリセリン、BG |
 | その他 | 無香料、無着色、アルコールフリー |
 
-[Amazon](https://www.amazon.co.jp/dp/B0C844QHTB/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00ufaua.fhlem24c.g00ufaua.fhlenb71/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24-cosmetics%2F4974972298412%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24-cosmetics%2Fi%2F10032791%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
+[![ちふれ 美白化粧水 TA](/images/products/chifure-ta-lotion.jpg)](https://www.amazon.co.jp/dp/B0C844QHTB/ref=nosim?tag=yyy0410mmm-22) [Amazon](https://www.amazon.co.jp/dp/B0C844QHTB/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00ufaua.fhlem24c.g00ufaua.fhlenb71/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24-cosmetics%2F4974972298412%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24-cosmetics%2Fi%2F10032791%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
 
-**仕組み（メーカー公式情報）**：有効成分トラネキサム酸は、美白（メラニンの生成を抑え、シミ・ソバカスを防ぐ）と肌あれ予防の両方を担う成分として配合されています。4種の保湿成分でうるおいを補いながら、シミ・ソバカス、肌あれ、乾燥をまとめて予防ケアする設計です。
+**仕組み**：有効成分トラネキサム酸は、美白（メラニンの生成を抑え、シミ・ソバカスを防ぐ）と肌あれ予防の両方を担う成分として配合されています。4種の保湿成分でうるおいを補いながら、シミ・ソバカス、肌あれ、乾燥をまとめて予防ケアする設計です。
 
-### アクアレーベル トリートメントミルク（ブライトニング）（資生堂）
+### ![アクアレーベル トリートメントミルク（ブライトニング）](/images/products/aqualabel-treatment-milk-brightening.jpg) アクアレーベル トリートメントミルク（ブライトニング）（資生堂）
 
 | 項目 | 内容 |
 |---|---|
@@ -101,13 +101,13 @@ tags:
 | 有効成分 | 4MSK（4-メトキシサリチル酸カリウム塩） |
 | テクスチャー | しっとり／とてもしっとりの2種 |
 
-[Amazon](https://www.amazon.co.jp/dp/B0CSSVT9QR/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00ufaua.fhlem24c.g00ufaua.fhlenb71/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24-cosmetics%2F4909978180317%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24-cosmetics%2Fi%2F10036014%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
+[![アクアレーベル トリートメントミルク（ブライトニング）](/images/products/aqualabel-treatment-milk-brightening.jpg)](https://www.amazon.co.jp/dp/B0CSSVT9QR/ref=nosim?tag=yyy0410mmm-22) [Amazon](https://www.amazon.co.jp/dp/B0CSSVT9QR/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00ufaua.fhlem24c.g00ufaua.fhlenb71/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24-cosmetics%2F4909978180317%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24-cosmetics%2Fi%2F10036014%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
 
 **仕組み（メーカー情報）**：美白有効成分4MSK（4-メトキシサリチル酸カリウム塩）がメラニンの生成を抑え、シミ・ソバカスを防ぎます。化粧水のあとに使い、うるおいを密封する乳液ステップです。
 
 ## パターン2｜乾燥＋シワ・ハリケア
 
-### エリクシール リフトモイスト ローション ba（資生堂）
+### ![エリクシール リフトモイスト ローション ba](/images/products/elixir-liftmoist-lotion-ba.jpg) エリクシール リフトモイスト ローション ba（資生堂）
 
 | 項目 | 内容 |
 |---|---|
@@ -120,7 +120,7 @@ tags:
 
 **仕組み（メーカー情報）**：エイジングケア（年齢に応じたうるおいケア）ラインの薬用化粧水。有効成分トラネキサム酸と、ハリ保湿のコラジェネシスを配合し、うるおいで満たしてハリのある肌へ導く設計です。
 
-### なめらか本舗 薬用リンクル乳液 ホワイト（常盤薬品工業）
+### ![なめらか本舗 薬用リンクル乳液 ホワイト](/images/products/nameraka-wrinkle-emulsion-white.jpg) なめらか本舗 薬用リンクル乳液 ホワイト（常盤薬品工業）
 
 | 項目 | 内容 |
 |---|---|
@@ -135,7 +135,7 @@ tags:
 
 ## パターン3｜乾燥＋肌荒れ予防
 
-### イハダ 薬用ローション（資生堂）
+### ![イハダ 薬用ローション](/images/products/ihada-yakuyo-uruoi-lotion.jpg) イハダ 薬用ローション（資生堂）
 
 | 項目 | 内容 |
 |---|---|
@@ -149,12 +149,13 @@ tags:
 
 **仕組み（メーカー情報）**：不純物の少ない高精製ワセリンが肌表面にうるおい保護膜をつくり、肌のうるおいバリア機能を守ります。有効成分アラントインとグリチルリチン酸ジカリウムの2つで、繰り返す肌荒れと乾燥を防ぐ敏感肌設計の薬用化粧水です。洗顔後、500円硬貨大を顔全体になじませます。
 
-### カルテHD モイスチュア エマルジョン（コーセー マルホ ファーマ）
+### ![カルテHD モイスチュア エマルジョン](/images/products/carte-hd-moisture-emulsion.jpg) カルテHD モイスチュア エマルジョン（コーセー マルホ ファーマ）
 
 | 項目 | 内容 |
 |---|---|
 | 分類 | 医薬部外品 |
 | 容量 | 120mL |
+| 価格 | ¥2,090（税込） |
 | 有効成分 | ヘパリン類似物質、グリチルリチン酸ジカリウム |
 | その他 | 無香料、無着色、アルコールフリー、低刺激設計 |
 
@@ -175,13 +176,13 @@ tags:
 
 | 商品 | 役割 | 有効成分・特徴成分 | 価格（税込） |
 |---|---|---|---|
-| ケアセラ AP 高保湿先行バリア乳液 | 先行乳液（洗顔後すぐ） | 8種の天然型セラミド、ワセリン（高圧乳化）※化粧品 | オープン価格（約¥1,870） |
+| ケアセラ AP 高保湿先行バリア乳液 | 先行乳液（洗顔後すぐ） | 8種の天然型セラミド、ワセリン（高圧乳化）※化粧品 | オープン価格（ロート公式通販 ¥1,870） |
 | ちふれ 美白化粧水 TA | 化粧水（美白） | トラネキサム酸 | ¥1,100 |
 | アクアレーベル トリートメントミルク（ブライトニング） | 乳液（美白） | 4MSK（4-メトキシサリチル酸カリウム塩） | ¥1,650 |
 | エリクシール リフトモイスト ローション ba | 化粧水（ハリ） | トラネキサム酸、コラジェネシス | ¥3,410 |
 | なめらか本舗 薬用リンクル乳液 ホワイト | 乳液（シワ改善） | ナイアシンアミド | ¥1,210 |
 | イハダ 薬用ローション | 化粧水（肌荒れ予防） | アラントイン、グリチルリチン酸ジカリウム、高精製ワセリン | ¥1,650 |
-| カルテHD モイスチュア エマルジョン | 乳液（保水・肌荒れ予防） | ヘパリン類似物質、グリチルリチン酸ジカリウム |  |
+| カルテHD モイスチュア エマルジョン | 乳液（保水・肌荒れ予防） | ヘパリン類似物質、グリチルリチン酸ジカリウム | ¥2,090 |
 
 ## Q&A
 
@@ -206,8 +207,8 @@ A. 必須ではありません。先行乳液だけを今のケアの最初に�
 
 元になった投稿と動画もあわせてどうぞ。
 
-- Instagram投稿：https://www.instagram.com/p/DfXBv9fmEGd/
-- YouTube（ゆん｜元化粧品研究×生涯ノーファンデ肌）：https://www.youtube.com/@yun.skincare
+- Instagram投稿：[![Instagram元投稿のサムネイル](/images/links/ig-caresera.jpg) Instagramの元投稿を見る](https://www.instagram.com/p/DfXBv9fmEGd/)
+- YouTube（ゆん｜元化粧品研究×生涯ノーファンデ肌）：[![YouTubeチャンネル「ゆん」](/images/links/yt-yun-skincare.jpg) YouTubeチャンネルを見る](https://www.youtube.com/@yun.skincare)
 
 自分の肌タイプから選びたい方は、当サイトの肌診断も試してみてください。
 
@@ -222,7 +223,7 @@ A. 必須ではありません。先行乳液だけを今のケアの最初に�
 - 常盤薬品工業 なめらか本舗 薬用リンクル乳液 ホワイト 製品情報（メーカー公表成分・価格を販売店掲載情報で確認）
 - 資生堂 イハダ 薬用ローション 製品情報（メーカー公表成分・価格を販売店掲載情報で確認）
 - コーセー マルホ ファーマ カルテHD モイスチュア エマルジョン 製品情報（メーカー公表成分を販売店掲載情報で確認）
-- 元投稿：Instagram @yun.skincare_（2026-11-05） https://www.instagram.com/p/DfXBv9fmEGd/
+- 元投稿：Instagram @yun.skincare_（2026-11-05） [![Instagram元投稿のサムネイル](/images/links/ig-caresera.jpg) Instagramの元投稿を見る](https://www.instagram.com/p/DfXBv9fmEGd/)
 
 ※価格は確認時点の税込価格・参考価格です。ケアセラはオープン価格のため店舗により異なります。
 

@@ -28,25 +28,25 @@ tags:
 同じ「セラミドケア」でも、成分の種類や処方、使う工程は商品によって大きく異なります。まずは全体像を表で確認してください。
 
 > この記事の元になった投稿はこちら
-> Instagram：https://www.instagram.com/p/DfkAYkGmBZF/
-> 動画で詳しく見たい方は日本語YouTubeチャンネルへ：https://www.youtube.com/@yun.skincare
+> Instagram：[![Instagram元投稿のサムネイル](/images/links/ig-ceramide.jpg) Instagramの元投稿を見る](https://www.instagram.com/p/DfkAYkGmBZF/)
+> 動画で詳しく見たい方は日本語YouTubeチャンネルへ：[![YouTubeチャンネル「ゆん」](/images/links/yt-yun-skincare.jpg) YouTubeチャンネルを見る](https://www.youtube.com/@yun.skincare)
 
 ## まとめ比較表
 
 | 商品名 | 工程 | アプローチ | 容量 | 価格（税込） | セラミド関連成分（正式名称） | 区分 |
 |---|---|---|---|---|---|---|
-| ミノン アミノモイスト ジェントルウォッシュ ホイップ | 洗顔 | まもる | 150mL | 1,650円 | ラウロイルグルタミン酸ジ（フィトステリル／オクチルドデシル） | 化粧品 |
+| ミノン アミノモイスト ジェントルウォッシュ ホイップ | 洗顔 | まもる | 150mL | ノープリントプライス（小売参考 1,650円） | ラウロイルグルタミン酸ジ（フィトステリル／オクチルドデシル） | 化粧品 |
 | キュレル 潤浸保湿 泡ジェル洗顔料 | 洗顔 | まもる | 200mL | 2,090円 | （セラミドを守って洗う設計。有効成分：グリチルリチン酸ジカリウム） | 医薬部外品 |
 | トゥヴェール ナノエマルジョン ディープ | 乳液 | 与える | 60mL | 3,610円 | セラミド類似成分12％、ヒト型セラミド5種（セラミドEOP・セラミドNG・セラミドNP・セラミドAG・セラミドAP） | 化粧品 |
-| トゥヴェール セラミドミルク | 乳液 | 与える | 40g | 3,780円 | ヒト型セラミド4.5％ | 化粧品 |
-| トゥヴェール バリアショットクリーム | クリーム | 与える | 80g |  | （角層バリアを助ける設計） | 化粧品 |
+| トゥヴェール セラミドミルク | 乳液 | 与える | 40g | 3,980円 | ヒト型セラミド4.5％ | 化粧品 |
+| トゥヴェール バリアショットクリーム | クリーム | 与える | 80g | 3,190円 | （角層バリアを助ける設計） | 化粧品 |
 | キュレル 潤浸保湿 フェイスクリーム | クリーム | 与える | 40g | 2,970円 | セラミド機能成分（ヘキサデシロキシPGヒドロキシエチルヘキサデカナミド） | 医薬部外品 |
 | AESTURA アトバリア365 クリーム | クリーム | 与える | 80mL | 3,300円 | 高密度セラミドカプセル（セラミドNP、スフィンゴ脂質、ヒドロキシプロピルビスパルミタミドMEA、コレステロール、ステアリン酸、アラキン酸、オレイン酸、パルミチン酸） | 化粧品 |
-| ミノン アミノモイスト モイストチャージ クリーム | クリーム | 与える | 40g | 2,530円 | ラウロイルグルタミン酸ジ（フィトステリル／オクチルドデシル）、マカデミアナッツ脂肪酸フィトステリル | 化粧品 |
+| ミノン アミノモイスト モイストチャージ クリーム | クリーム | 与える | 40g | ノープリントプライス（小売参考 2,530円） | ラウロイルグルタミン酸ジ（フィトステリル／オクチルドデシル）、マカデミアナッツ脂肪酸フィトステリル | 化粧品 |
 | SOFINA BASIC+ うるおいターボ化粧水 | 化粧水 | 与える | 160mL | 1,430円 | セラミドケア成分e（セチルPGヒドロキシエチルパルミタミド、ユーカリ葉エキス） | 化粧品 |
-| ソフィーナ iP ゴールデンタイムリペア 深夜浸透クリーム | クリーム（夜） | 与える | 55g | 2,970円 | セチルPGヒドロキシエチルパルミタミド | 化粧品 |
+| ソフィーナ iP ゴールデンタイムリペア 深夜浸透クリーム | クリーム（夜） | 与える | 55g | 3,190円 | セチルPGヒドロキシエチルパルミタミド | 化粧品 |
 | ONE BY KOSÉ セラム シールド | 美容液 | 育てる | 40g | 5,940円 | 有効成分：ライスパワーNo.11+（プラス） | 医薬部外品 |
-| ineuly グロウセラム | 美容液 | 育てる |  |  | 有効成分：ライスパワーNo.11 | 医薬部外品 |
+| ineuly グロウセラム | 美容液 | 育てる | 50g | 6,820円 | 有効成分：ライスパワーNo.11 | 医薬部外品 |
 
 ※価格は2026年11月20日確認時点。オープン価格の商品は販売店により異なります。
 
@@ -65,12 +65,12 @@ tags:
 
 ## 商品別解説
 
-### 1. ミノン アミノモイスト ジェントルウォッシュ ホイップ（第一三共ヘルスケア）
+### ![ミノン アミノモイスト ジェントルウォッシュ ホイップ](/images/products/minon-aminomoist-wash-whip.jpg) 1. ミノン アミノモイスト ジェントルウォッシュ ホイップ（第一三共ヘルスケア）
 
 | 項目 | 内容 |
 |---|---|
 | 容量 | 150mL |
-| 価格 | 1,650円（税込・オープン価格） |
+| 価格 | ノープリントプライス（小売参考 1,650円・税込） |
 | 区分 | 化粧品 |
 | セラミド関連成分 | ラウロイルグルタミン酸ジ（フィトステリル／オクチルドデシル） |
 | その他の特徴成分 | 植物性アミノ酸系洗浄成分（ココイルアラニンNa）、9種の保潤アミノ酸 |
@@ -85,7 +85,7 @@ tags:
 - 洗顔後のつっぱり感が気になる乾燥肌・敏感肌の人
 - 朝洗顔を手早く済ませたい人
 
-### 2. キュレル 潤浸保湿 泡ジェル洗顔料（花王）
+### ![キュレル 潤浸保湿 泡ジェル洗顔料](/images/products/curel-foam-gel-wash.jpg) 2. キュレル 潤浸保湿 泡ジェル洗顔料（花王）
 
 | 項目 | 内容 |
 |---|---|
@@ -105,7 +105,7 @@ tags:
 - 乾燥に加えて、くすみ汚れ・古い角質も気になる人
 - 摩擦を避けて洗いたい人
 
-### 3. トゥヴェール ナノエマルジョン ディープ（トゥヴェール）
+### ![トゥヴェール ナノエマルジョン ディープ](/images/products/tvert-nano-emulsion-deep.jpg) 3. トゥヴェール ナノエマルジョン ディープ（トゥヴェール）
 
 | 項目 | 内容 |
 |---|---|
@@ -124,14 +124,14 @@ tags:
 - 乳液でしっかり保湿したい強い乾燥肌の人
 - ヒト型セラミドを複数種配合した乳液を探している人
 
-[楽天](https://hb.afl.rakuten.co.jp/hgc/g00uhwla.fhlem8a1.g00uhwla.fhlen28b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbungen-shop%2Ftout-sk-4582389241930%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbungen-shop%2Fi%2F10003389%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
+[![トゥヴェール ナノエマルジョン ディープ](/images/products/tvert-nano-emulsion-deep.jpg)](https://hb.afl.rakuten.co.jp/hgc/g00uhwla.fhlem8a1.g00uhwla.fhlen28b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbungen-shop%2Ftout-sk-4582389241930%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbungen-shop%2Fi%2F10003389%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1) [楽天](https://hb.afl.rakuten.co.jp/hgc/g00uhwla.fhlem8a1.g00uhwla.fhlen28b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbungen-shop%2Ftout-sk-4582389241930%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbungen-shop%2Fi%2F10003389%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
 
-### 4. トゥヴェール セラミドミルク（トゥヴェール）
+### ![トゥヴェール セラミドミルク](/images/products/tvert-ceramide-milk.jpg) 4. トゥヴェール セラミドミルク（トゥヴェール）
 
 | 項目 | 内容 |
 |---|---|
 | 容量 | 40g |
-| 価格 | 3,780円（税込・公式ストア掲載価格） |
+| 価格 | 3,980円（税込・トゥヴェール公式ストア掲載価格） |
 | 区分 | 化粧品 |
 | セラミド関連成分 | ヒト型セラミド4.5％ |
 
@@ -145,11 +145,12 @@ tags:
 - ヒト型セラミドの配合率を重視したい人
 - 乾燥に加えて肌のゆらぎも気になる人
 
-### 5. トゥヴェール バリアショットクリーム（トゥヴェール）
+### ![トゥヴェール バリアショットクリーム](/images/products/tvert-barrier-shot-cream.jpg) 5. トゥヴェール バリアショットクリーム（トゥヴェール）
 
 | 項目 | 内容 |
 |---|---|
 | 容量 | 80g |
+| 価格 | 3,190円（税込・トゥヴェール公式ストア掲載価格） |
 | 区分 | 化粧品 |
 | 設計 | 角層バリアを助けるクリーム |
 
@@ -162,7 +163,7 @@ tags:
 **向いている人**
 - 乳液だけでは物足りず、クリームで仕上げたい人
 
-### 6. キュレル 潤浸保湿 フェイスクリーム（花王）
+### ![キュレル 潤浸保湿 フェイスクリーム](/images/products/curel-face-cream.jpg) 6. キュレル 潤浸保湿 フェイスクリーム（花王）
 
 | 項目 | 内容 |
 |---|---|
@@ -182,9 +183,9 @@ tags:
 - 肌荒れ・カサつきをくり返しがちな乾燥性敏感肌の人
 - こっくりしすぎないクリームが好きな人
 
-[Amazon](https://www.amazon.co.jp/dp/B001JF0MRG/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00qob6a.fhlemd8c.g00qob6a.fhlen214/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fladydrug%2F4901301236210%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fladydrug%2Fi%2F10004740%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
+[![キュレル 潤浸保湿 フェイスクリーム](/images/products/curel-face-cream.jpg)](https://www.amazon.co.jp/dp/B001JF0MRG/ref=nosim?tag=yyy0410mmm-22) [Amazon](https://www.amazon.co.jp/dp/B001JF0MRG/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00qob6a.fhlemd8c.g00qob6a.fhlen214/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fladydrug%2F4901301236210%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fladydrug%2Fi%2F10004740%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
 
-### 7. AESTURA アトバリア365 クリーム（アモーレパシフィックジャパン）
+### ![AESTURA アトバリア365 クリーム](/images/products/aestura-atobarrier365-cream.jpg) 7. AESTURA アトバリア365 クリーム（アモーレパシフィックジャパン）
 
 | 項目 | 内容 |
 |---|---|
@@ -203,14 +204,14 @@ tags:
 - 家族で使える大容量の保湿クリームを探している人
 - カプセル入りの濃密な使用感が好きな人
 
-[Amazon](https://www.amazon.co.jp/dp/B09YDCCJBJ/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00tkm5a.fhlem122.g00tkm5a.fhlenc82/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fflytoyou%2F1121057809%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fflytoyou%2Fi%2F10001453%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
+[![AESTURA アトバリア365 クリーム](/images/products/aestura-atobarrier365-cream.jpg)](https://www.amazon.co.jp/dp/B09YDCCJBJ/ref=nosim?tag=yyy0410mmm-22) [Amazon](https://www.amazon.co.jp/dp/B09YDCCJBJ/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00tkm5a.fhlem122.g00tkm5a.fhlenc82/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fflytoyou%2F1121057809%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fflytoyou%2Fi%2F10001453%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
 
-### 8. ミノン アミノモイスト モイストチャージ クリーム（第一三共ヘルスケア）
+### ![ミノン アミノモイスト モイストチャージ クリーム](/images/products/minon-moistcharge-cream.jpg) 8. ミノン アミノモイスト モイストチャージ クリーム（第一三共ヘルスケア）
 
 | 項目 | 内容 |
 |---|---|
 | 容量 | 40g |
-| 価格 | 2,530円（税込・オープン価格） |
+| 価格 | ノープリントプライス（小売参考 2,530円・税込） |
 | 区分 | 化粧品 |
 | セラミド関連成分 | ラウロイルグルタミン酸ジ（フィトステリル／オクチルドデシル）、マカデミアナッツ脂肪酸フィトステリル |
 | その他の特徴成分 | 9種の保潤アミノ酸、ワセリン、シア脂、スクワラン |
@@ -225,9 +226,9 @@ tags:
 - 乾燥によるごわつき・ハリ不足も気になる人
 - 夜の仕上げに濃密なクリームを使いたい人
 
-[Amazon](https://www.amazon.co.jp/dp/B0CCRCPWCP/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00q8dea.fhlem1bc.g00q8dea.fhlenc10/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fseikatsuzakka-plus1%2F4987107670533%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fseikatsuzakka-plus1%2Fi%2F10163685%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
+[![ミノン アミノモイスト モイストチャージ クリーム](/images/products/minon-moistcharge-cream.jpg)](https://www.amazon.co.jp/dp/B0CCRCPWCP/ref=nosim?tag=yyy0410mmm-22) [Amazon](https://www.amazon.co.jp/dp/B0CCRCPWCP/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00q8dea.fhlem1bc.g00q8dea.fhlenc10/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fseikatsuzakka-plus1%2F4987107670533%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fseikatsuzakka-plus1%2Fi%2F10163685%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
 
-### 9. SOFINA BASIC+ うるおいターボ化粧水（花王）
+### ![SOFINA BASIC+ うるおいターボ化粧水](/images/products/sofina-basic-turbo-lotion.jpg) 9. SOFINA BASIC+ うるおいターボ化粧水（花王）
 
 | 項目 | 内容 |
 |---|---|
@@ -247,12 +248,12 @@ tags:
 - 化粧水の段階からセラミドケアを取り入れたい人
 - プチプラで続けやすい価格帯を探している人
 
-### 10. ソフィーナ iP ゴールデンタイムリペア 深夜浸透クリーム（花王）
+### ![ソフィーナ iP ゴールデンタイムリペア 深夜浸透クリーム](/images/products/sofina-ip-goldentime-cream.jpg) 10. ソフィーナ iP ゴールデンタイムリペア 深夜浸透クリーム（花王）
 
 | 項目 | 内容 |
 |---|---|
 | 容量 | 55g |
-| 価格 | 2,970円（税込） |
+| 価格 | 3,190円（税込・花王公式通販掲載価格） |
 | 区分 | 化粧品 |
 | セラミド関連成分 | セチルPGヒドロキシエチルパルミタミド |
 | その他の特徴成分 | ラウロイルグルタミン酸ジ（コレステリル／オクチルドデシル）、ユーカリ葉エキス |
@@ -267,9 +268,9 @@ tags:
 - 夜の集中保湿を1品で済ませたい人
 - 朝起きたときの乾燥が気になる人
 
-[楽天](https://hb.afl.rakuten.co.jp/hgc/g00qawwa.fhlem690.g00qawwa.fhlen929/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcosmecomonline%2F1000195083%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fcosmecomonline%2Fi%2F10163835%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
+[![ソフィーナ iP ゴールデンタイムリペア 深夜浸透クリーム](/images/products/sofina-ip-goldentime-cream.jpg)](https://hb.afl.rakuten.co.jp/hgc/g00qawwa.fhlem690.g00qawwa.fhlen929/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcosmecomonline%2F1000195083%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fcosmecomonline%2Fi%2F10163835%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1) [楽天](https://hb.afl.rakuten.co.jp/hgc/g00qawwa.fhlem690.g00qawwa.fhlen929/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcosmecomonline%2F1000195083%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fcosmecomonline%2Fi%2F10163835%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
 
-### 11. ONE BY KOSÉ セラム シールド（コーセー）
+### ![ONE BY KOSÉ セラム シールド](/images/products/onekose-serum-shield.jpg) 11. ONE BY KOSÉ セラム シールド（コーセー）
 
 | 項目 | 内容 |
 |---|---|
@@ -288,12 +289,14 @@ tags:
 - 乾燥とシワの両方が気になり始めた人
 - バーム状の密封感のある美容液が好きな人
 
-[楽天](https://hb.afl.rakuten.co.jp/hgc/g00ujwta.fhlemaf2.g00ujwta.fhlen6b9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcosmeavenue%2F4971710565065-free%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fcosmeavenue%2Fi%2F10000922%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
+[![ONE BY KOSÉ セラム シールド](/images/products/onekose-serum-shield.jpg)](https://hb.afl.rakuten.co.jp/hgc/g00ujwta.fhlemaf2.g00ujwta.fhlen6b9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcosmeavenue%2F4971710565065-free%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fcosmeavenue%2Fi%2F10000922%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1) [楽天](https://hb.afl.rakuten.co.jp/hgc/g00ujwta.fhlemaf2.g00ujwta.fhlen6b9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcosmeavenue%2F4971710565065-free%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fcosmeavenue%2Fi%2F10000922%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
 
-### 12. ineuly グロウセラム（勇心酒造）
+### ![ineuly グロウセラム](/images/products/ineuly-grow-serum.jpg) 12. ineuly グロウセラム（勇心酒造）
 
 | 項目 | 内容 |
 |---|---|
+| 容量 | 50g |
+| 価格 | 6,820円（税込・ineuly公式サイト掲載価格） |
 | 区分 | 医薬部外品 |
 | 有効成分 | ライスパワーNo.11 |
 | その他の特徴成分 | ライスパワーNo.23 |
@@ -368,8 +371,8 @@ A. 今回の製品はいずれも乾燥肌・敏感肌を想定したブラン�
 
 この3つの視点で自分のルーティンを見直すと、どこが足りていないかが見えてきます。乾燥肌のゆんが実際に使い続けている名品の中から、今の肌に合う1品を選んでみてください。
 
-> 元投稿（Instagram）：https://www.instagram.com/p/DfkAYkGmBZF/
-> 比較動画は日本語YouTubeチャンネルでも公開しています：https://www.youtube.com/@yun.skincare
+> 元投稿（Instagram）：[![Instagram元投稿のサムネイル](/images/links/ig-ceramide.jpg) Instagramの元投稿を見る](https://www.instagram.com/p/DfkAYkGmBZF/)
+> 比較動画は日本語YouTubeチャンネルでも公開しています：[![YouTubeチャンネル「ゆん」](/images/links/yt-yun-skincare.jpg) YouTubeチャンネルを見る](https://www.youtube.com/@yun.skincare)
 
 ## 出典（確認日：2026年11月20日）
 

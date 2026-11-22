@@ -20,23 +20,23 @@ tags:
 
 > 📷 この記事の元になったInstagram投稿はこちら
 >
-> https://www.instagram.com/p/DdtX6rsGE2Z/
+> [![Instagram元投稿のサムネイル](/images/links/ig-lotion8.jpg) Instagramの元投稿を見る](https://www.instagram.com/p/DdtX6rsGE2Z/)
 
 > 🎥 動画で比較を見たい方は、日本語YouTubeチャンネルでもスキンケアの選び方を解説しています
-> https://www.youtube.com/@yun.skincare
+> [![YouTubeチャンネル「ゆん」](/images/links/yt-yun-skincare.jpg) YouTubeチャンネルを見る](https://www.youtube.com/@yun.skincare)
 
 ## あなたの悩みに合うのはどれ？
 
 | 画像 | 商品 | こんな人に | 容量・価格（税込） | 購入リンク |
 | --- | --- | --- | --- | --- |
-| ![ちふれ 美白化粧水 TA](/images/IMG_1056.jpg) | ① ちふれ 美白化粧水 TA | シミ予防と肌あれ予防を、まずは手頃な1本で | 180mL・1,100円 | [Amazon](https://www.amazon.co.jp/dp/B0C844QHTB/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00ufaua.fhlem24c.g00ufaua.fhlenb71/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24-cosmetics%2F4974972298412%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24-cosmetics%2Fi%2F10032791%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1) |
-|   | ② ソフィーナ BASIC+ うるおいターボ化粧水 | 化粧水だけでは乾燥が気になる | 160mL・参考1,430円※ |   |
-|   | ③ イハダ 薬用うるおいローション（しっとり） | 肌荒れ・乾燥を繰り返しやすい | 180mL・1,650円 |   |
-|   | ④ 肌ラボ 極潤 薬用ハリ化粧水 | シワ改善とシミ予防を化粧水から始めたい | 170mL・オープン価格 |   |
-| ![アクアレーベル トリートメントローション（モイストスムース）](/images/IMG_1059.jpg) | ⑤ アクアレーベル トリートメントローション（モイストスムース） | 大人の毛穴の目立ち・キメの乱れが気になる | 170mL・オープン価格 | [楽天](https://hb.afl.rakuten.co.jp/ichiba/32b6c430.ea0d1e6a.32b6c431.75416e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkusurinofukutaro%2F10181419%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
-| ![アクアレーベル トリートメントローション（ブライトニング）](/images/IMG_1057.jpg) | ⑥ アクアレーベル トリートメントローション（ブライトニング） | シミ予防を化粧水の段階から取り入れたい | 170mL・参考1,430円 | [Amazon](https://www.amazon.co.jp/dp/B0CSSWS9TP/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00r136a.fhlemc18.g00r136a.fhlenc1f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4909978180119%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24%2Fi%2F11254126%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1) |
-| ![メラノCC 薬用しみ対策 美白化粧水](/images/melano-cc-lotion-normal.jpg) | ⑦ メラノCC 薬用しみ対策 美白化粧水 | ビタミンC誘導体の化粧水を手頃に試したい | 170mL・オープン価格 | [Amazon](https://www.amazon.co.jp/dp/B0FDQCZJ8G/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00r136a.fhlemc18.g00r136a.fhlenc1f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4987241198900%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24%2Fi%2F11351027%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1) |
-|   | ⑧ ウルタンク うるおい乳液水 | 化粧水と乳液を1本で済ませたい・乾燥が慢性化している | 250mL・1,650円 |   |
+| ![ちふれ 美白化粧水 TA](/images/products/chifure-ta-lotion.jpg) | ① ちふれ 美白化粧水 TA | シミ予防と肌あれ予防を、まずは手頃な1本で | 180mL・1,100円 | [Amazon](https://www.amazon.co.jp/dp/B0C844QHTB/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00ufaua.fhlem24c.g00ufaua.fhlenb71/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24-cosmetics%2F4974972298412%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24-cosmetics%2Fi%2F10032791%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1) |
+| ![ソフィーナ BASIC+ うるおいターボ化粧水](/images/products/sofina-basic-turbo-lotion.jpg) | ② ソフィーナ BASIC+ うるおいターボ化粧水 | 化粧水だけでは乾燥が気になる | 160mL・1,430円（花王公式通販の販売価格） |   |
+| ![イハダ 薬用うるおいローション（しっとり）](/images/products/ihada-yakuyo-uruoi-lotion.jpg) | ③ イハダ 薬用うるおいローション（しっとり） | 肌荒れ・乾燥を繰り返しやすい | 180mL・1,650円 |   |
+| ![肌ラボ 極潤 薬用ハリ化粧水](/images/products/hadalabo-gokujun-hari-lotion.jpg) | ④ 肌ラボ 極潤 薬用ハリ化粧水 | シワ改善とシミ予防を化粧水から始めたい | 170mL・オープン価格（ロート公式通販 1,221円） |   |
+| ![アクアレーベル トリートメントローション（モイストスムース）](/images/products/aqualabel-treatment-lotion-moist-smooth.jpg) | ⑤ アクアレーベル トリートメントローション（モイストスムース） | 大人の毛穴の目立ち・キメの乱れが気になる | 170mL・オープン価格 | [楽天](https://hb.afl.rakuten.co.jp/ichiba/32b6c430.ea0d1e6a.32b6c431.75416e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkusurinofukutaro%2F10181419%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) |
+| ![アクアレーベル トリートメントローション（ブライトニング）](/images/products/aqualabel-treatment-lotion-brightening.jpg) | ⑥ アクアレーベル トリートメントローション（ブライトニング） | シミ予防を化粧水の段階から取り入れたい | 170mL・1,430円 | [Amazon](https://www.amazon.co.jp/dp/B0CSSWS9TP/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00r136a.fhlemc18.g00r136a.fhlenc1f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4909978180119%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24%2Fi%2F11254126%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1) |
+| ![メラノCC 薬用しみ対策 美白化粧水](/images/products/melano-cc-lotion-rich.jpg) | ⑦ メラノCC 薬用しみ対策 美白化粧水 | ビタミンC誘導体の化粧水を手頃に試したい | 170mL・オープン価格（ロート公式通販 990円） | [Amazon](https://www.amazon.co.jp/dp/B0FDQCZJ8G/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00r136a.fhlemc18.g00r136a.fhlenc1f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4987241198900%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24%2Fi%2F11351027%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1) |
+| ![ウルタンク うるおい乳液水](/images/products/urutank-uruoi-nyuekisui.jpg) | ⑧ ウルタンク うるおい乳液水 | 化粧水と乳液を1本で済ませたい・乾燥が慢性化している | 250mL・1,650円 |   |
 
 ※「参考」は販売店表示・編集部調べの価格で、販売店・時期によって変わります。その他は公式掲載価格または希望小売価格（2026年11月20日確認）。使い心地の評価は私個人の感想です。仕様の補足は本文をご覧ください。
 
@@ -49,7 +49,7 @@ tags:
 - **肌荒れを繰り返す**：肌あれ防止有効成分（グリチルリチン酸ジカリウム、アラントインなど）入りの医薬部外品が候補
 - **使用感の好み**：さらさら／しっとりのテクスチャ、香料・エタノールの有無は毎日使うほど差が出ます
 
-## ① ちふれ 美白化粧水 TA｜シミ予防と肌あれ予防を1,100円で
+## ![ちふれ 美白化粧水 TA](/images/products/chifure-ta-lotion.jpg) ① ちふれ 美白化粧水 TA｜シミ予防と肌あれ予防を1,100円で
 
 > 美白有効成分トラネキサム酸を配合した、ちふれの医薬部外品化粧水。
 
@@ -78,15 +78,15 @@ tags:
 > ★ 注意：「美白」はメラニンの生成を抑え、シミ・ソバカスを防ぐことです。できてしまったシミへの効果をうたうものではありません。
 
 🛒 ちふれ 美白化粧水 TA 180mL 1,100円
-[Amazon](https://www.amazon.co.jp/dp/B0C844QHTB/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00ufaua.fhlem24c.g00ufaua.fhlenb71/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24-cosmetics%2F4974972298412%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24-cosmetics%2Fi%2F10032791%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
+[![ちふれ 美白化粧水 TA](/images/products/chifure-ta-lotion.jpg)](https://www.amazon.co.jp/dp/B0C844QHTB/ref=nosim?tag=yyy0410mmm-22) [Amazon](https://www.amazon.co.jp/dp/B0C844QHTB/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00ufaua.fhlem24c.g00ufaua.fhlenb71/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24-cosmetics%2F4974972298412%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24-cosmetics%2Fi%2F10032791%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
 
-## ② ソフィーナ BASIC+ うるおいターボ化粧水｜空気中の水分を取り込む発想
+## ![ソフィーナ BASIC+ うるおいターボ化粧水](/images/products/sofina-basic-turbo-lotion.jpg) ② ソフィーナ BASIC+ うるおいターボ化粧水｜空気中の水分を取り込む発想
 
 > 花王の皮膚科学から生まれた、角層細胞レベルに着目した保湿化粧水。
 
 | 項目 | 内容 |
 | --- | --- |
-| 容量・価格 | 本体160mL・参考1,430円／レフィル150mL・参考1,210円／BIG本体320mL・参考2,750円（ノープリントプライス） |
+| 容量・価格 | 本体160mL・1,430円（花王公式通販の販売価格・税込）／レフィル150mL・参考1,210円／BIG本体320mL・参考2,750円（メーカー希望小売価格はノープリントプライス） |
 | 区分 | 化粧品 |
 | 保湿成分 | タンパク保水成分（セリン、スクロース、塩化Na、コハク酸ジグリコールグアニジン）、セラミドケア成分e（セチルPGヒドロキシエチルパルミタミド、ユーカリ葉エキス） |
 | 特徴 | 無香料・無着色・パラベンフリー・アルコールフリー（エチルアルコール無添加） |
@@ -110,7 +110,7 @@ tags:
 
 🛒 ソフィーナ BASIC+ うるおいターボ化粧水 160mL 参考1,430円
 
-## ③ イハダ 薬用うるおいローション（しっとり）｜肌荒れ・乾燥の繰り返しに
+## ![イハダ 薬用うるおいローション（しっとり）](/images/products/ihada-yakuyo-uruoi-lotion.jpg) ③ イハダ 薬用うるおいローション（しっとり）｜肌荒れ・乾燥の繰り返しに
 
 > 高精製ワセリン配合。繰り返す肌荒れ、乾燥を防ぐ敏感肌設計の薬用化粧水。
 
@@ -138,13 +138,13 @@ tags:
 
 🛒 イハダ 薬用うるおいローション（しっとり） 180mL 1,650円
 
-## ④ 肌ラボ 極潤 薬用ハリ化粧水｜ナイアシンアミドでシワ改善とシミ予防
+## ![肌ラボ 極潤 薬用ハリ化粧水](/images/products/hadalabo-gokujun-hari-lotion.jpg) ④ 肌ラボ 極潤 薬用ハリ化粧水｜ナイアシンアミドでシワ改善とシミ予防
 
 > ロート製薬の極潤エイジングケアライン。有効成分ナイアシンアミド配合の薬用化粧水。
 
 | 項目 | 内容 |
 | --- | --- |
-| 容量・価格 | 170mL・オープン価格（つめかえ用170mLあり） |
+| 容量・価格 | 170mL・オープン価格（ロート製薬公式通販の販売価格 1,221円・税込）／つめかえ用170mL・1,100円（同） |
 | 区分 | 医薬部外品（販売名：ロートH薬用リンクル化粧水Lb） |
 | 有効成分 | ナイアシンアミド |
 | うるおい成分 | ヒアルロン酸Na-2、加水分解ヒアルロン酸、アセチル化ヒアルロン酸ナトリウム（3種のヒアルロン酸） |
@@ -165,9 +165,9 @@ tags:
 
 > ★ 注意：「シミ対策」はメラニンの生成を抑え、シミ・そばかすを防ぐことです。オープン価格のため、価格は販売店で確認してください。
 
-🛒 肌ラボ 極潤 薬用ハリ化粧水 170mL オープン価格
+🛒 肌ラボ 極潤 薬用ハリ化粧水 170mL オープン価格（ロート公式通販 1,221円・税込）
 
-## ⑤ アクアレーベル トリートメントローション（モイストスムース）｜大人の毛穴とキメに
+## ![アクアレーベル トリートメントローション（モイストスムース）](/images/products/aqualabel-treatment-lotion-moist-smooth.jpg) ⑤ アクアレーベル トリートメントローション（モイストスムース）｜大人の毛穴とキメに
 
 > グリシルグリシン配合の高保湿毛穴ケア化粧水。資生堂の取扱企業限定ライン。
 
@@ -195,15 +195,15 @@ tags:
 > ★ 注意：ウエルシアグループ・ツルハグループの取扱企業限定販売のため、販売店が限られます。「美白」はメラニンの生成を抑え、シミ・ソバカスを防ぐことです。
 
 🛒 アクアレーベル トリートメントローション（モイストスムース） 170mL オープン価格
-[楽天](https://hb.afl.rakuten.co.jp/ichiba/32b6c430.ea0d1e6a.32b6c431.75416e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkusurinofukutaro%2F10181419%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
+[![アクアレーベル トリートメントローション（モイストスムース）](/images/products/aqualabel-treatment-lotion-moist-smooth.jpg)](https://hb.afl.rakuten.co.jp/ichiba/32b6c430.ea0d1e6a.32b6c431.75416e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkusurinofukutaro%2F10181419%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9) [楽天](https://hb.afl.rakuten.co.jp/ichiba/32b6c430.ea0d1e6a.32b6c431.75416e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkusurinofukutaro%2F10181419%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
 
-## ⑥ アクアレーベル トリートメントローション（ブライトニング）｜4MSKでシミ予防
+## ![アクアレーベル トリートメントローション（ブライトニング）](/images/products/aqualabel-treatment-lotion-brightening.jpg) ⑥ アクアレーベル トリートメントローション（ブライトニング）｜4MSKでシミ予防
 
 > 美白有効成分4MSK配合の、美容液級をうたう美白化粧水。
 
 | 項目 | 内容 |
 | --- | --- |
-| 容量・価格 | 170mL・参考1,430円（税込）／しっとり・とてもしっとりの2タイプ |
+| 容量・価格 | 170mL・1,430円（資生堂オンラインストアの販売価格・税込）／しっとり・とてもしっとりの2タイプ |
 | 区分 | 医薬部外品 |
 | 有効成分 | 4-メトキシサリチル酸カリウム塩（4MSK） |
 | その他の注目成分 | ツボクサエキス、アセチル化ヒアルロン酸ナトリウム、ヒアルロン酸ナトリウム（２）、水溶性コラーゲン（Ｆ）、浸透美容アミノ酸（D-グルタミン酸、DL-アラニン、DL-メチオニン） |
@@ -225,15 +225,15 @@ tags:
 > ★ 注意：エタノールと香料が含まれます。アルコールや香りが苦手な方は、②③⑤のような無香料・アルコールフリーのタイプも比べてください。
 
 🛒 アクアレーベル トリートメントローション（ブライトニング） 170mL 参考1,430円
-[Amazon](https://www.amazon.co.jp/dp/B0CSSWS9TP/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00r136a.fhlemc18.g00r136a.fhlenc1f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4909978180119%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24%2Fi%2F11254126%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
+[![アクアレーベル トリートメントローション（ブライトニング）](/images/products/aqualabel-treatment-lotion-brightening.jpg)](https://www.amazon.co.jp/dp/B0CSSWS9TP/ref=nosim?tag=yyy0410mmm-22) [Amazon](https://www.amazon.co.jp/dp/B0CSSWS9TP/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00r136a.fhlemc18.g00r136a.fhlenc1f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4909978180119%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24%2Fi%2F11254126%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
 
-## ⑦ メラノCC 薬用しみ対策 美白化粧水｜持続型ビタミンC誘導体
+## ![メラノCC 薬用しみ対策 美白化粧水](/images/products/melano-cc-lotion-rich.jpg) ⑦ メラノCC 薬用しみ対策 美白化粧水｜持続型ビタミンC誘導体
 
 > ビタミンC誘導体を含む3つの有効成分を配合した薬用美白化粧水。
 
 | 項目 | 内容 |
 | --- | --- |
-| 容量・価格 | しっとりタイプ 170mL・オープン価格（つめかえ用あり） |
+| 容量・価格 | しっとりタイプ 170mL・オープン価格（ロート製薬公式通販の販売価格 990円・税込）／つめかえ用・880円（同） |
 | 区分 | 医薬部外品 |
 | 有効成分 | L-アスコルビン酸2-グルコシド（持続型ビタミンC誘導体）、グリチルリチン酸ジカリウム、D-パントテニルアルコール（パンテノール） |
 | 特徴 | 柑橘系の香り |
@@ -253,10 +253,10 @@ tags:
 
 > ★ 注意：「美白」はメラニンの生成を抑え、しみ・そばかすを防ぐことです。「毛穴悩み」は、うるおいによって毛穴を目立たなくさせることを指します。オープン価格のため、価格は販売店で確認してください。
 
-🛒 メラノCC 薬用しみ対策 美白化粧水 170mL オープン価格
-[Amazon](https://www.amazon.co.jp/dp/B0FDQCZJ8G/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00r136a.fhlemc18.g00r136a.fhlenc1f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4987241198900%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24%2Fi%2F11351027%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
+🛒 メラノCC 薬用しみ対策 美白化粧水 170mL オープン価格（ロート公式通販 990円・税込）
+[![メラノCC 薬用しみ対策 美白化粧水](/images/products/melano-cc-lotion-rich.jpg)](https://www.amazon.co.jp/dp/B0FDQCZJ8G/ref=nosim?tag=yyy0410mmm-22) [Amazon](https://www.amazon.co.jp/dp/B0FDQCZJ8G/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00r136a.fhlemc18.g00r136a.fhlenc1f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4987241198900%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24%2Fi%2F11351027%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
 
-## ⑧ ウルタンク うるおい乳液水｜化粧水と乳液を1本に
+## ![ウルタンク うるおい乳液水](/images/products/urutank-uruoi-nyuekisui.jpg) ⑧ ウルタンク うるおい乳液水｜化粧水と乳液を1本に
 
 > コーセーコスメポートの新ブランド「ウルタンク」。ナノオイルカプセル配合の3in1化粧液。
 
@@ -312,14 +312,14 @@ tags:
 
 | 画像 | 商品 | 区分 | 特徴 |
 | --- | --- | --- | --- |
-| ![ちふれ 美白化粧水 TA](/images/IMG_1056.jpg) | ① ちふれ 美白化粧水 TA | 医薬部外品 | トラネキサム酸。180mL・1,100円の手頃さ |
-|   | ② ソフィーナ BASIC+ うるおいターボ化粧水 | 化粧品 | 自発吸水テクノロジー®とタンパク保水成分・セラミドケア成分e |
-|   | ③ イハダ 薬用うるおいローション（しっとり） | 医薬部外品 | アラントイン・グリチルリチン酸ジカリウムと高精製ワセリン |
-|   | ④ 肌ラボ 極潤 薬用ハリ化粧水 | 医薬部外品 | ナイアシンアミドと3種のヒアルロン酸 |
-| ![アクアレーベル トリートメントローション（モイストスムース）](/images/IMG_1059.jpg) | ⑤ アクアレーベル トリートメントローション（モイストスムース） | 医薬部外品 | グリシルグリシンとトラネキサム酸。取扱企業限定 |
-| ![アクアレーベル トリートメントローション（ブライトニング）](/images/IMG_1057.jpg) | ⑥ アクアレーベル トリートメントローション（ブライトニング） | 医薬部外品 | 4-メトキシサリチル酸カリウム塩（4MSK）とツボクサエキス |
-| ![メラノCC 薬用しみ対策 美白化粧水](/images/melano-cc-lotion-normal.jpg) | ⑦ メラノCC 薬用しみ対策 美白化粧水 | 医薬部外品 | L-アスコルビン酸2-グルコシドなど有効成分3種 |
-|   | ⑧ ウルタンク うるおい乳液水 | 化粧品 | ナノオイルカプセル配合の3in1。250mLの大容量 |
+| ![ちふれ 美白化粧水 TA](/images/products/chifure-ta-lotion.jpg) | ① ちふれ 美白化粧水 TA | 医薬部外品 | トラネキサム酸。180mL・1,100円の手頃さ |
+| ![ソフィーナ BASIC+ うるおいターボ化粧水](/images/products/sofina-basic-turbo-lotion.jpg) | ② ソフィーナ BASIC+ うるおいターボ化粧水 | 化粧品 | 自発吸水テクノロジー®とタンパク保水成分・セラミドケア成分e |
+| ![イハダ 薬用うるおいローション（しっとり）](/images/products/ihada-yakuyo-uruoi-lotion.jpg) | ③ イハダ 薬用うるおいローション（しっとり） | 医薬部外品 | アラントイン・グリチルリチン酸ジカリウムと高精製ワセリン |
+| ![肌ラボ 極潤 薬用ハリ化粧水](/images/products/hadalabo-gokujun-hari-lotion.jpg) | ④ 肌ラボ 極潤 薬用ハリ化粧水 | 医薬部外品 | ナイアシンアミドと3種のヒアルロン酸 |
+| ![アクアレーベル トリートメントローション（モイストスムース）](/images/products/aqualabel-treatment-lotion-moist-smooth.jpg) | ⑤ アクアレーベル トリートメントローション（モイストスムース） | 医薬部外品 | グリシルグリシンとトラネキサム酸。取扱企業限定 |
+| ![アクアレーベル トリートメントローション（ブライトニング）](/images/products/aqualabel-treatment-lotion-brightening.jpg) | ⑥ アクアレーベル トリートメントローション（ブライトニング） | 医薬部外品 | 4-メトキシサリチル酸カリウム塩（4MSK）とツボクサエキス |
+| ![メラノCC 薬用しみ対策 美白化粧水](/images/products/melano-cc-lotion-rich.jpg) | ⑦ メラノCC 薬用しみ対策 美白化粧水 | 医薬部外品 | L-アスコルビン酸2-グルコシドなど有効成分3種 |
+| ![ウルタンク うるおい乳液水](/images/products/urutank-uruoi-nyuekisui.jpg) | ⑧ ウルタンク うるおい乳液水 | 化粧品 | ナノオイルカプセル配合の3in1。250mLの大容量 |
 
 ## Q. 化粧水は高いものじゃないと効果がない？
 
@@ -345,8 +345,8 @@ A. 一般的には、水っぽいものからとろみのあるものへ重ね�
 
 気になる比較は保存して、お買い物のときに見返してみてください。
 
-📷 元投稿を見る → https://www.instagram.com/p/DdtX6rsGE2Z/
-🎥 YouTubeチャンネルを見る → https://www.youtube.com/@yun.skincare
+📷 元投稿を見る → [![Instagram元投稿のサムネイル](/images/links/ig-lotion8.jpg) Instagramの元投稿を見る](https://www.instagram.com/p/DdtX6rsGE2Z/)
+🎥 YouTubeチャンネルを見る → [![YouTubeチャンネル「ゆん」](/images/links/yt-yun-skincare.jpg) YouTubeチャンネルを見る](https://www.youtube.com/@yun.skincare)
 
 ---
 
