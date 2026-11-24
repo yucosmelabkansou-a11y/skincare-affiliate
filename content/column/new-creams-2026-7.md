@@ -102,6 +102,9 @@ tags:
 - 時短したいけれどエイジングケアの要素も入れたい人
 - クリームの重さが苦手で、ジェルの軽さと密封感を両立したい人
 
+🛒 アクアレーベル スペシャルジェルクリーム EX（ゴールデンリペア）90g ¥1,958（参考小売価格）
+[Amazon](https://www.amazon.co.jp/dp/B0HD78J1GH/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/32b6c430.ea0d1e6a.32b6c431.75416e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4909978282653%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
+
 ---
 
 ## ![カルテHD リンクル＆ホワイトケア モイスチュアゲル](/images/products/carte-hd-moisture-gel.jpg) 2. カルテHD リンクル＆ホワイトケア モイスチュアゲル
@@ -134,6 +137,9 @@ tags:
 
 - 敏感肌で、攻めのエイジングケア成分に不安がある人
 - シワ改善とシミ予防を、まず1品から取り入れたい人
+
+🛒 カルテHD リンクル＆ホワイトケア モイスチュアゲル 100g ¥3,520
+[Amazon](https://www.amazon.co.jp/dp/B0H6JDZCK8/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/32b6c430.ea0d1e6a.32b6c431.75416e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsundrug%2F4971710645170%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
 
 ---
 
@@ -169,6 +175,9 @@ tags:
 - 乾燥と肌荒れを繰り返しやすい、ゆらぎがちな肌の人
 - 保湿クリームはベタつくものが多いと感じている人
 
+🛒 d プログラム スキンリペアクリーム EX 45g ¥3,960
+[Amazon](https://www.amazon.co.jp/dp/B0HJCP7T8T/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/32b6c430.ea0d1e6a.32b6c431.75416e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4514254232491%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
+
 ---
 
 ## ![HAKU 薬用 美白ナイトクリームマスク](/images/products/haku-nightcreammask.jpg) 4. HAKU 薬用 美白ナイトクリームマスク
@@ -197,6 +206,9 @@ tags:
 
 - 美白ケアを夜の集中ケアとして取り入れたい人
 - 乾燥によるくすみ感が気になる人
+
+🛒 HAKU 薬用 美白ナイトクリームマスク 75g ¥9,350
+[Amazon](https://www.amazon.co.jp/dp/B0H4T6MCG4/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/32b6c430.ea0d1e6a.32b6c431.75416e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4909978282035%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
 
 ---
 
@@ -229,6 +241,9 @@ tags:
 - 目元・口元だけでなく、顔全体のシワ改善ケアをしたい人
 - クリームは塗り方（マッサージ）まで含めて楽しみたい人
 
+🛒 DEW タンタンリンクルクリーム 55g ノープリントプライス
+[Amazon](https://www.amazon.co.jp/dp/B0H5TV7CGJ/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/32b6c430.ea0d1e6a.32b6c431.75416e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F407162%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
+
 ---
 
 ## ![エリクシール トータルV ファーミングクリーム](/images/products/elixir-total-v-firming-ca.jpg) 6. エリクシール トータルV ファーミングクリーム
@@ -260,6 +275,9 @@ tags:
 - ほおやフェイスラインのもたつき感、ハリのなさが気になり始めた人
 - クリームに「引き上げる手技」まで含めたケアを求める人
 
+🛒 エリクシール トータルV ファーミングクリーム 50g ¥11,000
+[Amazon](https://www.amazon.co.jp/dp/B0CHMQCJZY/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/32b6c430.ea0d1e6a.32b6c431.75416e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4909978164355%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
+
 ---
 
 ## ![est ジェノリュクス クリーム](/images/products/est-genoluxe-cream.jpg) 7. est ジェノリュクス クリーム
@@ -276,7 +294,7 @@ tags:
 
 est の最先端エイジングケアクリーム。背景にあるのは花王の皮脂RNA研究で、「同じお手入れでも美しさのあらわれ方に個人差があるのは、角層のうるおい環境の違いではないか」という着想から開発されました。
 
-技術の核は **解砕型FFジェノリュクス技術**。花王のファインファイバー技術の知見を応用した「解砕型マイクロファイバー」を配合し、塗布すると肌上に均一な膜を形成しながら美容成分を補給する設計です。この膜は適度な水分閉塞性を保ち、汗・皮脂・こすれにも強い耐久性を備えるとされています。
+技術の核は **解砕型FFジェノリュクス技術**。花王のファインファイバー技術の知見を応用した「解砕型マイクロファイバー」を配合し、塗布すると肌上に均一な膜を形成しながら美容成分を補給する設計です。この膜は適度な水分閉塞性を保ち、汗・皮脂・こすれにも強い耐久性を備えています。
 
 配合される美容成分は、
 
@@ -293,6 +311,9 @@ est の最先端エイジングケアクリーム。背景にあるのは花王�
 
 - 成分を「足す」だけでなく、角層のうるおい環境そのものを整えたい人
 - 朝のメイク前にも使える膜感のあるクリームを探している人
+
+🛒 est ジェノリュクス クリーム 50g ¥14,300
+[Amazon](https://www.amazon.co.jp/dp/B0H97ZF58J/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/32b6c430.ea0d1e6a.32b6c431.75416e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fest-official%2Fe0078%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
 
 ---
 
@@ -344,7 +365,7 @@ A. 悩みで決めてください。敏感肌でエイジングケアも始め�
 A. 優劣ではなく役割の違いです。医薬部外品は承認された効能（シワ改善、シミ・そばかすを防ぐ、肌荒れを防ぐなど）の範囲が明確です。化粧品は効能をうたえない代わりに、カプセル化や膜形成など処方技術の個性が出ます。
 
 **Q. オールインワン（アクアレーベル／カルテHD）は、手持ちの化粧水や美容液と併用できますか？**
-A. アクアレーベルは公式にも「普段のスキンケアに美容液やクリームとして組み入れる」使い方が案内されています。カルテHDは1品完結が前提の設計ですが、仕上げの保湿として重ねる使い方も紹介されています。重ねる場合は、こすりすぎないことが共通の注意点です。
+A. アクアレーベルは公式にも「普段のスキンケアに美容液やクリームとして組み入れる」使い方が案内されています。カルテHDは1品完結が前提の設計ですが、仕上げの保湿として重ねる使い方もできます。重ねる場合は、こすりすぎないことが共通の注意点です。
 
 **Q. HAKU のナイトクリームマスクは毎晩使えますか？**
 A. 公式の目安は週2〜3回、夜のお手入れの最後です。毎日のクリームの置き換えではなく、集中ケアとして位置づけてください。
