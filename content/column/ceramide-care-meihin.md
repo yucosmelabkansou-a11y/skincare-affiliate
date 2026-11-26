@@ -311,6 +311,8 @@ tags:
 - ライスパワーNo.11の開発元ブランドの製品を使ってみたい人
 - 与えるケアに加えて、水分保持能の改善アプローチを取り入れたい人
 
+[![ineuly グロウセラム](/images/products/ineuly-grow-serum.jpg)](https://www.ineuly-product.com/view/item/000000000002) [公式オンラインストア](https://www.ineuly-product.com/view/item/000000000002) ／ [楽天（ふるさと納税）](https://hb.afl.rakuten.co.jp/ichiba/32b6c430.ea0d1e6a.32b6c431.75416e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff373869-utazu%2F58030944%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
+
 ---
 
 ## 技術・成分のまとめ：セラミドまわりの呼び方の違い
