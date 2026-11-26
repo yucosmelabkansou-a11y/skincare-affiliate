@@ -657,7 +657,7 @@ export default async function ResultPage({ params, searchParams }: Props) {
       <DiagnosisNotice />
 
       <div className="px-5 pb-10">
-        <DiagnosisPrivacyNote size="compact" />
+        <DiagnosisPrivacyNote />
       </div>
 
       {/* Footer Instagram */}
