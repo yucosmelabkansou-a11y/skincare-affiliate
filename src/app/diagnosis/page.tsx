@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SITE_URL } from '@/lib/siteConfig'
+import DiagnosisPrivacyNote from '@/components/DiagnosisPrivacyNote'
 
 export const metadata: Metadata = {
   title: '肌診断｜元化粧品研究・商品企画監修・あなたの肌タイプを2分で判定',
@@ -213,6 +214,7 @@ export default function DiagnosisStartPage() {
             診断をはじめる
             <Arrow />
           </Link>
+          <DiagnosisPrivacyNote className="mt-2" />
           <Link
             href="/"
             className="inline-flex items-center justify-center gap-3 px-9 py-3.5 transition-opacity hover:opacity-70"
