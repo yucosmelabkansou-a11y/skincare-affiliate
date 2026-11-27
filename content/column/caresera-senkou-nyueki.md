@@ -118,6 +118,8 @@ tags:
 | 特徴成分 | コラジェネシス（ハリ保湿成分） |
 | テクスチャー | みずみずしい／しっとりの2種 |
 
+[![エリクシール リフトモイスト ローション ba](/images/products/elixir-liftmoist-lotion-ba.jpg)](https://www.amazon.co.jp/dp/B0FFSL4KJZ/ref=nosim?tag=yyy0410mmm-22) [Amazon](https://www.amazon.co.jp/dp/B0FFSL4KJZ/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/32b6c430.ea0d1e6a.32b6c431.75416e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmatsuya-cosme%2F22714%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
+
 **仕組み（メーカー情報）**：エイジングケア（年齢に応じたうるおいケア）ラインの薬用化粧水。有効成分トラネキサム酸と、ハリ保湿のコラジェネシスを配合し、うるおいで満たしてハリのある肌へ導く設計です。
 
 ### ![なめらか本舗 薬用リンクル乳液 ホワイト](/images/products/nameraka-wrinkle-emulsion-white.jpg) なめらか本舗 薬用リンクル乳液 ホワイト（常盤薬品工業）
@@ -130,6 +132,8 @@ tags:
 | 有効成分 | ナイアシンアミド |
 | 保湿成分 | 豆乳発酵液、レチノール（ピュアレチノール） |
 | その他 | 無香料、無着色、無鉱物油 |
+
+[![なめらか本舗 薬用リンクル乳液 ホワイト](/images/products/nameraka-wrinkle-emulsion-white.jpg)](https://www.amazon.co.jp/dp/B0CB88DK2Y/ref=nosim?tag=yyy0410mmm-22) [Amazon](https://www.amazon.co.jp/dp/B0CB88DK2Y/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/32b6c430.ea0d1e6a.32b6c431.75416e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4964596701894%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
 
 **仕組み（メーカー情報）**：有効成分ナイアシンアミドは、シワ改善とシミ対策（メラニンの生成を抑え、シミ・ソバカスを防ぐ）の両方が認められた成分です。保湿成分として豆乳発酵液とピュアレチノール（レチノール）を配合。化粧水のあと、1円硬貨大をなじませます。
 
@@ -147,6 +151,8 @@ tags:
 | テクスチャー | しっとり／とてもしっとりの2種 |
 | その他 | 無香料、無着色、弱酸性、パラベンフリー、アルコール（エチルアルコール）フリー |
 
+[![イハダ 薬用ローション](/images/products/ihada-yakuyo-uruoi-lotion.jpg)](https://www.amazon.co.jp/dp/B0GFCT37C2/ref=nosim?tag=yyy0410mmm-22) [Amazon](https://www.amazon.co.jp/dp/B0GFCT37C2/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/ichiba/32b6c430.ea0d1e6a.32b6c431.75416e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24-cosmetics%2F4909978261238%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9)
+
 **仕組み（メーカー情報）**：不純物の少ない高精製ワセリンが肌表面にうるおい保護膜をつくり、肌のうるおいバリア機能を守ります。有効成分アラントインとグリチルリチン酸ジカリウムの2つで、繰り返す肌荒れと乾燥を防ぐ敏感肌設計の薬用化粧水です。洗顔後、500円硬貨大を顔全体になじませます。
 
 ### ![カルテHD モイスチュア エマルジョン](/images/products/carte-hd-moisture-emulsion.jpg) カルテHD モイスチュア エマルジョン（コーセー マルホ ファーマ）
@@ -158,6 +164,8 @@ tags:
 | 価格 | ¥2,090（税込） |
 | 有効成分 | ヘパリン類似物質、グリチルリチン酸ジカリウム |
 | その他 | 無香料、無着色、アルコールフリー、低刺激設計 |
+
+[![カルテHD モイスチュア エマルジョン](/images/products/carte-hd-moisture-emulsion.jpg)](https://www.amazon.co.jp/dp/B0D25QJ67V/ref=nosim?tag=yyy0410mmm-22) [Amazon](https://www.amazon.co.jp/dp/B0D25QJ67V/ref=nosim?tag=yyy0410mmm-22) ／ [楽天](https://hb.afl.rakuten.co.jp/hgc/g00qvyfa.fhlembc3.g00qvyfa.fhlen102/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsundrug%2F4971710560053%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fsundrug%2Fi%2F10108676%2F&rafcid=wsc_i_is_ee1229f7-691f-4a67-9e6c-9d1f5819b2d1)
 
 **仕組み（メーカー情報）**：保水有効成分ヘパリン類似物質は、肌のうるおいを高めて肌荒れを防ぐ成分で、カルテHDでは角層ラメラ（うるおい構造）にはたらきかける「ヘパリン類似物質HD」として配合されています。肌あれ防止有効成分グリチルリチン酸ジカリウムとの組み合わせです。化粧水のあと、ポンプ2回分をなじませます。本品は医薬部外品であり、医薬品ではありません。
 
