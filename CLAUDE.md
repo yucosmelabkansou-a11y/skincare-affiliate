@@ -325,10 +325,33 @@ git push origin main
 
 - **Amazon**：`https://amzn.to/XXXX`（ユーザー生成の短縮アフィリ）または `https://www.amazon.co.jp/dp/<ASIN>?tag=yyy0410mmm-22`。
 - **楽天**：`https://hb.afl.rakuten.co.jp/ichiba/.../?pc=...&link_type=hybrid_url&ut=...`（aflハイブリッド）。
-  **これはユーザーの楽天アフィリエイトアカウントでしか生成できない。Claudeは作れない。**
-- 直リンクが手元に無いときは **検索リンク**を仮置きし（`amazon.co.jp/s?k=...&tag=...` / `search.rakuten.co.jp/search/mall/...`）、
-  **ASINや楽天aflは推測せず、ユーザーに直リンクを依頼する**（取り違え・トラッキング欠落を防ぐ）。
+  既存記事で使っている ichiba テンプレート（`ichiba/32b6c430.ea0d1e6a.32b6c431.75416e52/?pc=<item.rakuten.co.jpの商品URLをエンコード>&link_type=hybrid_url&ut=<既存と同じ値>`）の `pc=` だけを、照合済みの販売ページURLに差し替えて作る（2026-11-26 の修正から採用している方式）。
 - 既存の直リンクは **`public/data/products.csv`** に入っていることがある（商品名で検索して流用可）。
+
+### 執筆前に「リンク表」を作る（必須・2026-11-27〜）
+
+記事を書き始める前に、掲載する全商品のリンク表（商品名／Amazon／楽天／公式）を作る。材料は次の順で使う。
+
+1. `public/data/products.csv` と過去記事（`content/column/*.md`）から、**同じ商品・同じ容量**の既存直リンクを流用する。
+2. **Amazon**：単品ページ（`/dp/<ASIN>`）を開き、商品名・容量・本体／つめかえ・セットでないことを照合してASINを確定する。リンクは `https://www.amazon.co.jp/dp/<ASIN>/ref=nosim?tag=yyy0410mmm-22`。
+3. **楽天**：販売ページ（`item.rakuten.co.jp/<shop>/<item>/`）を開いて商品名・容量を照合し、上の ichiba テンプレートで生成する。メーカー公式ショップを優先し、ふるさと納税の返礼品ページは通常の購入リンクにしない（ほかに販売ページが無いときだけ「楽天（ふるさと納税）」と明記して置く）。
+4. ASINや販売ページURLは**推測で作らない**。照合できなかった商品は、**リンク表の時点で**未特定の一覧をYunに出す（公開直前・公開後に発覚させない）。
+
+### 公開前のリンクチェック（必須・2026-11-27〜）
+
+コラム記事の購入リンクは記事Markdownに手書きする仕組みで、商品DBからは自動で入らない。書き忘れはそのまま公開されるため、
+**mainへpush（＝公開。`publishAt` の予約記事も含む）する前に、必ず次を実行する。**
+
+```bash
+node scripts/check_column_links.mjs <slug>      # 対象記事だけ（npm run check:links -- <slug> でも可）
+node scripts/check_column_links.mjs --all       # 全コラムの棚卸し
+```
+
+- 商品セクション（見出しに `/images/products/` の商品画像がある、または `## ①` 形式の見出し）ごとに、Amazon／楽天／公式いずれかの購入リンクがあるかを数える。
+- **「結果: NG」（終了コード1）が出たら、1品でも公開しない。** 出力された不足商品の一覧をそのままYunに報告し、リンクがそろってからpushする。
+- 「注意」（検索リンクの仮置き、aflでない楽天リンク、Amazon／楽天の片方だけ）は公開を止めないが、報告に含める。
+- 販売終了などで意図的にリンクを置かない商品は、そのセクションに `<!-- link-check: skip 理由 -->` を書く（理由必須。Yunの了承を得たものだけ）。
+- 「商品セクション未検出」と出た記事は、見出しの形が違うだけの可能性があるので目視で確認する。
 - 比較表と各商品の🛒ボタンの **両方** を必ず同じ直リンクに揃える（片方だけ検索リンクが残りがち）。
 - amzn.to がどの商品か不明なときは `curl -sL -o /dev/null -w "%{url_effective}"` で展開してASIN確認。
 
@@ -342,7 +365,7 @@ git push origin main
   gh api repos/yucosmelabkansou-a11y/skincare-affiliate/deployments/$DID/statuses --jq '.[0] | .state+"|"+(.environment//"?")+"|"+(.environment_url//"none")'
   ```
   `environment_url`（`*-<hash>.vercel.app`）がスマホでも開ける確認用URL。`environment` が `Production` なら本番。
-- **本番公開**：`main` にマージ → push。本番ドメインは **https://www.yun-skin-care.com**
+- **本番公開**：`node scripts/check_column_links.mjs <slug>` が「結果: OK」であることを確認してから `main` にマージ → push（上の「公開前のリンクチェック」）。本番ドメインは **https://www.yun-skin-care.com**
   （`skincare-affiliate.vercel.app` は本番ドメインへ301リダイレクト。`*-<hash>.vercel.app` プレビューは対象外）。
 
 ## ローカル確認
