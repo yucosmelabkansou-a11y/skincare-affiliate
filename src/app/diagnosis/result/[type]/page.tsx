@@ -17,6 +17,7 @@ import DiagnosisNotice from '@/components/DiagnosisNotice'
 import DiagnosisTendency from '@/components/DiagnosisTendency'
 import RelatedReads from '@/components/RelatedReads'
 import ShareButtons from './ShareButtons'
+import DiagnosisPrivacyNote from '@/components/DiagnosisPrivacyNote'
 
 // 静的パラメータ生成（SSG）
 export function generateStaticParams() {
@@ -660,6 +661,10 @@ export default async function ResultPage({ params, searchParams }: Props) {
       </section>
 
       <DiagnosisNotice />
+
+      <div className="px-5 pb-10">
+        <DiagnosisPrivacyNote />
+      </div>
 
       {/* Footer Instagram */}
       <footer
