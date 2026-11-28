@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // 予約公開の反映 API は実行時に content/column を読むため、記事ファイルを同梱する
+  outputFileTracingIncludes: {
+    '/api/revalidate-scheduled': ['./content/column/**/*'],
+  },
   images: {
     // AVIF優先（WebPより2〜3割小さい）。変換結果のキャッシュを31日保持して
     // Vercelの再変換コストを抑える（商品画像は差し替え時にファイル名が変わる運用）

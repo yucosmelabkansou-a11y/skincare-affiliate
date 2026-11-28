@@ -56,7 +56,28 @@ function assertNoPlaceholders(file: string, body: string) {
   }
 }
 
+// 予約公開：publishAt が未来の記事は公開しない（ISR の再生成時に判定される）
+function isPublished(a: Article, now = Date.now()): boolean {
+  if (!a.publishAt) return true
+  const t = Date.parse(a.publishAt)
+  return Number.isNaN(t) || t <= now
+}
+
 function readDir(type: ArticleType): Article[] {
+  return readDirIncludingScheduled(type).filter((a) => isPublished(a))
+}
+
+// 予約時刻を過ぎてから withinMs 以内の記事（予約公開の直後にページを作り直すため）
+export function getRecentlyScheduled(type: ArticleType, withinMs: number): Article[] {
+  const now = Date.now()
+  return readDirIncludingScheduled(type).filter((a) => {
+    if (!a.publishAt) return false
+    const t = Date.parse(a.publishAt)
+    return !Number.isNaN(t) && t <= now && now - t <= withinMs
+  })
+}
+
+function readDirIncludingScheduled(type: ArticleType): Article[] {
   const dir = path.join(ROOT, type)
   if (!fs.existsSync(dir)) return []
   return fs
@@ -86,12 +107,6 @@ function readDir(type: ArticleType): Article[] {
         midCta: parseCtaTarget(fm.midCta),
         endCta: parseCtaTarget(fm.endCta),
       } as Article
-    })
-    // 予約公開：publishAt が未来の記事は公開しない（ISR の再生成時に判定される）
-    .filter((a) => {
-      if (!a.publishAt) return true
-      const t = Date.parse(a.publishAt)
-      return Number.isNaN(t) || t <= Date.now()
     })
 }
 

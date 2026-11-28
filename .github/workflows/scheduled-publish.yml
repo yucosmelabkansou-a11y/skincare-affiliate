@@ -1,0 +1,29 @@
+name: 予約公開の反映
+
+# 予約公開（content/column/*.md の publishAt。毎朝 8:00 JST）を予約時刻の直後に本番へ反映し、
+# コラム一覧と記事ページに出たことを確認する。出ていなければこのワークフローが失敗し、通知メールが届く。
+# GitHub の定期実行は数分〜十数分遅れることがあるため、8:00〜8:45 JST に複数回実行する
+# （予約時刻を過ぎたばかりの記事が無い回は、何もせず数秒で終わる）。
+on:
+  schedule:
+    - cron: '0,5,10,15,20,30,45 23 * * *' # UTC 23時台 = JST 8:00〜8:45
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: scheduled-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 予約公開を反映して確認
+        run: node scripts/scheduled_publish.mjs

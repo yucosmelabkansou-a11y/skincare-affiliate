@@ -117,7 +117,7 @@ endCta: products
 4. ブラウザで記事とコラム一覧を開き、スマホ幅・PC幅でタイトル、比較表の横スクロール、表紙、CTA、出典、商品検索と関連記事のリンクを確認する。
 5. ローカルだけの場合は `http://localhost:<実際のポート>/column/<slug>` を示す。スマホ共有用プレビューはブランチをpushし、GitHub Deploymentの成功状態と返されたVercel URLを確認する。ホスト名は推測しない。変更した記事・画像などのパスだけを明示してstageする。
 6. 公開方法についてユーザーの最新の指示を優先する。指定がない場合はプレビューとNotion記録まで完了させる。本番公開が指示されていれば同じ許可を取り直さず、必要な検証後に公開まで続ける。
-7. mainへ反映する前に `node scripts/check_column_links.mjs <slug>` を実行し、「結果: OK」を確認する。NGなら1品でも公開せず、不足商品の一覧をYunに報告する（予約公開の記事も同じ）。公開時は対象記事・必要画像と、その記事の表示に必要な変更だけをmainへ反映する。手順書の更新を依頼された場合は関連ドキュメントも含める。最新の `origin/main` を確認し、無関係なローカル変更を含めない。push後の対象コミットに対するProductionデプロイ成功を確認する。本番URLは `src/lib/siteConfig.ts` の `SITE_URL` を確認して決める（現在 `https://www.yun-skin-care.com/column/<slug>`）。
+7. mainへ反映する前に `node scripts/check_column_links.mjs <slug>` を実行し、「結果: OK」を確認する。NGなら1品でも公開せず、不足商品の一覧をYunに報告する（予約公開の記事も同じ）。予約公開にする場合は `publishAt` を `YYYY-MM-DDT08:00:00+09:00`（8:00 JST）にする。8時台に GitHub Actions「予約公開の反映」が自動で反映・確認する（詳しくは `CLAUDE.md` の「予約公開（`publishAt`）の反映」）。公開時は対象記事・必要画像と、その記事の表示に必要な変更だけをmainへ反映する。手順書の更新を依頼された場合は関連ドキュメントも含める。最新の `origin/main` を確認し、無関係なローカル変更を含めない。push後の対象コミットに対するProductionデプロイ成功を確認する。本番URLは `src/lib/siteConfig.ts` の `SITE_URL` を確認して決める（現在 `https://www.yun-skin-care.com/column/<slug>`）。
 8. 本番の該当記事を開き、今回のタイトル・本文が反映されていることを確かめてから、Notionを「公開済」にする。既存URLがHTTP 200であるだけでは更新完了の根拠にならない。
 
 ### 既存のlintエラーの扱い

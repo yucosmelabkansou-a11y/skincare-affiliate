@@ -367,6 +367,14 @@ node scripts/check_column_links.mjs --all       # 全コラムの棚卸し
   `environment_url`（`*-<hash>.vercel.app`）がスマホでも開ける確認用URL。`environment` が `Production` なら本番。
 - **本番公開**：`node scripts/check_column_links.mjs <slug>` が「結果: OK」であることを確認してから `main` にマージ → push（上の「公開前のリンクチェック」）。本番ドメインは **https://www.yun-skin-care.com**
   （`skincare-affiliate.vercel.app` は本番ドメインへ301リダイレクト。`*-<hash>.vercel.app` プレビューは対象外）。
+- **予約公開（`publishAt`）の反映（2026-11-28〜）**：一覧・記事・トップ・サイトマップは10分ごとの再生成（`revalidate = 600`）で、
+  予約時刻を過ぎても「最初のアクセスには古いページを返し、裏で作り直す」ため、時刻ちょうどに出ないことがある（11/28 に発生）。
+  そのため GitHub Actions「予約公開の反映」（`.github/workflows/scheduled-publish.yml`）が **毎朝 8:00〜8:45 JST に数回**
+  `scripts/scheduled_publish.mjs` を実行し、本番の `/api/revalidate-scheduled` で作り直させたうえで、一覧と記事ページに出たことを確認する。
+  - 出ていなければワークフローが失敗し、GitHub から通知メールが届く。Actions のログに原因（一覧に掲載／記事ページのHTTP状態）が出る。
+  - 予約時刻を過ぎてから3時間以内の記事が無い日は、何もせず数秒で終わる。API も同じ条件で、対象が無ければ何もしない。
+  - **予約時刻は 8:00 JST に揃える**（ワークフローは8時台だけ動く。別の時刻にする場合は cron を足す）。
+  - 手動で反映・確認したいとき：GitHub の Actions 画面から「予約公開の反映」を Run workflow、または `node scripts/scheduled_publish.mjs`（確認だけなら `--check`）。
 
 ## ローカル確認
 
